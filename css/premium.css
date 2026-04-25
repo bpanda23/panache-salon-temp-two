@@ -66,6 +66,10 @@ h1, h2, h3, h4, h5, h6, .heading-section h2 {
 .hero-wrap {
     position: relative;
     overflow: hidden;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed; /* Smooth parallax alternative */
 }
 
 .hero-wrap .overlay {
