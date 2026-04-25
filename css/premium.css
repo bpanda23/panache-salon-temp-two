@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Montserrat:wght@300;400;600;700&display=swap');
+
+:root {
+    --gold-primary: #c5a059;
+    --gold-light: #e2c99d;
+    --gold-dark: #b08d57;
+    --charcoal-dark: #121212;
+    --charcoal-medium: #1e1e1e;
+    --charcoal-light: #2a2a2a;
+    --cream-light: #fdfaf5;
+    --text-muted: #a0a0a0;
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --transition-smooth: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* Global Typography */
+body {
+    font-family: 'Montserrat', sans-serif !important;
+    background-color: var(--charcoal-dark);
+    color: var(--cream-light);
+    line-height: 1.7;
+}
+
+h1, h2, h3, h4, h5, h6, .heading-section h2 {
+    font-family: 'Playfair Display', serif !important;
+    font-weight: 700 !important;
+    letter-spacing: 1px;
+}
+
+/* Navigation */
+.ftco-navbar-light {
+    background: transparent !important;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--glass-border);
+    padding: 1rem 0;
+}
+
+.ftco-navbar-light.scrolled {
+    background: rgba(18, 18, 18, 0.9) !important;
+}
+
+.navbar-brand {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: 1.8rem;
+    color: var(--gold-primary) !important;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
+    color: var(--cream-light) !important;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: var(--transition-smooth);
+}
+
+.ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover {
+    color: var(--gold-primary) !important;
+}
+
+/* Hero Section */
+.hero-wrap {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-wrap .overlay {
+    background: linear-gradient(135deg, rgba(18, 18, 18, 0.8) 0%, rgba(18, 18, 18, 0.4) 100%) !important;
+}
+
+.hero-wrap .slider-text h1 {
+    font-size: 5rem;
+    color: var(--gold-primary);
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 2rem;
+}
+
+.btn-primary {
+    background-color: var(--gold-primary) !important;
+    border-color: var(--gold-primary) !important;
+    color: #000 !important;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 0;
+    padding: 15px 35px !important;
+    transition: var(--transition-smooth);
+}
+
+.btn-primary:hover {
+    background-color: var(--gold-light) !important;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(197, 160, 89, 0.3);
+}
+
+.btn-white.btn-outline-white {
+    border-color: var(--gold-primary) !important;
+    color: var(--gold-primary) !important;
+    background: transparent !important;
+}
+
+.btn-white.btn-outline-white:hover {
+    background: var(--gold-primary) !important;
+    color: #000 !important;
+}
+
+/* Services */
+.services {
+    background: var(--charcoal-medium);
+    padding: 40px;
+    border: 1px solid var(--glass-border);
+    transition: var(--transition-smooth);
+}
+
+.services:hover {
+    transform: translateY(-10px);
+    border-color: var(--gold-primary);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+.services .icon span {
+    color: var(--gold-primary) !important;
+}
+
+.services h3 {
+    color: var(--gold-primary);
+}
+
+/* Staff Section */
+.staff {
+    background: var(--charcoal-medium);
+    padding: 30px;
+    border: 1px solid var(--glass-border);
+}
+
+.staff .img {
+    border: 3px solid var(--gold-primary);
+    border-radius: 50%;
+    margin: 0 auto 20px auto;
+    width: 150px;
+    height: 150px;
+}
+
+.staff h3 a {
+    color: var(--gold-primary);
+}
+
+.staff .position {
+    color: var(--text-muted);
+    font-style: italic;
+    display: block;
+    margin-bottom: 15px;
+}
+
+/* Pricing */
+.pricing-entry {
+    background: var(--charcoal-medium) !important;
+    border: 1px solid var(--glass-border);
+    transition: var(--transition-smooth);
+}
+
+.pricing-entry.active {
+    border: 2px solid var(--gold-primary);
+    box-shadow: 0 0 20px rgba(197, 160, 89, 0.2);
+}
+
+.pricing-entry h3 {
+    color: var(--gold-primary) !important;
+}
+
+.pricing-entry .price {
+    color: var(--cream-light) !important;
+}
+
+.pricing-entry ul li {
+    color: var(--text-muted);
+}
+
+/* Work / Portfolio */
+.work-entry {
+    overflow: hidden;
+    position: relative;
+    border: 1px solid var(--glass-border);
+}
+
+.work-entry .info {
+    background: rgba(18, 18, 18, 0.8) !important;
+}
+
+.work-entry h3 {
+    color: var(--gold-primary);
+}
+
+/* Blog */
+.blog-entry {
+    background: var(--charcoal-medium);
+    border: 1px solid var(--glass-border);
+}
+
+.blog-entry .text h3 a {
+    color: var(--gold-primary);
+}
+
+/* Footer */
+.ftco-footer {
+    background: var(--charcoal-dark) !important;
+    border-top: 1px solid var(--glass-border);
+}
+
+.ftco-footer h2 {
+    color: var(--gold-primary);
+}
+
+.ftco-footer-social li a {
+    background: var(--charcoal-medium) !important;
+    color: var(--gold-primary) !important;
+}
+
+/* Form Controls */
+.form-control {
+    background: var(--charcoal-light) !important;
+    border: 1px solid var(--glass-border) !important;
+    color: var(--cream-light) !important;
+}
+
+.form-control:focus {
+    border-color: var(--gold-primary) !important;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--charcoal-dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--gold-dark);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--gold-primary);
+}
+
+/* Background Sections */
+.bg-light {
+    background-color: var(--charcoal-light) !important;
+}
+
+.ftco-section {
+    padding: 8em 0;
+}
+
+.heading-section .mb-4 {
+    color: var(--gold-primary);
+}
