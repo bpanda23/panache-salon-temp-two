@@ -115,71 +115,417 @@
 		</div>
 	</section>
 
+
+
+
 	<section class="ftco-section bg-light">
 		<div class="container">
 			<div class="row justify-content-center mb-5 pb-3">
 				<div class="col-md-7 heading-section ftco-animate text-center">
-					<h2 class="mb-4">Our Beauty Experts</h2>
+					<h2 class="mb-4">Our Expert Services</h2>
 					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
 						live the blind texts.</p>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-lg-3 d-flex mb-sm-4 ftco-animate">
-					<div class="staff">
-						<div class="img mb-4" style="background-image: url(images/person_1.jpg);"></div>
-						<div class="info text-center">
-							<h3><a href="teacher-single.html">Mellisa Smith</a></h3>
-							<span class="position">Stylist</span>
-							<div class="text">
-								<p>Far far away, behind the word mountains, far from the countries Vokalia and
-									Consonantia, there live the blind texts.</p>
-							</div>
-						</div>
+
+			<!-- Service Filter Buttons -->
+			<div class="row justify-content-center mb-5 ftco-animate">
+				<div class="col-md-12">
+					<div class="service-filter-buttons text-center">
+						<button class="filter-btn active" data-filter="haircuts">Haircuts & Styling</button>
+						<button class="filter-btn" data-filter="spa">Hair Spa & Treatments</button>
+						<button class="filter-btn" data-filter="skincare">Skin Care & Grooming</button>
+						<button class="filter-btn" data-filter="bridal">Bridal Makeup</button>
+						<button class="filter-btn" data-filter="party">Party & Special Event Makeovers</button>
+						<button class="filter-btn" data-filter="wellness">Beauty & Wellness Services</button>
 					</div>
 				</div>
-				<div class="col-lg-3 d-flex mb-sm-4 ftco-animate">
-					<div class="staff">
-						<div class="img mb-4" style="background-image: url(images/person_2.jpg);"></div>
-						<div class="info text-center">
-							<h3><a href="teacher-single.html">Marie Mush</a></h3>
-							<span class="position">Fashionist</span>
-							<div class="text">
-								<p>Far far away, behind the word mountains, far from the countries Vokalia and
-									Consonantia, there live the blind texts.</p>
+			</div>
+
+			<!-- Staff Cards Carousel -->
+			<div class="row position-relative">
+				<div class="col-12">
+					<div class="staff-carousel-wrapper">
+						<div class="staff-carousel" id="staffCarousel">
+							<!-- Haircuts & Styling -->
+							<div class="d-flex mb-sm-4 staff-card" data-category="haircuts">
+								<div class="staff w-100">
+									<div class="img mb-4 mx-auto" style="background-image: url(images/menhaircut.png);"></div>
+									<div class="info text-center">
+										<h3><a href="#">Men's Precision Haircut</a></h3>
+										<span class="position">Haircuts & Styling</span>
+										<div class="text">
+											<p>Expert precision haircut tailored to your style and facial features for a sharp look.</p>
+										</div>
+										<a href="#" class="btn-view-details">View Details</a>
+
+									</div>
+								</div>
+							</div>
+							<div class="d-flex mb-sm-4 staff-card" data-category="haircuts">
+								<div class="staff w-100">
+									<div class="img mb-4 mx-auto" style="background-image: url(images/womenhaircut.png);"></div>
+									<div class="info text-center">
+										<h3><a href="#">Women's Haircut & Blow Dry</a></h3>
+										<span class="position">Haircuts & Styling</span>
+										<div class="text">
+											<p>Modern haircuts and trendy styling techniques for all hair types with flawless blow dry.</p>
+										</div>
+										<a href="#" class="btn-view-details">View Details</a>
+
+									</div>
+								</div>
+							</div>
+							<div class="d-flex mb-sm-4 staff-card" data-category="haircuts">
+								<div class="staff w-100">
+									<div class="img mb-4 mx-auto" style="background-image: url(images/haircoloring.png);"></div>
+									<div class="info text-center">
+										<h3><a href="#">Hair Coloring & Styling</a></h3>
+										<span class="position">Haircuts & Styling</span>
+										<div class="text">
+											<p>Master of hair coloring techniques including balayage, ombre, and highlights.</p>
+										</div>
+										<a href="#" class="btn-view-details">View Details</a>
+
+									</div>
+								</div>
+							</div>
+							<div class="d-flex mb-sm-4 staff-card" data-category="haircuts">
+								<div class="staff w-100">
+									<div class="img mb-4 mx-auto" style="background-image: url(images/kidshaircut.png);"></div>
+									<div class="info text-center">
+										<h3><a href="#">Kids Haircut & Styling</a></h3>
+										<span class="position">Haircuts & Styling</span>
+										<div class="text">
+											<p>Gentle and fun styling experience ensuring your kids look their absolute best.</p>
+										</div>
+										<a href="#" class="btn-view-details">View Details</a>
+
+									</div>
+								</div>
+							</div>
+
+							<!-- Hair Spa & Treatments -->
+							<div class="d-flex mb-sm-4 staff-card" data-category="spa" style="display: none;">
+								<div class="staff w-100">
+									<div class="img mb-4 mx-auto" style="background-image: url(images/person_2.jpg);"></div>
+									<div class="info text-center">
+										<h3><a href="#">Men's Hair Spa & Scalp Care</a></h3>
+										<span class="position">Hair Spa & Treatments</span>
+										<div class="text">
+											<p>Therapeutic treatments focusing on deep scalp care and rejuvenation.</p>
+										</div>
+										<a href="#" class="btn-view-details">View Details</a>
+
+									</div>
+								</div>
+							</div>
+							<div class="d-flex mb-sm-4 staff-card" data-category="spa" style="display: none;">
+								<div class="staff w-100">
+									<div class="img mb-4 mx-auto" style="background-image: url(images/person_3.jpg);"></div>
+									<div class="info text-center">
+										<h3><a href="#">Hair Spa & Deep Cond.</a></h3>
+										<span class="position">Hair Spa & Treatments</span>
+										<div class="text">
+											<p>Intensive deep conditioning therapies to restore natural hair vitality.</p>
+										</div>
+										<a href="#" class="btn-view-details">View Details</a>
+
+									</div>
+								</div>
+							</div>
+							<div class="d-flex mb-sm-4 staff-card" data-category="spa" style="display: none;">
+								<div class="staff w-100">
+									<div class="img mb-4 mx-auto" style="background-image: url(images/person_1.jpg);"></div>
+									<div class="info text-center">
+										<h3><a href="#">Keratin / Smoothening</a></h3>
+										<span class="position">Hair Spa & Treatments</span>
+										<div class="text">
+											<p>Professional smoothening treatments for perfectly silky and manageable hair.</p>
+										</div>
+										<a href="#" class="btn-view-details">View Details</a>
+
+									</div>
+								</div>
+							</div>
+							<div class="d-flex mb-sm-4 staff-card" data-category="spa" style="display: none;">
+								<div class="staff w-100">
+									<div class="img mb-4 mx-auto" style="background-image: url(images/person_4.jpg);"></div>
+									<div class="info text-center">
+										<h3><a href="#">Kids Hair Nourishment</a></h3>
+										<span class="position">Hair Spa & Treatments</span>
+										<div class="text">
+											<p>Safe and natural nourishment treatments suitable for delicate hair.</p>
+										</div>
+										<a href="#" class="btn-view-details">View Details</a>
+
+									</div>
+								</div>
+							</div>
+
+							<!-- Skin Care & Grooming -->
+							<div class="d-flex mb-sm-4 staff-card" data-category="skincare" style="display: none;">
+								<div class="staff w-100">
+									<div class="img mb-4 mx-auto" style="background-image: url(images/person_3.jpg);"></div>
+									<div class="info text-center">
+										<h3><a href="#">Men's Facial & Grooming</a></h3>
+										<span class="position">Skin Care & Grooming</span>
+										<div class="text">
+											<p>Specialized facial care and precise beard grooming techniques.</p>
+										</div>
+										<a href="#" class="btn-view-details">View Details</a>
+
+									</div>
+								</div>
+							</div>
+							<div class="d-flex mb-sm-4 staff-card" data-category="skincare" style="display: none;">
+								<div class="staff w-100">
+									<div class="img mb-4 mx-auto" style="background-image: url(images/person_1.jpg);"></div>
+									<div class="info text-center">
+										<h3><a href="#">Facial & Rejuvenation</a></h3>
+										<span class="position">Skin Care & Grooming</span>
+										<div class="text">
+											<p>Advanced facial treatments to revive and rejuvenate your natural glow.</p>
+										</div>
+										<a href="#" class="btn-view-details">View Details</a>
+
+									</div>
+								</div>
+							</div>
+							<div class="d-flex mb-sm-4 staff-card" data-category="skincare" style="display: none;">
+								<div class="staff w-100">
+									<div class="img mb-4 mx-auto" style="background-image: url(images/person_2.jpg);"></div>
+									<div class="info text-center">
+										<h3><a href="#">Cleanup & Detan</a></h3>
+										<span class="position">Skin Care & Grooming</span>
+										<div class="text">
+											<p>Deep cleansing and detan treatments to effectively remove impurities.</p>
+										</div>
+										<a href="#" class="btn-view-details">View Details</a>
+
+									</div>
+								</div>
+							</div>
+							<div class="d-flex mb-sm-4 staff-card" data-category="skincare" style="display: none;">
+								<div class="staff w-100">
+									<div class="img mb-4 mx-auto" style="background-image: url(images/person_4.jpg);"></div>
+									<div class="info text-center">
+										<h3><a href="#">Kids Gentle Skin Care</a></h3>
+										<span class="position">Skin Care & Grooming</span>
+										<div class="text">
+											<p>Mild and hypoallergenic skin care designed specifically for children.</p>
+										</div>
+										<a href="#" class="btn-view-details">View Details</a>
+
+									</div>
+								</div>
+							</div>
+
+							<!-- Bridal Makeup -->
+							<div class="d-flex mb-sm-4 staff-card" data-category="bridal" style="display: none;">
+								<div class="staff w-100">
+									<div class="img mb-4 mx-auto" style="background-image: url(images/person_2.jpg);"></div>
+									<div class="info text-center">
+										<h3><a href="#">Groom Makeup & Styling</a></h3>
+										<span class="position">Bridal Makeup</span>
+										<div class="text">
+											<p>Complete grooming and makeup services to ensure grooms look their best.</p>
+										</div>
+										<a href="#" class="btn-view-details">View Details</a>
+
+									</div>
+								</div>
+							</div>
+							<div class="d-flex mb-sm-4 staff-card" data-category="bridal" style="display: none;">
+								<div class="staff w-100">
+									<div class="img mb-4 mx-auto" style="background-image: url(images/person_3.jpg);"></div>
+									<div class="info text-center">
+										<h3><a href="#">Bridal Makeup Package</a></h3>
+										<span class="position">Bridal Makeup</span>
+										<div class="text">
+											<p>Comprehensive packages creating the perfect look for your special day.</p>
+										</div>
+										<a href="#" class="btn-view-details">View Details</a>
+
+									</div>
+								</div>
+							</div>
+							<div class="d-flex mb-sm-4 staff-card" data-category="bridal" style="display: none;">
+								<div class="staff w-100">
+									<div class="img mb-4 mx-auto" style="background-image: url(images/person_1.jpg);"></div>
+									<div class="info text-center">
+										<h3><a href="#">HD / Airbrush Bridal</a></h3>
+										<span class="position">Bridal Makeup</span>
+										<div class="text">
+											<p>Flawless HD and airbrush makeup techniques for a long-lasting, picture-perfect finish.</p>
+										</div>
+										<a href="#" class="btn-view-details">View Details</a>
+
+									</div>
+								</div>
+							</div>
+							<div class="d-flex mb-sm-4 staff-card" data-category="bridal" style="display: none;">
+								<div class="staff w-100">
+									<div class="img mb-4 mx-auto" style="background-image: url(images/person_4.jpg);"></div>
+									<div class="info text-center">
+										<h3><a href="#">Flower Girl Styling</a></h3>
+										<span class="position">Bridal Makeup</span>
+										<div class="text">
+											<p>Adorable makeup and styling for the youngest members of the bridal party.</p>
+										</div>
+										<a href="#" class="btn-view-details">View Details</a>
+
+									</div>
+								</div>
+							</div>
+
+							<!-- Party & Special Event -->
+							<div class="d-flex mb-sm-4 staff-card" data-category="party" style="display: none;">
+								<div class="staff w-100">
+									<div class="img mb-4 mx-auto" style="background-image: url(images/person_1.jpg);"></div>
+									<div class="info text-center">
+										<h3><a href="#">Party Grooming & Styling</a></h3>
+										<span class="position">Party Makeovers</span>
+										<div class="text">
+											<p>Sophisticated styling and grooming to make you stand out at any event.</p>
+										</div>
+										<a href="#" class="btn-view-details">View Details</a>
+
+									</div>
+								</div>
+							</div>
+							<div class="d-flex mb-sm-4 staff-card" data-category="party" style="display: none;">
+								<div class="staff w-100">
+									<div class="img mb-4 mx-auto" style="background-image: url(images/person_3.jpg);"></div>
+									<div class="info text-center">
+										<h3><a href="#">Party Makeup & Hair</a></h3>
+										<span class="position">Party Makeovers</span>
+										<div class="text">
+											<p>Glamorous party makeup and stunning hairstyles tailored to your outfit.</p>
+										</div>
+										<a href="#" class="btn-view-details">View Details</a>
+
+									</div>
+								</div>
+							</div>
+							<div class="d-flex mb-sm-4 staff-card" data-category="party" style="display: none;">
+								<div class="staff w-100">
+									<div class="img mb-4 mx-auto" style="background-image: url(images/person_2.jpg);"></div>
+									<div class="info text-center">
+										<h3><a href="#">Engagement Makeover</a></h3>
+										<span class="position">Party Makeovers</span>
+										<div class="text">
+											<p>Elegant and memorable makeovers perfect for engagement ceremonies and receptions.</p>
+										</div>
+										<a href="#" class="btn-view-details">View Details</a>
+
+									</div>
+								</div>
+							</div>
+							<div class="d-flex mb-sm-4 staff-card" data-category="party" style="display: none;">
+								<div class="staff w-100">
+									<div class="img mb-4 mx-auto" style="background-image: url(images/person_4.jpg);"></div>
+									<div class="info text-center">
+										<h3><a href="#">Kids Party Makeover</a></h3>
+										<span class="position">Party Makeovers</span>
+										<div class="text">
+											<p>Fun and creative styling to make kids feel special at any celebration.</p>
+										</div>
+										<a href="#" class="btn-view-details">View Details</a>
+
+									</div>
+								</div>
+							</div>
+
+							<!-- Beauty & Wellness -->
+							<div class="d-flex mb-sm-4 staff-card" data-category="wellness" style="display: none;">
+								<div class="staff w-100">
+									<div class="img mb-4 mx-auto" style="background-image: url(images/person_4.jpg);"></div>
+									<div class="info text-center">
+										<h3><a href="#">Men's Mani & Pedi</a></h3>
+										<span class="position">Beauty & Wellness</span>
+										<div class="text">
+											<p>Relaxing and thorough manicure and pedicure services tailored for men.</p>
+										</div>
+										<a href="#" class="btn-view-details">View Details</a>
+
+									</div>
+								</div>
+							</div>
+							<div class="d-flex mb-sm-4 staff-card" data-category="wellness" style="display: none;">
+								<div class="staff w-100">
+									<div class="img mb-4 mx-auto" style="background-image: url(images/person_1.jpg);"></div>
+									<div class="info text-center">
+										<h3><a href="#">Manicure & Pedicure</a></h3>
+										<span class="position">Beauty & Wellness</span>
+										<div class="text">
+											<p>Premium nail care for perfectly groomed hands and feet.</p>
+										</div>
+										<a href="#" class="btn-view-details">View Details</a>
+
+									</div>
+								</div>
+							</div>
+							<div class="d-flex mb-sm-4 staff-card" data-category="wellness" style="display: none;">
+								<div class="staff w-100">
+									<div class="img mb-4 mx-auto" style="background-image: url(images/person_2.jpg);"></div>
+									<div class="info text-center">
+										<h3><a href="#">Waxing & Threading</a></h3>
+										<span class="position">Beauty & Wellness</span>
+										<div class="text">
+											<p>Gentle and precise waxing and threading services for smooth skin.</p>
+										</div>
+										<a href="#" class="btn-view-details">View Details</a>
+
+									</div>
+								</div>
+							</div>
+							<div class="d-flex mb-sm-4 staff-card" data-category="wellness" style="display: none;">
+								<div class="staff w-100">
+									<div class="img mb-4 mx-auto" style="background-image: url(images/person_3.jpg);"></div>
+									<div class="info text-center">
+										<h3><a href="#">Kids Nail & Grooming</a></h3>
+										<span class="position">Beauty & Wellness</span>
+										<div class="text">
+											<p>Safe, fun, and gentle nail care and basic grooming for kids.</p>
+										</div>
+										<a href="#" class="btn-view-details">View Details</a>
+
+									</div>
+								</div>
 							</div>
 						</div>
+
+						<!-- Carousel Controls -->
+						<button class="carousel-control prev" id="prevBtn">
+							<span class="icon-chevron-left"></span>
+						</button>
+						<button class="carousel-control next" id="nextBtn">
+							<span class="icon-chevron-right"></span>
+						</button>
 					</div>
-				</div>
-				<div class="col-lg-3 d-flex mb-sm-4 ftco-animate">
-					<div class="staff">
-						<div class="img mb-4" style="background-image: url(images/person_3.jpg);"></div>
-						<div class="info text-center">
-							<h3><a href="teacher-single.html">Ana Jacobson</a></h3>
-							<span class="position">Makeup Stylist</span>
-							<div class="text">
-								<p>Far far away, behind the word mountains, far from the countries Vokalia and
-									Consonantia, there live the blind texts.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 d-flex mb-sm-4 ftco-animate">
-					<div class="staff">
-						<div class="img mb-4" style="background-image: url(images/person_4.jpg);"></div>
-						<div class="info text-center">
-							<h3><a href="teacher-single.html">Ivan Dorchsner</a></h3>
-							<span class="position">Nail Specialist</span>
-							<div class="text">
-								<p>Far far away, behind the word mountains, far from the countries Vokalia and
-									Consonantia, there live the blind texts.</p>
-							</div>
-						</div>
+
+					<!-- Carousel Dots/Pagination -->
+					<div class="carousel-dots text-center mt-4" id="carouselDots">
+						<span class="dot active" data-index="0"></span>
+						<span class="dot" data-index="1"></span>
+						<span class="dot" data-index="2"></span>
+						<span class="dot" data-index="3"></span>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
+
+	<!-- Scroll Modal -->
+<div class="scroll-modal-overlay" id="scrollModal">
+    <div class="scroll-container">
+        <div class="scroll-image-wrapper">
+            <img src="images/imageforscroll.png" alt="Scroll" class="scroll-bg-img">
+            <button class="close-scroll" id="closeScroll">&times;</button>
+        </div>
+    </div>
+</div>
 
 	<section class="ftco-section ftco-discount img" style="background-image: url(images/premium_service_2.png);">
 		<div class="overlay"></div>
@@ -648,6 +994,9 @@
 	<script src="js/google-map.js"></script>
 	<script src="js/main.js"></script>
 
-</body>
+
+
+
+  </body>
 
 </html>

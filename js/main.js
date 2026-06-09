@@ -284,8 +284,139 @@
 
 	$('#appointment_time').timepicker();
 
-
-
+	// Service Filter and Carousel Functionality
+	var serviceFilter = function() {
+            var categories = ['haircuts', 'spa', 'skincare', 'bridal', 'party', 'wellness'];
+            var currentCategory = 'haircuts';
+            var cardGroups = {};
+            var isAnimating = false;
+            
+            // Initialize card groups by category
+            $('.staff-card').each(function() {
+                var category = $(this).data('category');
+                if (!cardGroups[category]) {
+                    cardGroups[category] = [];
+                }
+                cardGroups[category].push($(this));
+            });
+            
+            function changeCategory(category, direction) {
+                if (category === currentCategory && direction) return;
+                isAnimating = true;
+                
+                // Update active filter button visually
+                $('.filter-btn').removeClass('active');
+                $('.filter-btn[data-filter="' + category + '"]').addClass('active');
+                
+                var currentCards = $('.staff-card:visible');
+                var nextCards = cardGroups[category] || [];
+                
+                // If there's no direction provided (initial load), skip animation
+                if (!direction) {
+                    $('.staff-card').hide();
+                    nextCards.forEach(function(card) { card.show(); });
+                    currentCategory = category;
+                    updateDots();
+                    isAnimating = false;
+                    return;
+                }
+                
+                // Add slide-out class based on direction
+                currentCards.addClass(direction === 'next' ? 'slide-out-left' : 'slide-out-right');
+                
+                setTimeout(function() {
+                    $('.staff-card').hide().removeClass('slide-out-left slide-out-right slide-in-left slide-in-right');
+                    
+                    nextCards.forEach(function(card) {
+                        card.show().addClass(direction === 'next' ? 'slide-in-right' : 'slide-in-left');
+                    });
+                    
+                    currentCategory = category;
+                    updateDots();
+                    
+                    setTimeout(function() {
+                        $('.staff-card').removeClass('slide-in-left slide-in-right');
+                        isAnimating = false;
+                    }, 500); // Wait for CSS animation to finish
+                }, 300); // Matches slide out animation duration
+            }
+            
+            // Update dots
+            function updateDots() {
+                var dotsContainer = $('#carouselDots');
+                if (dotsContainer.length === 0) {
+                    dotsContainer = $('.carousel-dots');
+                }
+                
+                if (dotsContainer.length > 0) {
+                    dotsContainer.empty();
+                    for (var i = 0; i < categories.length; i++) {
+                        var dotClass = categories[i] === currentCategory ? 'dot active' : 'dot';
+                        dotsContainer.append('<span class="' + dotClass + '" data-category="' + categories[i] + '"></span>');
+                    }
+                }
+            }
+            
+            // Filter button click handler
+            $('.filter-btn').on('click', function() {
+                if (isAnimating) return;
+                var targetCategory = $(this).data('filter');
+                if (targetCategory === currentCategory) return;
+                
+                var currentIndex = categories.indexOf(currentCategory);
+                var targetIndex = categories.indexOf(targetCategory);
+                var direction = targetIndex > currentIndex ? 'next' : 'prev';
+                
+                changeCategory(targetCategory, direction);
+            });
+            
+            // Previous button handler
+            $('#prevBtn, .carousel-control.prev, .carousel-prev').on('click', function(e) {
+                e.preventDefault();
+                if (isAnimating) return;
+                var idx = categories.indexOf(currentCategory);
+                idx = (idx - 1 + categories.length) % categories.length;
+                changeCategory(categories[idx], 'prev');
+            });
+            
+            // Next button handler
+            $('#nextBtn, .carousel-control.next, .carousel-next').on('click', function(e) {
+                e.preventDefault();
+                if (isAnimating) return;
+                var idx = categories.indexOf(currentCategory);
+                idx = (idx + 1) % categories.length;
+                changeCategory(categories[idx], 'next');
+            });
+            
+            // Dot click handler
+            $(document).on('click', '.dot', function() {
+                if (isAnimating) return;
+                var targetCategory = $(this).data('category');
+                if (targetCategory === currentCategory) return;
+                
+                var currentIndex = categories.indexOf(currentCategory);
+                var targetIndex = categories.indexOf(targetCategory);
+                var direction = targetIndex > currentIndex ? 'next' : 'prev';
+                
+                changeCategory(targetCategory, direction);
+            });
+            
+            // Initialize display without animation
+            changeCategory('haircuts', null);
+	};
+	serviceFilter();
 
 })(jQuery);
 
+
+    // View Details Scroll Modal Logic
+    $(document).on('click', '.btn-view-details', function(e) {
+        e.preventDefault();
+        $('#scrollModal').addClass('active');
+    });
+    
+    $(document).on('click', '#closeScroll, #scrollModal', function(e) {
+        if (e.target.id === 'scrollModal' || e.target.id === 'closeScroll') {
+            $('#scrollModal').removeClass('active');
+        }
+    });
