@@ -103,7 +103,7 @@ h6 {
 
 p {
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin-bottom: -1rem;
 }
 
 abbr[title],
@@ -10456,7 +10456,7 @@ h5,
 .h4,
 .h5 {
   line-height: 1.4;
-  color: #000;
+  color: #f3d01a;
   font-weight: 400;
 }
 
@@ -11583,7 +11583,7 @@ textarea.form-control {
 }
 
 .ftco-section {
-  padding: 7em 0;
+ 
   position: relative;
 }
 

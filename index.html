@@ -31,29 +31,73 @@
 
 <body>
 
-	<div class="hero-wrap js-fullheight" style="background-image: url('images/premium_hero.png');">
+	<div class="hero-wrap" id="hero">
 		<div class="overlay"></div>
-		<div class="container">
-			<div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center"
-				data-scrollax-parent="true">
+		<style>
+			#hero{position:relative; width:100%; height:calc(116vh + 300px); min-height:calc(100vh + 300px); overflow:hidden; background-color:#000;}
+			.hero-media{position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; object-position:center center;}
+			.hero-media, #heroImage{transition: opacity 0.8s ease;}
+			#heroVideo{z-index:0; opacity:1; object-position:center center;}
+			#heroImage{z-index:0; opacity:0; background-size:cover; background-position:center center;}
+			#hero .container{position:relative; z-index:2;}
+		</style>
+		<video id="heroVideo" class="hero-media" playsinline muted style="display:block;" preload="auto">
+			<source src="images/hero-1-video.mp4" type="video/mp4">
+		</video>
+		<div id="heroImage" class="hero-media" style="background-image: url('images/hero-2.png');"></div>
+		<div class="container" style="position:relative; z-index:1;">
+			<div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
 				<div class="col-md-8 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
 					<div class="icon">
 						<a href="index.html" class="logo">
-							<span class="flaticon-flower"></span>
-							<h1>Panache Salon</h1>
+							<!-- <span class="flaticon-flower"></span> -->
+							<!-- <h1>Panache Salon</h1> -->
 						</a>
 					</div>
-					<h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Luxury Beauty
-						Experience</h1>
-					<p class="mb-5" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Exquisite Care for
-						the Modern Individual</p>
+					<!-- <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Luxury Beauty Experience</h1>
+					<p class="mb-5" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Exquisite Care for the Modern Individual</p> -->
 
-					<p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><a href="services.html"
-							class="btn btn-primary px-4 py-3">Explore Our
-							Services</a></p>
+					<!-- <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">
+						<a href="services.html" class="btn btn-primary px-4 py-3">Explore Our Services</a></p> -->
 				</div>
 			</div>
 		</div>
+		<script>
+		(function(){
+			var v = document.getElementById('heroVideo');
+			var img = document.getElementById('heroImage');
+			var showDuration = 5500; // ms each
+			var fadeTime = 800; // matches CSS transition
+			var showingVideo = true;
+			function showVideo(){
+				showingVideo = true;
+				img.style.opacity = 0;
+				v.style.opacity = 1;
+				v.currentTime = 0;
+				v.play().catch(function(){});
+			}
+			function showImage(){
+				showingVideo = false;
+				v.style.opacity = 0;
+				img.style.opacity = 1;
+				try{ v.pause(); }catch(e){}
+			}
+			// start sequence
+			showVideo();
+			// cycle every showDuration + fadeTime to allow smooth crossfade
+			setInterval(function(){
+				if(showingVideo){
+					showImage();
+				}else{
+					showVideo();
+				}
+			}, showDuration + fadeTime);
+			// as a safety, also end video to image on ended
+			v.addEventListener('ended', function(){
+				setTimeout(showImage, 0);
+			});
+		})();
+		</script>
 	</div>
 
 	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
@@ -77,39 +121,90 @@
 		</div>
 	</nav>
 	<!-- END nav -->
+	<style>
+		/* move the navbar block down by 10% of the viewport */
+		#ftco-navbar{padding-top:1px;padding-bottom:1px; margin-top:0vh;}
+		@media(max-width:767px){#ftco-navbar{padding-top:10px;padding-bottom:10px; margin-top:6vh;}}
+	</style>
 
-	<section class="ftco-section">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-4 ftco-animate">
-					<div class="media d-block text-center block-6 services">
-						<div class="icon d-flex mb-3"><span class="flaticon-facial-treatment"></span></div>
-						<div class="media-body">
-							<h3 class="heading">Skin &amp; Beauty Care</h3>
-							<p>Even the all-powerful Pointing has no control about the blind texts it is an almost
-								unorthographic.</p>
+	<section class="ftco-section about-us-section">
+		<div class="container-fluid py-5">
+			<style>
+				.about-us-section{background:#080604; color:#f4efe4;}
+				.about-us-section .panel{border:1px solid rgba(255, 217, 136,0.18); background:rgba(255,255,255,0.04); box-shadow:0 30px 80px rgba(0,0,0,.25); border-radius:28px;}
+				.about-us-section .panel-hero{overflow:hidden; border-radius:32px; position:relative;}
+				.about-us-section .panel-hero img{width:100%; display:block; object-fit:cover; height:100%;}
+				.about-us-section .panel-hero::after{content:''; position:absolute; inset:0; background:linear-gradient(180deg, rgba(0,0,0,0) 36%, rgba(0,0,0,.74) 100%);}
+				.about-us-section .brand-badge{display:flex; align-items:center; gap:18px; margin-bottom:1.6rem;}
+				.about-us-section .brand-badge img{height:72px; width:auto; object-fit:contain; filter:brightness(1.05);}
+				.about-us-section h2{font-size:3.12rem; line-height:1.05; letter-spacing:.01em; margin:0 0 1rem; color:#f9e9cd;}
+				.about-us-section p.lead{font-size:1.08rem; color:rgba(244,239,228,.9); line-height:1.85; margin-bottom:2rem;}
+				.about-us-section .service-grid{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1rem;}
+				.about-us-section .service-card{padding:22px 24px; border:1px solid rgba(255,217,136,0.16); border-radius:22px; background:rgba(255,255,255,0.04);}
+				.about-us-section .service-card h4{margin:0 0 .65rem; font-size:1.04rem; color:#f7e6b4;}
+				.about-us-section .service-card p{margin:0; color:rgba(244,239,228,.78); font-size:.97rem; line-height:1.7;}
+				.about-us-section .service-card.feature{grid-column:1 / -1; text-align:center; padding:28px;}
+				.about-us-section .service-card.feature h4{font-size:1.2rem; margin-bottom:.6rem;}
+				.about-us-section .hero-quote{font-size:4.16rem; line-height:1.02; margin:0; letter-spacing:.02em;}
+				.about-us-section .hero-subtitle{color:#d8c397; font-size:.93rem; letter-spacing:.3em; text-transform:uppercase; margin-bottom:.8rem;}
+				@media(max-width:991px){
+					.about-us-section h2{font-size:2.7rem;}
+					.about-us-section .service-grid{grid-template-columns:1fr;}
+				}
+			</style>
+			<div class="container">
+				<div class="row align-items-center g-5">
+					<div class="col-lg-6">
+						<div class="panel panel-hero" style="min-height:560px;">
+							<img src="images/image_4.jpg" alt="Luxury salon" />
+							<div style="position:absolute; left:28px; bottom:28px; right:28px; color:#fff; z-index:1;">
+								<p style="text-transform:uppercase; letter-spacing:.3em; font-size:.8rem; margin:0 0 .75rem; color:rgba(255,255,255,.85);">Panache Salon Brand Experience</p>
+								<h2 class="hero-quote">Luxury Beauty with Every Detail</h2>
+								<p style="max-width:440px; margin-top:9rem; color:rgba(255,255,255,.88);">A premium salon environment with marble, gold accents and cinematic lighting that feels like a world-class beauty campaign.</p>
+							</div>
 						</div>
 					</div>
+					<div class="col-lg-6">
+						<div class="brand-badge">
+							<!-- <img src="images/saloon-logo.jpeg" alt="Panache Salon logo"> -->
+							<div>
+								<p style="margin:0; text-transform:uppercase; letter-spacing:.25em; color:#e5c87b; font-size:.845rem;">Luxury Salon Campaign</p>
+								<h3 style="margin:0; font-size:2.288rem; color:#ffffff;">Panache Salon</h3>
+							</div>
+						</div>
+						<p class="lead">Inspired by the Panache Salon identity, this brand showcase blends premium black and gold styling with a modern editorial salon atmosphere. Experience refined hair, skin, bridal and event beauty services in a luxury context.</p>
+					<div class="service-grid">
+						<div class="service-card">
+							<h4>Haircuts & Styling</h4>
+							<p>Signature cuts and couture styling for every elegant look.</p>
+						</div>
+						<div class="service-card">
+							<h4>Hair Spa & Treatments</h4>
+							<p>Deep nourishment and scalp therapy for healthy, luminous hair.</p>
+						</div>
+						<div class="service-card">
+							<h4>Skin Care & Grooming</h4>
+							<p>Premium facial rituals and glow-focused skincare refinement.</p>
+						</div>
+						<div class="service-card">
+							<h4>Bridal Makeup</h4>
+							<p>Luxurious bridal artistry for flawless celebration beauty.</p>
+						</div>
+						<div class="service-card">
+							<h4>Party & Special Event Makeovers</h4>
+							<p>Elegant glamour and red-carpet styling for every occasion.</p>
+						</div>
+						<div class="service-card">
+							<h4>Party & Special Event Makeovers</h4>
+							<p>Elegant glamour and red-carpet styling for every occasion.</p>
+						</div>
+						<div class="service-card feature">
+							<h4>Beauty & Wellness Services</h4>
+							<p>A complete premium experience for modern luxury self-care.</p>
+						</div>
+					</div>
+					<a href="#" class="btn btn-primary px-5 py-3" style="background:#d8b86e; border-color:#d8b86e; color:#0f0b06; font-weight:700; letter-spacing:.08em; margin-top:1.5rem; display:inline-block;">Book Your Transformation</a>
 				</div>
-				<div class="col-md-4 ftco-animate">
-					<div class="media d-block text-center block-6 services">
-						<div class="icon d-flex mb-3"><span class="flaticon-cosmetics"></span></div>
-						<div class="media-body">
-							<h3 class="heading">Makeup Pro</h3>
-							<p>Even the all-powerful Pointing has no control about the blind texts it is an almost
-								unorthographic.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<div class="media d-block text-center block-6 services">
-						<div class="icon d-flex mb-3"><span class="flaticon-curl"></span></div>
-						<div class="media-body">
-							<h3 class="heading">Hair Style</h3>
-							<p>Even the all-powerful Pointing has no control about the blind texts it is an almost
-								unorthographic.</p>
-						</div>
-					</div>
 				</div>
 			</div>
 		</div>
