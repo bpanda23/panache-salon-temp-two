@@ -138,7 +138,8 @@ h1, h2, h3, h4, h5, h6, .heading-section h2 {
 .staff-card {
     transition: var(--transition-smooth);
     display: flex !important;
-    perspective: 1500px; /* Added for 3D effect */
+    perspective: 1500px;
+    align-items: stretch;
 }
 
 .staff-card[style*="display: none"] {
@@ -155,6 +156,7 @@ h1, h2, h3, h4, h5, h6, .heading-section h2 {
     padding: 40px 20px;
     border: 1px solid rgba(212, 175, 55, 0.15);
     width: 100%;
+    height: 100%;
     border-radius: 20px;
     transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
     box-shadow: 
@@ -164,7 +166,11 @@ h1, h2, h3, h4, h5, h6, .heading-section h2 {
     transform-style: preserve-3d;
     position: relative;
     z-index: 1;
-    overflow: visible; /* To allow 3D pop out */
+    overflow: visible;
+    /* Flex column so button always pins to bottom */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .staff::before {
@@ -215,6 +221,12 @@ h1, h2, h3, h4, h5, h6, .heading-section h2 {
 .staff .info {
     transform: translateZ(30px);
     transition: transform 0.5s ease;
+    /* Flex column so text grows and button pins to bottom */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    width: 100%;
 }
 
 .staff:hover .info {
@@ -255,12 +267,20 @@ h1, h2, h3, h4, h5, h6, .heading-section h2 {
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
+.staff .info .text {
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
 .staff .info .text p {
     font-size: 0.95rem;
     color: #d0d0d0;
     line-height: 1.7;
-    margin-bottom: 25px; /* Added space for button */
+    margin-bottom: 25px;
     font-weight: 300;
+    text-align: center;
 }
 
 .btn-view-details {
@@ -632,10 +652,10 @@ h1, h2, h3, h4, h5, h6, .heading-section h2 {
 
 .scroll-container {
     position: relative;
-    width: 1300px;
-    max-width: 95vw;
-    height: 85vh;
-    max-height: 90vh;
+    width: 1500px;
+    max-width: 98vw;
+    height: 92vh;
+    max-height: 95vh;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -681,7 +701,7 @@ h1, h2, h3, h4, h5, h6, .heading-section h2 {
     width: 1300px;
     max-width: 95vw;
     height: 100%;
-    object-fit: cover; 
+    object-fit: contain; 
 }
 
 
