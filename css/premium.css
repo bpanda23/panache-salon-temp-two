@@ -448,11 +448,11 @@ h1, h2, h3, h4, h5, h6, .heading-section h2 {
 .service-filter-buttons {
     display: flex;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 42px;
     justify-content: flex-start;
     align-items: stretch;
     flex-direction: column;
-    height: 100%;
+    
     padding: 10px;
     background: linear-gradient(160deg, rgba(255,255,255,0.04) 0%, rgba(197,160,89,0.06) 100%);
     border: 1px solid rgba(197, 160, 89, 0.18);
