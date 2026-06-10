@@ -11243,10 +11243,13 @@ h5,
 }
 
 .appointment-info {
+  border-radius: 28px;
+    margin-top: 44px;
+    height: 82%;
   width: 100%;
   display: block;
-  background: rgba(255, 255, 255, 0.1);
-  color: rgba(255, 255, 255, 0.9);
+  background: white;
+  color: black;
   -webkit-box-shadow: 0px 5px 71px -27px rgba(0, 0, 0, 0.21);
   -moz-box-shadow: 0px 5px 71px -27px rgba(0, 0, 0, 0.21);
   box-shadow: 0px 5px 71px -27px rgba(0, 0, 0, 0.21);
@@ -11259,7 +11262,7 @@ h5,
 }
 
 .appointment-info span {
-  color: rgba(255, 255, 255, 0.9);
+  color: #0a0000;
 }
 
 .appointment-info .day {
@@ -11268,7 +11271,7 @@ h5,
 
 .appointment-info h3 {
   font-size: 20px;
-  color: #fff;
+  color: #0a0000;
 }
 
 .appointment h3 {
