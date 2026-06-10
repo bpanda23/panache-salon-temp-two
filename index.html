@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -96,6 +96,7 @@
 			v.addEventListener('ended', function(){
 				setTimeout(showImage, 0);
 			});
+			
 		})();
 		</script>
 	</div>
@@ -154,66 +155,11 @@
 					.about-us-section .service-grid{grid-template-columns:1fr;}
 				}
 			</style>
-			<div class="container">
-				<div class="row align-items-stretch g-5">
-					<div class="col-lg-6">
-						<div class="panel panel-hero" style="height:100%; min-height:560px;">
-							<img src="images/aboutus.png" alt="Luxury salon" />
-							<div style="position:absolute; left:28px; bottom:28px; right:28px; color:#fff; z-index:1;">
-								<p
-									style="text-transform:uppercase; letter-spacing:.3em; font-size:.8rem; margin:0 0 .75rem; color:rgba(255,255,255,.85);">
-									Panache Salon Brand Experience</p>
-								<h2 class="hero-quote">Luxury Beauty with Every Detail</h2>
-								<p
-									style="max-width:440px; margin-top:2rem; font-size:1.15rem; line-height:1.7; color:rgba(255,255,255,.92);">
-									A premium salon environment with marble, gold accents and cinematic lighting that
-									feels like a world-class beauty campaign.</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-6">
-						<div class="brand-badge">
-							<!-- <img src="images/saloon-logo.jpeg" alt="Panache Salon logo"> -->
-							<div>
-								<p style="margin:0; text-transform:uppercase; letter-spacing:.25em; color:#e5c87b; font-size:.845rem;">Luxury Salon Campaign</p>
-								<h3 style="margin:0; font-size:2.288rem; color:#ffffff;">About Panache Salon</h3>
-							</div>
-						</div>
-						<p class="lead">Inspired by the Panache Salon identity, this brand showcase blends premium black and gold styling with a modern editorial salon atmosphere. Experience refined hair, skin, bridal and event beauty services in a luxury context.</p>
-					<div class="service-grid">
-						<div class="service-card">
-							<h4>Haircuts & Styling</h4>
-							<p>Signature cuts and couture styling for every elegant look.</p>
-						</div>
-						<div class="service-card">
-							<h4>Hair Spa & Treatments</h4>
-							<p>Deep nourishment and scalp therapy for healthy, luminous hair.</p>
-						</div>
-						<div class="service-card">
-							<h4>Skin Care & Grooming</h4>
-							<p>Premium facial rituals and glow-focused skincare refinement.</p>
-						</div>
-						<div class="service-card">
-							<h4>Bridal Makeup</h4>
-							<p>Luxurious bridal artistry for flawless celebration beauty.</p>
-						</div>
-						<div class="service-card">
-							<h4>Party & Special Event Makeovers</h4>
-							<p>Elegant glamour and red-carpet styling for every occasion.</p>
-						</div>
-						<div class="service-card">
-							<h4>Beauty & Wellness Services</h4>
-							<p>A complete premium experience for modern luxury self-care and wellness services.</p>
-						</div>
-						<div class="service-card feature">
-							<h4>Beauty, Wellness & Transformation</h4>
-							<p>Discover the perfect harmony of beauty, relaxation, and renewal through premium services tailored to elevate your look, mood, and well-being.</p>
-						</div>
-					</div>
-					<!-- <a href="#" class="btn btn-primary px-5 py-3" style="background:#d8b86e; border-color:#d8b86e; color:#0f0b06; font-weight:700; letter-spacing:.08em; margin-top:1.5rem; display:inline-block;">Book Your Transformation</a> -->
-				</div>
-				</div>
-			</div>
+			<section id="about">
+    <img src="images/Our_Story.png"
+         alt="Our Story"
+         style="width:100%; display:block;">
+</section>
 		</div>
 	</section>
 
@@ -221,7 +167,7 @@
 
 
 	<section id="services" class="ftco-section bg-light">
-		<div class="container">
+		<div class="container-fluid px-md-5">
 			<div class="row justify-content-center mb-5 pb-3">
 				<div class="col-md-7 heading-section ftco-animate text-center">
 					<h2 class="mb-4">Our Expert Services</h2>
@@ -230,138 +176,195 @@
 				</div>
 			</div>
 
-			<!-- Service Filter Buttons -->
-			<div class="row justify-content-center mb-5 ftco-animate">
-				<div class="col-md-12">
-					<div class="service-filter-buttons text-center">
-						<button class="filter-btn active" data-filter="haircuts">Haircuts & Styling</button>
-						<button class="filter-btn" data-filter="spa">Hair Spa & Treatments</button>
-						<button class="filter-btn" data-filter="skincare">Skin Care & Grooming</button>
-						<button class="filter-btn" data-filter="bridal">Bridal Makeup</button>
-						<button class="filter-btn" data-filter="party">Party & Special Event Makeovers</button>
-						<button class="filter-btn" data-filter="wellness">Beauty & Wellness Services</button>
+			<div class="row position-relative align-items-stretch">
+				<!-- Service Filter Buttons -->
+				<div class="col-lg-3 col-md-4 mb-4 ftco-animate services-sidebar-col">
+					<div class="service-filter-buttons">
+						<button class="filter-btn active" style="text-align: left;" data-filter="haircuts"> Service Architecture & Technical Specification</button>
+						<button class="filter-btn" style="text-align: left;" data-filter="spa">Precision Hair Styling & Advanced Cuts</button>
+						<button class="filter-btn" style="text-align: left;" data-filter="skincare"> Advanced Chemical Transformations & Hair Coloring</button>
+						<button class="filter-btn" style="text-align: left;" data-filter="bridal"> Holistic Hair Wellness & Therapeutic Spas</button>
+						<button class="filter-btn" style="text-align: left;" data-filter="party">Advanced Skincare & Complexion Refining</button>
+						<button class="filter-btn" style="text-align: left;" data-filter="wellness">Luxury Hand & Feet Therapies</button>
 					</div>
 				</div>
-			</div>
 
-			<!-- Staff Cards Carousel -->
-			<div class="row position-relative">
-				<div class="col-12">
-					<div class="staff-carousel-wrapper">
+				<!-- Staff Cards Carousel -->
+				<div class="col-lg-9 col-md-8">
+					<div class="staff-carousel-wrapper" style="max-width: 100%; padding-top: 0;">
 						<div class="staff-carousel" id="staffCarousel">
-							<!-- Haircuts & Styling -->
+							<!-- Men's Grooming, Beard & Shave Rituals -->
 							<div class="d-flex mb-sm-4 staff-card" data-category="haircuts">
 								<div class="staff w-100">
 									<div class="img mb-4 mx-auto" style="background-image: url(images/menhaircut.png);"></div>
 									<div class="info text-center">
-										<h3><a href="#">Men's Precision Haircut</a></h3>
-										<span class="position">Haircuts & Styling</span>
+										<h3><a href="#">Signature Beard Styling</a></h3>
+										<span class="position">Men's Grooming & Beard</span>
 										<div class="text">
-											<p>Expert precision haircut tailored to your style and facial features for a sharp look.</p>
+											<p>Ergonomic structural analysis followed by advanced clipper-and-scissor trimming, razor edge contouring, and infusion of lightweight argan/jojoba growth oils for sharp structural styling.</p>
 										</div>
 										<a href="#" class="btn-view-details">View Details</a>
-
 									</div>
 								</div>
 							</div>
 							<div class="d-flex mb-sm-4 staff-card" data-category="haircuts">
 								<div class="staff w-100">
-									<div class="img mb-4 mx-auto" style="background-image: url(images/womenhaircut.png);"></div>
+									<div class="img mb-4 mx-auto" style="background-image: url(images/menhaircut.png);"></div>
 									<div class="info text-center">
-										<h3><a href="#">Women's Haircut & Blow Dry</a></h3>
-										<span class="position">Haircuts & Styling</span>
+										<h3><a href="#">The Royal Beard Spa</a></h3>
+										<span class="position">Men's Grooming & Beard</span>
 										<div class="text">
-											<p>Modern haircuts and trendy styling techniques for all hair types with flawless blow dry.</p>
+											<p>Multi-phase clinical rejuvenation: Antimicrobial wash, natural walnut micro-exfoliating skin scrub, charcoal or clay clarifying mask, intensive oil application, targeted micro-steam humidification, and an intensive 15-minute cranial blood-circulation massage.</p>
 										</div>
 										<a href="#" class="btn-view-details">View Details</a>
-
 									</div>
 								</div>
 							</div>
 							<div class="d-flex mb-sm-4 staff-card" data-category="haircuts">
 								<div class="staff w-100">
-									<div class="img mb-4 mx-auto" style="background-image: url(images/haircoloring.png);"></div>
+									<div class="img mb-4 mx-auto" style="background-image: url(images/menhaircut.png);"></div>
 									<div class="info text-center">
-										<h3><a href="#">Hair Coloring & Styling</a></h3>
-										<span class="position">Haircuts & Styling</span>
+										<h3><a href="#">Beard Trim</a></h3>
+										<span class="position">Men's Grooming & Beard</span>
 										<div class="text">
-											<p>Master of hair coloring techniques including balayage, ombre, and highlights.</p>
+											<p>Classic baseline maintenance including length equalization, cleaning of lines along the cheek and neck, and topical hydration balm finish.</p>
 										</div>
 										<a href="#" class="btn-view-details">View Details</a>
-
 									</div>
 								</div>
 							</div>
 							<div class="d-flex mb-sm-4 staff-card" data-category="haircuts">
 								<div class="staff w-100">
-									<div class="img mb-4 mx-auto" style="background-image: url(images/kidshaircut.png);"></div>
+									<div class="img mb-4 mx-auto" style="background-image: url(images/menhaircut.png);"></div>
 									<div class="info text-center">
-										<h3><a href="#">Kids Haircut & Styling</a></h3>
-										<span class="position">Haircuts & Styling</span>
+										<h3><a href="#">Beard & Moustache Custom Color</a></h3>
+										<span class="position">Men's Grooming & Beard</span>
 										<div class="text">
-											<p>Gentle and fun styling experience ensuring your kids look their absolute best.</p>
+											<p>High-speed, ammonia-free root-deep pigment application. Delivers 100% natural-looking grey coverage blending smoothly with original underlying hair tones.</p>
 										</div>
 										<a href="#" class="btn-view-details">View Details</a>
-
+									</div>
+								</div>
+							</div>
+							<div class="d-flex mb-sm-4 staff-card" data-category="haircuts">
+								<div class="staff w-100">
+									<div class="img mb-4 mx-auto" style="background-image: url(images/menhaircut.png);"></div>
+									<div class="info text-center">
+										<h3><a href="#">The Classic Shave</a></h3>
+										<span class="position">Men's Grooming & Beard</span>
+										<div class="text">
+											<p>Traditional single-pass wet shave using premium moisturizing lather, skin prep, precision blade glide, and cooling witch hazel post-shave protection.</p>
+										</div>
+										<a href="#" class="btn-view-details">View Details</a>
+									</div>
+								</div>
+							</div>
+							<div class="d-flex mb-sm-4 staff-card" data-category="haircuts">
+								<div class="staff w-100">
+									<div class="img mb-4 mx-auto" style="background-image: url(images/menhaircut.png);"></div>
+									<div class="info text-center">
+										<h3><a href="#">Hot Towel Shave</a></h3>
+										<span class="position">Men's Grooming & Beard</span>
+										<div class="text">
+											<p>Engineered for razor-bump prone skin. Multiple rounds of botanical hot towel steaming, rich emollient protective pre-shave cream lathering, slow straight-razor precision sweeps, cold-stone closing compression, and full-spectrum calming head massage.</p>
+										</div>
+										<a href="#" class="btn-view-details">View Details</a>
 									</div>
 								</div>
 							</div>
 
-							<!-- Hair Spa & Treatments -->
-							<div class="d-flex mb-sm-4 staff-card" data-category="spa" style="display: none;">
-								<div class="staff w-100">
-									<div class="img mb-4 mx-auto" style="background-image: url(images/spaandscalp.png);"></div>
-									<div class="info text-center">
-										<h3><a href="#">Men's Hair Spa & Scalp Care</a></h3>
-										<span class="position">Hair Spa & Treatments</span>
-										<div class="text">
-											<p>Therapeutic treatments focusing on deep scalp care and rejuvenation.</p>
-										</div>
-										<a href="#" class="btn-view-details">View Details</a>
-
-									</div>
-								</div>
+							<!-- Precision Hair Styling & Advanced Cuts -->
+				<div class="d-flex mb-sm-4 staff-card" data-category="spa" style="display: none;">
+					<div class="staff w-100">
+						<div class="img mb-4 mx-auto" style="background-image: url(images/menhaircut.png);"></div>
+						<div class="info text-center">
+							<h3><a href="#">Haircut Regular (Adult)</a></h3>
+							<span class="position">Precision Hair Styling</span>
+							<div class="text">
+								<p>Standard maintenance cuts, perimeter tidying, professional scissor or clipper execution, completed with a soothing structural blow-dry styling.</p>
 							</div>
-							<div class="d-flex mb-sm-4 staff-card" data-category="spa" style="display: none;">
-								<div class="staff w-100">
-									<div class="img mb-4 mx-auto" style="background-image: url(images/spaandconditioning.png);"></div>
-									<div class="info text-center">
-										<h3><a href="#">Hair Spa & Deep Cond.</a></h3>
-										<span class="position">Hair Spa & Treatments</span>
-										<div class="text">
-											<p>Intensive deep conditioning therapies to restore natural hair vitality.</p>
-										</div>
-										<a href="#" class="btn-view-details">View Details</a>
-
-									</div>
-								</div>
+							<a href="#" class="btn-view-details">View Details</a>
+						</div>
+					</div>
+				</div>
+				<div class="d-flex mb-sm-4 staff-card" data-category="spa" style="display: none;">
+					<div class="staff w-100">
+						<div class="img mb-4 mx-auto" style="background-image: url(images/womenhaircut.png);"></div>
+						<div class="info text-center">
+							<h3><a href="#">Haircut Advanced (Adult)</a></h3>
+							<span class="position">Precision Hair Styling</span>
+							<div class="text">
+								<p>High-fashion structural transformation: customized texturing, fading, texturized layers, or personalized facial structure profiling with full style consultation.</p>
 							</div>
-							<div class="d-flex mb-sm-4 staff-card" data-category="spa" style="display: none;">
-								<div class="staff w-100">
-									<div class="img mb-4 mx-auto" style="background-image: url(images/keratin.png);"></div>
-									<div class="info text-center">
-										<h3><a href="#">Keratin / Smoothening</a></h3>
-										<span class="position">Hair Spa & Treatments</span>
-										<div class="text">
-											<p>Professional smoothening treatments for perfectly silky and manageable hair.</p>
-										</div>
-										<a href="#" class="btn-view-details">View Details</a>
-
-									</div>
-								</div>
+							<a href="#" class="btn-view-details">View Details</a>
+						</div>
+					</div>
+				</div>
+				<div class="d-flex mb-sm-4 staff-card" data-category="spa" style="display: none;">
+					<div class="staff w-100">
+						<div class="img mb-4 mx-auto" style="background-image: url(images/kidshaircut.png);"></div>
+						<div class="info text-center">
+							<h3><a href="#">Kids Haircut Regular</a></h3>
+							<span class="position">Precision Hair Styling</span>
+							<div class="text">
+								<p>Gentle, rapid, and playful styling for children under 12. Prioritizes security, speed, and clean, manageable classic cuts.</p>
 							</div>
-							<div class="d-flex mb-sm-4 staff-card" data-category="spa" style="display: none;">
-								<div class="staff w-100">
-									<div class="img mb-4 mx-auto" style="background-image: url(images/kidshairnourishment.png);"></div>
-									<div class="info text-center">
-										<h3><a href="#">Kids Hair Nourishment</a></h3>
-										<span class="position">Hair Spa & Treatments</span>
-										<div class="text">
-											<p>Safe and natural nourishment treatments suitable for delicate hair.</p>
-										</div>
-										<a href="#" class="btn-view-details">View Details</a>
-
-									</div>
+							<a href="#" class="btn-view-details">View Details</a>
+						</div>
+					</div>
+				</div>
+				<div class="d-flex mb-sm-4 staff-card" data-category="spa" style="display: none;">
+					<div class="staff w-100">
+						<div class="img mb-4 mx-auto" style="background-image: url(images/kidshaircut.png);"></div>
+						<div class="info text-center">
+							<h3><a href="#">Kids Haircut Advanced</a></h3>
+							<span class="position">Precision Hair Styling</span>
+							<div class="text">
+								<p>Trendy model styling, complex texturing, or mini-fades for fashion-forward children. Includes mild child-safe styling paste application.</p>
+							</div>
+							<a href="#" class="btn-view-details">View Details</a>
+						</div>
+					</div>
+				</div>
+				<div class="d-flex mb-sm-4 staff-card" data-category="spa" style="display: none;">
+					<div class="staff w-100">
+						<div class="img mb-4 mx-auto" style="background-image: url(images/menhaircut.png);"></div>
+						<div class="info text-center">
+							<h3><a href="#">Head Shave Premium</a></h3>
+							<span class="position">Precision Hair Styling</span>
+							<div class="text">
+								<p>Ultra-close traditional head shaving utilizing pre-shave lubricating oils, multi-directional clean shaves, and continuous post-shave scalp hydration.</p>
+							</div>
+							<a href="#" class="btn-view-details">View Details</a>
+						</div>
+					</div>
+				</div>
+				<div class="d-flex mb-sm-4 staff-card" data-category="spa" style="display: none;">
+					<div class="staff w-100">
+						<div class="img mb-4 mx-auto" style="background-image: url(images/spaandconditioning.png);"></div>
+						<div class="info text-center">
+							<h3><a href="#">Classic Hair Wash</a></h3>
+							<span class="position">Precision Hair Styling</span>
+							<div class="text">
+								<p>Cleansing of the hair shaft and scalp utilizing temperature-balanced water, premium shampoo tailored to hair density, and balancing conditioner.</p>
+							</div>
+							<a href="#" class="btn-view-details">View Details</a>
+						</div>
+					</div>
+				</div>
+				<div class="d-flex mb-sm-4 staff-card" data-category="spa" style="display: none;">
+					<div class="staff w-100">
+						<div class="img mb-4 mx-auto" style="background-image: url(images/keratin.png);"></div>
+						<div class="info text-center">
+							<h3><a href="#">Treatment Base Wash</a></h3>
+							<span class="position">Precision Hair Styling</span>
+							<div class="text">
+								<p>Specifically formulated for keratin-treated, heavily lightened, chemically straightened, or color-processed hair. Utilizes strictly sulfate-free and sodium-chloride-free protein infusions.</p>
+							</div>
+							<a href="#" class="btn-view-details">View Details</a>
+						</div>
+					</div>
+				</div>					</div>
 								</div>
 							</div>
 
