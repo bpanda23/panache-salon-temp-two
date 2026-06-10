@@ -8674,7 +8674,7 @@ button.bg-dark:focus {
 
 .mb-5,
 .my-5 {
-  margin-bottom: 3rem !important;
+  /* margin-bottom: 3rem !important; */
 }
 
 .ml-5,
@@ -8770,7 +8770,7 @@ button.bg-dark:focus {
 
 .pb-3,
 .py-3 {
-  padding-bottom: 1rem !important;
+  /* padding-bottom: 1rem !important; */
 }
 
 .pl-3,
@@ -11887,13 +11887,13 @@ textarea.form-control {
 .ftco-counter .text strong.number {
   font-weight: 400;
   font-size: 30px;
-  color: #c5a059;
+  color: #120c01;
 }
 
 .ftco-counter .text span {
-  font-weight: 400;
-  font-size: 14px;
-  color: rgba(0, 0, 0, 0.7);
+  font-weight: 600;
+  font-size: 16px;
+  color: rgba(6 6 0 / 70%);
 }
 
 @media (max-width: 767.98px) {
