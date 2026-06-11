@@ -199,16 +199,14 @@ h1, h2, h3, h4, h5, h6, .heading-section h2 {
 
 .staff .img {
     border: 4px solid var(--gold-primary);
-    box-shadow: 
-        0 15px 25px rgba(0, 0, 0, 0.6),
-        inset 0 0 15px rgba(212, 175, 55, 0.3);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6), inset 0 0 15px rgba(212, 175, 55, 0.3);
     transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
-    border-radius: 50%;
-    margin: 0 auto 15px auto;
-    width: 90px;
-    height: 90px;
-    transform: translateZ(40px); /* 3D pop out effect */
-    background-position: top center;
+    border-radius: 0%;
+    /* margin: 0 auto 15px auto; */
+    width: 100%;
+    height: 191px;
+    transform: translateZ(39px);
+    /* background-position: top center; */
     background-size: cover;
 }
 
@@ -275,12 +273,13 @@ h1, h2, h3, h4, h5, h6, .heading-section h2 {
 }
 
 .staff .info .text p {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     color: #d0d0d0;
     line-height: 1.6;
     margin-bottom: 15px;
-    font-weight: 300;
+    font-weight: 600;
     text-align: center;
+    font-family: sans-serif;
 }
 
 .btn-view-details {
