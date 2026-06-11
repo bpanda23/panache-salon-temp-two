@@ -163,10 +163,10 @@ h1, h2, h3, h4, h5, h6, .heading-section h2 {
         15px 15px 25px rgba(0, 0, 0, 0.6), 
         -5px -5px 15px rgba(255, 255, 255, 0.03),
         inset 1px 1px 2px rgba(255, 255, 255, 0.1);
-    transform-style: preserve-3d;
+    transform-style: flat;
     position: relative;
     z-index: 1;
-    overflow: visible;
+    overflow: hidden;
     /* Flex column so button always pins to bottom */
     display: flex;
     flex-direction: column;
@@ -185,7 +185,7 @@ h1, h2, h3, h4, h5, h6, .heading-section h2 {
 }
 
 .staff:hover {
-    transform: translateY(-12px) scale(1.02);
+    transform: translateY(-6px) scale(1.02);
     box-shadow: 
         0 25px 45px rgba(0, 0, 0, 0.8), 
         0 0 35px rgba(212, 175, 55, 0.25),
@@ -205,19 +205,19 @@ h1, h2, h3, h4, h5, h6, .heading-section h2 {
     /* margin: 0 auto 15px auto; */
     width: 100%;
     height: 191px;
-    transform: translateZ(39px);
+    transform: none;
     /* background-position: top center; */
     background-size: cover;
 }
 
 .staff:hover .img {
-    transform: translateZ(60px) scale(1.1);
+    transform: scale(1.05);
     border-color: var(--gold-light);
     box-shadow: 0 20px 40px rgba(212, 175, 55, 0.5);
 }
 
 .staff .info {
-    transform: translateZ(30px);
+    transform: none;
     transition: transform 0.5s ease;
     /* Flex column so text grows and button pins to bottom */
     display: flex;
@@ -228,7 +228,7 @@ h1, h2, h3, h4, h5, h6, .heading-section h2 {
 }
 
 .staff:hover .info {
-    transform: translateZ(45px);
+    transform: none;
 }
 
 .staff .info h3 {
@@ -576,11 +576,11 @@ h1, h2, h3, h4, h5, h6, .heading-section h2 {
 /* Staff Carousel Wrapper */
 .staff-carousel-wrapper {
     position: relative;
-    padding: 10px 15px 20px 15px;
+    padding: 20px 20px 20px 20px;
     margin: 0;
     height: 780px;
     overflow-y: auto;
-    overflow-x: hidden;
+    overflow-x: visible;
     /* Premium gold scrollbar */
     scrollbar-width: thin;
     scrollbar-color: var(--gold-primary) rgba(255,255,255,0.06);
@@ -611,6 +611,7 @@ h1, h2, h3, h4, h5, h6, .heading-section h2 {
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
     justify-content: center;
+    padding: 10px 6px 10px 6px;
 }
 
 @keyframes fadeIn {
