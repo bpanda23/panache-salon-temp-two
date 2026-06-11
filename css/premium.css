@@ -436,7 +436,14 @@ h1, h2, h3, h4, h5, h6, .heading-section h2 {
 }
 
 .ftco-section {
-   
+    padding-top: 5em;
+    padding-bottom: 5em;
+}
+
+/* Services section — ensure the fixed-height scroll panel never bleeds into next section */
+#services {
+    padding-bottom: 6em;
+    overflow: visible;
 }
 
 .heading-section .mb-4 {
@@ -569,9 +576,34 @@ h1, h2, h3, h4, h5, h6, .heading-section h2 {
 /* Staff Carousel Wrapper */
 .staff-carousel-wrapper {
     position: relative;
-    padding: 20px 50px;
-    overflow: hidden;
+    padding: 10px 15px 20px 15px;
     margin: 0;
+    height: 780px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    /* Premium gold scrollbar */
+    scrollbar-width: thin;
+    scrollbar-color: var(--gold-primary) rgba(255,255,255,0.06);
+    border-radius: 16px;
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(197,160,89,0.1);
+}
+
+/* Webkit scrollbar styling */
+.staff-carousel-wrapper::-webkit-scrollbar {
+    width: 6px;
+}
+.staff-carousel-wrapper::-webkit-scrollbar-track {
+    background: rgba(255,255,255,0.05);
+    border-radius: 3px;
+}
+.staff-carousel-wrapper::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--gold-primary), var(--gold-dark));
+    border-radius: 3px;
+    box-shadow: 0 0 6px rgba(197,160,89,0.4);
+}
+.staff-carousel-wrapper::-webkit-scrollbar-thumb:hover {
+    background: var(--gold-light);
 }
 
 .staff-carousel {
@@ -592,37 +624,17 @@ h1, h2, h3, h4, h5, h6, .heading-section h2 {
     }
 }
 
-/* Carousel Controls */
+/* Carousel Controls — hidden */
 .carousel-control {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: var(--gold-primary);
-    border: none;
-    color: #000;
-    width: 45px;
-    height: 45px;
-    border-radius: 0;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    transition: var(--transition-smooth);
-    z-index: 10;
-}
-
-.carousel-control:hover {
-    background: var(--gold-light);
-    transform: translateY(-50%) scale(1.1);
+    display: none !important;
 }
 
 .carousel-control.prev {
-    left: 5px;
+    display: none !important;
 }
 
 .carousel-control.next {
-    right: 5px;
+    display: none !important;
 }
 
 /* Carousel Dots/Pagination */
