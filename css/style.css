@@ -11774,6 +11774,7 @@ textarea.form-control {
   font-size: 24px;
   font-weight: 400;
   text-transform: uppercase;
+  margin-top:11px;
 }
 
 @media (max-width: 767.98px) {
@@ -11863,7 +11864,7 @@ textarea.form-control {
   width: 100px;
   height: 100px;
   margin: 0 auto;
-  background: #fff;
+  background: brown;
   position: relative;
   border: 1px solid #f0f0f0;
   margin-bottom: 20px;
@@ -11990,6 +11991,7 @@ textarea.form-control {
 
 .block-23 ul li span {
   color: rgba(255, 255, 255, 0.7);
+  font-size: 18px;
 }
 
 .block-23 ul li .icon,
@@ -12581,4 +12583,186 @@ textarea.form-control {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px;
   }
+}
+
+/* Mascot Styles */
+.mascot-container {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    pointer-events: none;
+        font-family: "Work Sans", sans-serif;
+    font-size: large;
+}
+
+.mascot-container * {
+    pointer-events: auto;
+}
+
+.mascot-img-wrapper {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation: float 3s ease-in-out infinite;
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #56bbbf;
+    background: #0edeec;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.mascot-img-wrapper:hover {
+    transform: scale(1.1);
+}
+
+.mascot-img-wrapper img {
+    width: 120%;
+    height: 120%;
+    object-fit: cover;
+    object-position: center;
+    margin-left: -10%;
+    margin-top: -10%;
+}
+
+.speech-bubble {
+    background: #fff;
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    font-family: 'dandys', cursive;
+    font-size: 1.2rem;
+    color: #bf9456;
+    position: relative;
+    animation: fadeInOut 5s ease-in-out infinite;
+}
+
+.speech-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    right: 30px;
+    border-width: 10px 10px 0;
+    border-style: solid;
+    border-color: #fff transparent transparent;
+}
+
+.mascot-menu {
+    position: absolute;
+    bottom: 120px;
+    right: 0;
+    width: 250px;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    transform: translateY(20px) scale(0.9);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 1001;
+}
+
+.mascot-menu.active {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+    visibility: visible;
+}
+
+.mascot-menu h5 {
+    font-family: 'Playfair Display', serif;
+    color: #000000;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #bf9456;
+    padding-bottom: 10px;
+}
+
+.mascot-menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mascot-menu-list li {
+    margin-bottom: 10px;
+}
+
+.mascot-menu-list li a {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    border-radius: 12px;
+    color: #252525;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.mascot-menu-list li a i {
+    margin-right: 12px;
+    color: #bf9456;
+    font-size: 1.1rem;
+}
+
+.mascot-menu-list li a:hover {
+    background: #bf9456;
+    color: #fff;
+    transform: translateX(-5px);
+}
+
+.mascot-menu-list li a:hover i {
+    color: #fff;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes fadeInOut {
+
+    0%,
+    100% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    10%,
+    90% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+    .mascot-container {
+        right: 15px;
+        bottom: 15px;
+    }
+
+    .mascot-img-wrapper {
+        width: 80px;
+        height: 80px;
+    }
+
+    .mascot-menu {
+        width: 200px;
+        bottom: 100px;
+    }
 }
