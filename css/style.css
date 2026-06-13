@@ -12623,11 +12623,11 @@ textarea.form-control {
 
 .mascot-img-wrapper img {
     width: 120%;
-    height: 120%;
+    height: 142%;
     object-fit: cover;
     object-position: center;
     margin-left: -10%;
-    margin-top: -10%;
+    
 }
 
 .speech-bubble {
