@@ -420,3 +420,120 @@
             $('#scrollModal').removeClass('active');
         }
     });
+
+// Dynamic Custom Mobile Drawer Navigation
+$(document).ready(function() {
+    // Only execute if we have a navbar on the page
+    if ($('#ftco-navbar').length > 0) {
+        // Create mobile header bar
+        var mobileHeader = $('<div class="mobile-header"></div>');
+        var brandLink = $('<a href="index.html" class="mobile-brand">Panache Salon</a>');
+        var toggleBtn = $('<button class="mobile-menu-toggle" aria-label="Toggle Menu"><span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span></button>');
+        
+        mobileHeader.append(brandLink).append(toggleBtn);
+        $('body').append(mobileHeader);
+        
+        // Create drawer and overlay
+        var drawer = $('<div class="mobile-drawer"></div>');
+        var overlay = $('<div class="mobile-drawer-overlay"></div>');
+        
+        var drawerHeader = $('<div class="drawer-header"><span class="drawer-logo">Panache Salon</span><button class="close-drawer">&times;</button></div>');
+        var drawerNav = $('<ul class="mobile-drawer-nav"></ul>');
+        
+        // Read links from the desktop navbar
+        $('#ftco-navbar .navbar-nav .nav-item').each(function() {
+            var originalLink = $(this).find('a');
+            if (originalLink.length > 0) {
+                var href = originalLink.attr('href');
+                var text = originalLink.text();
+                var isActive = $(this).hasClass('active') ? 'active' : '';
+                
+                var li = $('<li class="drawer-nav-item ' + isActive + '"></li>');
+                var a = $('<a href="' + href + '">' + text + '</a>');
+                
+                // Add click handlers for anchor links to close the drawer
+                a.on('click', function(e) {
+                    // If it is a hash link, handle smooth scroll
+                    if (href && href.startsWith('#')) {
+                        e.preventDefault();
+                        drawer.removeClass('active');
+                        overlay.removeClass('active');
+                        toggleBtn.removeClass('active');
+                        $('body').css('overflow', '');
+                        
+                        var target = $(href);
+                        if (target.length > 0) {
+                            $('html, body').animate({
+                                scrollTop: target.offset().top
+                            }, 700, 'easeInOutExpo');
+                        }
+                    } else {
+                        // Normal link, drawer will close as page redirects
+                        drawer.removeClass('active');
+                        overlay.removeClass('active');
+                        toggleBtn.removeClass('active');
+                        $('body').css('overflow', '');
+                    }
+                });
+                
+                li.append(a);
+                drawerNav.append(li);
+            }
+        });
+        
+        drawer.append(drawerHeader).append(drawerNav);
+        
+        // Add footer to drawer
+        var drawerFooter = $('<div class="drawer-footer"><a href="#appointment" class="btn btn-primary btn-block btn-book-drawer">Book Now</a></div>');
+        drawerFooter.find('.btn-book-drawer').on('click', function(e) {
+            e.preventDefault();
+            drawer.removeClass('active');
+            overlay.removeClass('active');
+            toggleBtn.removeClass('active');
+            $('body').css('overflow', '');
+            
+            var target = $('#appointment');
+            if (target.length > 0) {
+                $('html, body').animate({
+                    scrollTop: target.offset().top
+                }, 700, 'easeInOutExpo');
+            } else {
+                window.location.href = 'index.html#appointment';
+            }
+        });
+        drawer.append(drawerFooter);
+        
+        $('body').append(drawer).append(overlay);
+        
+        // Event Listeners for toggle
+        toggleBtn.on('click', function() {
+            var isOpen = drawer.hasClass('active');
+            if (isOpen) {
+                drawer.removeClass('active');
+                overlay.removeClass('active');
+                toggleBtn.removeClass('active');
+                $('body').css('overflow', '');
+            } else {
+                drawer.addClass('active');
+                overlay.addClass('active');
+                toggleBtn.addClass('active');
+                $('body').css('overflow', 'hidden');
+            }
+        });
+        
+        overlay.on('click', function() {
+            drawer.removeClass('active');
+            overlay.removeClass('active');
+            toggleBtn.removeClass('active');
+            $('body').css('overflow', '');
+        });
+        
+        drawerHeader.find('.close-drawer').on('click', function() {
+            drawer.removeClass('active');
+            overlay.removeClass('active');
+            toggleBtn.removeClass('active');
+            $('body').css('overflow', '');
+        });
+    }
+});
+
