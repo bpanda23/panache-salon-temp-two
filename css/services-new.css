@@ -1,0 +1,281 @@
+.service-nav-btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start !important; /* Force icon to the left */
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    cursor: pointer;
+    position: relative;
+    height: 60px;
+    width: 60px;
+    border-radius: 30px !important;
+    transition: width 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), background 0.5s ease, box-shadow 0.5s ease;
+    overflow: hidden;
+    margin: 0 10px;
+    box-shadow: none !important;
+}
+
+.service-nav-btn::before, .service-nav-btn::after {
+    display: none !important;
+}
+
+.service-nav-btn .icon-pin {
+    width: 60px;
+    height: 60px;
+    min-width: 60px;
+    border-radius: 50% !important;
+    background: var(--gold-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.service-nav-btn .icon-pin svg {
+    width: 28px;
+    height: 28px;
+    fill: #000;
+    transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.custom-icon-img {
+    width: 34px;
+    height: 34px;
+    object-fit: contain;
+    transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.service-nav-btn .btn-text-wrapper {
+    position: absolute;
+    left: 60px;
+    top: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+    padding-left: 15px;
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+    white-space: nowrap;
+    z-index: 1;
+}
+
+.service-nav-btn .btn-text {
+    color: #fff !important;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700 !important;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.service-nav-btn.active .btn-text {
+    color: #fff !important; /* Force override premium.css */
+}
+
+.service-nav-btn:hover, .service-nav-btn.active {
+    width: 260px;
+    background: rgba(20, 20, 20, 0.95) !important;
+    border-radius: 30px !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6), inset 0 0 0 1px rgba(197, 160, 89, 0.4) !important;
+    transform: none !important;
+}
+
+.service-nav-btn:hover .icon-pin, .service-nav-btn.active .icon-pin {
+    background: linear-gradient(135deg, var(--gold-light), var(--gold-dark)) !important;
+    border-radius: 50% !important;
+    box-shadow: 0 0 20px rgba(197, 160, 89, 0.5);
+}
+
+.service-nav-btn:hover .icon-pin svg, .service-nav-btn.active .icon-pin svg,
+.service-nav-btn:hover .custom-icon-img, .service-nav-btn.active .custom-icon-img {
+    transform: scale(1.15);
+}
+
+.service-nav-btn:hover .btn-text-wrapper, .service-nav-btn.active .btn-text-wrapper {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 0.1s;
+}
+
+/* Responsiveness for buttons */
+@media (max-width: 991px) {
+    .services-nav-scroll {
+        justify-content: flex-start;
+        padding-bottom: 10px;
+    }
+    .service-nav-btn {
+        margin: 0 5px;
+    }
+    .service-nav-btn:hover, .service-nav-btn.active {
+        width: 220px;
+    }
+    .service-nav-btn .btn-text {
+        font-size: 0.85rem;
+    }
+}
+
+/* Detailed Service Carousel Section */
+.detailed-service-carousel-section {
+    background: #080604;
+    color: #f4efe4;
+    padding: 80px 0;
+}
+.ds-left-panel {
+    transition: opacity 0.8s cubic-bezier(0.2, 1, 0.3, 1), transform 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+.ds-image-wrapper {
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.6), 0 0 40px rgba(197, 160, 89, 0.15);
+    border: 1px solid rgba(197, 160, 89, 0.3);
+    transition: transform 0.8s cubic-bezier(0.2, 1, 0.3, 1), box-shadow 0.8s ease;
+}
+.ds-image-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%;
+    width: 50%; height: 100%;
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0) 100%);
+    transform: skewX(-25deg);
+    transition: none;
+    z-index: 2;
+    pointer-events: none;
+}
+.ds-image-wrapper:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 40px 70px rgba(0,0,0,0.8), 0 0 80px rgba(197, 160, 89, 0.35);
+}
+.ds-image-wrapper:hover::after {
+    left: 150%;
+    transition: left 1s cubic-bezier(0.2, 1, 0.3, 1);
+}
+.ds-image {
+    width: 100%;
+    height: 380px !important;
+    object-fit: cover;
+    transition: transform 10s ease-in-out;
+}
+.ds-image-wrapper:hover .ds-image {
+    transform: scale(1.06);
+}
+.ds-desc-wrapper {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(197, 160, 89, 0.15);
+    border-radius: 24px;
+    padding: 30px;
+    margin-top: 20px;
+}
+.ds-category {
+    display: inline-block;
+    color: var(--gold-primary);
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.ds-title {
+    font-size: 2.2rem !important;
+    font-family: 'Playfair Display', Georgia, serif;
+    color: #fff;
+    font-weight: 700;
+    margin-top: 10px;
+}
+.ds-description {
+    font-size: 1.05rem !important;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.8;
+    margin-bottom: 0;
+}
+
+/* Right Side Panel */
+.ds-right-panel {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(197, 160, 89, 0.15);
+    border-radius: 24px;
+    padding: 30px 20px;
+    height: 100%;
+}
+.ds-side-heading {
+    font-family: 'Playfair Display', serif;
+    color: var(--gold-primary);
+    font-size: 1.8rem;
+    text-align: center;
+    border-bottom: 1px solid rgba(197, 160, 89, 0.2);
+    padding-bottom: 15px;
+}
+.ds-sub-options-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+}
+.ds-sub-option-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0,0,0,0.4);
+    border: 1px solid rgba(255,255,255,0.08);
+    color: rgba(255,255,255,0.7);
+    padding: 16px 20px;
+    border-radius: 16px;
+    font-size: 0.95rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+}
+.ds-sub-option-btn .btn-arrow {
+    opacity: 0;
+    transform: translateX(-15px);
+    transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    color: #fff;
+}
+.ds-sub-option-btn:hover {
+    background: rgba(197, 160, 89, 0.15);
+    color: #fff;
+    border-color: rgba(197, 160, 89, 0.5);
+    transform: translateX(8px) scale(1.02);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+.ds-sub-option-btn:hover .btn-arrow {
+    opacity: 0.5;
+    transform: translateX(-5px);
+}
+.ds-sub-option-btn.active {
+    background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold-dark) 100%);
+    color: #000 !important;
+    border-color: transparent;
+    box-shadow: 0 10px 25px rgba(197, 160, 89, 0.4);
+    transform: translateX(10px);
+    font-weight: 700;
+}
+.ds-sub-option-btn.active .btn-text {
+    color: #000 !important;
+}
+.ds-sub-option-btn.active .btn-arrow {
+    opacity: 1;
+    transform: translateX(0);
+    color: #000 !important;
+}
+
+.fade-out {
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+}
+.fade-in {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
