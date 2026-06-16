@@ -104,17 +104,170 @@
     </div>
   </div>
   
+  <section id="detailed-service-carousel" class="ftco-section detailed-service-carousel-section" style="display: none;">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Left side: Image -->
+        <div class="col-lg-6 mb-5 mb-lg-0 ftco-animate">
+          <div class="ds-image-wrapper">
+            <img src="images/Signature Beard Styling.png" alt="Service" id="dsImage" class="img-fluid ds-image">
+          </div>
+        </div>
+        <!-- Right side: Content -->
+        <div class="col-lg-6 pl-lg-5 ftco-animate">
+          <div class="ds-content-wrapper">
+            <span class="ds-category" id="dsCategory">MEN'S GROOMING & BEARD</span>
+            <h2 class="ds-title mb-4" id="dsTitle">Signature Beard Styling</h2>
+            <p class="ds-description mb-5" id="dsDesc">Ergonomic structural analysis followed by advanced clipper-and-scissor trimming, razor edge contouring, and infusion of lightweight argan/jojoba growth oils for sharp structural styling.</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Sub-options for the carousel -->
+      <div class="row mt-5">
+        <div class="col-12">
+          <div class="ds-sub-options-container">
+            <button class="ds-sub-option active" data-index="0">Signature Beard Styling</button>
+            <button class="ds-sub-option" data-index="1">The Royal Beard Spa</button>
+            <button class="ds-sub-option" data-index="2">Beard Trim</button>
+            <button class="ds-sub-option" data-index="3">Beard & Moustache Custom Color</button>
+            <button class="ds-sub-option" data-index="4">The Classic Shave</button>
+            <button class="ds-sub-option" data-index="5">Hot Towel Shave</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <script>
-    // Smooth scroll and active state management for the new buttons
+    // Data for the carousel
+    const serviceData = [
+      {
+        title: "Signature Beard Styling",
+        category: "MEN'S GROOMING & BEARD",
+        desc: "Ergonomic structural analysis followed by advanced clipper-and-scissor trimming, razor edge contouring, and infusion of lightweight argan/jojoba growth oils for sharp structural styling.",
+        img: "images/Signature Beard Styling.png"
+      },
+      {
+        title: "The Royal Beard Spa",
+        category: "MEN'S GROOMING & BEARD",
+        desc: "Multi-phase clinical rejuvenation: Antimicrobial wash, natural walnut micro-exfoliating skin scrub, charcoal or clay clarifying mask, intensive oil application, targeted micro-steam humidification, and an intensive 15-minute cranial blood-circulation massage.",
+        img: "images/Royal Beard Spa (2).png"
+      },
+      {
+        title: "Beard Trim",
+        category: "MEN'S GROOMING & BEARD",
+        desc: "Classic baseline maintenance including length equalization, cleaning of lines along the cheek and neck, and topical hydration balm finish.",
+        img: "images/electri_trimmer.png"
+      },
+      {
+        title: "Beard & Moustache Custom Color",
+        category: "MEN'S GROOMING & BEARD",
+        desc: "High-speed, ammonia-free root-deep pigment application. Delivers 100% natural-looking grey coverage blending smoothly with original underlying hair tones.",
+        img: "images/Moustache Custom.png"
+      },
+      {
+        title: "The Classic Shave",
+        category: "MEN'S GROOMING & BEARD",
+        desc: "Traditional single-pass wet shave using premium moisturizing lather, skin prep, precision blade glide, and cooling witch hazel post-shave protection.",
+        img: "images/Classic Shave.png"
+      },
+      {
+        title: "Hot Towel Shave",
+        category: "MEN'S GROOMING & BEARD",
+        desc: "Engineered for razor-bump prone skin. Multiple rounds of botanical hot towel steaming, rich emollient protective pre-shave cream lathering, slow straight-razor precision sweeps, cold-stone closing compression, and full-spectrum calming head massage.",
+        img: "images/Hot Towel Shave.png"
+      }
+    ];
+
+    let currentIndex = 0;
+    let carouselInterval;
+
+    function updateCarousel(index) {
+      const data = serviceData[index];
+      const imgWrapper = document.querySelector('.ds-image-wrapper');
+      const imgEl = document.getElementById('dsImage');
+      const contentEl = document.querySelector('.ds-content-wrapper');
+      
+      // Animate out
+      imgWrapper.classList.add('fade-out');
+      contentEl.classList.add('fade-out');
+      
+      setTimeout(() => {
+        // Update content
+        imgEl.src = data.img;
+        document.getElementById('dsCategory').textContent = data.category;
+        document.getElementById('dsTitle').textContent = data.title;
+        document.getElementById('dsDesc').textContent = data.desc;
+        
+        // Animate in
+        imgWrapper.classList.remove('fade-out');
+        contentEl.classList.remove('fade-out');
+      }, 400); // Wait for fade out
+
+      // Update active sub-option button
+      document.querySelectorAll('.ds-sub-option').forEach((btn, idx) => {
+        if(idx === index) btn.classList.add('active');
+        else btn.classList.remove('active');
+      });
+    }
+
+    function startCarousel() {
+      carouselInterval = setInterval(() => {
+        currentIndex = (currentIndex + 1) % serviceData.length;
+        updateCarousel(currentIndex);
+      }, 4000);
+    }
+
+    function resetCarousel() {
+      clearInterval(carouselInterval);
+      startCarousel();
+    }
+
+    // Initialize sub-options click events
+    document.querySelectorAll('.ds-sub-option').forEach((btn, idx) => {
+      btn.addEventListener('click', () => {
+        if(currentIndex === idx) return;
+        currentIndex = idx;
+        updateCarousel(currentIndex);
+        resetCarousel();
+      });
+    });
+
+    // Smooth scroll and active state management for the main sticky buttons
     document.addEventListener("DOMContentLoaded", function() {
       const buttons = document.querySelectorAll(".service-nav-btn");
       buttons.forEach(button => {
         button.addEventListener("click", function() {
           buttons.forEach(btn => btn.classList.remove("active"));
           this.classList.add("active");
-          // Here you can add logic to filter/scroll to the respective section
+          
+          // Logic to show carousel if Beard & Shaving is clicked
+          if (this.getAttribute("data-target") === "service-design") { // It's still using service-design target in HTML
+            document.getElementById("detailed-service-carousel").style.display = "block";
+            // Start the carousel if it's not running
+            clearInterval(carouselInterval);
+            updateCarousel(0);
+            startCarousel();
+            // Smooth scroll to the section
+            window.scrollTo({
+                top: document.getElementById("detailed-service-carousel").offsetTop - 150,
+                behavior: "smooth"
+            });
+          } else {
+             // For other options, hide this carousel (or replace data)
+             document.getElementById("detailed-service-carousel").style.display = "none";
+             clearInterval(carouselInterval);
+          }
         });
       });
+      
+      // Initially simulate a click on the active button to trigger display
+      const activeBtn = document.querySelector(".service-nav-btn.active");
+      if (activeBtn && activeBtn.getAttribute("data-target") === "service-design") {
+          document.getElementById("detailed-service-carousel").style.display = "block";
+          startCarousel();
+      }
     });
   </script>
   <script src="js/jquery.min.js"></script>
