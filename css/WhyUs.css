@@ -127,11 +127,11 @@
 }
 
 /* Reduce extra whitespace between sections on the Why Us page */
-.whyus-hero-section { padding-bottom: 28px; }
-.wu-mission-section { margin-top: -10px; padding-top: 64px; padding-bottom: 44px; padding-left: 28px; padding-right: 28px; }
-.wu-pillars-section { padding-top: 48px; padding-bottom: 56px; margin-top: -14px; }
-.wu-responsibility-section { padding-top: 68px; padding-bottom: 68px; }
-.wu-promise-banner-section { margin-top: -12px; }
+.whyus-hero-section { padding-bottom: 0px; margin-bottom: 0px; }
+.wu-mission-section { margin-top: 0px; padding-top: 20px; padding-bottom: 10px; padding-left: 15px; padding-right: 15px; }
+.wu-pillars-section { padding-top: 10px; padding-bottom: 0px; margin-top: 0px; }
+.wu-responsibility-section { padding-top: 0px !important; padding-bottom: 0px !important; margin-top: 0px; }
+.wu-promise-banner-section { margin-top: 0px; }
 
 
 
@@ -179,7 +179,7 @@
 /* Section Heading */
 .wu-section-heading {
     font-family: 'Playfair Display', Georgia, serif;
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: 700;
     color: #f9e9cd;
     text-align: center;
@@ -191,59 +191,67 @@
     animation: wu-fadeInUp 0.8s ease 0.2s both;
 }
 
-/* Mission Card */
-.wu-mission-card {
-    background: linear-gradient(145deg, rgba(22, 18, 12, 0.96), rgba(12, 10, 7, 0.99));
-    border: 1px solid rgba(197, 160, 89, 0.18);
-    border-radius: 20px;
-    padding: 55px 60px;
-    position: relative;
-    overflow: hidden;
-    transition: border-color 0.5s ease, box-shadow 0.5s ease;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+/* Mission Content */
+.wu-mission-content {
+    text-align: center;
+    padding: 0 15px;
 }
-.wu-mission-card:hover {
-    border-color: rgba(197, 160, 89, 0.45);
-    box-shadow: 0 30px 70px rgba(0,0,0,0.7), 0 0 40px rgba(197,160,89,0.08);
+
+.wu-mission-eyebrow {
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: #c5a059;
+    font-size: 1rem;
+    margin-bottom: 10px;
 }
-.wu-mission-card-accent {
-    position: absolute;
-    left: 0; top: 0; bottom: 0;
-    width: 4px;
-    background: linear-gradient(to bottom, transparent, #c5a059, transparent);
-    border-radius: 20px 0 0 20px;
+
+.wu-mission-heading {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 700;
+    color: #f9e9cd;
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+    line-height: 1.2;
 }
-.wu-mission-card-shimmer {
-    position: absolute;
-    top: 0; left: -100%;
-    width: 50%; height: 100%;
-    background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.04) 50%, transparent 100%);
-    transform: skewX(-15deg);
-    pointer-events: none;
-    animation: wu-shimmer 6s ease-in-out infinite;
+
+.wu-heading-gold {
+    color: #c5a059;
 }
+
+.wu-mission-divider {
+    width: 140px;
+    height: 2px;
+    background: linear-gradient(90deg, rgba(197,160,89,0), rgba(197,160,89,0.8), rgba(197,160,89,0));
+    margin: 0 auto 20px auto;
+}
+
 .wu-mission-body {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.18rem;
+    font-size: 1.35rem;
     color: rgba(244, 239, 228, 0.88);
-    line-height: 2;
-    margin-bottom: 22px;
+    line-height: 1.8;
+    margin-bottom: 15px;
     position: relative;
     z-index: 1;
     transition: color 0.4s ease;
 }
-.wu-mission-body:last-child { margin-bottom: 0; }
-.wu-mission-card:hover .wu-mission-body { color: rgba(255, 255, 255, 0.95); }
 
-/* Core Promise */
+.wu-mission-body:last-child { margin-bottom: 0; }
+.wu-mission-content:hover .wu-mission-body { color: rgba(255, 255, 255, 0.95); }
+
+/* Core Promise stays centered in its own block */
 .wu-core-promise {
-    margin-top: 60px;
+    margin-top: 30px;
     text-align: center;
     position: relative;
-    padding: 50px 60px;
+    padding: 25px 0;
     border-top: 1px solid rgba(197,160,89,0.15);
     border-bottom: 1px solid rgba(197,160,89,0.15);
 }
+
 .wu-quote-mark {
     font-family: 'Playfair Display', serif;
     font-size: 6rem;
@@ -252,27 +260,29 @@
     display: block;
     transition: color 0.5s ease;
 }
-.wu-quote-open { margin-bottom: 20px; }
-.wu-quote-close { margin-top: 10px; text-align: right; }
+
+.wu-quote-open { margin-bottom: 15px; }
+.wu-quote-close { margin-top: 5px; }
+
 .wu-core-promise:hover .wu-quote-mark { color: rgba(197, 160, 89, 0.7); }
-.wu-promise-label {
-    display: block;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.72rem;
-    font-weight: 700;
-    letter-spacing: 4px;
-    color: #c5a059;
-    text-transform: uppercase;
-    margin-bottom: 25px;
-}
+
 .wu-promise-text {
     font-family: 'Playfair Display', Georgia, serif;
-    font-size: 1.35rem;
+    font-size: 1.65rem;
     color: rgba(249, 233, 205, 0.92);
-    line-height: 1.85;
+    line-height: 1.8;
     font-style: italic;
     margin: 0;
     transition: color 0.4s ease;
+}
+.wu-core-promise:hover .wu-promise-text { color: #ffffff; }
+
+.wu-promise-label-script {
+    display: block;
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;
+    color: #c5a059;
+    margin-top: 15px;
 }
 .wu-core-promise:hover .wu-promise-text { color: #ffffff; }
 
@@ -289,261 +299,318 @@
     margin-top: -18px;
 }
 
-
-.wu-pillars-ornament {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    margin-bottom: 18px;
-}
-.wu-ornament-line {
-    display: inline-block;
-    width: 80px; height: 1px;
-    background: linear-gradient(to right, transparent, rgba(197,160,89,0.6), transparent);
-}
-.wu-ornament-icon {
-    font-size: 1.4rem;
-    color: rgba(197,160,89,0.7);
-}
-.wu-pillars-heading {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-size: 2.8rem;
-    font-weight: 700;
-    color: #c5a059;
-    margin-bottom: 0;
-}
-
-/* Pillar Card */
-.wu-pillar-card {
-    background: rgba(255,255,255,0.02);
-    border: 1px solid rgba(197, 160, 89, 0.12);
-    border-radius: 20px;
-    padding: 40px 28px 36px;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-    height: 100%;
-    cursor: default;
-    transition: all 0.55s cubic-bezier(0.2, 1, 0.3, 1);
-    z-index: 1;
-    aspect-ratio: 1 / 1;
-}
-.wu-pillar-card:hover {
-    transform: translateY(-18px);
-    border-color: rgba(197, 160, 89, 0.55);
-    box-shadow: 0 35px 60px rgba(0,0,0,0.55), 0 0 45px rgba(197,160,89,0.12);
-}
-.wu-pillar-number {
-    font-family: 'Playfair Display', serif;
-    font-size: 4rem;
-    font-weight: 700;
-    color: rgba(197,160,89,0.08);
-    line-height: 1;
-    position: absolute;
-    top: 15px; right: 20px;
-    transition: color 0.5s ease;
-}
-.wu-pillar-card:hover .wu-pillar-number { color: rgba(197,160,89,0.2); }
-.wu-pillar-icon {
-    font-size: 3rem;
-    color: #c5a059;
-    margin-bottom: 22px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 80px; height: 80px;
-    border-radius: 50%;
-    border: 1px solid rgba(197,160,89,0.2);
-    transition: all 0.5s ease;
-    position: relative;
-    z-index: 1;
-    animation: wu-pulseBorder 3s ease-in-out infinite;
-}
-.wu-pillar-card:hover .wu-pillar-icon {
-    transform: scale(1.15) rotate(8deg);
-    color: #f9e9cd;
-    background: rgba(197,160,89,0.08);
-    border-color: rgba(197,160,89,0.6);
-    animation: none;
-}
-.wu-pillar-title {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-size: 1.25rem;
-    color: #ffffff;
-    font-weight: 600;
-    margin-bottom: 15px;
-    transition: color 0.4s ease;
-}
-.wu-pillar-card:hover .wu-pillar-title { color: #f9e9cd; }
-.wu-pillar-text {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.06rem;
-    color: rgba(255,255,255,0.68);
-    line-height: 1.9;
-    position: relative; z-index: 1;
-    transition: color 0.4s ease;
-}
-.wu-pillar-card:hover .wu-pillar-text { color: rgba(255,255,255,0.88); }
-.wu-pillar-glow {
-    position: absolute;
-    inset: -20px;
-    background: radial-gradient(circle at 50% 0%, rgba(197,160,89,0.15) 0%, transparent 65%);
-    opacity: 0;
-    transition: opacity 0.5s ease;
-    z-index: 0;
-    pointer-events: none;
-}
-.wu-pillar-card:hover .wu-pillar-glow { opacity: 1; }
-.wu-pillar-sweep {
-    position: absolute;
-    top: 0; left: -100%;
-    width: 50%; height: 2px;
-    background: linear-gradient(90deg, transparent, #c5a059, transparent);
-    transition: left 0.9s ease;
-}
-.wu-pillar-card:hover .wu-pillar-sweep { left: 150%; }
-
-/* =====================================================
-   CORPORATE RESPONSIBILITY SECTION
-   ===================================================== */
- .wu-responsibility-section {
-    position: relative;
-    padding: 88px 0;
-
-    background: url('../images/bg_2.jpg') no-repeat center center fixed;
-    background-size: cover;
-    color: #ffffff;
-    overflow: hidden;
-}
-.wu-resp-overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(8, 6, 4, 0.88);
-    z-index: 1;
-}
-.wu-responsibility-section .container { position: relative; z-index: 2; }
-.wu-resp-badge {
+.wu-section-eyebrow {
     display: inline-block;
     font-family: 'Montserrat', sans-serif;
-    font-size: 0.72rem;
+    font-size: 0.9rem;
     font-weight: 700;
     letter-spacing: 4px;
     color: #c5a059;
     text-transform: uppercase;
-    border: 1px solid rgba(197,160,89,0.35);
-    border-radius: 40px;
-    padding: 8px 28px;
-    margin-bottom: 40px;
-    animation: wu-pulseBorder 4s ease-in-out infinite;
+    margin-bottom: 12px;
 }
-.wu-resp-quote {
+
+.wu-pillars-heading {
     font-family: 'Playfair Display', Georgia, serif;
-    font-size: 1.65rem;
-    color: rgba(197,160,89,0.95);
-    font-style: italic;
-    line-height: 1.95;
-    border: none;
-    padding: 0;
-    margin-bottom: 30px;
-    transition: color 0.4s ease;
-}
-.wu-responsibility-section:hover .wu-resp-quote { color: #ffffff; }
-.wu-resp-signature {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.9rem;
-    color: #c5a059;
-    letter-spacing: 2px;
-    font-weight: 600;
+    font-size: 3.4rem;
+    font-weight: 700;
+    color: #f9e9cd;
+    margin-bottom: 0;
 }
 
 /* =====================================================
-   OUR PROMISE BANNER
+   PILLARS — COMPACT 2×2 FEATURE GRID
+   ===================================================== */
+
+.wu-feat-block {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 36px 40px 36px 56px;
+    background: #0e0b08;
+    border: 1px solid rgba(197,160,89,0.28);
+    border-top: none;
+    border-left: none;
+    min-height: 220px;
+    overflow: hidden;
+    transition: background 0.4s ease;
+    cursor: default;
+}
+.wu-feat-block--alt {
+    background: #0b0905;
+    border-top: 1px solid rgba(197,160,89,0.28);
+    border-bottom: none;
+}
+.wu-feat-block:hover {
+    background: rgba(197,160,89,0.07);
+}
+
+/* Gold left accent bar */
+.wu-feat-accent {
+    position: absolute;
+    left: 0; top: 20%; bottom: 20%;
+    width: 3px;
+    background: linear-gradient(to bottom, transparent, #c5a059, transparent);
+    opacity: 0.5;
+    transition: opacity 0.4s ease, top 0.4s ease, bottom 0.4s ease;
+}
+.wu-feat-block:hover .wu-feat-accent {
+    opacity: 1;
+    top: 0; bottom: 0;
+}
+
+/* Ghost number */
+.wu-feat-num {
+    position: absolute;
+    right: 20px; bottom: 10px;
+    font-family: 'Playfair Display', serif;
+    font-size: 6rem;
+    font-weight: 900;
+    line-height: 1;
+    color: rgba(197,160,89,0.05);
+    pointer-events: none;
+    transition: color 0.4s ease;
+    user-select: none;
+}
+.wu-feat-block:hover .wu-feat-num {
+    color: rgba(197,160,89,0.1);
+}
+
+/* Icon + text side by side */
+.wu-feat-inner {
+    display: flex;
+    align-items: flex-start;
+    gap: 22px;
+    position: relative;
+    z-index: 1;
+}
+
+.wu-feat-icon {
+    flex-shrink: 0;
+    font-size: 3rem;
+    color: #d4aa6a;
+    line-height: 1;
+    margin-top: 4px;
+    transition: transform 0.4s ease;
+}
+.wu-feat-block:hover .wu-feat-icon {
+    transform: scale(1.2);
+}
+
+.wu-feat-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 12px;
+    line-height: 1.3;
+}
+
+.wu-feat-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.15rem;
+    color: rgba(255,255,255,0.82);
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* =====================================================
+   CORPORATE RESPONSIBILITY — BOLD STATEMENT
+   ===================================================== */
+.wu-responsibility-section {
+    position: relative;
+    padding: 40px 0;
+    overflow: hidden;
+    color: #ffffff;
+    background: #060503;
+}
+
+.wu-resp-bg {
+    position: absolute;
+    inset: 0;
+    background: url('../images/bg_2.jpg') no-repeat center center;
+    background-size: cover;
+    z-index: 0;
+}
+
+.wu-resp-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, rgba(3,2,1,0.96) 0%, rgba(8,5,3,0.92) 60%, rgba(14,10,5,0.96) 100%);
+    z-index: 1;
+}
+
+.wu-responsibility-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* The main statement container */
+.wu-resp-statement {
+    text-align: center;
+    max-width: 860px;
+    margin: 0 auto;
+}
+
+/* Header: line — LABEL — line */
+.wu-resp-statement-header {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 32px;
+}
+
+.wu-resp-header-accent {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(197,160,89,0.55));
+}
+.wu-resp-header-accent:last-child {
+    background: linear-gradient(90deg, rgba(197,160,89,0.55), transparent);
+}
+
+.wu-resp-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 5px;
+    color: #c5a059;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+/* Quote area */
+.wu-resp-quote-wrap {
+    position: relative;
+    padding: 0 30px;
+    margin-bottom: 32px;
+}
+
+.wu-resp-bigquote {
+    font-family: 'Playfair Display', serif;
+    font-size: 8rem;
+    line-height: 0.6;
+    color: rgba(197,160,89,0.15);
+    display: block;
+    font-style: normal;
+    user-select: none;
+}
+.wu-resp-bigquote--close {
+    text-align: right;
+    line-height: 0.1;
+    margin-top: -10px;
+}
+
+.wu-resp-statement-text {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.7rem;
+    font-style: italic;
+    color: #f9e9cd;
+    line-height: 1.75;
+    margin: -20px 0 0 0;
+    position: relative;
+    z-index: 1;
+}
+
+/* Footer: line — icon + author — line */
+.wu-resp-statement-footer {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.wu-resp-footer-line {
+    flex: 1;
+    height: 1px;
+    background: rgba(197,160,89,0.25);
+}
+
+.wu-resp-footer-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    white-space: nowrap;
+}
+
+.wu-resp-footer-icon {
+    font-size: 1.4rem;
+    color: #c5a059;
+}
+
+.wu-resp-footer-author {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: rgba(197,160,89,0.8);
+    text-transform: uppercase;
+}
+
+/* =====================================================
+   OUR PROMISE BANNER (Sleek Horizontal Strip)
    ===================================================== */
 .wu-promise-banner-section {
-    background: #0d0b08;
+    background: #080604;
     padding: 0;
-    margin: 0;
 }
 
 .wu-promise-banner {
     display: flex;
     align-items: center;
-    border-radius: 18px;
-
-    background: linear-gradient(100deg, #111009 0%, #1a1710 50%, #0e0c08 100%);
-    border-top: 1px solid rgba(197,160,89,0.2);
-    border-bottom: 1px solid rgba(197,160,89,0.2);
-    padding: 35px 60px;
+    background: linear-gradient(90deg, #110e0a 0%, #1a150f 50%, #110e0a 100%);
+    border-top: 1px solid rgba(197,160,89,0.3);
+    border-bottom: 1px solid rgba(197,160,89,0.3);
+    padding: 30px 50px;
     gap: 40px;
-    position: relative;
-    overflow: hidden;
-    transition: border-color 0.5s ease;
 }
-.wu-promise-banner:hover {
-    border-color: rgba(197,160,89,0.5);
-}
-.wu-promise-banner::before {
-    content: '';
-    position: absolute;
-    top: 0; left: -100%;
-    width: 60%; height: 100%;
-    background: linear-gradient(120deg, transparent, rgba(197,160,89,0.04), transparent);
-    transform: skewX(-15deg);
-    animation: wu-shimmer 7s ease-in-out infinite;
-    pointer-events: none;
-}
+
 .wu-promise-left {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 15px;
     flex-shrink: 0;
-    border-right: 1px solid rgba(197,160,89,0.25);
-    padding-right: 40px;
 }
+
 .wu-promise-icon {
-    width: 48px; height: 48px;
-    flex-shrink: 0;
+    width: 40px; height: 40px;
 }
 .wu-promise-icon svg { width: 100%; height: 100%; }
+
 .wu-promise-label {
     font-family: 'Montserrat', sans-serif;
-    font-size: 0.75rem;
+    font-size: 0.95rem;
     font-weight: 700;
-    letter-spacing: 2.5px;
+    letter-spacing: 2px;
     color: #c5a059;
     text-transform: uppercase;
-    white-space: nowrap;
 }
+
 .wu-promise-center {
     flex: 1;
+    border-left: 1px solid rgba(197,160,89,0.2);
+    border-right: 1px solid rgba(197,160,89,0.2);
+    padding: 0 40px;
 }
+
 .wu-promise-text {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1rem;
-    color: rgba(244, 239, 228, 0.85);
-    line-height: 1.8;
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.7;
     margin: 0;
-    transition: color 0.4s ease;
 }
-.wu-promise-banner:hover .wu-promise-text { color: rgba(255, 255, 255, 0.95); }
+
 .wu-promise-right {
     flex-shrink: 0;
-    border-left: 1px solid rgba(197,160,89,0.25);
-    padding-left: 40px;
 }
+
 .wu-promise-signature {
     font-family: 'Playfair Display', Georgia, serif;
-    font-size: 2.5rem;
+    font-size: 2.6rem;
     color: #c5a059;
     font-style: italic;
-    display: block;
-    line-height: 1;
-    letter-spacing: 2px;
-    opacity: 0.8;
-    transition: opacity 0.4s ease;
+    opacity: 0.9;
 }
-.wu-promise-banner:hover .wu-promise-signature { opacity: 1; }
 
 /* =====================================================
    RESPONSIVE
@@ -556,33 +623,34 @@
     .wu-pillars-section { padding: 60px 0; }
     .wu-responsibility-section { padding: 68px 0; }
 
+    .wu-resp-inner {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 30px;
+        gap: 30px;
+    }
+    .wu-resp-quote { font-size: 1.35rem; }
 
-    .wu-resp-quote { font-size: 1.25rem; }
     .wu-promise-banner {
         flex-direction: column;
         text-align: center;
         padding: 40px 30px;
+        gap: 25px;
     }
-    .wu-promise-left {
-        flex-direction: column;
-        border-right: none;
-        padding-right: 0;
-        border-bottom: 1px solid rgba(197,160,89,0.25);
-        padding-bottom: 25px;
-    }
-    .wu-promise-right {
+    .wu-promise-center {
         border-left: none;
-        padding-left: 0;
-        border-top: 1px solid rgba(197,160,89,0.25);
-        padding-top: 25px;
+        border-right: none;
+        border-top: 1px solid rgba(197,160,89,0.2);
+        border-bottom: 1px solid rgba(197,160,89,0.2);
+        padding: 25px 0;
     }
+    .wu-mission-heading { font-size: 2.1rem; }
 }
 @media (max-width: 575px) {
     .wu-section-heading { font-size: 2.2rem; }
     .wu-pillars-heading { font-size: 1.8rem; }
     .wu-promise-text { font-size: 0.95rem; }
-
-    .wu-mission-body { font-size: 1.08rem; }
-    .wu-pillar-text { font-size: 0.98rem; }
+    .wu-mission-heading { font-size: 1.85rem; }
+    .wu-mission-body { font-size: 1.04rem; padding-left: 0; padding-right: 0; }
+    .wu-core-promise { padding: 35px 20px; }
 }
-
