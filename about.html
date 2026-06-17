@@ -28,6 +28,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/premium.css">
   <link rel="stylesheet" href="css/services-new.css">
+  <link rel="stylesheet" href="css/about.css">
 </head>
 
 <body>
@@ -37,10 +38,10 @@
       <div class="collapse navbar-collapse" id="ftco-nav">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
-          <li class="nav-item active"><a href="" class="nav-link">About Us</a></li>
+          <li class="nav-item active"><a href="about.html" class="nav-link">About Us</a></li>
           <li class="nav-item active"><a href="services.html" class="nav-link">Services</a></li>
           <li class="nav-item active"><a href="" class="nav-link">Bridal Elite</a></li>
-          <li class="nav-item active"><a href="" class="nav-link">Why Us</a></li>
+          <li class="nav-item active"><a href="WhyUs.html" class="nav-link">Why Us</a></li>
           <li class="nav-item"><a href="" class="nav-link">Contact</a></li>
         </ul>
       </div>
@@ -48,98 +49,83 @@
   </nav>
   <!-- END nav -->
 
-  <section class="services-hero-section">
-    <video autoplay loop muted playsinline class="hero-video-bg">
-      <source src="images/About_Us.mp4" type="video/mp4">
+  <!-- About Hero Section — same structure as services hero -->
+  <section class="about-hero-section">
+    <video autoplay loop muted playsinline class="about-hero-video-bg">
+      <source src="images/Our Services.mp4" type="video/mp4">
     </video>
-    <div class="hero-video-overlay"></div>
+    <div class="about-hero-overlay"></div>
     <div class="container">
       <div class="row justify-content-center text-center">
         <div class="col-md-8 ftco-animate">
-          <div class="hero-subtitle">
+          <div class="about-hero-subtitle">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
               style="margin-right: 8px;">
               <path d="M12 2L14.4 9.6L22 12L14.4 14.4L12 22L9.6 14.4L2 12L9.6 9.6L12 2Z" fill="#d8c397" />
             </svg>
-            PREMIUM SERVICES
+            ABOUT PANACHE
           </div>
-          <h1 class="hero-title">About Us</h1>
-          <p class="hero-description">
-            From haircuts to facials, explore our comprehensive range of luxury beauty services with transparent
-            pricing.
+          <h1 class="about-hero-title">About Us</h1>
+          <p class="about-hero-description">
+            Where master craftsmanship meets personal transformation discover the story behind Panache.
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Sticky Services Navigation Bar -->
-  <!-- <div class="services-nav-wrapper" id="servicesNavWrapper">
-    <div class="container">
-      <div class="services-nav-scroll">
-        <button class="service-nav-btn active" data-target="service-design">
-          <div class="icon-pin">
-            <img src="images/Icons/Beard & Shaving.png" alt="Beard & Shaving" class="custom-icon-img">
+  <!-- Our Story Section -->
+  <section class="our-story-section">
+    <div class="story-bg-glow story-bg-glow--left"></div>
+    <div class="story-bg-glow story-bg-glow--right"></div>
+    <div class="container-fluid px-4 px-lg-5">
+
+
+
+      <div class="row align-items-center story-row">
+
+        <!-- Left: Image -->
+        <div class="col-lg-5 col-md-6 story-image-col">
+          <div class="story-image-wrapper">
+            <div class="story-image-glow"></div>
+            <img src="images/About Us Image.png" alt="Panache Salon Interior" class="story-img">
+            <div class="story-image-border"></div>
           </div>
-          <div class="btn-text-wrapper">
-            <span class="btn-text">Beard & Shaving</span>
+        </div>
+
+        <!-- Right: Content -->
+        <div class="col-lg-7 col-md-6 story-content-col">
+          <div class="story-content">
+            <h2 class="story-title">Our Story</h2>
+            <div class="story-title-divider">
+              <span class="divider-line"></span>
+              <span class="divider-ornament">&#10022;</span>
+              <span class="divider-line"></span>
+            </div>
+
+            <p class="story-tagline">REFINING PERSONAL IDENTITY THROUGH MASTER CRAFTSMANSHIP.</p>
+
+            <p class="story-para">
+              Founded on the eternal truth that beauty provides continuous happiness, Panache Salon &amp; Spa has grown
+              into a definitive service-oriented institution.
+            </p>
+            <p class="story-para">
+              We understand that a person's appearance is intrinsically linked to their internal confidence. Our salon
+              plays an essential, transformative role in sharpening individual style, refining grooming habits, and
+              rejuvenating the spirit.
+            </p>
+            <p class="story-para">
+              We cater to an elite clientele of men, women, and families who recognize that superior grooming demands
+              superior skill. At Panache, we don't just follow trends — we study you. Your hair, your skin, your
+              lifestyle — and create looks that reflect your personality, naturally.
+            </p>
           </div>
-        </button>
-        <button class="service-nav-btn" data-target="hair-styling">
-          <div class="icon-pin">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path d="M7,3C7,3 6,5 6,8C6,11 8,13 8,16C8,19 6,21 6,21H18C18,21 16,19 16,16C16,13 18,11 18,8C18,5 17,3 17,3H7ZM12,11C10.34,11 9,9.66 9,8C9,6.34 10.34,5 12,5C13.66,5 15,6.34 15,8C15,9.66 13.66,11 12,11Z"/>
-            </svg>
-          </div>
-          <div class="btn-text-wrapper">
-            <span class="btn-text">Hair Styling</span>
-          </div>
-        </button>
-        <button class="service-nav-btn" data-target="hair-coloring">
-          <div class="icon-pin">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12,3C12,3 7,7.5 7,12.5C7,15.5 9.5,18 12.5,18C15.5,18 18,15.5 18,12.5C18,7.5 12,3 12,3ZM12.5,16.5C10.3,16.5 8.5,14.7 8.5,12.5C8.5,9.5 12,5.7 12,5.7C12,5.7 15.5,9.5 15.5,12.5C15.5,14.7 13.7,16.5 12.5,16.5Z"/>
-            </svg>
-          </div>
-          <div class="btn-text-wrapper">
-            <span class="btn-text">Hair Coloring</span>
-          </div>
-        </button>
-        <button class="service-nav-btn" data-target="hair-wellness">
-          <div class="icon-pin">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12,2C17.52,2 22,6.48 22,12C22,17.52 17.52,22 12,22C6.48,22 2,17.52 2,12C2,6.48 6.48,2 12,2ZM11,19.93C7.06,19.43 4,16.05 4,12C4,7.95 7.06,4.57 11,4.07V19.93ZM13,4.07C16.94,4.57 20,7.95 20,12C20,16.05 16.94,19.43 13,19.93V4.07Z"/>
-            </svg>
-          </div>
-          <div class="btn-text-wrapper">
-            <span class="btn-text">Hair Wellness</span>
-          </div>
-        </button>
-        <button class="service-nav-btn" data-target="skin-care">
-          <div class="icon-pin">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12,21A9,9 0 0,1 3,12A9,9 0 0,1 12,3A9,9 0 0,1 21,12A9,9 0 0,1 12,21ZM12,19A7,7 0 0,0 19,12A7,7 0 0,0 12,5A7,7 0 0,0 5,12A7,7 0 0,0 12,19ZM12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7Z"/>
-            </svg>
-          </div>
-          <div class="btn-text-wrapper">
-            <span class="btn-text">Skin Care</span>
-          </div>
-        </button>
-        <button class="service-nav-btn" data-target="nail-care">
-          <div class="icon-pin">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12,21.5C10.5,21.5 9,20 9,18V8A3,3 0 0,1 15,8V18C15,20 13.5,21.5 12,21.5ZM12,19.5C12.8,19.5 13.5,18.8 13.5,18V8A1.5,1.5 0 0,0 10.5,8V18C10.5,18.8 11.2,19.5 12,19.5Z"/>
-            </svg>
-          </div>
-          <div class="btn-text-wrapper">
-            <span class="btn-text">Nail Care</span>
-          </div>
-        </button>
+        </div>
+
       </div>
     </div>
-  </div> -->
-  
-  
+  </section>
+
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
   <script src="js/popper.min.js"></script>
@@ -162,5 +148,3 @@
 </body>
 
 </html>
-
-
