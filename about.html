@@ -50,7 +50,7 @@
 
   <section class="services-hero-section">
     <video autoplay loop muted playsinline class="hero-video-bg">
-      <source src="images/Our Services.mp4" type="video/mp4">
+      <source src="images/About_Us.mp4" type="video/mp4">
     </video>
     <div class="hero-video-overlay"></div>
     <div class="container">
@@ -63,7 +63,7 @@
             </svg>
             PREMIUM SERVICES
           </div>
-          <h1 class="hero-title">Our Services</h1>
+          <h1 class="hero-title">About Us</h1>
           <p class="hero-description">
             From haircuts to facials, explore our comprehensive range of luxury beauty services with transparent
             pricing.
@@ -74,7 +74,7 @@
   </section>
 
   <!-- Sticky Services Navigation Bar -->
-  <div class="services-nav-wrapper" id="servicesNavWrapper">
+  <!-- <div class="services-nav-wrapper" id="servicesNavWrapper">
     <div class="container">
       <div class="services-nav-scroll">
         <button class="service-nav-btn active" data-target="service-design">
@@ -137,189 +137,9 @@
         </button>
       </div>
     </div>
-  </div>
+  </div> -->
   
-  <section id="detailed-service-carousel" class="ftco-section detailed-service-carousel-section" style="display: none;">
-    <div class="container-fluid px-4 px-lg-5">
-      <div class="row">
-        <!-- Left side: Image and Description -->
-        <div class="col-lg-8 mb-5 mb-lg-0 ftco-animate">
-          <div class="ds-left-panel">
-            <div class="ds-image-wrapper mb-4">
-              <img src="images/Signature Beard Styling.png" alt="Service" id="dsImage" class="img-fluid ds-image">
-              <div class="ds-desc-overlay">
-                 <span class="ds-category mb-2" id="dsCategory">MEN'S GROOMING & BEARD</span>
-                 <h3 class="ds-title mb-3" id="dsTitle">Signature Beard Styling</h3>
-                 <p class="ds-description" id="dsDesc">Ergonomic structural analysis followed by advanced clipper-and-scissor trimming, razor edge contouring, and infusion of lightweight argan/jojoba growth oils for sharp structural styling.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Right side: Content Headings (Vertical Stack) -->
-        <div class="col-lg-4 pl-lg-5 ftco-animate">
-          <div class="ds-right-panel">
-            <h3 class="ds-side-heading mb-4">Select a Service</h3>
-            <div class="ds-sub-options-vertical" id="dsSubOptionsContainer">
-              <button class="ds-sub-option-btn active" data-index="0">
-                <span class="btn-text">Signature Beard Styling</span>
-                <span class="btn-arrow">→</span>
-              </button>
-              <button class="ds-sub-option-btn" data-index="1">
-                <span class="btn-text">The Royal Beard Spa</span>
-                <span class="btn-arrow">→</span>
-              </button>
-              <button class="ds-sub-option-btn" data-index="2">
-                <span class="btn-text">Beard Trim</span>
-                <span class="btn-arrow">→</span>
-              </button>
-              <button class="ds-sub-option-btn" data-index="3">
-                <span class="btn-text">Beard & Moustache Custom Color</span>
-                <span class="btn-arrow">→</span>
-              </button>
-              <button class="ds-sub-option-btn" data-index="4">
-                <span class="btn-text">The Classic Shave</span>
-                <span class="btn-arrow">→</span>
-              </button>
-              <button class="ds-sub-option-btn" data-index="5">
-                <span class="btn-text">Hot Towel Shave</span>
-                <span class="btn-arrow">→</span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <script>
-    // Data for the carousel
-    const serviceData = [
-      {
-        title: "Signature Beard Styling",
-        category: "MEN'S GROOMING & BEARD",
-        desc: "Ergonomic structural analysis followed by advanced clipper-and-scissor trimming, razor edge contouring, and infusion of lightweight argan/jojoba growth oils for sharp structural styling.",
-        img: "images/Signature Beard Styling.png"
-      },
-      {
-        title: "The Royal Beard Spa",
-        category: "MEN'S GROOMING & BEARD",
-        desc: "Multi-phase clinical rejuvenation: Antimicrobial wash, natural walnut micro-exfoliating skin scrub, charcoal or clay clarifying mask, intensive oil application, targeted micro-steam humidification, and an intensive 15-minute cranial blood-circulation massage.",
-        img: "images/Royal Beard Spa (2).png"
-      },
-      {
-        title: "Beard Trim",
-        category: "MEN'S GROOMING & BEARD",
-        desc: "Classic baseline maintenance including length equalization, cleaning of lines along the cheek and neck, and topical hydration balm finish.",
-        img: "images/electri_trimmer.png"
-      },
-      {
-        title: "Beard & Moustache Custom Color",
-        category: "MEN'S GROOMING & BEARD",
-        desc: "High-speed, ammonia-free root-deep pigment application. Delivers 100% natural-looking grey coverage blending smoothly with original underlying hair tones.",
-        img: "images/Moustache Custom.png"
-      },
-      {
-        title: "The Classic Shave",
-        category: "MEN'S GROOMING & BEARD",
-        desc: "Traditional single-pass wet shave using premium moisturizing lather, skin prep, precision blade glide, and cooling witch hazel post-shave protection.",
-        img: "images/Classic Shave.png"
-      },
-      {
-        title: "Hot Towel Shave",
-        category: "MEN'S GROOMING & BEARD",
-        desc: "Engineered for razor-bump prone skin. Multiple rounds of botanical hot towel steaming, rich emollient protective pre-shave cream lathering, slow straight-razor precision sweeps, cold-stone closing compression, and full-spectrum calming head massage.",
-        img: "images/Hot Towel Shave.png"
-      }
-    ];
-
-    let currentIndex = 0;
-    let carouselInterval;
-
-    function updateCarousel(index) {
-      const data = serviceData[index];
-      const panelEl = document.querySelector('.ds-left-panel');
-      const imgEl = document.getElementById('dsImage');
-      
-      // Animate out
-      panelEl.classList.add('fade-out');
-      
-      setTimeout(() => {
-        // Update content
-        imgEl.src = data.img;
-        document.getElementById('dsCategory').textContent = data.category;
-        document.getElementById('dsTitle').textContent = data.title;
-        document.getElementById('dsDesc').textContent = data.desc;
-        
-        // Animate in
-        panelEl.classList.remove('fade-out');
-      }, 400); // Wait for fade out
-
-      // Update active sub-option button
-      document.querySelectorAll('.ds-sub-option-btn').forEach((btn, idx) => {
-        if(idx === index) btn.classList.add('active');
-        else btn.classList.remove('active');
-      });
-    }
-
-    function startCarousel() {
-      carouselInterval = setInterval(() => {
-        currentIndex = (currentIndex + 1) % serviceData.length;
-        updateCarousel(currentIndex);
-      }, 4000);
-    }
-
-    function resetCarousel() {
-      clearInterval(carouselInterval);
-      startCarousel();
-    }
-
-    // Initialize sub-options click events
-    document.querySelectorAll('.ds-sub-option-btn').forEach((btn, idx) => {
-      btn.addEventListener('click', () => {
-        if(currentIndex === idx) return;
-        currentIndex = idx;
-        updateCarousel(currentIndex);
-        resetCarousel();
-      });
-    });
-
-    // Smooth scroll and active state management for the main sticky buttons
-    document.addEventListener("DOMContentLoaded", function() {
-      const buttons = document.querySelectorAll(".service-nav-btn");
-      buttons.forEach(button => {
-        button.addEventListener("click", function() {
-          buttons.forEach(btn => btn.classList.remove("active"));
-          this.classList.add("active");
-          
-          // Logic to show carousel if Beard & Shaving is clicked
-          if (this.getAttribute("data-target") === "service-design") { // It's still using service-design target in HTML
-            document.getElementById("detailed-service-carousel").style.display = "block";
-            // Start the carousel if it's not running
-            clearInterval(carouselInterval);
-            updateCarousel(0);
-            startCarousel();
-            // Smooth scroll to the section
-            window.scrollTo({
-                top: document.getElementById("detailed-service-carousel").offsetTop - 150,
-                behavior: "smooth"
-            });
-          } else {
-             // For other options, hide this carousel (or replace data)
-             document.getElementById("detailed-service-carousel").style.display = "none";
-             clearInterval(carouselInterval);
-          }
-        });
-      });
-      
-      // Initially simulate a click on the active button to trigger display
-      const activeBtn = document.querySelector(".service-nav-btn.active");
-      if (activeBtn && activeBtn.getAttribute("data-target") === "service-design") {
-          document.getElementById("detailed-service-carousel").style.display = "block";
-          startCarousel();
-      }
-    });
-  </script>
+  
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
   <script src="js/popper.min.js"></script>
@@ -334,7 +154,7 @@
   <script src="js/bootstrap-datepicker.js"></script>
   <script src="js/jquery.timepicker.min.js"></script>
   <script src="js/scrollax.min.js"></script>
-  <script
+  <script 
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
