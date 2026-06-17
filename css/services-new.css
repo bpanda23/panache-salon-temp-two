@@ -188,7 +188,7 @@
 }
 .ds-image {
     width: 100%;
-    height: 530px !important;  /* Slightly taller than before — grows downward only */
+ 
     object-fit: cover;
     object-position: center 30%;  /* Shows faces — centred with slight upward bias */
     display: block;
@@ -305,7 +305,7 @@
     color: rgba(255,255,255,0.7);
     padding: 16px 20px;
     border-radius: 16px;
-    font-size: 0.95rem;
+    font-size: 1.54rem;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     cursor: pointer;
