@@ -1792,3 +1792,125 @@ h1, h2, h3, h4, h5, h6, .heading-section h2 {
     color: #111;
     margin: 0;
 }
+
+
+
+.services-bento{
+    display:grid;
+
+    grid-template-columns:
+        minmax(400px, 2fr)
+        minmax(180px, 1fr)
+        minmax(180px, 1fr);
+
+    grid-template-rows:
+        170px
+        170px
+        120px;
+
+    gap:16px;
+
+    grid-template-areas:
+        "large men skin"
+        "large bridal spa"
+        ".     .     wellness";
+}
+
+/* Grid Areas */
+.large     { grid-area: large; }
+.men       { grid-area: men; }
+.skin      { grid-area: skin; }
+.bridal    { grid-area: bridal; }
+.spa       { grid-area: spa; }
+.wellness  { grid-area: wellness; }
+
+.service-card{
+    position:relative;
+    overflow:hidden;
+    border-radius:18px;
+    display:block;
+    text-decoration:none;
+    background:#000;
+    min-height:100px;
+}
+
+.service-image{
+    position:absolute;
+    inset:0;
+    background-size:cover;
+    background-position:center;
+    transition:all .6s ease;
+}
+
+.service-card:hover .service-image{
+    transform:scale(1.08);
+}
+
+.service-overlay{
+    position:absolute;
+    inset:0;
+    padding:24px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+
+    background:
+    linear-gradient(
+        to top,
+        rgba(0,0,0,.75) 0%,
+        rgba(0,0,0,.35) 45%,
+        rgba(0,0,0,0) 100%
+    );
+}
+
+.service-overlay h3{
+    color:#fff;
+    font-size:28px;
+    line-height:1.2;
+    font-weight:600;
+    margin:0;
+}
+
+.service-overlay p{
+    color:rgba(255,255,255,.85);
+    margin-top:8px;
+    margin-bottom:0;
+    font-size:14px;
+}
+
+/* Small cards */
+.men h3,
+.skin h3,
+.bridal h3,
+.spa h3,
+.wellness h3{
+    font-size:22px;
+}
+
+/* Responsive */
+@media(max-width:991px){
+
+    .services-bento{
+
+        grid-template-columns:1fr;
+
+        grid-template-rows:auto;
+
+        grid-template-areas:
+            "large"
+            "men"
+            "skin"
+            "bridal"
+            "spa"
+            "wellness";
+    }
+
+    .service-card{
+        height:280px;
+    }
+
+    .large{
+        height:400px;
+    }
+}
