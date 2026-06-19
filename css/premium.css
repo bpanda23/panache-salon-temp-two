@@ -1397,7 +1397,7 @@ h1, h2, h3, h4, h5, h6, .heading-section h2 {
 #services.ftco-section.bg-light {
     background: #0a0806 !important;
     padding-top: 2.2rem;
-    padding-bottom: 6rem;
+    padding-bottom: 4rem;
     text-align: center;
 }
 
@@ -1678,7 +1678,8 @@ h1, h2, h3, h4, h5, h6, .heading-section h2 {
 .wrapper {
     width: 100%;
     overflow: hidden;
-    
+    padding-top: 60px;
+    text-align: center;
 }
 
 .carousel {
@@ -1688,6 +1689,7 @@ h1, h2, h3, h4, h5, h6, .heading-section h2 {
     width: max-content;
     will-change: transform;
     animation: testimonial-marquee 22s linear infinite;
+    padding-top: 13px;
 }
 
 .slide {
