@@ -1366,3 +1366,178 @@ h1, h2, h3, h4, h5, h6, .heading-section h2 {
     opacity: 1;
     transform: translateY(0) scale(1) rotateX(0deg);
 }
+
+/* ================================================
+   HOMEPAGE SERVICE CARDS GRID  (New 7-Card Circular Design)
+   ================================================ */
+
+#services.ftco-section.bg-light {
+    background: #0a0806 !important;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+#services .heading-section h2.mb-4 {
+    color: var(--gold-primary);
+    font-size: 3rem;
+    letter-spacing: 2px;
+    text-shadow: 0 4px 15px rgba(197, 160, 89, 0.2);
+}
+
+/* Flexbox honeycomb layout: exactly centers Row 2 in between Row 1 cards */
+.hs-cards-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Reduced gap to allow bigger circles */
+    width: 100%;
+    max-width: 1350px; /* Increased max-width significantly to make cards larger */
+    margin: 40px auto 0;
+    padding: 0 15px;
+}
+
+/* Offset class no longer needed with Flexbox centering */
+.hs-card.card-offset { }
+
+/* Individual card - Static Circle setup */
+.hs-card {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    text-decoration: none !important;
+    
+    /* Circle Design */
+    width: calc(25% - 15px); /* Adjusted for 20px gap (3 gaps * 20px = 60px / 4 = 15px) */
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    
+    background: #111;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(197, 160, 89, 0.15);
+    transition: box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+/* Hover: just border and shadow, no card movement */
+.hs-card:hover {
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.8), 
+                0 0 20px rgba(197, 160, 89, 0.2);
+    border-color: rgba(197, 160, 89, 0.6);
+}
+
+/* Background image - clear by default */
+.hs-card-img {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    transition: filter 0.5s ease;
+    filter: brightness(0.95);
+}
+
+/* Image purely darkens and blurs on hover (NO scaling/movement) */
+.hs-card:hover .hs-card-img {
+    filter: brightness(0.35) saturate(1.2) blur(2px);
+}
+
+/* Overlay hidden by default, visible on hover */
+.hs-card-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    background: radial-gradient(circle at center, rgba(10, 6, 3, 0.4) 0%, rgba(5, 3, 1, 0.9) 100%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.hs-card:hover .hs-card-overlay {
+    opacity: 1;
+}
+
+/* Service name text - Scrolls down on hover */
+.hs-card-name {
+    font-family: 'Playfair Display', Georgia, serif !important;
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #fff !important;
+    text-align: center;
+    letter-spacing: 1px;
+    line-height: 1.4;
+    margin: 0;
+    opacity: 0;
+    transform: translateY(-30px); /* Start from above */
+    transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1),
+                opacity 0.5s ease,
+                color 0.4s ease;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.9);
+}
+
+.hs-card:hover .hs-card-name {
+    opacity: 1;
+    transform: translateY(0); /* Scroll down into place */
+    color: var(--gold-light) !important;
+}
+
+/* Expanding horizontal gold line */
+.hs-card-line {
+    width: 0px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold-primary), transparent);
+    margin-top: 15px;
+    opacity: 0;
+    transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1) 0.1s,
+                opacity 0.4s ease 0.1s;
+    box-shadow: 0 0 8px var(--gold-primary);
+}
+
+.hs-card:hover .hs-card-line {
+    width: 60px;
+    opacity: 1;
+}
+
+/* Responsive adjustments for Flexbox Circular Layout */
+@media (max-width: 1499px) {
+    .hs-cards-grid {
+        max-width: 1200px;
+    }
+}
+
+@media (max-width: 1199px) {
+    .hs-cards-grid {
+        max-width: 900px;
+    }
+    .hs-card {
+        width: calc(33.333% - 13.34px); /* 3 cards per row */
+    }
+}
+
+@media (max-width: 991px) {
+    .hs-cards-grid {
+        max-width: 700px;
+    }
+    .hs-card {
+        width: calc(33.333% - 13.34px);
+    }
+}
+
+@media (max-width: 767px) {
+    .hs-card {
+        width: calc(50% - 10px); /* 2 cards per row */
+    }
+    .hs-card-name {
+        font-size: 1.15rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hs-card {
+        width: 100%; /* 1 card per row */
+        max-width: 300px;
+    }
+}

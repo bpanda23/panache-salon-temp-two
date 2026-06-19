@@ -34,19 +34,55 @@
 	<div class="hero-wrap" id="hero">
 		<div class="overlay"></div>
 		<style>
-			#hero{position:relative; width:100%; height:115vh; min-height:115vh; overflow:hidden; background-color:#000;}
-			.hero-media{position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; object-position:center center;}
-			.hero-media, #heroImage{transition: opacity 0.8s ease;}
-			#heroVideo{z-index:0; opacity:1; object-position:center center;}
-			#heroImage{z-index:0; opacity:0; background-size:cover; background-position:center center; }
-			#hero .container{position:relative; z-index:2;}
+			#hero {
+				position: relative;
+				width: 100%;
+				height: 115vh;
+				min-height: 115vh;
+				overflow: hidden;
+				background-color: #000;
+			}
+
+			.hero-media {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				object-position: center center;
+			}
+
+			.hero-media,
+			#heroImage {
+				transition: opacity 0.8s ease;
+			}
+
+			#heroVideo {
+				z-index: 0;
+				opacity: 1;
+				object-position: center center;
+			}
+
+			#heroImage {
+				z-index: 0;
+				opacity: 0;
+				background-size: cover;
+				background-position: center center;
+			}
+
+			#hero .container {
+				position: relative;
+				z-index: 2;
+			}
 		</style>
 		<video id="heroVideo" class="hero-media" playsinline muted style="display:block;" preload="auto">
 			<source src="images/Panache salon Cover Video.mp4" type="video/mp4">
 		</video>
 		<div id="heroImage" class="hero-media" style="background-image: url('images/hero-2.png');"></div>
 		<div class="container" style="position:relative; z-index:1;">
-			<div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
+			<div class="row no-gutters slider-text align-items-center justify-content-center"
+				data-scrollax-parent="true">
 				<div class="col-md-8 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
 					<div class="icon">
 						<a href="index.html" class="logo">
@@ -63,41 +99,41 @@
 			</div>
 		</div>
 		<script>
-		(function(){
-			var v = document.getElementById('heroVideo');
-			var img = document.getElementById('heroImage');
-			var showDuration = 10500; // ms each
-			var fadeTime = 8000; // matches CSS transition
-			var showingVideo = true;
-			function showVideo(){
-				showingVideo = true;
-				img.style.opacity = 0;
-				v.style.opacity = 1;
-				v.currentTime = 0;
-				v.play().catch(function(){});
-			}
-			function showImage(){
-				showingVideo = false;
-				v.style.opacity = 0;
-				img.style.opacity = 1;
-				try{ v.pause(); }catch(e){}
-			}
-			// start sequence
-			showVideo();
-			// cycle every showDuration + fadeTime to allow smooth crossfade
-			setInterval(function(){
-				if(showingVideo){
-					showImage();
-				}else{
-					showVideo();
+			(function () {
+				var v = document.getElementById('heroVideo');
+				var img = document.getElementById('heroImage');
+				var showDuration = 10500; // ms each
+				var fadeTime = 8000; // matches CSS transition
+				var showingVideo = true;
+				function showVideo() {
+					showingVideo = true;
+					img.style.opacity = 0;
+					v.style.opacity = 1;
+					v.currentTime = 0;
+					v.play().catch(function () { });
 				}
-			}, showDuration + fadeTime);
-			// as a safety, also end video to image on ended
-			v.addEventListener('ended', function(){
-				setTimeout(showImage, 0);
-			});
-			
-		})();
+				function showImage() {
+					showingVideo = false;
+					v.style.opacity = 0;
+					img.style.opacity = 1;
+					try { v.pause(); } catch (e) { }
+				}
+				// start sequence
+				showVideo();
+				// cycle every showDuration + fadeTime to allow smooth crossfade
+				setInterval(function () {
+					if (showingVideo) {
+						showImage();
+					} else {
+						showVideo();
+					}
+				}, showDuration + fadeTime);
+				// as a safety, also end video to image on ended
+				v.addEventListener('ended', function () {
+					setTimeout(showImage, 0);
+				});
+
+			})();
 		</script>
 	</div>
 
@@ -116,8 +152,8 @@
 					<li class="nav-item active"><a href="services.html" class="nav-link">Services</a></li>
 					<li class="nav-item active"><a href="bridal_service.html" class="nav-link">Bridal Elite</a></li>
 					<li class="nav-item active"><a href="WhyUs.html" class="nav-link">Why Us</a></li>
-						<li class="nav-item"><a href="contact-us.html" class="nav-link">Contact</a></li>
-				
+					<li class="nav-item"><a href="contact-us.html" class="nav-link">Contact</a></li>
+
 				</ul>
 			</div>
 		</div>
@@ -125,44 +161,20 @@
 	<!-- END nav -->
 	<style>
 		/* move the navbar block down by 10% of the viewport */
-		#ftco-navbar{padding-top:1px;padding-bottom:1px; margin-top:0vh;}
-		@media(max-width:767px){#ftco-navbar{padding-top:10px;padding-bottom:10px; margin-top:6vh;}}
+		#ftco-navbar {
+			padding-top: 1px;
+			padding-bottom: 1px;
+			margin-top: 0vh;
+		}
+
+		@media(max-width:767px) {
+			#ftco-navbar {
+				padding-top: 10px;
+				padding-bottom: 10px;
+				margin-top: 6vh;
+			}
+		}
 	</style>
-
-	<section class="ftco-section about-us-section">
-		<div class="container-fluid py-5">
-			<style>
-				.about-us-section{background:#080604; color:#f4efe4;}
-				.about-us-section .panel{border:1px solid rgba(255, 217, 136,0.18); background:rgba(255,255,255,0.04); box-shadow:0 30px 80px rgba(0,0,0,.25); border-radius:28px;}
-				.about-us-section .panel-hero{overflow:hidden; border-radius:32px; position:relative;}
-				.about-us-section .panel-hero img{width:100%; display:block; object-fit:cover; height:100%;}
-				.about-us-section .panel-hero::after{content:''; position:absolute; inset:0; background:linear-gradient(180deg, rgba(0,0,0,0) 36%, rgba(0,0,0,.74) 100%);}
-				.about-us-section .brand-badge{display:flex; align-items:center; gap:18px; margin-bottom:1.6rem;}
-				.about-us-section .brand-badge img{height:72px; width:auto; object-fit:contain; filter:brightness(1.05);}
-				.about-us-section h2{font-size:3.12rem; line-height:1.05; letter-spacing:.01em; margin:0 0 1rem; color:#f9e9cd;}
-				.about-us-section p.lead{font-size:1.08rem; color:rgba(244,239,228,.9); line-height:1.85; margin-bottom:2rem;}
-				.about-us-section .service-grid{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1rem;}
-				.about-us-section .service-card{padding:22px 24px; border:1px solid rgba(255,217,136,0.16); border-radius:22px; background:rgba(255,255,255,0.04);}
-				.about-us-section .service-card h4{margin:0 0 .65rem; font-size:1.04rem; color:#f7e6b4;}
-				.about-us-section .service-card p{margin:0; color:rgba(244,239,228,.78); font-size:.97rem; line-height:1.7;}
-				.about-us-section .service-card.feature{grid-column:1 / -1; text-align:center; padding:28px;}
-				.about-us-section .service-card.feature h4{font-size:1.2rem; margin-bottom:.6rem;}
-				.about-us-section .hero-quote{font-size:4.16rem; line-height:1.02; margin:0; letter-spacing:.02em;}
-				.about-us-section .hero-subtitle{color:#d8c397; font-size:.93rem; letter-spacing:.3em; text-transform:uppercase; margin-bottom:.8rem;}
-				@media(max-width:991px){
-					.about-us-section h2{font-size:2.7rem;}
-					.about-us-section .service-grid{grid-template-columns:1fr;}
-				}
-			</style>
-			<section id="about">
-    <img src="images/Our_Story.png"
-         alt="Our Story"
-         style="width:100%; display:block;">
-</section>
-		</div>
-	</section>
-
-
 
 
 	<section id="services" class="ftco-section bg-light">
@@ -170,445 +182,79 @@
 			<div class="row justify-content-center mb-5 pb-3">
 				<div class="col-md-7 heading-section ftco-animate text-center">
 					<h2 class="mb-4">Our Services</h2>
-					</div>
+				</div>
 			</div>
 
-			<div class="row position-relative align-items-stretch">
-				<!-- Service Filter Buttons -->
-				<div class="col-lg-3 col-md-4 mb-4 ftco-animate services-sidebar-col">
-					<div class="service-filter-buttons">
-						<button class="filter-btn active" style="text-align: left;" data-filter="haircuts"> Service Architecture & Technical Specification</button>
-						<button class="filter-btn" style="text-align: left;" data-filter="spa">Precision Hair Styling & Advanced Cuts</button>
-						<button class="filter-btn" style="text-align: left;" data-filter="skincare"> Advanced Chemical Transformations & Hair Coloring</button>
-						<button class="filter-btn" style="text-align: left;" data-filter="bridal"> Holistic Hair Wellness & Therapeutic Spas</button>
-						<button class="filter-btn" style="text-align: left;" data-filter="party">Advanced Skincare & Complexion Refining</button>
-						<button class="filter-btn" style="text-align: left;" data-filter="wellness">Luxury Hand & Feet Therapies</button>
-						<button class="filter-btn" style="text-align: left;" data-filter="wellness">The Bridal & Groom Luxury Care</button>
+			<div class="hs-cards-grid">
+				<!-- Card 1 -->
+				<a href="services.html" class="hs-card">
+					<div class="hs-card-img" style="background-image: url('images/Royal\ Beard\ Spa.png');"></div>
+					<div class="hs-card-overlay">
+						<h3 class="hs-card-name">Men's Grooming, Beard &amp; Shave Rituals</h3>
+						<div class="hs-card-line"></div>
 					</div>
-				</div>
-
-				<!-- Staff Cards Carousel -->
-				<div class="col-lg-9 col-md-8">
-					<div class="staff-carousel-wrapper" style="max-width: 100%; padding-top: 0;">
-						<div class="staff-carousel" id="staffCarousel">
-							<!-- Men's Grooming, Beard & Shave Rituals -->
-							<div class="d-flex mb-sm-4 staff-card" data-category="haircuts">
-								<div class="staff w-100">
-									<div class="img mb-4 mx-auto" style="background-image: url(images/Signature\ Beard\ Styling.png);"></div>
-									<div class="info text-center">
-										<h3><a href="#">Signature Beard Styling</a></h3>
-										<span class="position">Men's Grooming & Beard</span>
-										<div class="text">
-											<p>Ergonomic structural analysis followed by advanced clipper-and-scissor trimming, razor edge contouring, and infusion of lightweight argan/jojoba growth oils for sharp structural styling.</p>
-										</div>
-										<a href="#" class="btn-view-details">View Details</a>
-									</div>
-								</div>
-							</div>
-							<div class="d-flex mb-sm-4 staff-card" data-category="haircuts">
-								<div class="staff w-100">
-									<div class="img mb-4 mx-auto" style="background-image: url(images/Royal\ Beard\ Spa\ \(2\).png);"></div>
-									<div class="info text-center">
-										<h3><a href="#">The Royal Beard Spa</a></h3>
-										<span class="position">Men's Grooming & Beard</span>
-										<div class="text">
-											<p>Multi-phase clinical rejuvenation: Antimicrobial wash, natural walnut micro-exfoliating skin scrub, charcoal or clay clarifying mask, intensive oil application, targeted micro-steam humidification, and an intensive 15-minute cranial blood-circulation massage.</p>
-										</div>
-										<a href="#" class="btn-view-details">View Details</a>
-									</div>
-								</div>
-							</div>
-							<div class="d-flex mb-sm-4 staff-card" data-category="haircuts">
-								<div class="staff w-100">
-									<div class="img mb-4 mx-auto" style="background-image: url(images/electri_trimmer.png);"></div>
-									<div class="info text-center">
-										<h3><a href="#">Beard Trim</a></h3>
-										<span class="position">Men's Grooming & Beard</span>
-										<div class="text">
-											<p>Classic baseline maintenance including length equalization, cleaning of lines along the cheek and neck, and topical hydration balm finish.</p>
-										</div>
-										<a href="#" class="btn-view-details">View Details</a>
-									</div>
-								</div>
-							</div>
-							<div class="d-flex mb-sm-4 staff-card" data-category="haircuts">
-								<div class="staff w-100">
-									<div class="img mb-4 mx-auto" style="background-image: url(images/Moustache\ Custom.png);"></div>
-									<div class="info text-center">
-										<h3><a href="#">Beard & Moustache Custom Color</a></h3>
-										<span class="position">Men's Grooming & Beard</span>
-										<div class="text">
-											<p>High-speed, ammonia-free root-deep pigment application. Delivers 100% natural-looking grey coverage blending smoothly with original underlying hair tones.</p>
-										</div>
-										<a href="#" class="btn-view-details">View Details</a>
-									</div>
-								</div>
-							</div>
-							<div class="d-flex mb-sm-4 staff-card" data-category="haircuts">
-								<div class="staff w-100">
-									<div class="img mb-4 mx-auto" style="background-image: url(images/Classic\ Shave.png);"></div>
-									<div class="info text-center">
-										<h3><a href="#">The Classic Shave</a></h3>
-										<span class="position">Men's Grooming & Beard</span>
-										<div class="text">
-											<p>Traditional single-pass wet shave using premium moisturizing lather, skin prep, precision blade glide, and cooling witch hazel post-shave protection.</p>
-										</div>
-										<a href="#" class="btn-view-details">View Details</a>
-									</div>
-								</div>
-							</div>
-							<div class="d-flex mb-sm-4 staff-card" data-category="haircuts">
-								<div class="staff w-100">
-									<div class="img mb-4 mx-auto" style="background-image: url(images/Hot\ Towel\ Shave.png);"></div>
-									<div class="info text-center">
-										<h3><a href="#">Hot Towel Shave</a></h3>
-										<span class="position">Men's Grooming & Beard</span>
-										<div class="text">
-											<p>Engineered for razor-bump prone skin. Multiple rounds of botanical hot towel steaming, rich emollient protective pre-shave cream lathering, slow straight-razor precision sweeps, cold-stone closing compression, and full-spectrum calming head massage.</p>
-										</div>
-										<a href="#" class="btn-view-details">View Details</a>
-									</div>
-								</div>
-							</div>
-
-							<!-- Precision Hair Styling & Advanced Cuts -->
-				<div class="d-flex mb-sm-4 staff-card" data-category="spa" style="display: none;">
-					<div class="staff w-100">
-						<div class="img mb-4 mx-auto" style="background-image: url(images/menhaircut.png);"></div>
-						<div class="info text-center">
-							<h3><a href="#">Haircut Regular (Adult)</a></h3>
-							<span class="position">Precision Hair Styling</span>
-							<div class="text">
-								<p>Standard maintenance cuts, perimeter tidying, professional scissor or clipper execution, completed with a soothing structural blow-dry styling.</p>
-							</div>
-							<a href="#" class="btn-view-details">View Details</a>
-						</div>
+				</a>
+				<!-- Card 2 -->
+				<a href="services.html" class="hs-card">
+					<div class="hs-card-img" style="background-image: url('images/menhaircut.png');"></div>
+					<div class="hs-card-overlay">
+						<h3 class="hs-card-name">Precision Hair Styling &amp; Advanced Cuts</h3>
+						<div class="hs-card-line"></div>
 					</div>
-				</div>
-				<div class="d-flex mb-sm-4 staff-card" data-category="spa" style="display: none;">
-					<div class="staff w-100">
-						<div class="img mb-4 mx-auto" style="background-image: url(images/womenhaircut.png);"></div>
-						<div class="info text-center">
-							<h3><a href="#">Haircut Advanced (Adult)</a></h3>
-							<span class="position">Precision Hair Styling</span>
-							<div class="text">
-								<p>High-fashion structural transformation: customized texturing, fading, texturized layers, or personalized facial structure profiling with full style consultation.</p>
-							</div>
-							<a href="#" class="btn-view-details">View Details</a>
-						</div>
+				</a>
+				<!-- Card 3 -->
+				<a href="services.html" class="hs-card">
+					<div class="hs-card-img" style="background-image: url('images/haircoloring.png');"></div>
+					<div class="hs-card-overlay">
+						<h3 class="hs-card-name">Chemical Transformations &amp; Hair Coloring</h3>
+						<div class="hs-card-line"></div>
 					</div>
-				</div>
-				<div class="d-flex mb-sm-4 staff-card" data-category="spa" style="display: none;">
-					<div class="staff w-100">
-						<div class="img mb-4 mx-auto" style="background-image: url(images/kidshaircut.png);"></div>
-						<div class="info text-center">
-							<h3><a href="#">Kids Haircut Regular</a></h3>
-							<span class="position">Precision Hair Styling</span>
-							<div class="text">
-								<p>Gentle, rapid, and playful styling for children under 12. Prioritizes security, speed, and clean, manageable classic cuts.</p>
-							</div>
-							<a href="#" class="btn-view-details">View Details</a>
-						</div>
+				</a>
+				<!-- Card 4 -->
+				<a href="services.html" class="hs-card">
+					<div class="hs-card-img" style="background-image: url('images/keratin.png');"></div>
+					<div class="hs-card-overlay">
+						<h3 class="hs-card-name">Holistic Hair Wellness &amp; Therapeutic Spas</h3>
+						<div class="hs-card-line"></div>
 					</div>
-				</div>
-				<div class="d-flex mb-sm-4 staff-card" data-category="spa" style="display: none;">
-					<div class="staff w-100">
-						<div class="img mb-4 mx-auto" style="background-image: url(images/kidshaircut.png);"></div>
-						<div class="info text-center">
-							<h3><a href="#">Kids Haircut Advanced</a></h3>
-							<span class="position">Precision Hair Styling</span>
-							<div class="text">
-								<p>Trendy model styling, complex texturing, or mini-fades for fashion-forward children. Includes mild child-safe styling paste application.</p>
-							</div>
-							<a href="#" class="btn-view-details">View Details</a>
-						</div>
+				</a>
+				<!-- Card 5 (Offset starts here) -->
+				<a href="services.html" class="hs-card card-offset">
+					<div class="hs-card-img" style="background-image: url('images/rejuvenation.png');"></div>
+					<div class="hs-card-overlay">
+						<h3 class="hs-card-name">Advanced Skincare &amp; Complexion Refining</h3>
+						<div class="hs-card-line"></div>
 					</div>
-				</div>
-				<div class="d-flex mb-sm-4 staff-card" data-category="spa" style="display: none;">
-					<div class="staff w-100">
-						<div class="img mb-4 mx-auto" style="background-image: url(images/menhaircut.png);"></div>
-						<div class="info text-center">
-							<h3><a href="#">Head Shave Premium</a></h3>
-							<span class="position">Precision Hair Styling</span>
-							<div class="text">
-								<p>Ultra-close traditional head shaving utilizing pre-shave lubricating oils, multi-directional clean shaves, and continuous post-shave scalp hydration.</p>
-							</div>
-							<a href="#" class="btn-view-details">View Details</a>
-						</div>
+				</a>
+				<!-- Card 6 -->
+				<a href="services.html" class="hs-card">
+					<div class="hs-card-img" style="background-image: url('images/manicure-women.png');"></div>
+					<div class="hs-card-overlay">
+						<h3 class="hs-card-name">Luxury Hand &amp; Feet Therapies</h3>
+						<div class="hs-card-line"></div>
 					</div>
-				</div>
-				<div class="d-flex mb-sm-4 staff-card" data-category="spa" style="display: none;">
-					<div class="staff w-100">
-						<div class="img mb-4 mx-auto" style="background-image: url(images/spaandconditioning.png);"></div>
-						<div class="info text-center">
-							<h3><a href="#">Classic Hair Wash</a></h3>
-							<span class="position">Precision Hair Styling</span>
-							<div class="text">
-								<p>Cleansing of the hair shaft and scalp utilizing temperature-balanced water, premium shampoo tailored to hair density, and balancing conditioner.</p>
-							</div>
-							<a href="#" class="btn-view-details">View Details</a>
-						</div>
+				</a>
+				<!-- Card 7 -->
+				<a href="services.html" class="hs-card">
+					<div class="hs-card-img" style="background-image: url('images/bridal-makeup.png');"></div>
+					<div class="hs-card-overlay">
+						<h3 class="hs-card-name">The Bridal &amp; Groom Luxury Care</h3>
+						<div class="hs-card-line"></div>
 					</div>
-				</div>
-				<div class="d-flex mb-sm-4 staff-card" data-category="spa" style="display: none;">
-					<div class="staff w-100">
-						<div class="img mb-4 mx-auto" style="background-image: url(images/keratin.png);"></div>
-						<div class="info text-center">
-							<h3><a href="#">Treatment Base Wash</a></h3>
-							<span class="position">Precision Hair Styling</span>
-							<div class="text">
-								<p>Specifically formulated for keratin-treated, heavily lightened, chemically straightened, or color-processed hair. Utilizes strictly sulfate-free and sodium-chloride-free protein infusions.</p>
-							</div>
-							<a href="#" class="btn-view-details">View Details</a>
-						</div>
-						</div>
-					</div>
-
-					<!-- Skin Care & Grooming -->
-							<div class="d-flex mb-sm-4 staff-card" data-category="skincare" style="display: none;">
-								<div class="staff w-100">
-									<div class="img mb-4 mx-auto" style="background-image: url(images/facialandgrooming.png);"></div>
-									<div class="info text-center">
-										<h3><a href="#">Men's Facial & Grooming</a></h3>
-										<span class="position">Skin Care & Grooming</span>
-										<div class="text">
-											<p>Specialized facial care and precise beard grooming techniques.</p>
-										</div>
-										<a href="#" class="btn-view-details">View Details</a>
-
-									</div>
-								</div>
-							</div>
-							<div class="d-flex mb-sm-4 staff-card" data-category="skincare" style="display: none;">
-								<div class="staff w-100">
-									<div class="img mb-4 mx-auto" style="background-image: url(images/rejuvenation.png);"></div>
-									<div class="info text-center">
-										<h3><a href="#">Facial & Rejuvenation</a></h3>
-										<span class="position">Skin Care & Grooming</span>
-										<div class="text">
-											<p>Advanced facial treatments to revive and rejuvenate your natural glow.</p>
-										</div>
-										<a href="#" class="btn-view-details">View Details</a>
-
-									</div>
-								</div>
-							</div>
-							<div class="d-flex mb-sm-4 staff-card" data-category="skincare" style="display: none;">
-								<div class="staff w-100">
-									<div class="img mb-4 mx-auto" style="background-image: url(images/cleanup%26detan.png);"></div>
-									<div class="info text-center">
-										<h3><a href="#">Cleanup & &nbsp;&nbsp;&nbsp;Detan</a></h3>
-										<span class="position">Skin Care & Grooming</span>
-										<div class="text">
-											<p>Deep cleansing and detan treatments to effectively remove impurities.</p>
-										</div>
-										<a href="#" class="btn-view-details">View Details</a>
-
-									</div>
-								</div>
-							</div>
-							<div class="d-flex mb-sm-4 staff-card" data-category="skincare" style="display: none;">
-								<div class="staff w-100">
-									<div class="img mb-4 mx-auto" style="background-image: url(images/kidsskincare.png);"></div>
-									<div class="info text-center">
-										<h3><a href="#">Kids Gentle Skin Care</a></h3>
-										<span class="position">Skin Care & Grooming</span>
-										<div class="text">
-											<p>Mild and hypoallergenic skin care designed specifically for children.</p>
-										</div>
-										<a href="#" class="btn-view-details">View Details</a>
-
-									</div>
-								</div>
-							</div>
-
-							<!-- Bridal Makeup -->
-							<div class="d-flex mb-sm-4 staff-card" data-category="bridal" style="display: none;">
-								<div class="staff w-100">
-									<div class="img mb-4 mx-auto" style="background-image: url(images/groom-makeup.png);"></div>
-									<div class="info text-center">
-										<h3><a href="#">Groom Makeup & Styling</a></h3>
-										<span class="position">Bridal Makeup</span>
-										<div class="text">
-											<p>Complete grooming and makeup services to ensure grooms look their best.</p>
-										</div>
-										<a href="#" class="btn-view-details">View Details</a>
-
-									</div>
-								</div>
-							</div>
-							<div class="d-flex mb-sm-4 staff-card" data-category="bridal" style="display: none;">
-								<div class="staff w-100">
-									<div class="img mb-4 mx-auto" style="background-image: url(images/bridal-makeup.png);"></div>
-									<div class="info text-center">
-										<h3><a href="#">Bridal Makeup Package</a></h3>
-										<span class="position">Bridal Makeup</span>
-										<div class="text">
-											<p>Comprehensive packages creating the perfect look for your special day.</p>
-										</div>
-										<a href="#" class="btn-view-details">View Details</a>
-
-									</div>
-								</div>
-							</div>
-							<div class="d-flex mb-sm-4 staff-card" data-category="bridal" style="display: none;">
-								<div class="staff w-100">
-									<div class="img mb-4 mx-auto" style="background-image: url(images/airbrush-bridal.png);"></div>
-									<div class="info text-center">
-										<h3><a href="#">HD / Airbrush Bridal</a></h3>
-										<span class="position">Bridal Makeup</span>
-										<div class="text">
-											<p>Flawless HD and airbrush makeup techniques for a long-lasting, picture-perfect finish.</p>
-										</div>
-										<a href="#" class="btn-view-details">View Details</a>
-
-									</div>
-								</div>
-							</div>
-							<div class="d-flex mb-sm-4 staff-card" data-category="bridal" style="display: none;">
-								<div class="staff w-100">
-									<div class="img mb-4 mx-auto" style="background-image: url(images/flower-girl.png);"></div>
-									<div class="info text-center">
-										<h3><a href="#">Flower Girl Styling</a></h3>
-										<span class="position">Bridal Makeup</span>
-										<div class="text">
-											<p>Adorable makeup and styling for the youngest members of the bridal party.</p>
-										</div>
-										<a href="#" class="btn-view-details">View Details</a>
-
-									</div>
-								</div>
-							</div>
-
-							<!-- Party & Special Event -->
-							<div class="d-flex mb-sm-4 staff-card" data-category="party" style="display: none;">
-								<div class="staff w-100">
-									<div class="img mb-4 mx-auto" style="background-image: url(images/men-makeover.png);"></div>
-									<div class="info text-center">
-										<h3><a href="#">Party Grooming & Styling</a></h3>
-										<span class="position">Party Makeovers</span>
-										<div class="text">
-											<p>Sophisticated styling and grooming to make you stand out at any event.</p>
-										</div>
-										<a href="#" class="btn-view-details">View Details</a>
-
-									</div>
-								</div>
-							</div>
-							<div class="d-flex mb-sm-4 staff-card" data-category="party" style="display: none;">
-								<div class="staff w-100">
-									<div class="img mb-4 mx-auto" style="background-image: url(images/party-makeup.png);"></div>
-									<div class="info text-center">
-										<h3><a href="#">Party Makeup & Hair</a></h3>
-										<span class="position">Party Makeovers</span>
-										<div class="text">
-											<p>Glamorous party makeup and stunning hairstyles tailored to your outfit.</p>
-										</div>
-										<a href="#" class="btn-view-details">View Details</a>
-
-									</div>
-								</div>
-							</div>
-							<div class="d-flex mb-sm-4 staff-card" data-category="party" style="display: none;">
-								<div class="staff w-100">
-									<div class="img mb-4 mx-auto" style="background-image: url(images/eng-recp-makeover.png);"></div>
-									<div class="info text-center">
-										<h3><a href="#">Receptions Makeover</a></h3>
-										<span class="position">Party Makeovers</span>
-										<div class="text">
-											<p>Elegant and memorable makeovers perfect for engagement ceremonies and receptions.</p>
-										</div>
-										<a href="#" class="btn-view-details">View Details</a>
-
-									</div>
-								</div>
-							</div>
-							<div class="d-flex mb-sm-4 staff-card" data-category="party" style="display: none;">
-								<div class="staff w-100">
-									<div class="img mb-4 mx-auto" style="background-image: url(images/kids-party-makeover.png);"></div>
-									<div class="info text-center">
-										<h3><a href="#">Kids Party Makeover</a></h3>
-										<span class="position">Party Makeovers</span>
-										<div class="text">
-											<p>Fun and creative styling to make kids feel special at any celebration.</p>
-										</div>
-										<a href="#" class="btn-view-details">View Details</a>
-
-									</div>
-								</div>
-							</div>
-
-							<!-- Beauty & Wellness -->
-							<div class="d-flex mb-sm-4 staff-card" data-category="wellness" style="display: none;">
-								<div class="staff w-100">
-									<div class="img mb-4 mx-auto" style="background-image: url(images/manicure-men.png);"></div>
-									<div class="info text-center">
-										<h3><a href="#">Men's Mani & Pedi</a></h3>
-										<span class="position">Beauty & Wellness</span>
-										<div class="text">
-											<p>Relaxing and thorough manicure and pedicure services tailored for men.</p>
-										</div>
-										<a href="#" class="btn-view-details">View Details</a>
-
-									</div>
-								</div>
-							</div>
-							<div class="d-flex mb-sm-4 staff-card" data-category="wellness" style="display: none;">
-								<div class="staff w-100">
-									<div class="img mb-4 mx-auto" style="background-image: url(images/manicure-women.png);"></div>
-									<div class="info text-center">
-										<h3><a href="#">Manicure & Pedicure</a></h3>
-										<span class="position">Beauty & Wellness</span>
-										<div class="text">
-											<p>Premium nail care for perfectly groomed hands and feet.</p>
-										</div>
-										<a href="#" class="btn-view-details">View Details</a>
-
-									</div>
-								</div>
-							</div>
-							<div class="d-flex mb-sm-4 staff-card" data-category="wellness" style="display: none;">
-								<div class="staff w-100">
-									<div class="img mb-4 mx-auto" style="background-image: url(images/waxing-threading.png);"></div>
-									<div class="info text-center">
-										<h3><a href="#">Waxing & Threading</a></h3>
-										<span class="position">Beauty & Wellness</span>
-										<div class="text">
-											<p>Gentle and precise waxing and threading services for smooth skin.</p>
-										</div>
-										<a href="#" class="btn-view-details">View Details</a>
-
-									</div>
-								</div>
-							</div>
-							<div class="d-flex mb-sm-4 staff-card" data-category="wellness" style="display: none;">
-								<div class="staff w-100">
-									<div class="img mb-4 mx-auto" style="background-image: url(images/kids-nail.png);"></div>
-									<div class="info text-center">
-										<h3><a href="#">Kids Nail & Grooming</a></h3>
-										<span class="position">Beauty & Wellness</span>
-										<div class="text">
-											<p>Safe, fun, and gentle nail care and basic grooming for kids.</p>
-										</div>
-										<a href="#" class="btn-view-details">View Details</a>
-
-									</div>
-								</div>
-							</div>
-				</div>
+				</a>
 			</div>
 		</div>
 	</section>
 
 	<!-- Scroll Modal -->
-<div class="scroll-modal-overlay" id="scrollModal">
-    <div class="scroll-container">
-        <div class="scroll-image-wrapper">
-            <img src="images/Service_Info.png" alt="Scroll" class="scroll-bg-img">
-            <button class="close-scroll" id="closeScroll">&times;</button>
-        </div>
-    </div>
-</div>
+	<div class="scroll-modal-overlay" id="scrollModal">
+		<div class="scroll-container">
+			<div class="scroll-image-wrapper">
+				<img src="images/Service_Info.png" alt="Scroll" class="scroll-bg-img">
+				<button class="close-scroll" id="closeScroll">&times;</button>
+			</div>
+		</div>
+	</div>
 
 	<section class="ftco-section ftco-discount img"
 		style="background-image: url(images/student-discount.png); margin-top: 18px; padding: 60px 0; background-position: left bottom; background-size: cover;">
@@ -647,11 +293,11 @@
 						<img src="images/work-1.jpg" class="img-fluid" alt="Sutram Solutions Template">
 						<div class="info d-flex align-items-center">
 							<!-- Skin Care & Grooming -->
-							</div>
-						</div>
-					</a>
-				</div>
-				<!-- <div class="col-md-4 ftco-animate">
+	</div>
+	</div>
+	</a>
+	</div>
+	<!-- <div class="col-md-4 ftco-animate">
 					<a href="#" class="work-entry">
 						<img src="images/work-2.jpg" class="img-fluid" alt="Sutram Solutions Template">
 						<div class="info d-flex align-items-center">
@@ -677,8 +323,8 @@
 						</div>
 					</a>
 				</div> -->
-			</div>
-		</div>
+	</div>
+	</div>
 	</section>
 
 	<!-- <section class="ftco-partner bg-light">
@@ -792,7 +438,8 @@
 		</div>
 	</section> -->
 
-	<section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url(images/image_1.jpg);">
+	<section class="ftco-section ftco-counter img" id="section-counter"
+		style="background-image: url(images/image_1.jpg);">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row justify-content-center">
@@ -945,16 +592,16 @@
 						<div class="block-23 mb-3">
 							<ul>
 								<li><span class="icon icon-map-marker"></span><span class="text">
-									Assotech World - Avenue 01
-									Plot No. 274, adjacent to NH-16,
-									Rudrapur, Bhubaneswar, Odisha
-									
-								</span></li>
+										Assotech World - Avenue 01
+										Plot No. 274, adjacent to NH-16,
+										Rudrapur, Bhubaneswar, Odisha
+
+									</span></li>
 								<li><span class="icon icon-clock-o"></span><span class="text">
-									Opening Hours Monday - Sunday <br>
+										Opening Hours Monday - Sunday <br>
 										09:00AM - 09:00PM <br>
-									Including Public Holidays
-								</span></li>
+										Including Public Holidays
+									</span></li>
 
 								<li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929
 											210</span></a></li>
@@ -969,21 +616,17 @@
 						</ul>
 					</div>
 				</div>
-				
+
 				<div class="col-md-6">
 					<div class="col-md-16">
-					<div class="ftco-footer-widget mb-12">
-							<iframe
-					width="95%"
-					height="390"
-					style="border:0; border-radius:28px;"
-					loading="lazy"
-					allowfullscreen
-					src="https://www.google.com/maps?q=Assotech%20World%20-%20Avenue%2001%2C%20Plot%20No.%20274%2C%20adjacent%20to%20NH-16%2C%20Rudrapur%2C%20Bhubaneswar%2C%20Odisha%20751032&output=embed">
-				</iframe>				
-						
+						<div class="ftco-footer-widget mb-12">
+							<iframe width="95%" height="390" style="border:0; border-radius:28px;" loading="lazy"
+								allowfullscreen
+								src="https://www.google.com/maps?q=Assotech%20World%20-%20Avenue%2001%2C%20Plot%20No.%20274%2C%20adjacent%20to%20NH-16%2C%20Rudrapur%2C%20Bhubaneswar%2C%20Odisha%20751032&output=embed">
+							</iframe>
+
+						</div>
 					</div>
-				</div>
 				</div>
 			</div>
 			<div class="row">
@@ -1000,37 +643,36 @@
 			</div>
 		</div>
 	</footer>
-<script src="js/mascot.js"></script>
-<script src="js/main.js"></script>
- <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Playfair+Display:wght@500&family=Work+Sans&display=swap"
-        rel="stylesheet">
+	<script src="js/mascot.js"></script>
+	<script src="js/main.js"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Playfair+Display:wght@500&family=Work+Sans&display=swap"
+		rel="stylesheet">
 
-    <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-<div class="mascot-container">
-        <div class="speech-bubble">Welcome!</div>
-        <div class="mascot-img-wrapper">
-            <img src="images/mascot.png" alt="Mascot">
-        </div>
-        <div class="mascot-menu">
-            <h5>How can I help?</h5>
-            <ul class="mascot-menu-list">
-                <li><a
-                        href="https://docs.google.com/forms/d/e/1FAIpQLSclDF9rdahbYHU4E2IPDVMysiGjUnQSDPDy-Pu1XlWl5yFgeA/viewform?usp=sharing&ouid=105010883578271493527"><i
-                            class="fas fa-calendar-check"></i>Quick Booking</a></li>
-                <li><a href="#services"><i class="fas fa-search"></i>Our Services</a></li>
-                <li><a href="team.html"><i class="fas fa-users"></i>Meet Our Team</a></li>
-                <li><a href="testimonial.html"><i class="fas fa-star"></i>Client Reviews</a></li>
-                <li><a
-                        href="https://wa.me/6302519834" target="_blank" rel="noreferrer"><i
-                            class="fas fa-handshake"></i>Chat with Us</a></li>
-            </ul>
-        </div>
-    </div>
+	<!-- Icon Font Stylesheet -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+	<div class="mascot-container">
+		<div class="speech-bubble">Welcome!</div>
+		<div class="mascot-img-wrapper">
+			<img src="images/mascot.png" alt="Mascot">
+		</div>
+		<div class="mascot-menu">
+			<h5>How can I help?</h5>
+			<ul class="mascot-menu-list">
+				<li><a
+						href="https://docs.google.com/forms/d/e/1FAIpQLSclDF9rdahbYHU4E2IPDVMysiGjUnQSDPDy-Pu1XlWl5yFgeA/viewform?usp=sharing&ouid=105010883578271493527"><i
+							class="fas fa-calendar-check"></i>Quick Booking</a></li>
+				<li><a href="#services"><i class="fas fa-search"></i>Our Services</a></li>
+				<li><a href="team.html"><i class="fas fa-users"></i>Meet Our Team</a></li>
+				<li><a href="testimonial.html"><i class="fas fa-star"></i>Client Reviews</a></li>
+				<li><a href="https://wa.me/6302519834" target="_blank" rel="noreferrer"><i
+							class="fas fa-handshake"></i>Chat with Us</a></li>
+			</ul>
+		</div>
+	</div>
 
 
 	<!-- loader -->
@@ -1060,6 +702,6 @@
 
 
 
-  </body>
+</body>
 
 </html>
