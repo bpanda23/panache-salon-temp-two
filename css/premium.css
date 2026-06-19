@@ -1396,8 +1396,8 @@ h1, h2, h3, h4, h5, h6, .heading-section h2 {
 
 #services.ftco-section.bg-light {
     background: #0a0806 !important;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
 }
 
 #services .heading-section h2.mb-4 {
@@ -1627,50 +1627,52 @@ h1, h2, h3, h4, h5, h6, .heading-section h2 {
     position: relative !important;
 }
 
-/* Icon Span - Original size, dark charcoal color for gold contrast */
+/* Icon Span - BIG icons, dominant visual element */
 .ftco-counter .icon span,
 .block-18 .icon span {
     position: static !important;
-    transform: none !important;
-    font-size: 65px !important;
+    font-size: 40px !important;
+    transform: scale(6.5) !important;
+    transform-origin: center center !important;
     color: var(--charcoal-dark) !important;
     display: inline-block !important;
     line-height: 1 !important;
+    margin-bottom: 35px !important;
 }
 
-/* Stat Numbers - Crisp white for luxury contrast on gold background */
+/* Stat Numbers - smaller, below the big icons */
 .ftco-counter .text strong.number,
 .block-18 .text strong {
     font-family: 'Montserrat', sans-serif !important;
-    font-size: 3rem !important;
+    font-size: 1.8rem !important;
     font-weight: 700 !important;
     color: #ffffff !important;
     display: block;
     line-height: 1.1;
-    margin: 8px 0 4px !important;
+    margin: 4px 0 2px !important;
 }
 
-/* Add "+" suffix directly to the number */
+/* Add "+" suffix */
 .ftco-counter .text strong.number::after,
 .block-18 .text strong::after {
     content: '+' !important;
-    font-size: 1.8rem !important;
+    font-size: 1rem !important;
     color: #ffffff !important;
     vertical-align: super !important;
-    margin-left: 2px !important;
+    margin-left: 1px !important;
 }
 
-/* Labels - Charcoal dark, uppercase, spaced out */
+/* Labels - smaller text below numbers */
 .ftco-counter .text span,
 .block-18 .text span {
     font-family: 'Montserrat', sans-serif !important;
-    font-size: 0.8rem !important;
+    font-size: 0.65rem !important;
     font-weight: 700 !important;
     letter-spacing: 1.5px;
     text-transform: uppercase;
     color: rgba(18, 18, 18, 0.75) !important;
     display: block;
-    margin-top: 4px !important;
+    margin-top: 2px !important;
 }
 .wrapper {
     width: 100%;
@@ -1806,14 +1808,14 @@ h1, h2, h3, h4, h5, h6, .heading-section h2 {
     grid-template-rows:
         170px
         170px
-        120px;
+        170px;
 
     gap:16px;
 
     grid-template-areas:
         "large men skin"
         "large bridal spa"
-        ".     .     wellness";
+        "large skin2 wellness";
 }
 
 /* Grid Areas */
@@ -1822,6 +1824,7 @@ h1, h2, h3, h4, h5, h6, .heading-section h2 {
 .skin      { grid-area: skin; }
 .bridal    { grid-area: bridal; }
 .spa       { grid-area: spa; }
+.skin2     { grid-area: skin2; }
 .wellness  { grid-area: wellness; }
 
 .service-card{
@@ -1882,6 +1885,7 @@ h1, h2, h3, h4, h5, h6, .heading-section h2 {
 /* Small cards */
 .men h3,
 .skin h3,
+.skin2 h3,
 .bridal h3,
 .spa h3,
 .wellness h3{
@@ -1902,6 +1906,7 @@ h1, h2, h3, h4, h5, h6, .heading-section h2 {
             "men"
             "skin"
             "bridal"
+            "skin2"
             "spa"
             "wellness";
     }
