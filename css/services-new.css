@@ -123,21 +123,73 @@
     transition-delay: 0.1s;
 }
 
-/* Responsiveness for buttons */
-@media (max-width: 991px) {
+/* Nav Wrapper Sticky Styling */
+.services-nav-wrapper {
+    position: sticky;
+    top: 60px;
+    z-index: 1020;
+    background: rgba(8, 6, 4, 0.98);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 15px 0 5px;
+    border-bottom: 1px solid rgba(197, 160, 89, 0.2);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    margin-bottom: 20px;
+}
+
+/* Responsiveness */
+@media (max-width: 991.98px) {
+    .services-nav-wrapper { top: 55px; }
     .services-nav-scroll {
         justify-content: flex-start;
         padding-bottom: 10px;
     }
-    .service-nav-btn {
-        margin: 0 5px;
+    .service-nav-btn { margin: 0 5px; }
+    .service-nav-btn:hover, .service-nav-btn.active { width: 220px; }
+    .service-nav-btn .btn-text { font-size: 0.85rem; }
+    
+    .ds-title { font-size: 2rem !important; }
+    #servicePopupModal > div { height: 75vh !important; }
+    #popupTitle { font-size: 2.2rem !important; }
+}
+
+@media (max-width: 767.98px) {
+    .services-hero-section { padding: 120px 15px 50px !important; }
+    .hero-title { font-size: 2.6rem !important; }
+
+    /* Horizontal scroll for nav buttons */
+    .services-nav-wrapper { top: 50px; padding: 10px 0 0; }
+    .services-nav-scroll { 
+        flex-wrap: nowrap; 
+        overflow-x: auto; 
+        -webkit-overflow-scrolling: touch; 
+        padding-bottom: 20px; 
+        gap: 8px; 
+        scrollbar-width: none; 
     }
-    .service-nav-btn:hover, .service-nav-btn.active {
-        width: 220px;
-    }
-    .service-nav-btn .btn-text {
-        font-size: 0.85rem;
-    }
+    .services-nav-scroll::-webkit-scrollbar { display: none; }
+    .service-nav-btn { width: 64px; height: 64px; min-width: 64px; margin: 0; }
+    .service-nav-btn .icon-pin { width: 64px; height: 64px; min-width: 64px; }
+    .service-nav-btn:hover, .service-nav-btn.active { width: 200px; min-width: 200px; }
+
+    /* Detailed section adjustments */
+    .detailed-service-carousel-section { padding: 30px 0 !important; }
+    .ds-image { height: 280px !important; border-radius: 16px; }
+    .ds-image-wrapper { border-radius: 16px; }
+    .ds-title { font-size: 1.65rem !important; text-align: left; }
+    .ds-description { font-size: 0.95rem !important; text-align: left; }
+    .ds-desc-overlay { padding: 25px 20px !important; }
+    .ds-right-panel { margin-top: 25px; padding: 25px 15px !important; border-radius: 16px; }
+    .ds-side-heading { font-size: 1.4rem !important; }
+    .ds-sub-option-btn { font-size: 1.05rem !important; padding: 14px 15px !important; }
+    
+    /* Popup Modal overrides */
+    #servicePopupModal > div { width: 95vw !important; height: 80vh !important; border-radius: 16px !important; }
+    #servicePopupModal button { top: 10px !important; right: 10px !important; width: 36px !important; height: 36px !important; font-size: 1.2rem !important; }
+    #servicePopupModal > div > div > div:last-child { padding: 25px 20px !important; }
+    #popupCategory { font-size: 0.7rem !important; padding: 4px 12px !important; margin-bottom: 10px !important; }
+    #popupTitle { font-size: 1.6rem !important; margin: 8px 0 10px !important; text-align: left; line-height: 1.2; }
+    #popupDesc { font-size: 0.95rem !important; text-align: left; }
 }
 
 /* Detailed Service Carousel Section */
@@ -392,3 +444,4 @@
     opacity: 1;
     transform: translateY(0) scale(1);
 }
+

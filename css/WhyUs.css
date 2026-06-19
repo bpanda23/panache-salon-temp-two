@@ -41,13 +41,11 @@
 .whyus-hero-video-bg {
     position: absolute;
     top: -119px; left: 0;
-    
     width: 100%; height: 100%;
     object-fit: cover;
     z-index: 0;
 }
-/* When using a static image for the Why Us hero, show the whole image
-   without cropping and keep it in-flow so it doesn't overlap the text. */
+/* DESKTOP: in-flow image — shows the full image at natural height, no cropping */
 .whyus-hero-image {
     position: relative;
     width: 100%;
@@ -57,8 +55,12 @@
     display: block;
     z-index: 0;
 }
-/* Hide the overlay when a static hero image is used to avoid overlap */
+/* DESKTOP: hide overlay — pure image, no dark tint */
 .whyus-hero-section .whyus-hero-overlay {
+    display: none;
+}
+/* DESKTOP: hero text hidden — only shown on mobile/tablet */
+.whyus-hero-content {
     display: none;
 }
 .whyus-hero-overlay {
@@ -98,9 +100,36 @@
     margin: 0 auto;
     font-weight: 500;
 }
-@media (max-width: 768px) {
-    .whyus-hero-section { padding: 100px 0 50px; }
-    .whyus-hero-title { font-size: 3rem; }
+/* TABLET: switch to fixed-height cover image with overlay and hero text */
+@media (max-width: 991.98px) {
+    .whyus-hero-section {
+        min-height: 55vh !important;
+        display: flex !important;
+        align-items: flex-end !important;
+        padding: 0 0 40px !important;
+        margin-bottom: 0 !important;
+    }
+    .whyus-hero-image {
+        position: absolute !important;
+        top: 0 !important; left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        object-position: center top !important;
+    }
+    .whyus-hero-section .whyus-hero-overlay {
+        display: block !important;
+        background: linear-gradient(to bottom, rgba(5,4,2,0.25) 0%, rgba(5,4,2,0.55) 55%, rgba(5,4,2,0.88) 100%);
+    }
+    .whyus-hero-content { display: block !important; width: 100%; }
+    .whyus-hero-title { font-size: 2.8rem; }
+}
+/* MOBILE */
+@media (max-width: 767.98px) {
+    .whyus-hero-section { min-height: 45vh !important; padding-bottom: 25px !important; }
+    .whyus-hero-title { font-size: 2.2rem !important; }
+    .whyus-hero-description { font-size: 0.95rem !important; }
+    .whyus-hero-subtitle { font-size: 0.75rem !important; margin-bottom: 1rem !important; }
 }
 
 /* =====================================================
@@ -713,42 +742,51 @@
 /* =====================================================
    RESPONSIVE
    ===================================================== */
-@media (max-width: 991px) {
+@media (max-width: 991.98px) {
+    /* Hero handled in early media query above */
     .wu-mission-card { padding: 40px 35px; }
     .wu-core-promise { padding: 40px 30px; }
     .wu-pillars-heading { font-size: 2.2rem; }
-    .wu-mission-section { padding: 64px 0 44px; }
+    .wu-mission-section { margin-top: 0 !important; padding: 64px 0 44px; }
     .wu-pillars-section { padding: 60px 0; }
     .wu-responsibility-section { padding: 68px 0; }
 
-    .wu-resp-inner {
-        flex-direction: column;
-        text-align: center;
-        padding: 40px 30px;
-        gap: 30px;
-    }
+    .wu-resp-inner { flex-direction: column; text-align: center; padding: 40px 30px; gap: 30px; }
     .wu-resp-quote { font-size: 1.35rem; }
 
-    .wu-promise-banner {
-        flex-direction: column;
-        text-align: center;
-        padding: 40px 30px;
-        gap: 25px;
-    }
-    .wu-promise-center {
-        border-left: none;
-        border-right: none;
-        border-top: 1px solid rgba(197,160,89,0.2);
-        border-bottom: 1px solid rgba(197,160,89,0.2);
-        padding: 25px 0;
-    }
+    .wu-promise-banner { flex-direction: column; text-align: center; padding: 40px 30px; gap: 25px; }
+    .wu-promise-center { border-left: none; border-right: none; border-top: 1px solid rgba(197,160,89,0.2); border-bottom: 1px solid rgba(197,160,89,0.2); padding: 25px 0; }
     .wu-mission-heading { font-size: 2.1rem; }
 }
-@media (max-width: 575px) {
-    .wu-section-heading { font-size: 2.2rem; }
-    .wu-pillars-heading { font-size: 1.8rem; }
+
+@media (max-width: 767.98px) {
+    /* Hero handled in early media query above */
+    .wu-mission-section { padding-top: 40px !important; }
+    .wu-resp-bigquote { font-size: 4rem !important; }
+    .wu-resp-statement-text { font-size: 1.3rem !important; text-align: center; }
+    .wu-resp-footer-content { flex-direction: column; gap: 5px; text-align: center; }
+    
+    .wu-feat-block { 
+        padding: 30px 20px !important; 
+        min-height: auto !important; 
+        background: rgba(255, 255, 255, 0.03) !important;
+        border-radius: 16px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+    .wu-feat-inner { flex-direction: column; align-items: center; text-align: center; gap: 15px; }
+    .wu-feat-icon { font-size: 3rem !important; margin: 0; }
+    .wu-feat-title { font-size: 1.6rem !important; }
+    .wu-feat-text { font-size: 1.05rem !important; }
+    
+    .wu-promise-banner { padding: 30px 20px !important; }
+    .wu-promise-signature { font-size: 2.2rem !important; }
+    
+    .wu-section-heading { font-size: 2.2rem; text-align: center; display: block; }
+    .wu-section-eyebrow { text-align: center; display: block; }
+    .wu-pillars-heading { font-size: 1.8rem; text-align: center; }
     .wu-promise-text { font-size: 0.95rem; }
-    .wu-mission-heading { font-size: 1.85rem; }
-    .wu-mission-body { font-size: 1.04rem; padding-left: 0; padding-right: 0; }
+    .wu-mission-heading { font-size: 1.85rem; text-align: center; }
+    .wu-mission-eyebrow { display: block; text-align: center; margin-bottom: 15px; }
+    .wu-mission-body { font-size: 1.04rem; padding-left: 0; padding-right: 0; text-align: center; }
     .wu-core-promise { padding: 35px 20px; }
 }

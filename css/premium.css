@@ -1922,3 +1922,90 @@ h1, h2, h3, h4, h5, h6, .heading-section h2 {
         height:400px;
     }
 }
+
+/* Homepage Tablet Responsiveness */
+@media (max-width: 991.98px) {
+    .ftco-discount {
+        padding: 60px 15px !important;
+        background-position: center right !important;
+    }
+    .ftco-discount .justify-content-end {
+        justify-content: center !important;
+    }
+    .discount {
+        max-width: 85% !important;
+        text-align: left;
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        border: 1px solid rgba(255,255,255,0.4);
+        margin: 0 auto;
+    }
+    .discount h2 {
+        font-size: 2.8rem !important;
+    }
+    .discount p, .discount h3 {
+        font-size: 1.3rem !important;
+    }
+}
+
+/* Homepage Mobile Responsiveness */
+@media (max-width: 767.98px) {
+    #hero {
+        height: 100vh !important;
+        min-height: 100vh !important;
+    }
+    
+    .hero-wrap .slider-text h1 {
+        font-size: 2.8rem !important;
+    }
+
+    .ftco-counter .block-18 .text strong.number {
+        font-size: 26px !important;
+    }
+    .ftco-counter .block-18 .text span {
+        font-size: 14px !important;
+    }
+
+    .services-bento {
+        gap: 12px !important;
+    }
+    .service-card {
+        height: 220px !important;
+    }
+    .large {
+        height: 320px !important;
+    }
+
+    .ftco-discount {
+        padding: 40px 15px !important;
+        background-position: center right !important;
+    }
+    .discount {
+        max-width: 100% !important;
+        padding: 25px;
+        border-radius: 16px;
+    }
+    .discount h2 {
+        font-size: 2.2rem !important;
+    }
+    .discount p, .discount h3 {
+        font-size: 1.1rem !important;
+    }
+    .discount p.mb-4 {
+        font-size: 1.2rem !important;
+        margin-top: 20px !important;
+        padding-left: 15px !important;
+        border-left: 4px solid #A81C1C !important;
+    }
+
+    .mascot-container {
+        transform: scale(0.75);
+        transform-origin: bottom right;
+        bottom: 15px !important;
+        right: 15px !important;
+    }
+}
