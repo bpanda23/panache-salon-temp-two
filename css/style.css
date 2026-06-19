@@ -12590,7 +12590,7 @@ textarea.form-control {
     position: fixed;
     right: 30px;
     bottom: 30px;
-    z-index: 1000;
+    z-index: 9999;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
