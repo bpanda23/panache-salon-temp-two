@@ -435,11 +435,6 @@ h1, h2, h3, h4, h5, h6, .heading-section h2 {
     background-color: var(--charcoal-light) !important;
 }
 
-.ftco-section {
-    /* padding-top: 5em;
-    padding-bottom: 5em; */
-}
-
 /* Services section — ensure the fixed-height scroll panel never bleeds into next section */
 #services {
     /* padding-bottom: 6em; */
@@ -761,12 +756,13 @@ h1, h2, h3, h4, h5, h6, .heading-section h2 {
 
 .scroll-image-wrapper {
     position: relative;
-    width: 0;
+    width: 100%;
     height: 100%;
     overflow: hidden;
     transform: translateZ(-500px) scale(0.7);
     filter: blur(8px);
     opacity: 0;
+    border-radius: 24px;
 }
 
 .scroll-modal-overlay.active .scroll-image-wrapper {
@@ -795,10 +791,37 @@ h1, h2, h3, h4, h5, h6, .heading-section h2 {
 }
 
 .scroll-bg-img {
-    width: 1300px;
-    max-width: 95vw;
+    width: 100%;
     height: 100%;
     object-fit: contain; 
+}
+
+.scroll-carousel {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.scroll-carousel__track {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transform: translate3d(0, 0, 0);
+    will-change: transform;
+}
+
+.scroll-carousel__slide {
+    flex: 0 0 100%;
+    height: 100%;
+}
+
+.scroll-carousel__slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
 }
 
 
@@ -1397,6 +1420,9 @@ h1, h2, h3, h4, h5, h6, .heading-section h2 {
 }
 
 /* Individual card - Static Rounded Rectangle */
+/* Offset class no longer needed with Flexbox centering */
+
+/* Individual card - Static Circle setup */
 .hs-card {
     position: relative;
     display: block;
@@ -1645,4 +1671,124 @@ h1, h2, h3, h4, h5, h6, .heading-section h2 {
     color: rgba(18, 18, 18, 0.75) !important;
     display: block;
     margin-top: 4px !important;
+}
+.wrapper {
+    width: 100%;
+    overflow: hidden;
+    
+}
+
+.carousel {
+    display: flex;
+    align-items: stretch;
+    gap: 50px;
+    width: max-content;
+    will-change: transform;
+    animation: testimonial-marquee 22s linear infinite;
+}
+
+.slide {
+    flex: 0 0 clamp(280px, 46vw, 560px);
+    text-align: center;
+    background: #222;
+    color: #fff;
+    border-radius: 18px;
+    opacity: 0.82;
+    transform: scale(0.95);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+    transition: transform 0.75s ease, opacity 0.75s ease, background-color 0.75s ease;
+}
+
+.slide.prev,
+.slide.next {
+    opacity: 0.88;
+    transform: scale(0.98);
+}
+
+.slide.active {
+    opacity: 1;
+    transform: scale(1.06);
+    background: #2a2a2a;
+}
+
+.wrapper:hover .carousel {
+    animation-play-state: paused;
+}
+
+.slide img {
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+        padding: 18px 0 32px;
+    }
+
+    .carousel {
+        gap: 16px;
+    }
+
+    .slide {
+        flex-basis: 82vw;
+        padding: 32px 24px;
+    }
+}
+
+@keyframes testimonial-marquee {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+
+    to {
+        transform: translate3d(-50%, 0, 0);
+    }
+}
+
+
+
+
+
+.slide.active {
+    opacity: 1;
+}
+
+.slide img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.review-title {
+    font-size: 36px;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 15px;
+}
+
+.stars {
+    font-size: 28px;
+    color: #d4a017;
+    letter-spacing: 4px;
+    margin-bottom: 25px;
+}
+
+.quote {
+    max-width: 600px;
+    margin: 0 auto 35px;
+    font-size: 19px;
+    line-height: 1.8;
+    color: #ffffff;
+}
+
+.client-name {
+    font-size: 28px;
+    font-weight: 700;
+    color: #111;
+    margin: 0;
 }
