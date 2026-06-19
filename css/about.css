@@ -1,0 +1,372 @@
+/* Navbar — sticky, same as premium.css style */
+#ftco-navbar {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 1030 !important;
+    background: rgba(8, 6, 4, 0.95) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding-top: 1px;
+    padding-bottom: 1px;
+    margin-top: 0vh;
+}
+@media (max-width: 767px) {
+    #ftco-navbar { padding-top: 10px; padding-bottom: 10px; margin-top: 0vh; }
+}
+
+/* CRITICAL FIX: ftco-animate hides elements with opacity:0 until scroll triggers.
+   The hero is at top of page so scroll never fires — force text visible */
+.about-hero-section .ftco-animate {
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
+}
+.about-hero-section .about-hero-subtitle,
+.about-hero-section .about-hero-title,
+.about-hero-section .about-hero-description {
+    opacity: 1 !important;
+    visibility: visible !important;
+    position: relative;
+    z-index: 3;
+}
+
+
+/* =====================================================
+   HERO SECTION — EXACT MATCH to services-hero-section
+   Same padding, same structure, same classes mirrored
+   ===================================================== */
+.about-hero-section {
+    background: #080604;
+    color: #ffffff;
+    padding: 140px 0 60px;   /* identical to services hero */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Full-bleed video — identical to .hero-video-bg */
+.about-hero-video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+/* Dark overlay — identical to .hero-video-overlay */
+.about-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+/* Container z-index — identical to services */
+.about-hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Subtitle — identical to .services-hero-section .hero-subtitle */
+.about-hero-subtitle {
+    color: #d8c397;
+    font-size: 0.85rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Main title — identical to .services-hero-section .hero-title */
+.about-hero-title {
+    font-size: 4rem;
+    color: #ffffff;
+    font-family: 'Playfair Display', Georgia, serif;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+/* Description — identical to .services-hero-section .hero-description */
+.about-hero-description {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.8;
+    max-width: 600px;
+    margin: 0 auto;
+    font-weight: 500;
+}
+
+/* Responsive — identical to services */
+@media (max-width: 768px) {
+    .about-hero-section { padding: 100px 0 50px; }
+    .about-hero-title   { font-size: 3rem; }
+}
+
+/* =====================================================
+   OUR STORY SECTION
+   ===================================================== */
+.our-story-section {
+    background: linear-gradient(160deg, #0d0b08 0%, #080604 60%, #0f0c07 100%);
+    color: #f4efe4;
+    padding: 90px 0 18px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Ambient background orbs */
+.story-bg-glow {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    animation: orbitGlow 10s ease-in-out infinite alternate;
+}
+.story-bg-glow--left {
+    width: 500px; height: 500px;
+    top: -100px; left: -150px;
+    background: radial-gradient(circle, rgba(197,160,89,0.07) 0%, transparent 70%);
+}
+.story-bg-glow--right {
+    width: 400px; height: 400px;
+    bottom: -80px; right: -100px;
+    background: radial-gradient(circle, rgba(197,160,89,0.05) 0%, transparent 70%);
+    animation-delay: -5s;
+}
+@keyframes orbitGlow {
+    0%   { transform: scale(1) translate(0, 0); }
+    100% { transform: scale(1.3) translate(20px, 15px); }
+}
+
+/* "ABOUT PANACHE" centered label */
+.about-panache-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    margin-bottom: 10px;
+    animation: fadeInDown 0.8s ease 0.1s both;
+}
+.label-line {
+    display: inline-block;
+    width: 60px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(197,160,89,0.7), transparent);
+}
+.label-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    color: #c5a059;
+    text-transform: uppercase;
+}
+.about-panache-ornament {
+    text-align: center;
+    color: rgba(197,160,89,0.5);
+    font-size: 1rem;
+    margin-bottom: 55px;
+    animation: pulse 3s ease-in-out infinite;
+}
+@keyframes pulse {
+    0%, 100% { opacity: 0.4; transform: scale(1); }
+    50%       { opacity: 1;   transform: scale(1.2); }
+}
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* =====================================================
+   LEFT: IMAGE CARD
+   ===================================================== */
+.story-image-col { 
+    padding-right: 20px; /* Restored gap on the right of the image */
+    position: relative;
+    z-index: 1;
+}
+
+/* Offset gold frame behind the image for ultra-premium look */
+.story-image-col::before {
+    content: '';
+    position: absolute;
+    top: -20px; 
+    left: 20px;
+    width: calc(100% - 40px); 
+    height: 100%;
+    border: 2px solid rgba(197, 160, 89, 0.5);
+    border-radius: 20px 100px 20px 100px;
+    z-index: 0;
+    transition: all 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.story-image-wrapper {
+    position: relative;
+    border-radius: 20px 100px 20px 100px;
+    overflow: hidden;
+    box-shadow:
+        0 30px 60px rgba(0,0,0,0.7),
+        0 0 0 1px rgba(197,160,89,0.25),
+        0 0 60px rgba(197,160,89,0.08);
+    transition: all 0.8s cubic-bezier(0.2,1,0.3,1);
+    cursor: pointer;
+}
+
+/* Ambient glow behind image */
+.story-image-glow {
+    position: absolute;
+    inset: -20px;
+    background: radial-gradient(ellipse at 30% 40%, rgba(197,160,89,0.2) 0%, transparent 60%);
+    z-index: 0;
+    pointer-events: none;
+    transition: opacity 0.6s ease;
+    opacity: 0;
+}
+
+/* Image */
+.story-img {
+    width: 100%;
+    height: 600px; /* Elegant height */
+    object-fit: cover;
+    object-position: left center; /* Ensures the 'Panache' sign on the left is perfectly visible */
+    display: block;
+    position: relative;
+    z-index: 1;
+    transition: transform 12s ease-in-out;
+}
+
+/* Gold inner border ring */
+.story-image-border {
+    position: absolute;
+    inset: 0;
+    border-radius: 20px 100px 20px 100px;
+    box-shadow: inset 0 0 0 1px rgba(197,160,89,0);
+    transition: box-shadow 0.7s ease;
+    z-index: 3;
+    pointer-events: none;
+}
+
+/* Shimmer sweep on hover */
+.story-image-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0; left: -130%;
+    width: 60%; height: 100%;
+    background: linear-gradient(120deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.12) 50%, rgba(255,255,255,0) 100%);
+    transform: skewX(-18deg);
+    z-index: 2;
+    pointer-events: none;
+    transition: none;
+}
+
+/* =====================================================
+   RIGHT: CONTENT
+   ===================================================== */
+.story-content-col { 
+    padding-left: 50px; /* Added substantial gap on the left of the text */
+    z-index: 5;
+}
+.story-content { 
+    max-width: 100%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: transparent; /* Removed the card background for a cleaner, elegant floating text design */
+    border: none;
+    border-radius: 0;
+    padding: 20px 0;
+    margin-left: 0; 
+    box-shadow: none;
+    transition: all 0.6s cubic-bezier(0.2, 1, 0.3, 1);
+    position: relative;
+    z-index: 5;
+}
+
+/* Title */
+.story-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 3.2rem; /* Scaled down slightly to fit smaller card */
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.1;
+    background: linear-gradient(to right, #f9e9cd 0%, #c5a059 50%, #f9e9cd 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% auto;
+    animation: fadeInUp 0.8s ease 0.3s both, shimmerText 4s linear infinite;
+}
+
+@keyframes shimmerText {
+    to { background-position: 200% center; }
+}
+
+/* Decorative divider */
+.story-title-divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 28px;
+    animation: fadeInUp 0.8s ease 0.45s both;
+}
+.divider-line {
+    flex: 1;
+    max-width: 80px;
+    height: 1px;
+    background: linear-gradient(to right, rgba(197,160,89,0.5), transparent);
+    transition: all 0.6s ease;
+}
+.divider-ornament { 
+    color: #c5a059; 
+    font-size: 0.9rem; 
+    transition: transform 0.6s ease, color 0.6s ease, text-shadow 0.6s ease;
+}
+
+/* Tagline */
+.story-tagline {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #e8c882;
+    margin-bottom: 25px;
+    animation: fadeInUp 0.8s ease 0.55s both;
+}
+
+/* Body paragraphs */
+.story-para {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.05rem;
+    color: rgba(244, 239, 228, 0.88);
+    line-height: 1.9;
+    margin-bottom: 22px;
+    animation: fadeInUp 0.8s ease 0.65s both;
+}
+.story-para:nth-child(5) { animation-delay: 0.75s; }
+.story-para:nth-child(6) { animation-delay: 0.85s; }
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+@media (max-width: 991px) {
+    .story-image-col { padding: 0 15px; margin-bottom: 60px; }
+    .story-image-col::before { display: none; }
+    .story-content-col { padding: 0 15px; }
+    .story-content { 
+        margin-left: 0; 
+        padding: 40px 30px; 
+    }
+
+    .story-img { height: 500px; }
+    .story-title { font-size: 2.8rem; }
+}
+@media (max-width: 575px) {
+    .story-title { font-size: 2.2rem; }
+}

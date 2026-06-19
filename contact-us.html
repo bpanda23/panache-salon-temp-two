@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Panache Salon – Hair & Beauty Studio Template</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+  <link rel="stylesheet" href="css/animate.css">
+
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+
+  <link rel="stylesheet" href="css/aos.css">
+
+  <link rel="stylesheet" href="css/ionicons.min.css">
+
+  <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+
+  <link rel="stylesheet" href="css/flaticon.css">
+  <link rel="stylesheet" href="css/icomoon.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/premium.css">
+  <link rel="stylesheet" href="css/services-new.css">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <div class="container">
+      <div class="collapse navbar-collapse" id="ftco-nav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item active"><a href="about.html" class="nav-link">About Us</a></li>
+          <li class="nav-item active"><a href="services.html" class="nav-link">Services</a></li>
+          <li class="nav-item active"><a href="bridal_service.html" class="nav-link">Bridal Elite</a></li>
+          <li class="nav-item active"><a href="WhyUs.html" class="nav-link">Why Us</a></li>
+          <li class="nav-item"><a href="contact-us.html" class="nav-link">Contact</a></li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- END nav -->
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Manrope:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --pine-900: #16221b;
+      --pine-800: #21311f;
+      --pine-700: #2c4030;
+      --gold-500: #c9a253;
+      --gold-300: #e1c789;
+      --ivory-100: #f8f4ec;
+      --ivory-200: #efe9db;
+      --ink-900: #24241f;
+      --ink-600: #5d5a4f;
+      --hairline: #dfd6c1;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Manrope', sans-serif;
+      color: var(--ink-900);
+      background: var(--ivory-100);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .contact-hero-section {
+      min-height: 520px;
+      padding-top: 0;
+      padding-bottom: 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-hero-section .hero-video-bg {
+      position: absolute !important;
+      top: 0 !important;
+      left: 0 !important;
+      width: 100% !important;
+      height: 100% !important;
+      transform: none !important;
+      object-fit: cover !important;
+      object-position: center center !important;
+      z-index: 0 !important;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--gold-500);
+      outline-offset: 3px;
+    }
+
+    .page {
+      display: flex;
+      min-height: 100vh;
+      width: 100%;
+    }
+
+    /* ---------- LEFT VISUAL PANEL ---------- */
+
+    .visual {
+      position: sticky;
+      top: 0;
+      flex: 0 0 44%;
+      height: 100vh;
+      overflow: hidden;
+      background: var(--pine-900);
+    }
+
+    .visual__img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: saturate(0.85);
+    }
+
+    .visual__overlay {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(22, 34, 27, 0.55) 0%, rgba(22, 34, 27, 0.25) 38%, rgba(22, 34, 27, 0.5) 72%, rgba(22, 34, 27, 0.92) 100%),
+        linear-gradient(100deg, rgba(22, 34, 27, 0.55) 0%, rgba(22, 34, 27, 0.05) 45%);
+    }
+
+    .visual__mark {
+      position: absolute;
+      top: 48px;
+      left: 48px;
+      width: 54px;
+      height: 54px;
+      border: 1px solid var(--gold-300);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Fraunces', serif;
+      font-size: 22px;
+      color: var(--gold-300);
+      z-index: 2;
+      animation: fadeUp 0.7s ease both;
+    }
+
+    .visual__brand {
+      position: absolute;
+      bottom: 170px;
+      left: 48px;
+      z-index: 2;
+      animation: fadeUp 0.7s ease 0.1s both;
+    }
+
+    .visual__brand-name {
+      display: block;
+      font-family: 'Fraunces', serif;
+      font-size: 15px;
+      letter-spacing: 0.34em;
+      color: var(--ivory-100);
+    }
+
+    .visual__brand-sub {
+      display: block;
+      margin-top: 4px;
+      font-size: 10.5px;
+      letter-spacing: 0.28em;
+      color: var(--gold-300);
+    }
+
+    .visual__quote {
+      position: absolute;
+      bottom: 48px;
+      left: 48px;
+      right: 48px;
+      z-index: 2;
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-weight: 500;
+      font-size: 23px;
+      line-height: 1.45;
+      color: var(--ivory-100);
+      border-top: 1px solid rgba(225, 199, 137, 0.35);
+      padding-top: 18px;
+      animation: fadeUp 0.7s ease 0.2s both;
+    }
+
+    /* ---------- RIGHT CONTENT PANEL ---------- */
+
+    .content {
+      flex: 1;
+      position: relative;
+      border-left: 1px solid var(--hairline);
+      display: flex;
+      justify-content: center;
+    }
+
+    .content::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 9px;
+      height: 9px;
+      background: var(--ivory-100);
+      border: 1px solid var(--gold-500);
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    .content__inner {
+      width: 100%;
+      max-width: 580px;
+      padding: 96px 56px 80px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12.5px;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold-500);
+      animation: fadeUp 0.6s ease both;
+    }
+
+    .eyebrow svg {
+      width: 14px;
+      height: 14px;
+      flex-shrink: 0;
+    }
+
+    .heading {
+      margin-top: 14px;
+      font-family: 'Fraunces', serif;
+      font-weight: 600;
+      font-size: clamp(40px, 4.4vw, 56px);
+      line-height: 1.05;
+      color: var(--pine-900);
+      animation: fadeUp 0.6s ease 0.06s both;
+    }
+
+    .intro {
+      margin-top: 18px;
+      max-width: 440px;
+      font-size: 15.5px;
+      line-height: 1.7;
+      color: var(--ink-600);
+      animation: fadeUp 0.6s ease 0.12s both;
+    }
+
+    .info-list {
+      list-style: none;
+      margin-top: 48px;
+      border-top: 1px solid var(--hairline);
+    }
+
+    .info-item {
+      display: flex;
+      gap: 20px;
+      padding: 22px 0;
+      border-bottom: 1px solid var(--hairline);
+      animation: fadeUp 0.6s ease both;
+    }
+
+    .info-item:nth-of-type(1) {
+      animation-delay: 0.16s;
+    }
+
+    .info-item:nth-of-type(2) {
+      animation-delay: 0.20s;
+    }
+
+    .info-item:nth-of-type(3) {
+      animation-delay: 0.24s;
+    }
+
+    .info-item:nth-of-type(4) {
+      animation-delay: 0.28s;
+    }
+
+    .info-item:nth-of-type(5) {
+      animation-delay: 0.32s;
+    }
+
+    .info-item:nth-of-type(6) {
+      animation-delay: 0.36s;
+    }
+
+    .info-icon {
+      flex-shrink: 0;
+      width: 38px;
+      height: 38px;
+      border: 1px solid var(--gold-500);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold-500);
+    }
+
+    .info-icon svg {
+      width: 17px;
+      height: 17px;
+    }
+
+    .info-text h3 {
+      font-family: 'Fraunces', serif;
+      font-weight: 600;
+      font-size: 17px;
+      color: var(--pine-900);
+      margin-bottom: 5px;
+    }
+
+    .info-text p {
+      font-size: 14.5px;
+      line-height: 1.65;
+      color: #000;
+      font-weight: 800;
+
+    }
+
+    .info-text a {
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s ease, color 0.2s ease;
+    }
+
+    .info-text a:hover {
+      color: var(--pine-700);
+      border-bottom-color: var(--gold-500);
+    }
+
+    .cta-row {
+      margin-top: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+      animation: fadeUp 0.6s ease 0.4s both;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 15px 30px;
+      background: var(--pine-900);
+      color: var(--ivory-100);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      border-radius: 2px;
+      transition: background 0.25s ease, transform 0.25s ease;
+    }
+
+    .btn svg {
+      width: 14px;
+      height: 14px;
+    }
+
+    .btn:hover {
+      background: var(--pine-700);
+      transform: translateX(2px);
+    }
+
+    .social-row {
+      display: flex;
+      gap: 12px;
+    }
+
+    .social-row a {
+      width: 42px;
+      height: 42px;
+      border: 1px solid var(--hairline);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--pine-900);
+      transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+    }
+
+    .social-row a svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    .social-row a:hover {
+      border-color: var(--gold-500);
+      color: var(--gold-500);
+      transform: translateY(-2px);
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (prefers-reduced-motion:reduce) {
+      * {
+        animation: none !important;
+      }
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+
+    @media (max-width:1024px) {
+      .page {
+        flex-direction: column;
+      }
+
+      .visual {
+        position: relative;
+        flex: none;
+        height: 62vh;
+      }
+
+      .content {
+        border-left: none;
+        border-top: 1px solid var(--hairline);
+      }
+
+      .content::before {
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+
+      .content__inner {
+        padding: 64px 40px 64px;
+      }
+    }
+
+    @media (max-width:600px) {
+      .visual {
+        height: 48vh;
+      }
+
+      .visual__quote {
+        font-size: 19px;
+        bottom: 36px;
+        left: 28px;
+        right: 28px;
+      }
+
+      .visual__brand {
+        left: 28px;
+        bottom: 130px;
+      }
+
+      .visual__mark {
+        left: 28px;
+        top: 28px;
+        width: 46px;
+        height: 46px;
+        font-size: 18px;
+      }
+
+      .content__inner {
+        padding: 48px 24px 56px;
+      }
+
+      .heading {
+        font-size: 36px;
+      }
+
+      .info-item {
+        gap: 14px;
+      }
+
+      .cta-row {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+  </head>
+
+  <body>
+
+    <div class="page">
+
+      <!-- LEFT: VISUAL PANEL -->
+      <aside class="visual">
+        <img class="visual__img"
+          src="images/Panache Salon Logo.png"
+          alt="Interior of Hyde Luxury Salon">
+        <div class="visual__overlay"></div>
+        <div class="visual__mark">P|S</div>
+        <div class="visual__brand">
+          <span class="visual__brand-name">PANACHE</span>
+          <span class="visual__brand-sub">LUXURY SALON</span>
+        </div>
+        <p class="visual__quote">&ldquo;A touch of class in every style.&rdquo;</p>
+      </aside>
+
+      <!-- RIGHT: CONTACT CONTENT -->
+      <main class="content">
+        <div class="content__inner">
+
+          <p class="eyebrow">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l1.6 6.4L20 10l-6.4 1.6L12 18l-1.6-6.4L4 10l6.4-1.6L12 2z" />
+            </svg>
+            Get in Touch
+          </p>
+
+          <h1 class="heading">Contact Us</h1>
+
+          <p class="intro">Visit our salon in Bhubaneswar for a refined grooming and beauty experience, or reach out
+            below &mdash; our team is happy to help.</p>
+
+          <ul class="info-list">
+
+            <li class="info-item">
+              <span class="info-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M12 21s-7-6.1-7-11.5A7 7 0 0 1 19 9.5C19 14.9 12 21 12 21z" />
+                  <circle cx="12" cy="9.5" r="2.4" />
+                </svg>
+              </span>
+              <div class="info-text">
+                <h3>Address</h3>
+                <p>2nd Floor, Plot No.&ndash; 217, Naharkanta, Rudrapur, Hanspal Bridge, Bhubaneswar, Odisha &ndash;
+                  752101</p>
+              </div>
+            </li>
+
+            <li class="info-item">
+              <span class="info-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path
+                    d="M4.5 4.5h3.2l1.6 4-2 1.6a11.5 11.5 0 0 0 5.6 5.6l1.6-2 4 1.6v3.2a1.5 1.5 0 0 1-1.6 1.5C9.5 19.6 4.4 14.5 3 7.1a1.5 1.5 0 0 1 1.5-1.6z" />
+                </svg>
+              </span>
+              <div class="info-text">
+                <h3>Phone</h3>
+                <p><a href="tel:+919040493999">+91 90404 93999</a></p>
+              </div>
+            </li>
+
+            <li class="info-item">
+              <span class="info-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <rect x="3" y="5.5" width="18" height="13" rx="1.5" />
+                  <path d="M4 7l8 6 8-6" />
+                </svg>
+              </span>
+              <div class="info-text">
+                <h3>Email</h3>
+                <p><a href="mailto:info@panachesalon.co.in">info@panachesalon.co.in</a></p>
+              </div>
+            </li>
+
+            <li class="info-item">
+              <span class="info-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="8.5" />
+                  <path d="M12 7.5V12l3.2 1.9" />
+                </svg>
+              </span>
+              <div class="info-text">
+                <h3>Hours</h3>
+                <p>Mon &ndash; Sun: 9:30 AM &ndash; 8:30 PM</p>
+              </div>
+            </li>
+
+            <li class="info-item">
+              <span class="info-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M12 3.5a8 8 0 0 0-6.9 12.1L4 20.5l5.1-1.1A8 8 0 1 0 12 3.5z" />
+                  <path
+                    d="M8.7 9.6c.2-.5.6-1.1 1-1.1.5 0 .9.4 1.2 1 .2.4.1.8-.1 1.1l-.4.5c-.1.2-.1.4 0 .6.5 1 1.4 1.9 2.4 2.4.2.1.4.1.6 0l.5-.4c.3-.2.7-.3 1.1-.1.6.3 1 .7 1 1.2 0 .4-.6.8-1.1 1-1 .4-2.6 0-4.4-1.8-1.8-1.8-2.2-3.4-1.8-4.4z" />
+                </svg>
+              </span>
+              <div class="info-text">
+                <h3>WhatsApp</h3>
+                <p><a href="https://wa.me/919040493999" target="_blank" rel="noopener">Chat with us on WhatsApp</a></p>
+              </div>
+            </li>
+
+            <li class="info-item">
+              <span class="info-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <rect x="4" y="4" width="16" height="16" rx="4.5" />
+                  <circle cx="12" cy="12" r="3.6" />
+                  <circle cx="16.6" cy="7.4" r="0.7" fill="currentColor" stroke="none" />
+                </svg>
+              </span>
+              <div class="info-text">
+                <h3>Instagram</h3>
+                <p><a href="https://instagram.com/panachesalon" target="_blank" rel="noopener">@panachesalon</a>
+                </p>
+              </div>
+            </li>
+
+          </ul>
+
+          <div class="cta-row">
+            <a href="#" class="btn">
+              Book an Appointment
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </a>
+            <div class="social-row">
+              <a href="https://wa.me/919040493999" target="_blank" rel="noopener" aria-label="WhatsApp">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M12 3.5a8 8 0 0 0-6.9 12.1L4 20.5l5.1-1.1A8 8 0 1 0 12 3.5z" />
+                </svg>
+              </a>
+              <a href="https://instagram.com/hydeluxurysalon" target="_blank" rel="noopener" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <rect x="4" y="4" width="16" height="16" rx="4.5" />
+                  <circle cx="12" cy="12" r="3.6" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </main>
+
+    </div>
+
+
+    <footer class="ftco-footer ftco-section img">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md-6">
+            <div class="ftco-footer-widget mb-8">
+              <h2 class="ftco-heading-2">Have a Questions?</h2>
+              <div class="block-23 mb-3">
+                <ul>
+                  <li><span class="icon icon-map-marker"></span><span class="text">
+                      Assotech World - Avenue 01
+                      Plot No. 274, adjacent to NH-16,
+                      Rudrapur, Bhubaneswar, Odisha
+
+                    </span></li>
+                  <li><span class="icon icon-clock-o"></span><span class="text">
+                      Opening Hours Monday - Sunday <br>
+                      09:00AM - 09:00PM <br>
+                      Including Public Holidays
+                    </span></li>
+
+                  <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929
+                        210</span></a></li>
+                  <li><a href="#"><span class="icon icon-envelope"></span><span
+                        class="text">info@panache.co.in</span></a></li>
+                </ul>
+              </div>
+              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="col-md-16">
+              <div class="ftco-footer-widget mb-12">
+                <iframe width="95%" height="390" style="border:0; border-radius:28px;" loading="lazy" allowfullscreen
+                  src="https://www.google.com/maps?q=Assotech%20World%20-%20Avenue%2001%2C%20Plot%20No.%20274%2C%20adjacent%20to%20NH-16%2C%20Rudrapur%2C%20Bhubaneswar%2C%20Odisha%20751032&output=embed">
+                </iframe>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+
+            <p><!-- Link back to Sutram Solutions can't be removed. Template is licensed under CC BY 3.0. -->
+              Copyright &copy;
+              <script>document.write(new Date().getFullYear());</script> All rights reserved | This template
+              is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://sutramsolutions.in"
+                target="_blank">Sutram Solutions</a>
+              <!-- Link back to Sutram Solutions can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Playfair+Display:wght@500&family=Work+Sans&display=swap"
+      rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <div class="mascot-container">
+      <div class="speech-bubble">Welcome!</div>
+      <div class="mascot-img-wrapper">
+        <img src="images/mascot.png" alt="Mascot">
+      </div>
+      <div class="mascot-menu">
+        <h5>How can I help?</h5>
+        <ul class="mascot-menu-list">
+          <li><a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSclDF9rdahbYHU4E2IPDVMysiGjUnQSDPDy-Pu1XlWl5yFgeA/viewform?usp=sharing&ouid=105010883578271493527"><i
+                class="fas fa-calendar-check"></i>Quick Booking</a></li>
+          <li><a href="#services"><i class="fas fa-search"></i>Our Services</a></li>
+          <li><a href="team.html"><i class="fas fa-users"></i>Meet Our Team</a></li>
+          <li><a href="testimonial.html"><i class="fas fa-star"></i>Client Reviews</a></li>
+          <li><a href="https://wa.me/6302519834" target="_blank" rel="noreferrer"><i class="fas fa-handshake"></i>Chat
+              with Us</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- loader -->
+    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+        <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+        <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+          stroke="#F96D00" />
+      </svg></div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
+    <script src="js/jquery.timepicker.min.js"></script>
+    <script src="js/scrollax.min.js"></script>
+    <script src="js/mascot.js"></script>
+    <script src="js/main.js"></script>
+
+
+  </body>
+
+</html>

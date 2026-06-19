@@ -1,0 +1,754 @@
+/* =====================================================
+   WHYUS.CSS — Why Us Page Stylesheet
+   Modular, isolated — mirrors premium.css design language
+   ===================================================== */
+
+/* --- Navbar --- */
+#ftco-navbar {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 1030 !important;
+    background: rgba(8, 6, 4, 0.95) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+@media (max-width: 767px) {
+    #ftco-navbar { padding-top: 10px; padding-bottom: 10px; }
+}
+
+/* =====================================================
+   HERO SECTION — Exact match to services-hero-section
+   ===================================================== */
+.whyus-hero-section {
+    background: radial-gradient(1200px 600px at 15% 10%, rgba(197,160,89,0.18) 0%, rgba(197,160,89,0.03) 45%, rgba(8,6,4,1) 100%),
+                linear-gradient(160deg, #0d0b08 0%, #080604 65%, #100d07 100%);
+    color: #ffffff;
+    padding: 120px 0 52px;
+    position: relative;
+    overflow: hidden;
+}
+
+.whyus-hero-section .whyus-hero-subtitle,
+.whyus-hero-section .whyus-hero-title,
+.whyus-hero-section .whyus-hero-description {
+    opacity: 1 !important;
+    visibility: visible !important;
+    position: relative;
+    z-index: 3;
+}
+.whyus-hero-video-bg {
+    position: absolute;
+    top: -119px; left: 0;
+    
+    width: 100%; height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+/* When using a static image for the Why Us hero, show the whole image
+   without cropping and keep it in-flow so it doesn't overlap the text. */
+.whyus-hero-image {
+    position: relative;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+    z-index: 0;
+}
+/* Hide the overlay when a static hero image is used to avoid overlap */
+.whyus-hero-section .whyus-hero-overlay {
+    display: none;
+}
+.whyus-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 1;
+}
+.whyus-hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+.whyus-hero-subtitle {
+    color: #d8c397;
+    font-size: 0.85rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+}
+.whyus-hero-title {
+    font-size: 4rem;
+    color: #ffffff;
+    font-family: 'Playfair Display', Georgia, serif;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+.whyus-hero-description {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.8;
+    max-width: 600px;
+    margin: 0 auto;
+    font-weight: 500;
+}
+@media (max-width: 768px) {
+    .whyus-hero-section { padding: 100px 0 50px; }
+    .whyus-hero-title { font-size: 3rem; }
+}
+
+/* =====================================================
+   SHARED KEYFRAMES
+   ===================================================== */
+@keyframes wu-fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes wu-fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes wu-orbitGlow {
+    0%   { transform: scale(1) translate(0, 0); }
+    100% { transform: scale(1.4) translate(25px, 20px); }
+}
+@keyframes wu-shimmer {
+    0%   { left: -100%; }
+    100% { left: 200%; }
+}
+@keyframes wu-pulseBorder {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(197, 160, 89, 0.3); }
+    50%       { box-shadow: 0 0 0 8px rgba(197, 160, 89, 0); }
+}
+
+/* =====================================================
+   MISSION STATEMENT SECTION
+   ===================================================== */
+.wu-mission-section {
+    background:
+        radial-gradient(900px 450px at 10% 15%, rgba(197,160,89,0.14) 0%, rgba(197,160,89,0.04) 35%, transparent 65%),
+        radial-gradient(700px 350px at 90% 30%, rgba(72, 167, 255, 0.10) 0%, rgba(72, 167, 255, 0.03) 38%, transparent 68%),
+        linear-gradient(160deg, #0d0b08 0%, #080604 60%, #100d07 100%);
+    color: #f4efe4;
+    padding: 72px 0 52px;
+
+    position: relative;
+    overflow: hidden;
+}
+
+/* Reduce extra whitespace between sections on the Why Us page */
+.whyus-hero-section { padding-bottom: 0px; margin-bottom: 0px; }
+.wu-mission-section { margin-top: -157px; padding-top: 20px; padding-bottom: 10px; padding-left: 15px; padding-right: 15px; }
+.wu-pillars-section { padding-top: 10px; padding-bottom: 0px; margin-top: 0px; }
+.wu-responsibility-section { padding-top: 0px !important; padding-bottom: 0px !important; margin-top: 0px; }
+.wu-promise-banner-section { margin-top: 0px; }
+
+
+
+.wu-bg-orb {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    animation: wu-orbitGlow 12s ease-in-out infinite alternate;
+}
+.wu-orb-left {
+    width: 550px; height: 550px;
+    top: -150px; left: -180px;
+    background: radial-gradient(circle, rgba(197,160,89,0.08) 0%, transparent 70%);
+}
+.wu-orb-right {
+    width: 400px; height: 400px;
+    bottom: -100px; right: -120px;
+    background: radial-gradient(circle, rgba(197,160,89,0.06) 0%, transparent 70%);
+    animation-delay: -6s;
+}
+
+/* Section Label */
+.wu-section-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    margin-bottom: 16px;
+    animation: wu-fadeInDown 0.8s ease 0.1s both;
+}
+.wu-label-line {
+    display: inline-block;
+    width: 60px; height: 1px;
+    background: linear-gradient(to right, transparent, rgba(197,160,89,0.7), transparent);
+}
+.wu-label-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    color: #c5a059;
+    text-transform: uppercase;
+}
+
+/* Section Heading */
+.wu-section-heading {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #f9e9cd;
+    text-align: center;
+    margin-bottom: 50px;
+    background: linear-gradient(to right, #f9e9cd 0%, #c5a059 50%, #f9e9cd 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% auto;
+    animation: wu-fadeInUp 0.8s ease 0.2s both;
+}
+
+/* Mission Content */
+.wu-mission-content {
+    text-align: center;
+    padding: 0 15px;
+}
+
+.wu-mission-eyebrow {
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: #c5a059;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.wu-mission-heading {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 700;
+    color: #f9e9cd;
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.wu-heading-gold {
+    color: #c5a059;
+}
+
+.wu-mission-divider {
+    width: 140px;
+    height: 2px;
+    background: linear-gradient(90deg, rgba(197,160,89,0), rgba(197,160,89,0.8), rgba(197,160,89,0));
+    margin: 0 auto 20px auto;
+}
+
+.wu-mission-body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.35rem;
+    color: rgba(244, 239, 228, 0.88);
+    line-height: 1.8;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 1;
+    transition: color 0.4s ease;
+}
+
+.wu-mission-body:last-child { margin-bottom: 0; }
+.wu-mission-content:hover .wu-mission-body { color: rgba(255, 255, 255, 0.95); }
+
+/* Core Promise stays centered in its own block */
+.wu-core-promise {
+    margin-top: 30px;
+    text-align: center;
+    position: relative;
+    padding: 25px 0;
+    border-top: 1px solid rgba(197,160,89,0.15);
+    border-bottom: 1px solid rgba(197,160,89,0.15);
+}
+
+.wu-quote-mark {
+    font-family: 'Playfair Display', serif;
+    font-size: 6rem;
+    color: rgba(197, 160, 89, 0.3);
+    line-height: 0.5;
+    display: block;
+    transition: color 0.5s ease;
+}
+
+.wu-quote-open { margin-bottom: 15px; }
+.wu-quote-close { margin-top: 5px; }
+
+.wu-core-promise:hover .wu-quote-mark { color: rgba(197, 160, 89, 0.7); }
+
+.wu-promise-text {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.65rem;
+    color: rgba(249, 233, 205, 0.92);
+    line-height: 1.8;
+    font-style: italic;
+    margin: 0;
+    transition: color 0.4s ease;
+}
+.wu-core-promise:hover .wu-promise-text { color: #ffffff; }
+
+.wu-promise-label-script {
+    display: block;
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;
+    color: #c5a059;
+    margin-top: 15px;
+}
+.wu-core-promise:hover .wu-promise-text { color: #ffffff; }
+
+/* =====================================================
+   PILLARS SECTION
+   ===================================================== */
+.wu-pillars-section {
+    background:
+        radial-gradient(1000px 500px at 50% 0%, rgba(197,160,89,0.14) 0%, transparent 60%),
+        radial-gradient(700px 420px at 15% 50%, rgba(72,167,255,0.10) 0%, transparent 55%),
+        #070503;
+    padding: 86px 0;
+    position: relative;
+    margin-top: -18px;
+}
+
+.wu-section-eyebrow {
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    color: #c5a059;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.wu-pillars-heading {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 3.4rem;
+    font-weight: 700;
+    color: #f9e9cd;
+    margin-bottom: 0;
+}
+
+/* =====================================================
+   PILLARS — COMPACT 2×2 FEATURE GRID
+   ===================================================== */
+
+  .wu-pillars-section .col-md-6 {
+    padding: 10px;
+} 
+.wu-feat-block {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 36px 40px 36px 56px;
+    background: #0e0b08;
+    border: 1px solid rgba(197,160,89,0.28);
+    animation: wuFadeUp 0.8s ease forwards;
+    border-left: none;
+    min-height: 220px;
+    overflow: hidden;
+    transition: background 0.4s ease;
+    cursor: default;
+    border-radius: 8px;
+}
+.wu-feat-block--alt {
+    background: #0b0905;
+    border-top: 1px solid rgba(197,160,89,0.28);
+    border-bottom: none;
+}
+.wu-feat-block:hover {
+    background: rgba(197,160,89,0.07);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(197,160,89,0.15);
+    border-color: rgba(197,160,89,0.6);
+}
+
+@keyframes wuFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================
+   GOLD SHINE EFFECT
+========================= */
+
+.wu-feat-block::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 70%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,0.06),
+        transparent
+    );
+    transition: 0.8s;
+}
+
+.wu-feat-block:hover::before {
+    left: 130%;
+}
+
+.col-md-6:nth-child(1) .wu-feat-block {
+    animation-delay: 0.1s;
+}
+
+.col-md-6:nth-child(2) .wu-feat-block {
+    animation-delay: 0.2s;
+}
+
+.col-md-6:nth-child(3) .wu-feat-block {
+    animation-delay: 0.3s;
+}
+
+.col-md-6:nth-child(4) .wu-feat-block {
+    animation-delay: 0.4s;
+}
+
+/* Gold left accent bar */
+.wu-feat-accent {
+    position: absolute;
+    left: 0; top: 20%; bottom: 20%;
+    width: 3px;
+    background: linear-gradient(to bottom, transparent, #c5a059, transparent);
+    opacity: 0.5;
+    transition: opacity 0.4s ease, top 0.4s ease, bottom 0.4s ease;
+}
+.wu-feat-block:hover .wu-feat-accent {
+    opacity: 1;
+    top: 0; bottom: 0;
+}
+
+/* Ghost number */
+    /* .wu-feat-num {
+        position: absolute;
+        right: 20px; bottom: 10px;
+        font-family: 'Playfair Display', serif;
+        font-size: 6rem;
+        font-weight: 900;
+        line-height: 1;
+        color: rgba(197,160,89,0.05);
+        pointer-events: none;
+        transition: color 0.4s ease;
+        user-select: none;
+    }
+    .wu-feat-block:hover .wu-feat-num {
+        color: rgba(197,160,89,0.1);
+    } */
+
+/* Icon + text side by side */
+.wu-feat-inner {
+    display: flex;
+    align-items: flex-start;
+    gap: 22px;
+    position: relative;
+    z-index: 1;
+}
+
+.wu-feat-icon {
+    flex-shrink: 0;
+    font-size: 3rem;
+    color: #d4aa6a;
+    line-height: 1;
+    margin-top: 4px;
+    transition: all 0.4s ease;
+}
+.wu-feat-block:hover .wu-feat-icon {
+    /* transform: scale(1.2); */
+    transform: scale(1.15) rotate(5deg);
+    color: #e3bc7b;
+}
+
+.wu-feat-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 12px;
+    line-height: 1.3;
+    transition: color 0.3s ease;
+}
+
+.wu-feat-block:hover .wu-feat-title {
+    color: #d4aa6a;
+}
+
+.wu-feat-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.15rem;
+    color: rgba(255,255,255,0.82);
+    line-height: 1.8;
+    margin: 0;
+}
+
+.wu-pillars-heading {
+    position: relative;
+    transition: all 0.4s ease;
+}
+
+.wu-pillars-heading:hover {
+    letter-spacing: 1px;
+}
+
+.wu-heading-gold {
+    transition: all 0.4s ease;
+}
+
+.wu-pillars-heading:hover .wu-heading-gold {
+    text-shadow: 0 0 15px rgba(212,170,106,0.5);
+}
+
+/* =====================================================
+   CORPORATE RESPONSIBILITY — BOLD STATEMENT
+   ===================================================== */
+.wu-responsibility-section {
+    position: relative;
+    padding: 40px 0;
+    overflow: hidden;
+    color: #ffffff;
+    background: #060503;
+}
+
+.wu-resp-bg {
+    position: absolute;
+    inset: 0;
+    background: url('../images/bg_2.jpg') no-repeat center center;
+    background-size: cover;
+    z-index: 0;
+}
+
+.wu-resp-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, rgba(3,2,1,0.96) 0%, rgba(8,5,3,0.92) 60%, rgba(14,10,5,0.96) 100%);
+    z-index: 1;
+}
+
+.wu-responsibility-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* The main statement container */
+.wu-resp-statement {
+    text-align: center;
+    max-width: 860px;
+    margin: 0 auto;
+}
+
+/* Header: line — LABEL — line */
+.wu-resp-statement-header {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 32px;
+}
+
+.wu-resp-header-accent {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(197,160,89,0.55));
+}
+.wu-resp-header-accent:last-child {
+    background: linear-gradient(90deg, rgba(197,160,89,0.55), transparent);
+}
+
+.wu-resp-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 5px;
+    color: #c5a059;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+/* Quote area */
+.wu-resp-quote-wrap {
+    position: relative;
+    padding: 0 30px;
+    margin-bottom: 32px;
+}
+
+.wu-resp-bigquote {
+    font-family: 'Playfair Display', serif;
+    font-size: 8rem;
+    line-height: 0.6;
+    color: rgba(197,160,89,0.15);
+    display: block;
+    font-style: normal;
+    user-select: none;
+}
+.wu-resp-bigquote--close {
+    text-align: right;
+    line-height: 0.1;
+    margin-top: -10px;
+}
+
+.wu-resp-statement-text {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.7rem;
+    font-style: italic;
+    color: #f9e9cd;
+    line-height: 1.75;
+    margin: -20px 0 0 0;
+    position: relative;
+    z-index: 1;
+}
+
+/* Footer: line — icon + author — line */
+.wu-resp-statement-footer {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.wu-resp-footer-line {
+    flex: 1;
+    height: 1px;
+    background: rgba(197,160,89,0.25);
+}
+
+.wu-resp-footer-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    white-space: nowrap;
+}
+
+.wu-resp-footer-icon {
+    font-size: 1.4rem;
+    color: #c5a059;
+}
+
+.wu-resp-footer-author {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: rgba(197,160,89,0.8);
+    text-transform: uppercase;
+}
+
+/* =====================================================
+   OUR PROMISE BANNER (Sleek Horizontal Strip)
+   ===================================================== */
+.wu-promise-banner-section {
+    background: #080604;
+    padding: 0;
+}
+
+.wu-promise-banner {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(90deg, #110e0a 0%, #1a150f 50%, #110e0a 100%);
+    border-top: 1px solid rgba(197,160,89,0.3);
+    border-bottom: 1px solid rgba(197,160,89,0.3);
+    padding: 30px 50px;
+    gap: 40px;
+}
+
+.wu-promise-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-shrink: 0;
+}
+
+.wu-promise-icon {
+    width: 40px; height: 40px;
+}
+.wu-promise-icon svg { width: 100%; height: 100%; }
+
+.wu-promise-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #c5a059;
+    text-transform: uppercase;
+}
+
+.wu-promise-center {
+    flex: 1;
+    border-left: 1px solid rgba(197,160,89,0.2);
+    border-right: 1px solid rgba(197,160,89,0.2);
+    padding: 0 40px;
+}
+
+.wu-promise-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.7;
+    margin: 0;
+}
+
+.wu-promise-right {
+    flex-shrink: 0;
+}
+
+.wu-promise-signature {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 2.6rem;
+    color: #c5a059;
+    font-style: italic;
+    opacity: 0.9;
+}
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+@media (max-width: 991px) {
+    .wu-mission-card { padding: 40px 35px; }
+    .wu-core-promise { padding: 40px 30px; }
+    .wu-pillars-heading { font-size: 2.2rem; }
+    .wu-mission-section { padding: 64px 0 44px; }
+    .wu-pillars-section { padding: 60px 0; }
+    .wu-responsibility-section { padding: 68px 0; }
+
+    .wu-resp-inner {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 30px;
+        gap: 30px;
+    }
+    .wu-resp-quote { font-size: 1.35rem; }
+
+    .wu-promise-banner {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 30px;
+        gap: 25px;
+    }
+    .wu-promise-center {
+        border-left: none;
+        border-right: none;
+        border-top: 1px solid rgba(197,160,89,0.2);
+        border-bottom: 1px solid rgba(197,160,89,0.2);
+        padding: 25px 0;
+    }
+    .wu-mission-heading { font-size: 2.1rem; }
+}
+@media (max-width: 575px) {
+    .wu-section-heading { font-size: 2.2rem; }
+    .wu-pillars-heading { font-size: 1.8rem; }
+    .wu-promise-text { font-size: 0.95rem; }
+    .wu-mission-heading { font-size: 1.85rem; }
+    .wu-mission-body { font-size: 1.04rem; padding-left: 0; padding-right: 0; }
+    .wu-core-promise { padding: 35px 20px; }
+}
