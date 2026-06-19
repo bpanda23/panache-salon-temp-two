@@ -1396,8 +1396,9 @@ h1, h2, h3, h4, h5, h6, .heading-section h2 {
 
 #services.ftco-section.bg-light {
     background: #0a0806 !important;
-    padding-top: 6rem;
+    padding-top: 2.2rem;
     padding-bottom: 6rem;
+    text-align: center;
 }
 
 #services .heading-section h2.mb-4 {
@@ -1799,7 +1800,7 @@ h1, h2, h3, h4, h5, h6, .heading-section h2 {
 
 .services-bento{
     display:grid;
-
+    margin-top:25px;
     grid-template-columns:
         minmax(400px, 2fr)
         minmax(180px, 1fr)
