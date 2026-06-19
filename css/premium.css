@@ -1389,27 +1389,23 @@ h1, h2, h3, h4, h5, h6, .heading-section h2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px; /* Reduced gap to allow bigger circles */
+    gap: 30px; 
     width: 100%;
-    max-width: 1350px; /* Increased max-width significantly to make cards larger */
+    max-width: 1350px; 
     margin: 40px auto 0;
     padding: 0 15px;
 }
 
-/* Offset class no longer needed with Flexbox centering */
-.hs-card.card-offset { }
-
-/* Individual card - Static Circle setup */
+/* Individual card - Static Rounded Rectangle */
 .hs-card {
     position: relative;
     display: block;
     overflow: hidden;
     text-decoration: none !important;
     
-    /* Circle Design */
-    width: calc(25% - 15px); /* Adjusted for 20px gap (3 gaps * 20px = 60px / 4 = 15px) */
-    aspect-ratio: 1 / 1;
-    border-radius: 50%;
+    width: calc(25% - 22.5px); /* 4 cards per row */
+    aspect-ratio: 4 / 5;
+    border-radius: 12px;
     
     background: #111;
     cursor: pointer;
@@ -1437,71 +1433,66 @@ h1, h2, h3, h4, h5, h6, .heading-section h2 {
     filter: brightness(0.95);
 }
 
-/* Image purely darkens and blurs on hover (NO scaling/movement) */
+/* Image purely darkens and blurs on hover */
 .hs-card:hover .hs-card-img {
     filter: brightness(0.35) saturate(1.2) blur(2px);
 }
 
-/* Overlay hidden by default, visible on hover */
-.hs-card-overlay {
+/* Sliding Bottom Panel hidden below by default */
+.hs-card-bottom {
     position: absolute;
-    inset: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 45%;
+    background: #050403; /* Solid black/dark */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 25px;
-    background: radial-gradient(circle at center, rgba(10, 6, 3, 0.4) 0%, rgba(5, 3, 1, 0.9) 100%);
-    opacity: 0;
-    transition: opacity 0.5s ease;
+    transform: translateY(100%); /* Hidden below */
+    transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+    padding: 20px 15px 15px;
+    border-top: 1px solid rgba(197, 160, 89, 0.3);
 }
 
-.hs-card:hover .hs-card-overlay {
-    opacity: 1;
+.hs-card:hover .hs-card-bottom {
+    transform: translateY(0); /* Scrolls up from down */
 }
 
-/* Service name text - Scrolls down on hover */
+/* Gold Icon Wrapper overlapping the top of the black box */
+.hs-icon-wrapper {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 55px;
+    height: 55px;
+    border: 1px solid var(--gold-primary);
+    border-radius: 50%;
+    background: #050403;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gold-primary);
+    font-size: 1.3rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+/* Service name text */
 .hs-card-name {
     font-family: 'Playfair Display', Georgia, serif !important;
-    font-size: 1.35rem;
+    font-size: 1.15rem;
     font-weight: 700;
-    color: #fff !important;
+    color: var(--gold-light) !important;
     text-align: center;
     letter-spacing: 1px;
     line-height: 1.4;
-    margin: 0;
-    opacity: 0;
-    transform: translateY(-30px); /* Start from above */
-    transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1),
-                opacity 0.5s ease,
-                color 0.4s ease;
-    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.9);
+    margin: 15px 0 0 0;
+    text-transform: uppercase;
 }
 
-.hs-card:hover .hs-card-name {
-    opacity: 1;
-    transform: translateY(0); /* Scroll down into place */
-    color: var(--gold-light) !important;
-}
-
-/* Expanding horizontal gold line */
-.hs-card-line {
-    width: 0px;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, var(--gold-primary), transparent);
-    margin-top: 15px;
-    opacity: 0;
-    transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1) 0.1s,
-                opacity 0.4s ease 0.1s;
-    box-shadow: 0 0 8px var(--gold-primary);
-}
-
-.hs-card:hover .hs-card-line {
-    width: 60px;
-    opacity: 1;
-}
-
-/* Responsive adjustments for Flexbox Circular Layout */
+/* Responsive adjustments for Flexbox Layout */
 @media (max-width: 1499px) {
     .hs-cards-grid {
         max-width: 1200px;
@@ -1513,7 +1504,7 @@ h1, h2, h3, h4, h5, h6, .heading-section h2 {
         max-width: 900px;
     }
     .hs-card {
-        width: calc(33.333% - 13.34px); /* 3 cards per row */
+        width: calc(33.333% - 20px); /* 3 cards per row */
     }
 }
 
@@ -1522,16 +1513,23 @@ h1, h2, h3, h4, h5, h6, .heading-section h2 {
         max-width: 700px;
     }
     .hs-card {
-        width: calc(33.333% - 13.34px);
+        width: calc(33.333% - 20px);
     }
 }
 
 @media (max-width: 767px) {
     .hs-card {
-        width: calc(50% - 10px); /* 2 cards per row */
+        width: calc(50% - 15px); /* 2 cards per row */
     }
     .hs-card-name {
-        font-size: 1.15rem;
+        font-size: 1.05rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hs-card {
+        width: 100%; /* 1 card per row */
+        max-width: 320px;
     }
 }
 
@@ -1540,4 +1538,111 @@ h1, h2, h3, h4, h5, h6, .heading-section h2 {
         width: 100%; /* 1 card per row */
         max-width: 300px;
     }
+}
+
+/* ================================================
+   STATS / COUNTER SECTION  — Premium Golden Design
+   ================================================ */
+
+#section-counter {
+    position: relative;
+    padding: 5rem 0 !important;
+    /* Solid golden primary background */
+    background: var(--gold-primary) !important;
+    border: none !important;
+}
+
+/* Hide background images or overlays */
+#section-counter .overlay {
+    display: none !important;
+}
+
+/* Flexbox reordering: Icon -> Number -> Label */
+.block-18 .text {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.block-18 .icon {
+    order: 1 !important;
+}
+
+.block-18 .text strong.number {
+    order: 2 !important;
+}
+
+.block-18 .text span {
+    order: 3 !important;
+}
+
+/* Remove all boxes, borders, and cards */
+.block-18 {
+    padding: 0 !important;
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    width: 100%;
+    margin-bottom: 0 !important;
+}
+
+/* Transparent Icon Container */
+.ftco-counter .icon {
+    width: auto !important;
+    height: auto !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    margin: 0 auto 10px !important;
+    border-radius: 0 !important;
+    position: relative !important;
+}
+
+/* Icon Span - Original size, dark charcoal color for gold contrast */
+.ftco-counter .icon span,
+.block-18 .icon span {
+    position: static !important;
+    transform: none !important;
+    font-size: 65px !important;
+    color: var(--charcoal-dark) !important;
+    display: inline-block !important;
+    line-height: 1 !important;
+}
+
+/* Stat Numbers - Crisp white for luxury contrast on gold background */
+.ftco-counter .text strong.number,
+.block-18 .text strong {
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 3rem !important;
+    font-weight: 700 !important;
+    color: #ffffff !important;
+    display: block;
+    line-height: 1.1;
+    margin: 8px 0 4px !important;
+}
+
+/* Add "+" suffix directly to the number */
+.ftco-counter .text strong.number::after,
+.block-18 .text strong::after {
+    content: '+' !important;
+    font-size: 1.8rem !important;
+    color: #ffffff !important;
+    vertical-align: super !important;
+    margin-left: 2px !important;
+}
+
+/* Labels - Charcoal dark, uppercase, spaced out */
+.ftco-counter .text span,
+.block-18 .text span {
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 0.8rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: rgba(18, 18, 18, 0.75) !important;
+    display: block;
+    margin-top: 4px !important;
 }
