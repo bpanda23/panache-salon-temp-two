@@ -49,7 +49,7 @@
   </nav>
   <!-- END nav -->
 
-  
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -438,20 +438,30 @@
 
     /* ---------- RESPONSIVE ---------- */
 
-    @media (max-width:1024px) {
+    /* ── Tablet (stacked layout) ── */
+    @media (max-width: 1024px) {
       .page {
         flex-direction: column;
+        min-height: unset;
       }
 
       .visual {
         position: relative;
         flex: none;
-        height: 62vh;
+        height: 55vh;
+        min-height: 320px;
+      }
+
+      /* Reposition brand text for horizontal layout */
+      .visual__brand {
+        bottom: 110px;
+        left: 48px;
       }
 
       .content {
         border-left: none;
         border-top: 1px solid var(--hairline);
+        justify-content: flex-start;
       }
 
       .content::before {
@@ -461,50 +471,153 @@
       }
 
       .content__inner {
-        padding: 64px 40px 64px;
+        max-width: 100%;
+        padding: 56px 48px 64px;
       }
     }
 
-    @media (max-width:600px) {
+    /* ── Mobile ── */
+    @media (max-width: 767.98px) {
       .visual {
-        height: 48vh;
+        height: 45vh;
+        min-height: 260px;
       }
 
-      .visual__quote {
-        font-size: 19px;
-        bottom: 36px;
-        left: 28px;
-        right: 28px;
-      }
-
-      .visual__brand {
-        left: 28px;
-        bottom: 130px;
-      }
-
+      /* Mark (P|S circle) — centered top */
       .visual__mark {
-        left: 28px;
-        top: 28px;
-        width: 46px;
-        height: 46px;
+        top: 24px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 48px;
+        height: 48px;
         font-size: 18px;
       }
 
+      /* Brand name — centered */
+      .visual__brand {
+        left: 0;
+        right: 0;
+        bottom: 110px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      /* Quote — centered, smaller */
+      .visual__quote {
+        font-size: 17px;
+        bottom: 24px;
+        left: 24px;
+        right: 24px;
+        text-align: center;
+        padding-top: 14px;
+      }
+
+      /* Content panel */
+      .content {
+        border-top: none;
+      }
+
+      .content::before {
+        display: none;
+      }
+
       .content__inner {
-        padding: 48px 24px 56px;
+        padding: 40px 20px 56px;
+        text-align: left;
+      }
+
+      .eyebrow {
+        justify-content: flex-start;
+        font-size: 11.5px;
       }
 
       .heading {
-        font-size: 36px;
+        font-size: 34px;
+        margin-top: 12px;
+        line-height: 1.1;
+      }
+
+      .intro {
+        font-size: 14.5px;
+        max-width: 100%;
+        margin-top: 14px;
+      }
+
+      /* Info list items */
+      .info-list {
+        margin-top: 32px;
       }
 
       .info-item {
         gap: 14px;
+        padding: 18px 0;
+        align-items: flex-start;
       }
 
+      .info-icon {
+        width: 34px;
+        height: 34px;
+        flex-shrink: 0;
+        margin-top: 2px;
+      }
+
+      .info-icon svg {
+        width: 15px;
+        height: 15px;
+      }
+
+      .info-text h3 {
+        font-size: 15px;
+        margin-bottom: 3px;
+      }
+
+      .info-text p {
+        font-size: 13.5px;
+        line-height: 1.6;
+      }
+
+      /* CTA & social row */
       .cta-row {
+        margin-top: 36px;
         flex-direction: column;
         align-items: flex-start;
+        gap: 20px;
+      }
+
+      .btn {
+        width: 100%;
+        justify-content: center;
+        padding: 16px 24px;
+        font-size: 12.5px;
+        border-radius: 4px;
+      }
+
+      .social-row {
+        width: 100%;
+        justify-content: flex-start;
+        gap: 14px;
+      }
+
+      .social-row a {
+        width: 46px;
+        height: 46px;
+      }
+    }
+
+    /* ── Small phone (iPhone SE etc) ── */
+    @media (max-width: 390px) {
+      .visual {
+        height: 38vh;
+      }
+
+      .heading {
+        font-size: 28px;
+      }
+
+      .content__inner {
+        padding: 32px 16px 48px;
       }
     }
   </style>
@@ -516,16 +629,14 @@
 
       <!-- LEFT: VISUAL PANEL -->
       <aside class="visual">
-        <img class="visual__img"
-          src="images/Panache Salon Logo.png"
-          alt="Interior of Hyde Luxury Salon">
-        <div class="visual__overlay"></div>
+        <img class="visual__img" src="images/Contactus-final.png" alt="Interior of Hyde Luxury Salon">
+        <!-- <div class="visual__overlay"></div>
         <div class="visual__mark">P|S</div>
         <div class="visual__brand">
           <span class="visual__brand-name">PANACHE</span>
           <span class="visual__brand-sub">LUXURY SALON</span>
-        </div>
-        <p class="visual__quote">&ldquo;A touch of class in every style.&rdquo;</p>
+        </div> -->
+        <!-- <p class="visual__quote">&ldquo;A touch of class in every style.&rdquo;</p> -->
       </aside>
 
       <!-- RIGHT: CONTACT CONTENT -->
