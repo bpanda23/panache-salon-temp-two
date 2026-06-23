@@ -1682,6 +1682,10 @@ h1, h2, h3, h4, h5, h6, .heading-section h2 {
     text-align: center;
 }
 
+.wrapper h1 {
+    color: #ffffff;
+}
+
 .carousel {
     display: flex;
     align-items: stretch;
@@ -1950,6 +1954,9 @@ h1, h2, h3, h4, h5, h6, .heading-section h2 {
     .discount p, .discount h3 {
         font-size: 1.3rem !important;
     }
+    .discount p.mb-4 {
+        color: #2c1a0e !important;
+    }
 }
 
 /* Homepage Mobile Responsiveness */
@@ -2000,12 +2007,13 @@ h1, h2, h3, h4, h5, h6, .heading-section h2 {
         margin-top: 20px !important;
         padding-left: 15px !important;
         border-left: 4px solid #A81C1C !important;
+        color: #2c1a0e !important;
     }
 
     .mascot-container {
-        transform: scale(0.75);
+        transform: scale(0.8);
         transform-origin: bottom right;
-        bottom: 15px !important;
-        right: 15px !important;
+        bottom: 10px !important;
+        right: 10px !important;
     }
 }
