@@ -50,7 +50,7 @@ h1, h2, h3, h4, h5, h6, .heading-section h2 {
 }
 
 .ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
-    color: var(--cream-light) !important;
+    color: var(--gold-primary) !important;
     font-weight: 600;
     font-size: 0.9rem;
     text-transform: uppercase;
@@ -59,7 +59,15 @@ h1, h2, h3, h4, h5, h6, .heading-section h2 {
 }
 
 .ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover {
-    color: var(--gold-primary) !important;
+    color: var(--cream-light) !important;
+}
+
+.ftco-navbar-light.scrolled .navbar-nav > .nav-item > .nav-link {
+    color: var(--cream-light) !important;
+}
+
+.ftco-navbar-light.scrolled .navbar-nav > .nav-item > .nav-link:hover {
+    color: var(--cream-light) !important;
 }
 
 /* Hero Section */
@@ -847,8 +855,30 @@ h1, h2, h3, h4, h5, h6, .heading-section h2 {
     .close-scroll { top: 10px; right: 10px; font-size: 2rem; }
 }
 
-/* Custom Mobile Drawer Navigation Styles */
+/* Custom Mobile Drawer Navigation Styles - Hide on Desktop */
+.mobile-header,
+.mobile-drawer,
+.mobile-drawer-overlay {
+    display: none !important;
+}
+
 @media (max-width: 991.98px) {
+    /* Show mobile header on mobile devices */
+    .mobile-header {
+        display: flex !important;
+    }
+    
+    /* The drawer is controlled by the .active class, we don't need to force display:block here 
+       Wait, let's check if the drawer CSS relies on display. 
+       Usually it uses transform: translateX(-100%), so we need to set display: block !important 
+       so it's rendered, and let transform handle visibility. */
+    .mobile-drawer {
+        display: flex !important;
+    }
+    
+    .mobile-drawer-overlay {
+        display: block !important;
+    }
     /* Hide default bootstrap navbar on mobile */
     #ftco-navbar {
         display: none !important;

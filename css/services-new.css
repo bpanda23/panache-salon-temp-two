@@ -445,3 +445,110 @@
     transform: translateY(0) scale(1);
 }
 
+/* Accordion Styles */
+.ds-accordion-group {
+    margin-bottom: 20px;
+}
+
+.ds-accordion-header {
+    width: 100%;
+    background: rgba(15, 15, 15, 0.65);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(197, 160, 89, 0.25);
+    border-left: 5px solid #c5a059;
+    border-radius: 12px;
+    padding: 18px 24px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #c5a059;
+    font-size: 1.15rem;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.ds-accordion-header::before {
+    content: '';
+    position: absolute;
+    top: 0; 
+    left: -150%;
+    width: 50%; 
+    height: 100%;
+    background: linear-gradient(to right, transparent, rgba(197, 160, 89, 0.15), transparent);
+    transform: skewX(-25deg);
+    transition: all 0.7s ease;
+    z-index: 1;
+}
+
+.ds-accordion-header span {
+    position: relative;
+    z-index: 2;
+}
+
+.ds-accordion-header:hover {
+    background: rgba(25, 25, 25, 0.8);
+    border-color: rgba(197, 160, 89, 0.6);
+    color: #ebd7a1;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(197, 160, 89, 0.2), 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+.ds-accordion-header:hover::before {
+    left: 150%;
+}
+
+.ds-accordion-header.open {
+    background: rgba(197, 160, 89, 0.15);
+    border-color: #c5a059;
+    color: #ebd7a1;
+    box-shadow: 0 4px 25px rgba(197, 160, 89, 0.25);
+}
+
+.acc-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgba(197, 160, 89, 0.15);
+    border: 1px solid rgba(197, 160, 89, 0.4);
+    transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    font-size: 0.85rem;
+    color: #c5a059;
+    position: relative;
+    z-index: 2;
+}
+
+.ds-accordion-header:hover .acc-arrow {
+    background: rgba(197, 160, 89, 0.2);
+    border-color: rgba(197, 160, 89, 0.6);
+    color: #ebd7a1;
+}
+
+.ds-accordion-header.open .acc-arrow {
+    transform: rotate(180deg);
+    background: rgba(197, 160, 89, 0.25);
+    border-color: #c5a059;
+    color: #ebd7a1;
+}
+
+.ds-accordion-content {
+    display: none;
+    padding: 0;
+}
+
+.ds-accordion-content.open {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}

@@ -115,7 +115,7 @@
             <img src="images/Icons/Hands & Feet N.png" alt="Skin Care" class="custom-icon-img">
           </div>
           <div class="btn-text-wrapper">
-            <span class="btn-text">Hands and Feet</span>
+            <span class="btn-text">Hands & Feet</span>
           </div>
         </button>
         <button class="service-nav-btn" data-target="nail-care">
@@ -130,56 +130,214 @@
     </div>
   </div>
 
-  <section id="detailed-service-carousel" class="ftco-section detailed-service-carousel-section" style="display: none;">
+  <!-- HAIR SECTION -->
+  <section id="service-design" class="ftco-section detailed-service-carousel-section" style="display:none;">
     <div class="container-fluid px-4 px-lg-5">
       <div class="row">
-        <!-- Left side: Image and Description -->
         <div class="col-lg-8 mb-5 mb-lg-0 ftco-animate">
           <div class="ds-left-panel">
             <div class="ds-image-wrapper mb-4">
-              <img src="images/Signature Beard Styling.png" alt="Service" id="dsImage" class="img-fluid ds-image">
+              <img src="images/menhaircut.png" alt="Hair Service" id="hairMainImg" class="img-fluid ds-image"
+                onerror="this.src='images/Signature Beard Styling.png'">
               <div class="ds-desc-overlay">
-                <span class="ds-category mb-2" id="dsCategory">MEN'S GROOMING & BEARD</span>
-                <h3 class="ds-title mb-3" id="dsTitle">Signature Beard Styling</h3>
-                <p class="ds-description" id="dsDesc">Ergonomic structural analysis followed by advanced
-                  clipper-and-scissor trimming, razor edge contouring, and infusion of lightweight argan/jojoba growth
-                  oils for sharp structural styling.</p>
+                <span class="ds-category mb-2" id="hairCategory">HAIR STYLING & ADVANCED CUTS</span>
+                <h3 class="ds-title mb-3" id="hairTitle">Haircut Regular (Adult)</h3>
+                <p class="ds-description" id="hairDesc">A precision adult haircut crafted to suit your face shape and
+                  style preference.</p>
               </div>
             </div>
           </div>
         </div>
-
-        <!-- Right side: Content Headings (Vertical Stack) -->
         <div class="col-lg-4 pl-lg-5 ftco-animate">
-          <div class="ds-right-panel">
+          <div class="ds-right-panel" style="overflow-y:auto;max-height:560px;">
             <h3 class="ds-side-heading mb-4">Select a Service</h3>
-            <div class="ds-sub-options-vertical" id="dsSubOptionsContainer">
-              <button class="ds-sub-option-btn active" data-index="0">
-                <span class="btn-text">Signature Beard Styling</span>
-                <span class="btn-arrow">→</span>
+
+            <div class="ds-accordion-group">
+              <button class="ds-accordion-header open" onclick="toggleAccordion(this)">
+                <span>Hair Styling & Advanced Cuts</span>
+                <span class="acc-arrow">&#9660;</span>
               </button>
-              <button class="ds-sub-option-btn" data-index="1">
-                <span class="btn-text">The Royal Beard Spa</span>
-                <span class="btn-arrow">→</span>
+              <div class="ds-accordion-content open">
+                <button class="ds-sub-option-btn hair-btn active" data-index="0"><span class="btn-text">Haircut Regular (Adult)</span><span class="btn-arrow">&#8594;</span></button>
+                <button class="ds-sub-option-btn hair-btn" data-index="1"><span class="btn-text">Haircut Advanced (Adult)</span><span class="btn-arrow">&#8594;</span></button>
+                <button class="ds-sub-option-btn hair-btn" data-index="2"><span class="btn-text">Kids Haircut Regular</span><span class="btn-arrow">&#8594;</span></button>
+                <button class="ds-sub-option-btn hair-btn" data-index="3"><span class="btn-text">Kids Haircut Advanced</span><span class="btn-arrow">&#8594;</span></button>
+                <button class="ds-sub-option-btn hair-btn" data-index="4"><span class="btn-text">Head Shave Premium</span><span class="btn-arrow">&#8594;</span></button>
+                <button class="ds-sub-option-btn hair-btn" data-index="5"><span class="btn-text">Classic Hair Wash</span><span class="btn-arrow">&#8594;</span></button>
+                <button class="ds-sub-option-btn hair-btn" data-index="6"><span class="btn-text">Treatment Base Wash</span><span class="btn-arrow">&#8594;</span></button>
+              </div>
+            </div>
+
+            <div class="ds-accordion-group">
+              <button class="ds-accordion-header" onclick="toggleAccordion(this)">
+                <span>Hair Colouring</span>
+                <span class="acc-arrow">&#9660;</span>
               </button>
-              <button class="ds-sub-option-btn" data-index="2">
-                <span class="btn-text">Beard Trim</span>
-                <span class="btn-arrow">→</span>
+              <div class="ds-accordion-content">
+                <button class="ds-sub-option-btn hair-btn" data-index="7"><span class="btn-text">Grey Coverage</span><span class="btn-arrow">&#8594;</span></button>
+                <button class="ds-sub-option-btn hair-btn" data-index="8"><span class="btn-text">Global Hair Color</span><span class="btn-arrow">&#8594;</span></button>
+                <button class="ds-sub-option-btn hair-btn" data-index="9"><span class="btn-text">Dimensional Highlights</span><span class="btn-arrow">&#8594;</span></button>
+                <button class="ds-sub-option-btn hair-btn" data-index="10"><span class="btn-text">Smoothening Treatments</span><span class="btn-arrow">&#8594;</span></button>
+                <button class="ds-sub-option-btn hair-btn" data-index="11"><span class="btn-text">Permanent Straightening</span><span class="btn-arrow">&#8594;</span></button>
+                <button class="ds-sub-option-btn hair-btn" data-index="12"><span class="btn-text">Keratin Therapy Infusion</span><span class="btn-arrow">&#8594;</span></button>
+                <button class="ds-sub-option-btn hair-btn" data-index="13"><span class="btn-text">Advanced Hair Botox</span><span class="btn-arrow">&#8594;</span></button>
+              </div>
+            </div>
+
+            <div class="ds-accordion-group">
+              <button class="ds-accordion-header" onclick="toggleAccordion(this)">
+                <span>Hair Wellness & Therapeutic Spas</span>
+                <span class="acc-arrow">&#9660;</span>
               </button>
-              <button class="ds-sub-option-btn" data-index="3">
-                <span class="btn-text">Beard & Moustache Custom Color</span>
-                <span class="btn-arrow">→</span>
-              </button>
-              <button class="ds-sub-option-btn" data-index="4">
-                <span class="btn-text">The Classic Shave</span>
-                <span class="btn-arrow">→</span>
-              </button>
-              <button class="ds-sub-option-btn" data-index="5">
-                <span class="btn-text">Hot Towel Shave</span>
-                <span class="btn-arrow">→</span>
-              </button>
+              <div class="ds-accordion-content">
+                <button class="ds-sub-option-btn hair-btn" data-index="14"><span class="btn-text">Signature Botanical Head Massage</span><span class="btn-arrow">&#8594;</span></button>
+                <button class="ds-sub-option-btn hair-btn" data-index="15"><span class="btn-text">Premium Restorative Hair Spa</span><span class="btn-arrow">&#8594;</span></button>
+                <button class="ds-sub-option-btn hair-btn" data-index="16"><span class="btn-text">Color, Repair & Rejuvenate Triple Spa</span><span class="btn-arrow">&#8594;</span></button>
+              </div>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BEARD SECTION -->
+  <section id="hair-styling" class="ftco-section detailed-service-carousel-section" style="display:none;">
+    <div class="container-fluid px-4 px-lg-5">
+      <div class="row">
+        <div class="col-lg-8 mb-5 mb-lg-0 ftco-animate">
+          <div class="ds-left-panel">
+            <div class="ds-image-wrapper mb-4">
+              <img src="images/Signature Beard Styling.png" alt="Beard Service" id="beardMainImg"
+                class="img-fluid ds-image">
+              <div class="ds-desc-overlay">
+                <span class="ds-category mb-2" id="beardCategory">MEN'S GROOMING & BEARD</span>
+                <h3 class="ds-title mb-3" id="beardTitle">Signature Beard Styling</h3>
+                <p class="ds-description" id="beardDesc">Ergonomic structural analysis followed by advanced
+                  clipper-and-scissor trimming, razor edge contouring, and infusion of lightweight argan/jojoba growth
+                  oils.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 pl-lg-5 ftco-animate">
+          <div class="ds-right-panel" style="overflow-y:auto;max-height:560px;">
+            <h3 class="ds-side-heading mb-4">Select a Service</h3>
+            <div class="ds-sub-options-vertical">
+              <button class="ds-sub-option-btn beard-btn active" data-index="0"><span class="btn-text">Signature Beard
+                  Styling</span><span class="btn-arrow">&#8594;</span></button>
+              <button class="ds-sub-option-btn beard-btn" data-index="1"><span class="btn-text">The Royal Beard
+                  Spa</span><span class="btn-arrow">&#8594;</span></button>
+              <button class="ds-sub-option-btn beard-btn" data-index="2"><span class="btn-text">Beard Trim</span><span
+                  class="btn-arrow">&#8594;</span></button>
+              <button class="ds-sub-option-btn beard-btn" data-index="3"><span class="btn-text">Beard & Moustache Custom
+                  Color</span><span class="btn-arrow">&#8594;</span></button>
+              <button class="ds-sub-option-btn beard-btn" data-index="4"><span class="btn-text">The Classic
+                  Shave</span><span class="btn-arrow">&#8594;</span></button>
+              <button class="ds-sub-option-btn beard-btn" data-index="5"><span class="btn-text">Hot Towel Shave
+                  (Sensitive Skin Protocol)</span><span class="btn-arrow">&#8594;</span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKIN SECTION -->
+  <section id="hair-coloring" class="ftco-section detailed-service-carousel-section" style="display:none;">
+    <div class="container-fluid px-4 px-lg-5">
+      <div class="row">
+        <div class="col-lg-8 mb-5 mb-lg-0 ftco-animate">
+          <div class="ds-left-panel">
+            <div class="ds-image-wrapper mb-4">
+              <img src="images/rejuvenation.png" alt="Skin Service" id="skinMainImg" class="img-fluid ds-image"
+                onerror="this.src='images/Signature Beard Styling.png'">
+              <div class="ds-desc-overlay">
+                <span class="ds-category mb-2" id="skinCategory">SKIN CARE</span>
+                <h3 class="ds-title mb-3" id="skinTitle">Refreshing Cleanup</h3>
+                <p class="ds-description" id="skinDesc">A deep-cleansing skin cleanup that removes impurities, unclogs
+                  pores, and leaves your skin feeling fresh and revitalized.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 pl-lg-5 ftco-animate">
+          <div class="ds-right-panel" style="overflow-y:auto;max-height:560px;">
+            <h3 class="ds-side-heading mb-4">Select a Service</h3>
+            <div class="ds-sub-options-vertical">
+              <button class="ds-sub-option-btn skin-btn active" data-index="0"><span class="btn-text">Refreshing
+                  Cleanup</span><span class="btn-arrow">&#8594;</span></button>
+              <button class="ds-sub-option-btn skin-btn" data-index="1"><span class="btn-text">Radiant Detan
+                  System</span><span class="btn-arrow">&#8594;</span></button>
+              <button class="ds-sub-option-btn skin-btn" data-index="2"><span class="btn-text">Regular
+                  Facial</span><span class="btn-arrow">&#8594;</span></button>
+              <button class="ds-sub-option-btn skin-btn" data-index="3"><span class="btn-text">Premium
+                  Facial</span><span class="btn-arrow">&#8594;</span></button>
+              <button class="ds-sub-option-btn skin-btn" data-index="4"><span class="btn-text">Luxury Facial
+                  Elite</span><span class="btn-arrow">&#8594;</span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HANDS & FEET SECTION -->
+  <section id="skin-care" class="ftco-section detailed-service-carousel-section" style="display:none;">
+    <div class="container-fluid px-4 px-lg-5">
+      <div class="row">
+        <div class="col-lg-8 mb-5 mb-lg-0 ftco-animate">
+          <div class="ds-left-panel">
+            <div class="ds-image-wrapper mb-4">
+              <img src="images/waxing-threading.png" alt="Hands and Feet" id="hfMainImg" class="img-fluid ds-image"
+                onerror="this.src='images/Signature Beard Styling.png'">
+              <div class="ds-desc-overlay">
+                <span class="ds-category mb-2" id="hfCategory">HANDS & FEET</span>
+                <h3 class="ds-title mb-3" id="hfTitle">Regular Manicure</h3>
+                <p class="ds-description" id="hfDesc">A classic manicure including nail shaping, cuticle care, hand
+                  massage, and a polished finish for beautifully groomed hands.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 pl-lg-5 ftco-animate">
+          <div class="ds-right-panel" style="overflow-y:auto;max-height:560px;">
+            <h3 class="ds-side-heading mb-4">Select a Service</h3>
+            <div class="ds-sub-options-vertical">
+              <button class="ds-sub-option-btn hf-btn active" data-index="0"><span class="btn-text">Regular
+                  Manicure</span><span class="btn-arrow">&#8594;</span></button>
+              <button class="ds-sub-option-btn hf-btn" data-index="1"><span class="btn-text">Premium
+                  Manicure</span><span class="btn-arrow">&#8594;</span></button>
+              <button class="ds-sub-option-btn hf-btn" data-index="2"><span class="btn-text">Regular
+                  Pedicure</span><span class="btn-arrow">&#8594;</span></button>
+              <button class="ds-sub-option-btn hf-btn" data-index="3"><span class="btn-text">Premium
+                  Pedicure</span><span class="btn-arrow">&#8594;</span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NAILS SECTION (Placeholder) -->
+  <section id="hair-wellness" class="ftco-section detailed-service-carousel-section" style="display:none;">
+    <div class="container-fluid px-4 px-lg-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center ftco-animate">
+          <h2 style="color: #c5a059; font-family: 'Playfair Display', serif; margin-top: 50px;">Nails</h2>
+          <p style="font-size: 1.2rem; color: #fff; font-family: 'Montserrat', sans-serif;">The services will be launched soon.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPA & WELLNESS SECTION (Placeholder) -->
+  <section id="nail-care" class="ftco-section detailed-service-carousel-section" style="display:none;">
+    <div class="container-fluid px-4 px-lg-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center ftco-animate">
+          <h2 style="color: #c5a059; font-family: 'Playfair Display', serif; margin-top: 50px;">Spa & Wellness</h2>
+          <p style="font-size: 1.2rem; color: #fff; font-family: 'Montserrat', sans-serif;">The services will be launched soon.</p>
         </div>
       </div>
     </div>
@@ -335,56 +493,65 @@
   </style>
 
   <script>
-    // Data for the service options
-    const serviceData = [
-      {
-        title: "Signature Beard Styling",
-        category: "MEN'S GROOMING & BEARD",
-        desc: "Ergonomic structural analysis followed by advanced clipper-and-scissor trimming, razor edge contouring, and infusion of lightweight argan/jojoba growth oils for sharp structural styling.",
-        img: "images/Signature Beard Styling.png"
-      },
-      {
-        title: "The Royal Beard Spa",
-        category: "MEN'S GROOMING & BEARD",
-        desc: "Multi-phase clinical rejuvenation: Antimicrobial wash, natural walnut micro-exfoliating skin scrub, charcoal or clay clarifying mask, intensive oil application, targeted micro-steam humidification, and an intensive 15-minute cranial blood-circulation massage.",
-        img: "images/Royal Beard Spa (2).png"
-      },
-      {
-        title: "Beard Trim",
-        category: "MEN'S GROOMING & BEARD",
-        desc: "Classic baseline maintenance including length equalization, cleaning of lines along the cheek and neck, and topical hydration balm finish.",
-        img: "images/electri_trimmer.png"
-      },
-      {
-        title: "Beard & Moustache Custom Color",
-        category: "MEN'S GROOMING & BEARD",
-        desc: "High-speed, ammonia-free root-deep pigment application. Delivers 100% natural-looking grey coverage blending smoothly with original underlying hair tones.",
-        img: "images/Moustache Custom.png"
-      },
-      {
-        title: "The Classic Shave",
-        category: "MEN'S GROOMING & BEARD",
-        desc: "Traditional single-pass wet shave using premium moisturizing lather, skin prep, precision blade glide, and cooling witch hazel post-shave protection.",
-        img: "images/Classic Shave.png"
-      },
-      {
-        title: "Hot Towel Shave",
-        category: "MEN'S GROOMING & BEARD",
-        desc: "Engineered for razor-bump prone skin. Multiple rounds of botanical hot towel steaming, rich emollient protective pre-shave cream lathering, slow straight-razor precision sweeps, cold-stone closing compression, and full-spectrum calming head massage.",
-        img: "images/Hot Towel Shave.png"
-      }
-    ];
+    // Accordion toggle function for Hair Section
+    window.toggleAccordion = function (btn) {
+      const content = btn.nextElementSibling;
+      btn.classList.toggle('open');
+      content.classList.toggle('open');
+    };
 
-    // Open popup with data for the clicked option (index >= 1)
-    function openServicePopup(index) {
-      const data = serviceData[index];
+    // Data for all service options
+    const serviceData = {
+      hair: [
+        { title: "Haircut Regular (Adult)", category: "HAIR STYLING", desc: "A precision adult haircut crafted to suit your face shape and style preference.", img: "images/menhaircut.png" },
+        { title: "Haircut Advanced (Adult)", category: "HAIR STYLING", desc: "An advanced restyling cut including a thorough consultation, precision texturizing, and styling.", img: "images/menhaircut.png" },
+        { title: "Kids Haircut Regular", category: "HAIR STYLING", desc: "A gentle and stylish haircut for kids.", img: "images/menhaircut.png" },
+        { title: "Kids Haircut Advanced", category: "HAIR STYLING", desc: "Advanced styling for kids including complex cuts and finishes.", img: "images/menhaircut.png" },
+        { title: "Head Shave Premium", category: "HAIR STYLING", desc: "A smooth, premium head shave with hot towel treatment.", img: "images/menhaircut.png" },
+        { title: "Classic Hair Wash", category: "HAIR STYLING", desc: "A relaxing double cleanse hair wash and conditioning.", img: "images/menhaircut.png" },
+        { title: "Treatment Base Wash", category: "HAIR STYLING", desc: "A specialized wash using treatment-specific shampoos and masks.", img: "images/menhaircut.png" },
+        { title: "Grey Coverage", category: "HAIR COLOURING", desc: "Complete coverage for grey hair with premium color products.", img: "images/menhaircut.png" },
+        { title: "Global Hair Color", category: "HAIR COLOURING", desc: "Full head hair coloring using premium, long-lasting shades.", img: "images/menhaircut.png" },
+        { title: "Dimensional Highlights", category: "HAIR COLOURING", desc: "Custom placed highlights to add depth and dimension to your hair.", img: "images/menhaircut.png" },
+        { title: "Smoothening Treatments", category: "HAIR COLOURING", desc: "Frizz-free, smooth hair treatments lasting several months.", img: "images/menhaircut.png" },
+        { title: "Permanent Straightening", category: "HAIR COLOURING", desc: "Permanent chemical straightening for sleek, straight hair.", img: "images/menhaircut.png" },
+        { title: "Keratin Therapy Infusion", category: "HAIR COLOURING", desc: "Deep keratin infusion to restore protein and smooth hair cuticles.", img: "images/keratin.png" },
+        { title: "Advanced Hair Botox", category: "HAIR COLOURING", desc: "Deep conditioning hair botox treatment to repair damaged fibers.", img: "images/menhaircut.png" },
+        { title: "Signature Botanical Head Massage", category: "HAIR WELLNESS", desc: "A relaxing head massage using premium botanical oils.", img: "images/menhaircut.png" },
+        { title: "Premium Restorative Hair Spa", category: "HAIR WELLNESS", desc: "A multi-step hair spa to restore moisture and shine.", img: "images/menhaircut.png" },
+        { title: "Color, Repair & Rejuvenate Triple Spa", category: "HAIR WELLNESS", desc: "An intensive spa treatment targeting color-treated and damaged hair.", img: "images/menhaircut.png" }
+      ],
+      beard: [
+        { title: "Signature Beard Styling", category: "MEN'S GROOMING & BEARD", desc: "Ergonomic structural analysis followed by advanced clipper-and-scissor trimming, razor edge contouring.", img: "images/Signature Beard Styling.png" },
+        { title: "The Royal Beard Spa", category: "MEN'S GROOMING & BEARD", desc: "Multi-phase clinical rejuvenation: Antimicrobial wash, micro-exfoliating scrub, and mask.", img: "images/Royal Beard Spa (2).png" },
+        { title: "Beard Trim", category: "MEN'S GROOMING & BEARD", desc: "Classic baseline maintenance including length equalization and lines cleaning.", img: "images/electri_trimmer.png" },
+        { title: "Beard & Moustache Custom Color", category: "MEN'S GROOMING & BEARD", desc: "High-speed, ammonia-free root-deep pigment application for 100% grey coverage.", img: "images/Moustache Custom.png" },
+        { title: "The Classic Shave", category: "MEN'S GROOMING & BEARD", desc: "Traditional single-pass wet shave using premium moisturizing lather.", img: "images/Classic Shave.png" },
+        { title: "Hot Towel Shave (Sensitive Skin Protocol)", category: "MEN'S GROOMING & BEARD", desc: "Engineered for razor-bump prone skin. Multiple rounds of botanical hot towel steaming.", img: "images/Hot Towel Shave.png" }
+      ],
+      skin: [
+        { title: "Refreshing Cleanup", category: "SKIN CARE", desc: "A deep-cleansing skin cleanup that removes impurities and unclogs pores.", img: "images/rejuvenation.png" },
+        { title: "Radiant Detan System", category: "SKIN CARE", desc: "An advanced detanning treatment to brighten skin and remove sun damage.", img: "images/rejuvenation.png" },
+        { title: "Regular Facial", category: "SKIN CARE", desc: "A classic facial including cleansing, exfoliation, massage, and mask.", img: "images/rejuvenation.png" },
+        { title: "Premium Facial", category: "SKIN CARE", desc: "A luxurious facial customized for your skin type with premium serums.", img: "images/rejuvenation.png" },
+        { title: "Luxury Facial Elite", category: "SKIN CARE", desc: "Our most exclusive facial treatment featuring advanced anti-aging techniques.", img: "images/rejuvenation.png" }
+      ],
+      hf: [
+        { title: "Regular Manicure", category: "HANDS & FEET", desc: "A classic manicure including nail shaping, cuticle care, and hand massage.", img: "images/waxing-threading.png" },
+        { title: "Premium Manicure", category: "HANDS & FEET", desc: "An indulgent manicure with scrub, mask, and extended massage.", img: "images/waxing-threading.png" },
+        { title: "Regular Pedicure", category: "HANDS & FEET", desc: "A relaxing pedicure with foot soak, scrub, and nail care.", img: "images/waxing-threading.png" },
+        { title: "Premium Pedicure", category: "HANDS & FEET", desc: "A luxurious pedicure featuring advanced callous removal, mask, and deep massage.", img: "images/waxing-threading.png" }
+      ]
+    };
+
+    function openServicePopup(section, index) {
+      const data = serviceData[section][index];
       document.getElementById('popupImage').src = data.img;
       document.getElementById('popupCategory').textContent = data.category;
       document.getElementById('popupTitle').textContent = data.title;
       document.getElementById('popupDesc').textContent = data.desc;
       const modal = document.getElementById('servicePopupModal');
       modal.classList.add('open');
-      // Prevent body scroll while modal is open
       document.body.style.overflow = 'hidden';
     }
 
@@ -393,33 +560,37 @@
       document.body.style.overflow = '';
     }
 
-    // Close modal on backdrop click
     document.getElementById('servicePopupModal').addEventListener('click', function (e) {
       if (e.target === this) closeServicePopup();
     });
 
-    // Close modal on Escape key
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape') closeServicePopup();
     });
 
-    // Attach click events to sub-option buttons
-    // Index 0 = first option: image stays fixed on left, clicking does nothing extra
-    // Index 1+ = open popup
-    document.querySelectorAll('.ds-sub-option-btn').forEach(function (btn, idx) {
-      btn.addEventListener('click', function () {
-        // Update active highlight on the button list
-        document.querySelectorAll('.ds-sub-option-btn').forEach(function (b) {
-          b.classList.remove('active');
-        });
-        this.classList.add('active');
+    // Attach click events to sub-option buttons across all sections
+    ['hair', 'beard', 'skin', 'hf'].forEach(section => {
+      document.querySelectorAll('.' + section + '-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          // Update active highlight for buttons in this section only
+          document.querySelectorAll('.' + section + '-btn').forEach(function (b) {
+            b.classList.remove('active');
+          });
+          this.classList.add('active');
 
-        if (idx === 0) {
-          // First option: keep left image as is, just mark active — no popup
-          return;
-        }
-        // All other options: show popup
-        openServicePopup(idx);
+          const idx = parseInt(this.getAttribute('data-index'));
+          if (idx === 0) {
+            // First option changes the left image/text but doesn't open popup
+            const data = serviceData[section][idx];
+            document.getElementById(section + 'MainImg').src = data.img;
+            document.getElementById(section + 'Category').textContent = data.category;
+            document.getElementById(section + 'Title').textContent = data.title;
+            document.getElementById(section + 'Desc').textContent = data.desc;
+          } else {
+            // Open popup for other options
+            openServicePopup(section, idx);
+          }
+        });
       });
     });
 
@@ -431,23 +602,32 @@
           buttons.forEach(function (btn) { btn.classList.remove("active"); });
           this.classList.add("active");
 
-          if (this.getAttribute("data-target") === "service-design") {
-            document.getElementById("detailed-service-carousel").style.display = "block";
-            // Smooth scroll to the section
+          // Hide all category sections first
+          document.querySelectorAll('.detailed-service-carousel-section').forEach(sec => {
+            sec.style.display = 'none';
+          });
+
+          const targetId = this.getAttribute("data-target");
+          const targetSection = document.getElementById(targetId);
+
+          if (targetSection) {
+            targetSection.style.display = "block";
             window.scrollTo({
-              top: document.getElementById("detailed-service-carousel").offsetTop - 150,
+              top: targetSection.offsetTop - 150,
               behavior: "smooth"
             });
-          } else {
-            document.getElementById("detailed-service-carousel").style.display = "none";
           }
         });
       });
 
-      // Show section on load since Beard & Shaving is already active
+      // Show section on load for the active button
       const activeBtn = document.querySelector(".service-nav-btn.active");
-      if (activeBtn && activeBtn.getAttribute("data-target") === "service-design") {
-        document.getElementById("detailed-service-carousel").style.display = "block";
+      if (activeBtn) {
+        const targetId = activeBtn.getAttribute("data-target");
+        const targetSection = document.getElementById(targetId);
+        if (targetSection) {
+          targetSection.style.display = "block";
+        }
       }
     });
   </script>
