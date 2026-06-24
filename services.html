@@ -137,7 +137,7 @@
         <div class="col-lg-8 mb-5 mb-lg-0 ftco-animate">
           <div class="ds-left-panel">
             <div class="ds-image-wrapper mb-4">
-              <img src="images/menhaircut.png" alt="Hair Service" id="hairMainImg" class="img-fluid ds-image"
+              <img src="images/Hair/Haircut Regular (Adult) - Unisex.png" alt="Hair Service" id="hairMainImg" class="img-fluid ds-image"
                 onerror="this.src='images/Signature Beard Styling.png'">
               <div class="ds-desc-overlay">
                 <span class="ds-category mb-2" id="hairCategory">HAIR STYLING & ADVANCED CUTS</span>
@@ -249,13 +249,12 @@
         <div class="col-lg-8 mb-5 mb-lg-0 ftco-animate">
           <div class="ds-left-panel">
             <div class="ds-image-wrapper mb-4">
-              <img src="images/rejuvenation.png" alt="Skin Service" id="skinMainImg" class="img-fluid ds-image"
+              <img src="images/Skin/Refreshing Cleanup.png" alt="Skin Service" id="skinMainImg" class="img-fluid ds-image"
                 onerror="this.src='images/Signature Beard Styling.png'">
               <div class="ds-desc-overlay">
                 <span class="ds-category mb-2" id="skinCategory">SKIN CARE</span>
                 <h3 class="ds-title mb-3" id="skinTitle">Refreshing Cleanup</h3>
-                <p class="ds-description" id="skinDesc">A deep-cleansing skin cleanup that removes impurities, unclogs
-                  pores, and leaves your skin feeling fresh and revitalized.</p>
+                <p class="ds-description" id="skinDesc">A rapid pore detox focusing on surface dust removal, custom enzyme peeling exfoliation, painless blackhead extraction, and a light botanical hydration application. Perfect for regular monthly skin hygiene.</p>
               </div>
             </div>
           </div>
@@ -288,7 +287,7 @@
         <div class="col-lg-8 mb-5 mb-lg-0 ftco-animate">
           <div class="ds-left-panel">
             <div class="ds-image-wrapper mb-4">
-              <img src="images/waxing-threading.png" alt="Hands and Feet" id="hfMainImg" class="img-fluid ds-image"
+              <img src="images/Regular Manicure.png" alt="Hands and Feet" id="hfMainImg" class="img-fluid ds-image"
                 onerror="this.src='images/Signature Beard Styling.png'">
               <div class="ds-desc-overlay">
                 <span class="ds-category mb-2" id="hfCategory">HANDS & FEET</span>
@@ -342,7 +341,7 @@
     </div>
   </section>
 
-
+  <!--Footer section-->
   <footer class="ftco-footer ftco-section img">
     <div class="overlay"></div>
     <div class="container">
@@ -502,23 +501,24 @@
     // Data for all service options
     const serviceData = {
       hair: [
-        { title: "Haircut Regular (Adult)", category: "HAIR STYLING", desc: "Standard maintenance cuts, perimeter tidying, professional scissor or clipper execution, completed with a soothing structural blow-dry styling.", img: "images/menhaircut.png" },
-        { title: "Haircut Advanced (Adult)", category: "HAIR STYLING", desc: "High-fashion structural transformation: customized texturing, fading, texturized layers, or personalized facial structure profiling with full style consultation.", img: "images/menhaircut.png" },
-        { title: "Kids Haircut Regular", category: "HAIR STYLING", desc: "Gentle, rapid, and playful styling for children under 12. Prioritizes security, speed, and clean, manageable classic cuts.", img: "images/menhaircut.png" },
-        { title: "Kids Haircut Advanced", category: "HAIR STYLING", desc: "Trendy model styling, complex texturing, or mini-fades for fashion-forward children. Includes mild child-safe styling paste application.", img: "images/menhaircut.png" },
-        { title: "Head Shave Premium", category: "HAIR STYLING", desc: "Ultra-close traditional head shaving utilizing pre-shave lubricating oils, multi-directional clean shaves, and continuous post-shave scalp hydration.", img: "images/menhaircut.png" },
-        { title: "Classic Hair Wash", category: "HAIR STYLING", desc: "Cleansing of the hair shaft and scalp utilizing temperature-balanced water, premium shampoo tailored to hair density, and balancing conditioner.", img: "images/menhaircut.png" },
-        { title: "Treatment Base Wash", category: "HAIR STYLING", desc: "Specifically formulated for keratin-treated, heavily lightened, chemically straightened, or color-processed hair. Utilizes strictly sulfate-free and sodium-chloride-free protein infusions..", img: "images/menhaircut.png" },
-        { title: "Grey Coverage", category: "HAIR COLOURING", desc: "Targeted root application to eradicate silver regrowth. Formulated to ensure natural depth and perfect multi-tonal consistency.", img: "images/menhaircut.png" },
-        { title: "Global Hair Color", category: "HAIR COLOURING", desc: "Full-head root-to-tip chromatic shift. Delivers high-reflectivity shine and uniform saturation across all zones.", img: "images/menhaircut.png" },
-        { title: "Dimensional Highlights", category: "HAIR COLOURING", desc: "Precision balayage, ombré, or classic foil weaving. Adds striking volume, brightness, and deep optical contrast.", img: "images/menhaircut.png" },
-        { title: "Smoothening Treatments", category: "HAIR COLOURING", desc: "Relaxes intense natural curl structures, eliminates environmental frizz, and cuts daily drying/styling times in half.", img: "images/menhaircut.png" },
-        { title: "Permanent Straightening", category: "HAIR COLOURING", desc: "Breaks and realigns disulfide bonds for perfectly straight, pin-sleek, glassy tresses with lasting structural hold.", img: "images/menhaircut.png" },
-        { title: "Keratin Therapy Infusion", category: "HAIR COLOURING", desc: "Deep protein filling process that patches microfissures in the hair cortex. Eradicates texture irregularities and seals hair cuticles beautifully.", img: "images/keratin.png" },
-        { title: "Advanced Hair Botox", category: "HAIR COLOURING", desc: "The ultimate anti-aging, non-chemical deep conditioning treatment. Fills damaged fibers, plumps limp hair strands, and restores youthful bounce and elasticity.", img: "images/menhaircut.png" },
-        { title: "Signature Botanical Head Massage", category: "HAIR WELLNESS", desc: "A deeply therapeutic ritual combining warm nutrient oils with targeted reflexology points along the scalp, neck, and shoulders to maximize local blood flow and melt mental tension.", img: "images/menhaircut.png" },
-        { title: "Premium Restorative Hair Spa", category: "HAIR WELLNESS", desc: "Multi-step intense conditioning mask application paired with micro-mist hydration to completely re-establish healthy lipid barriers inside chemically dehydrated hair shafts.", img: "images/menhaircut.png" },
-        { title: "Color, Repair & Rejuvenate Triple Spa", category: "HAIR WELLNESS", desc: "A specialized treatment designed for processed hair. It uses advanced anti-oxidant serums to lock in hair color vibrance, neutralize chemical residues, and repair deep cuticle scales.", img: "images/menhaircut.png" }
+        { title: "Haircut Regular (Adult)", category: "HAIR STYLING", desc: "Standard maintenance cuts, perimeter tidying, professional scissor or clipper execution, completed with a soothing structural blow-dry styling.", img: "images/Hair/Haircut Regular (Adult) - Unisex.png" },
+        { title: "Haircut Advanced (Adult)", category: "HAIR STYLING", desc: "High-fashion structural transformation: customized texturing, fading, texturized layers, or personalized facial structure profiling with full style consultation.", img: "images/Hair/Haircut Advanced (Adult) - Unisex.png" },
+        { title: "Kids Haircut Regular", category: "HAIR STYLING", desc: "Gentle, rapid, and playful styling for children under 12. Prioritizes security, speed, and clean, manageable classic cuts.", img: "images/Hair/Kids Haircut Regular.png" },
+        { title: "Kids Haircut Advanced", category: "HAIR STYLING", desc: "Trendy model styling, complex texturing, or mini-fades for fashion-forward children. Includes mild child-safe styling paste application.", img: "images/Hair/Kids Haircut Advanced.png" },
+        { title: "Head Shave Premium", category: "HAIR STYLING", desc: "Ultra-close traditional head shaving utilizing pre-shave lubricating oils, multi-directional clean shaves, and continuous post-shave scalp hydration.", img: "images/Hair/Head Shave Premium.png" },
+        { title: "Classic Hair Wash", category: "HAIR STYLING", desc: "Cleansing of the hair shaft and scalp utilizing temperature-balanced water, premium shampoo tailored to hair density, and balancing conditioner.", img: "images/Hair/Classic Hair Wash.png" },
+        { title: "Treatment Base Wash", category: "HAIR STYLING", desc: "Specifically formulated for keratin-treated, heavily lightened, chemically straightened, or color-processed hair. Utilizes strictly sulfate-free and sodium-chloride-free protein infusions..", img: "images/Hair/Treatment Base Wash.png" },
+
+        { title: "Grey Coverage", category: "HAIR COLOURING", desc: "Targeted root application to eradicate silver regrowth. Formulated to ensure natural depth and perfect multi-tonal consistency.", img: "images/Hair/Grey Coverage.png" },
+        { title: "Global Hair Color", category: "HAIR COLOURING", desc: "Full-head root-to-tip chromatic shift. Delivers high-reflectivity shine and uniform saturation across all zones.", img: "images/Hair/Global Hair Color.png" },
+        { title: "Dimensional Highlights", category: "HAIR COLOURING", desc: "Precision balayage, ombré, or classic foil weaving. Adds striking volume, brightness, and deep optical contrast.", img: "images/Hair/Dimensional Highlights.png" },
+        { title: "Smoothening Treatments", category: "HAIR COLOURING", desc: "Relaxes intense natural curl structures, eliminates environmental frizz, and cuts daily drying/styling times in half.", img: "images/Hair/Smoothening Treatments.png" },
+        { title: "Permanent Straightening", category: "HAIR COLOURING", desc: "Breaks and realigns disulfide bonds for perfectly straight, pin-sleek, glassy tresses with lasting structural hold.", img: "images/Hair/Permanent Straightening.png" },
+        { title: "Keratin Therapy Infusion", category: "HAIR COLOURING", desc: "Deep protein filling process that patches microfissures in the hair cortex. Eradicates texture irregularities and seals hair cuticles beautifully.", img: "images/Hair/Keratin Therapy Infusion.png" },
+        { title: "Advanced Hair Botox", category: "HAIR COLOURING", desc: "The ultimate anti-aging, non-chemical deep conditioning treatment. Fills damaged fibers, plumps limp hair strands, and restores youthful bounce and elasticity.", img: "images/Hair/Advanced Hair Botox.png" },
+        { title: "Signature Botanical Head Massage", category: "HAIR WELLNESS", desc: "A deeply therapeutic ritual combining warm nutrient oils with targeted reflexology points along the scalp, neck, and shoulders to maximize local blood flow and melt mental tension.", img: "images/Hair/Signature Botanical Head Massage.png" },
+        { title: "Premium Restorative Hair Spa", category: "HAIR WELLNESS", desc: "Multi-step intense conditioning mask application paired with micro-mist hydration to completely re-establish healthy lipid barriers inside chemically dehydrated hair shafts.", img: "images/Hair/Premium Restorative Hair Spa.png" },
+        { title: "Color, Repair & Rejuvenate Triple Spa", category: "HAIR WELLNESS", desc: "A specialized treatment designed for processed hair. It uses advanced anti-oxidant serums to lock in hair color vibrance, neutralize chemical residues, and repair deep cuticle scales.", img: "images/Hair/Color, Repair & Rejuvenate Triple Spa.png" }
       ],
       beard: [
         { title: "Signature Beard Styling", category: "MEN'S GROOMING & BEARD", desc: "Ergonomic structural analysis followed by advanced clipper-and-scissor trimming, razor edge contouring.", img: "images/Signature Beard Styling.png" },
@@ -529,17 +529,17 @@
         { title: "Hot Towel Shave (Sensitive Skin Protocol)", category: "MEN'S GROOMING & BEARD", desc: "Engineered for razor-bump prone skin. Multiple rounds of botanical hot towel steaming.", img: "images/Hot Towel Shave.png" }
       ],
       skin: [
-        { title: "Refreshing Cleanup", category: "SKIN CARE", desc: "A rapid pore detox focusing on surface dust removal, custom enzyme peeling exfoliation, painless blackhead extraction, and a light botanical hydration application. Perfect for regular monthly skin hygiene.", img: "images/rejuvenation.png" },
-        { title: "Radiant Detan System", category: "SKIN CARE", desc: "Highly stable, clinical brightening treatments designed to safely break down cellular melanin accumulation caused by UV radiation. Available in targeted anatomical zones: Face | Hands | Legs | Full Body.", img: "images/rejuvenation.png" },
-        { title: "Regular Facial", category: "SKIN CARE", desc: "Classic skin care including professional manual facial manipulation, deep cleansing, gentle pore steaming, dead-skin scrubbing, and a customized skin type mask for steady maintenance.", img: "images/rejuvenation.png" },
-        { title: "Premium Facial", category: "SKIN CARE", desc: "Targeted treatments addressing specific skin concerns (such as active acne control, intense oil balance, or deep moisture replenishment). Utilizes highly active botanical complexes and specialized ampoule vitamins.", img: "images/rejuvenation.png" },
-        { title: "Luxury Facial Elite", category: "SKIN CARE", desc: "The ultimate anti-aging and skin brightening indulgence. Includes dual-phase deep exfoliation, advanced facial contour massage, firming peel-off masks, and targeted nutrient infusing serums. Re-energizes cells and provides an immediate red-carpet glow.", img: "images/rejuvenation.png" }
+        { title: "Refreshing Cleanup", category: "SKIN CARE", desc: "A rapid pore detox focusing on surface dust removal, custom enzyme peeling exfoliation, painless blackhead extraction, and a light botanical hydration application. Perfect for regular monthly skin hygiene.", img: "images/Skin/Refreshing Cleanup.png" },
+        { title: "Radiant Detan System", category: "SKIN CARE", desc: "Highly stable, clinical brightening treatments designed to safely break down cellular melanin accumulation caused by UV radiation. Available in targeted anatomical zones: Face | Hands | Legs | Full Body.", img: "images/Skin/Radiant Detan System.png" },
+        { title: "Regular Facial", category: "SKIN CARE", desc: "Classic skin care including professional manual facial manipulation, deep cleansing, gentle pore steaming, dead-skin scrubbing, and a customized skin type mask for steady maintenance.", img: "images/Skin/Regular Facial.png" },
+        { title: "Premium Facial", category: "SKIN CARE", desc: "Targeted treatments addressing specific skin concerns (such as active acne control, intense oil balance, or deep moisture replenishment). Utilizes highly active botanical complexes and specialized ampoule vitamins.", img: "images/Skin/Premium Facial.png" },
+        { title: "Luxury Facial Elite", category: "SKIN CARE", desc: "The ultimate anti-aging and skin brightening indulgence. Includes dual-phase deep exfoliation, advanced facial contour massage, firming peel-off masks, and targeted nutrient infusing serums. Re-energizes cells and provides an immediate red-carpet glow.", img: "images/Skin/Luxury Facial Elite.png" }
       ],
       hf: [
-        { title: "Regular Manicure", category: "HANDS & FEET", desc: "Essential hand grooming consisting of aromatic sanitizing, accurate nail shaping, cuticle work, skin exfoliation, and a light massage.", img: "images/waxing-threading.png" },
-        { title: "Premium Manicure", category: "HANDS & FEET", desc: "An elevated hand spa including cell-renewing scrubs, deep moisture paraffin or clay masks, thermal glove wraps, and an extended acupressure arm massage.", img: "images/waxing-threading.png" },
-        { title: "Regular Pedicure", category: "HANDS & FEET", desc: "A classic foot bath featuring dead skin filing, soothing salt scrubs, cuticle trimming, clean nail shaping, and an oil massage.", img: "images/waxing-threading.png" },
-        { title: "Premium Pedicure", category: "HANDS & FEET", desc: "A luxurious medical-grade foot spa that addresses dry heels through heavy-duty callus smoothing, therapeutic sea salt foot baths, clarifying masks, and deep muscle massage to melt leg fatigue.", img: "images/waxing-threading.png" }
+        { title: "Regular Manicure", category: "HANDS & FEET", desc: "Essential hand grooming consisting of aromatic sanitizing, accurate nail shaping, cuticle work, skin exfoliation, and a light massage.", img: "images/Regular Manicure.png" },
+        { title: "Premium Manicure", category: "HANDS & FEET", desc: "An elevated hand spa including cell-renewing scrubs, deep moisture paraffin or clay masks, thermal glove wraps, and an extended acupressure arm massage.", img: "images/Premium Manicure.png" },
+        { title: "Regular Pedicure", category: "HANDS & FEET", desc: "A classic foot bath featuring dead skin filing, soothing salt scrubs, cuticle trimming, clean nail shaping, and an oil massage.", img: "images/Regular Pedicure.png" },
+        { title: "Premium Pedicure", category: "HANDS & FEET", desc: "A luxurious medical-grade foot spa that addresses dry heels through heavy-duty callus smoothing, therapeutic sea salt foot baths, clarifying masks, and deep muscle massage to melt leg fatigue.", img: "images/Premium Pedicure.png" }
       ]
     };
 
