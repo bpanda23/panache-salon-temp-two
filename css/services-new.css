@@ -174,11 +174,12 @@
 
     /* Detailed section adjustments */
     .detailed-service-carousel-section { padding: 30px 0 !important; }
-    .ds-image { height: 280px !important; border-radius: 16px; }
+    .ds-image { height: 420px !important; border-radius: 16px; }
     .ds-image-wrapper { border-radius: 16px; }
-    .ds-title { font-size: 1.65rem !important; text-align: left; }
-    .ds-description { font-size: 0.95rem !important; text-align: left; }
-    .ds-desc-overlay { padding: 25px 20px !important; }
+    .ds-title { font-size: 1.35rem !important; text-align: left; margin-bottom: 8px !important; }
+    .ds-description { font-size: 0.85rem !important; text-align: left; line-height: 1.5; }
+    .ds-desc-overlay { padding: 15px 15px 20px !important; }
+    .ds-category { font-size: 0.65rem; padding: 3px 10px; margin-bottom: 6px; }
     .ds-right-panel { margin-top: 25px; padding: 25px 15px !important; border-radius: 16px; }
     .ds-side-heading { font-size: 1.4rem !important; }
     .ds-sub-option-btn { font-size: 1.05rem !important; padding: 14px 15px !important; }

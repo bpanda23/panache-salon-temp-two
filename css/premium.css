@@ -49,25 +49,43 @@ h1, h2, h3, h4, h5, h6, .heading-section h2 {
     letter-spacing: 2px;
 }
 
+/* â”€â”€ Navbar links: ALL pages â€” default (non-active) state â”€â”€ */
 .ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
-    color: var(--gold-primary) !important;
+    color: rgba(197, 160, 89, 0.5) !important;   /* dimmed gold */
     font-weight: 600;
     font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: var(--transition-smooth);
+    border-bottom: 2px solid transparent;
+    padding-bottom: 4px;
 }
 
+/* â”€â”€ Hover state â”€â”€ */
 .ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover {
-    color: var(--cream-light) !important;
+    color: var(--gold-primary) !important;
 }
 
+/* â”€â”€ ACTIVE page link â€” clearly different color â”€â”€ */
+.ftco-navbar-light .navbar-nav > .nav-item.active > .nav-link {
+    color: #ffffff !important;                   /* bright white = current page */
+    border-bottom: 2px solid var(--gold-primary);
+}
+
+/* â”€â”€ Scrolled navbar: non-active â”€â”€ */
 .ftco-navbar-light.scrolled .navbar-nav > .nav-item > .nav-link {
-    color: var(--cream-light) !important;
+    color: rgba(255, 255, 255, 0.45) !important;  /* dimmed white */
 }
 
+/* â”€â”€ Scrolled navbar: hover â”€â”€ */
 .ftco-navbar-light.scrolled .navbar-nav > .nav-item > .nav-link:hover {
-    color: var(--cream-light) !important;
+    color: var(--gold-primary) !important;
+}
+
+/* â”€â”€ Scrolled navbar: ACTIVE page link â”€â”€ */
+.ftco-navbar-light.scrolled .navbar-nav > .nav-item.active > .nav-link {
+    color: var(--gold-primary) !important;        /* gold = current page when scrolled */
+    border-bottom: 2px solid var(--gold-primary);
 }
 
 /* Hero Section */
@@ -443,7 +461,7 @@ h1, h2, h3, h4, h5, h6, .heading-section h2 {
     background-color: var(--charcoal-light) !important;
 }
 
-/* Services section — ensure the fixed-height scroll panel never bleeds into next section */
+/* Services section â€” ensure the fixed-height scroll panel never bleeds into next section */
 #services {
     /* padding-bottom: 6em; */
     overflow: visible;
@@ -628,7 +646,7 @@ h1, h2, h3, h4, h5, h6, .heading-section h2 {
     }
 }
 
-/* Carousel Controls — hidden */
+/* Carousel Controls â€” hidden */
 .carousel-control {
     display: none !important;
 }
@@ -1598,7 +1616,7 @@ h1, h2, h3, h4, h5, h6, .heading-section h2 {
 }
 
 /* ================================================
-   STATS / COUNTER SECTION  — Premium Golden Design
+   STATS / COUNTER SECTION  â€” Premium Golden Design
    ================================================ */
 
 #section-counter {
@@ -2045,5 +2063,16 @@ h1, h2, h3, h4, h5, h6, .heading-section h2 {
         transform-origin: bottom right;
         bottom: 10px !important;
         right: 10px !important;
+    }
+
+    /* Fix counter section mobile gap */
+    #section-counter {
+        padding: 4.5em 0 1.5em !important;
+        margin-bottom: 0 !important;
+    }
+
+    /* Fix map to copyright gap on mobile */
+    .ftco-footer-widget iframe {
+        margin-bottom: 35px !important;
     }
 }

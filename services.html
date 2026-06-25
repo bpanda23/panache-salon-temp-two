@@ -36,11 +36,11 @@
     <div class="container">
       <div class="collapse navbar-collapse" id="ftco-nav">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
-          <li class="nav-item active"><a href="about.html" class="nav-link">About Us</a></li>
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
           <li class="nav-item active"><a href="services.html" class="nav-link">Services</a></li>
-          <li class="nav-item active"><a href="bridal_service.html" class="nav-link">Bridal Elite</a></li>
-          <li class="nav-item active"><a href="WhyUs.html" class="nav-link">Why Us</a></li>
+          <li class="nav-item"><a href="bridal_service.html" class="nav-link">Bridal Elite</a></li>
+          <li class="nav-item"><a href="WhyUs.html" class="nav-link">Why Us</a></li>
           <li class="nav-item"><a href="contact-us.html" class="nav-link">Contact</a></li>
 
         </ul>
@@ -619,13 +619,25 @@
         });
       });
 
-      // Show section on load for the active button
-      const activeBtn = document.querySelector(".service-nav-btn.active");
-      if (activeBtn) {
-        const targetId = activeBtn.getAttribute("data-target");
-        const targetSection = document.getElementById(targetId);
-        if (targetSection) {
-          targetSection.style.display = "block";
+      // Check URL parameters for tab selection
+      const urlParams = new URLSearchParams(window.location.search);
+      const tabParam = urlParams.get('tab');
+      let targetBtn;
+      if (tabParam) {
+        targetBtn = document.querySelector(`.service-nav-btn[data-target="${tabParam}"]`);
+      }
+      
+      if (targetBtn) {
+        targetBtn.click();
+      } else {
+        // Show section on load for the active button
+        const activeBtn = document.querySelector(".service-nav-btn.active");
+        if (activeBtn) {
+          const targetId = activeBtn.getAttribute("data-target");
+          const targetSection = document.getElementById(targetId);
+          if (targetSection) {
+            targetSection.style.display = "block";
+          }
         }
       }
     });
