@@ -73,6 +73,14 @@
 				object-position: center center;
 			}
 
+			@media (max-width: 767px) {
+				#heroVideo {
+					top: 10%;
+					height: 110%;
+					object-position: center top;
+				}
+			}
+
 			#heroImage {
 				z-index: 0;
 				opacity: 0;
@@ -88,7 +96,7 @@
 		<video id="heroVideo" class="hero-media" playsinline muted style="display:block;" preload="auto">
 			<source src="images/home-hero.mp4" type="video/mp4">
 		</video>
-		<div id="heroImage" class="hero-media" style="background-image: url('images/second-hero.png');"></div>
+		<div id="heroImage" class="hero-media" style="background-image: url('images/third-hero.png');"></div>
 		<div class="container" style="position:relative; z-index:1;">
 			<div class="row no-gutters slider-text align-items-center justify-content-center"
 				data-scrollax-parent="true">
@@ -182,55 +190,129 @@
 			}
 		}
 	</style>
-	<section class="ftco-section ftco-counter img" id="section-counter"
-		style="background-image: url(images/image_1.jpg);">
-		<div class="overlay"></div>
-		<div class="container">
-			<div class="row justify-content-center">
-				<div class="col-md-10">
-					<div class="row">
-						<div class="col-md-3 col-6 d-flex justify-content-center counter-wrap ftco-animate">
-							<div class="block-18 text-center">
-								<div class="text">
-									<div class="icon"><span class="flaticon-flower"></span></div>
-									<span>Makeup Over Done</span>
-									<strong class="number" data-number="3500">0</strong>
-								</div>
-							</div>
+	<!-- What to Expect Section -->
+	<section class="panache-expect-section">
+		<div class="panache-expect-inner">
+			<!-- Heading -->
+			<div class="panache-expect-heading">
+				<h2>What to Expect at Panache</h2>
+				<div class="panache-expect-divider">
+					<span class="divider-line-thin"></span>
+					<span class="divider-diamond">❖</span>
+					<span class="divider-line-thin"></span>
+				</div>
+			</div>
+
+			<!-- Steps + Right Image Row -->
+			<div class="panache-expect-row">
+
+				<!-- Steps -->
+				<div class="panache-steps">
+					<!-- Dashed connector line -->
+					<div class="panache-steps-line"></div>
+
+					<!-- Step 1 -->
+					<div class="panache-step">
+						<div class="panache-step-icon">
+							<svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="30" cy="30" r="28" stroke="#c5a059" stroke-width="1.5"/>
+								<rect x="16" y="16" width="22" height="24" rx="2" stroke="#c5a059" stroke-width="1.5"/>
+								<line x1="16" y1="22" x2="38" y2="22" stroke="#c5a059" stroke-width="1.5"/>
+								<line x1="20" y1="27" x2="28" y2="27" stroke="#c5a059" stroke-width="1.2"/>
+								<line x1="20" y1="31" x2="28" y2="31" stroke="#c5a059" stroke-width="1.2"/>
+								<circle cx="38" cy="38" r="6" fill="#1a1a1a" stroke="#c5a059" stroke-width="1.2"/>
+								<line x1="38" y1="34" x2="38" y2="38" stroke="#c5a059" stroke-width="1.2"/>
+								<line x1="38" y1="38" x2="41" y2="40" stroke="#c5a059" stroke-width="1.2"/>
+							</svg>
 						</div>
-						<div class="col-md-3 col-6 d-flex justify-content-center counter-wrap ftco-animate">
-							<div class="block-18 text-center">
-								<div class="text">
-									<div class="icon"><span class="flaticon-flower"></span></div>
-									<span>Procedure</span>
-									<strong class="number" data-number="1000">0</strong>
-								</div>
-							</div>
+						<div class="panache-step-content">
+							<h4>1. Easy Booking</h4>
+							<p>Book your appointment in just a few clicks.</p>
 						</div>
-						<div class="col-md-3 col-6 d-flex justify-content-center counter-wrap ftco-animate">
-							<div class="block-18 text-center">
-								<div class="text">
-									<div class="icon"><span class="flaticon-flower"></span></div>
-									<span>Happy Client</span>
-									<strong class="number" data-number="3000">0</strong>
-								</div>
-							</div>
+					</div>
+
+					<!-- Step 2 -->
+					<div class="panache-step">
+						<div class="panache-step-icon">
+							<svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="30" cy="30" r="28" stroke="#c5a059" stroke-width="1.5"/>
+								<path d="M22 28 Q30 18 38 28" stroke="#c5a059" stroke-width="1.5" fill="none"/>
+								<rect x="20" y="28" width="20" height="3" rx="1" stroke="#c5a059" stroke-width="1.2"/>
+								<rect x="24" y="31" width="12" height="8" rx="1" stroke="#c5a059" stroke-width="1.2"/>
+								<line x1="26" y1="22" x2="26" y2="18" stroke="#c5a059" stroke-width="1.2"/>
+								<line x1="30" y1="22" x2="30" y2="17" stroke="#c5a059" stroke-width="1.2"/>
+								<line x1="34" y1="22" x2="34" y2="18" stroke="#c5a059" stroke-width="1.2"/>
+							</svg>
 						</div>
-						<div class="col-md-3 col-6 d-flex justify-content-center counter-wrap ftco-animate">
-							<div class="block-18 text-center">
-								<div class="text">
-									<div class="icon"><span class="flaticon-flower"></span></div>
-									<span>Skin Treatment</span>
-									<strong class="number" data-number="900">0</strong>
-								</div>
-							</div>
+						<div class="panache-step-content">
+							<h4>2. Warm Welcome</h4>
+							<p>Enjoy a relaxing ambience and a warm greeting.</p>
+						</div>
+					</div>
+
+					<!-- Step 3 -->
+					<div class="panache-step">
+						<div class="panache-step-icon">
+							<svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="30" cy="30" r="28" stroke="#c5a059" stroke-width="1.5"/>
+								<ellipse cx="30" cy="32" rx="7" ry="10" stroke="#c5a059" stroke-width="1.5"/>
+								<circle cx="30" cy="20" r="4" stroke="#c5a059" stroke-width="1.5"/>
+								<path d="M36 26 Q42 24 42 30" stroke="#c5a059" stroke-width="1.2" fill="none"/>
+								<path d="M36 34 Q44 34 43 40" stroke="#c5a059" stroke-width="1.2" fill="none"/>
+								<circle cx="43" cy="41" r="2" stroke="#c5a059" stroke-width="1.2"/>
+							</svg>
+						</div>
+						<div class="panache-step-content">
+							<h4>3. Personalized Service</h4>
+							<p>Our experts understand your needs and recommend the best for you.</p>
+						</div>
+					</div>
+
+					<!-- Step 4 -->
+					<div class="panache-step">
+						<div class="panache-step-icon">
+							<svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="30" cy="30" r="28" stroke="#c5a059" stroke-width="1.5"/>
+								<path d="M30 18 Q38 22 38 30 Q38 38 30 42 Q22 38 22 30 Q22 22 30 18Z" stroke="#c5a059" stroke-width="1.5" fill="none"/>
+								<path d="M26 30 Q28 26 30 30 Q32 34 34 30" stroke="#c5a059" stroke-width="1.3" fill="none"/>
+							</svg>
+						</div>
+						<div class="panache-step-content">
+							<h4>4. Relax &amp; Enjoy</h4>
+							<p>Sit back and enjoy a luxurious pampering experience.</p>
+						</div>
+					</div>
+
+					<!-- Step 5 -->
+					<div class="panache-step">
+						<div class="panache-step-icon">
+							<svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="30" cy="30" r="28" stroke="#c5a059" stroke-width="1.5"/>
+								<path d="M22 28 L28 34 L38 22" stroke="#c5a059" stroke-width="2" fill="none" stroke-linecap="round"/>
+								<path d="M30 16 L32 22 L38 22 L33 26 L35 32 L30 28 L25 32 L27 26 L22 22 L28 22Z" stroke="#c5a059" stroke-width="1.2" fill="none"/>
+							</svg>
+						</div>
+						<div class="panache-step-content">
+							<h4>5. Walk Out Confident</h4>
+							<p>Leave feeling refreshed, beautiful and confident.</p>
 						</div>
 					</div>
 				</div>
+
+				<!-- Right Side Image / Card -->
+				<div class="panache-expect-card">
+					<div class="panache-card-placeholder">
+						<div class="panache-card-logo">
+							<span class="card-logo-ps">P|S</span>
+							<span class="card-logo-name">PANACHE SALON</span>
+							<span class="card-logo-tagline">A Touch of Class in Every Style</span>
+						</div>
+					</div>
+				</div>
+
 			</div>
 		</div>
 	</section>
-
 	<section id="services" class="ftco-section bg-light">
 		<div class="container-fluid px-md-5">
 			<h1>The Panache Experience</h1>
@@ -350,36 +432,42 @@
 			<div class="slide active">
 				<h3>Archan Singh</h3>
 				<div class="stars">★★★★★</div>
-				<p class="quote">"Absolutely amazing experience! The staff was incredibly welcoming, and my hair color turned out exactly how I wanted it. Highly recommend Panache Salon!"</p>
+				<p class="quote">"Absolutely amazing experience! The staff was incredibly welcoming, and my hair color
+					turned out exactly how I wanted it. Highly recommend Panache Salon!"</p>
 			</div>
 
 			<div class="slide">
 				<h3>Rahul Kumar</h3>
 				<div class="stars">★★★★★</div>
-				<p class="quote">"I had a wonderful spa day here. The massage and facial were so relaxing. The ambiance of the salon is pure luxury and comfort."</p>
+				<p class="quote">"I had a wonderful spa day here. The massage and facial were so relaxing. The ambiance
+					of the salon is pure luxury and comfort."</p>
 			</div>
 
 			<div class="slide">
 				<h3>Veenamai Sahoo</h3>
 				<div class="stars">★★★★★</div>
-				<p class="quote">"The best bridal makeup I could have asked for! The team made me feel like a queen on my special day. Everything was flawless and lasted all night."</p>
+				<p class="quote">"The best bridal makeup I could have asked for! The team made me feel like a queen on
+					my special day. Everything was flawless and lasted all night."</p>
 			</div>
 			<div class="slide">
 				<h3>Anurag Mohanti</h3>
 				<div class="stars">★★★★★</div>
-				<p class="quote">"Great service and attention to detail. The men's grooming package is fantastic. I always leave feeling fresh and looking my best."</p>
+				<p class="quote">"Great service and attention to detail. The men's grooming package is fantastic. I
+					always leave feeling fresh and looking my best."</p>
 			</div>
 
 			<div class="slide">
 				<h3>Mamata Kumari</h3>
 				<div class="stars">★★★★★</div>
-				<p class="quote">"I've been coming here for months for my manicures and pedicures. The quality of work is outstanding, and the nail artists are so talented!"</p>
+				<p class="quote">"I've been coming here for months for my manicures and pedicures. The quality of work
+					is outstanding, and the nail artists are so talented!"</p>
 			</div>
 
 			<div class="slide">
 				<h3>Tapaswani Moharana</h3>
 				<div class="stars">★★★★★</div>
-				<p class="quote">"From the moment you walk in, you're treated with such care. The keratin treatment completely transformed my frizzy hair. I'm a customer for life!"</p>
+				<p class="quote">"From the moment you walk in, you're treated with such care. The keratin treatment
+					completely transformed my frizzy hair. I'm a customer for life!"</p>
 			</div>
 		</div>
 	</div>
@@ -449,7 +537,7 @@
 
 					<p><!-- Link back to Sutram Solutions can't be removed.  is licensed under CC BY 3.0. -->
 						Copyright &copy;
-						<script>document.write(new Date().getFullYear());</script> All rights reserved | This 
+						<script>document.write(new Date().getFullYear());</script> All rights reserved | This
 						is made with <i class="icon-heart" aria-hidden="true"></i> by <a
 							href="https://sutramsolutions.in" target="_blank">Sutram Solutions</a>
 						<!-- Link back to Sutram Solutions can't be removed.  is licensed under CC BY 3.0. -->
