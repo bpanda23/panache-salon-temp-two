@@ -2007,7 +2007,301 @@ h1, h2, h3, h4, h5, h6, .heading-section h2 {
     }
 }
 
-/* Homepage Mobile Responsiveness */
+/* ================================================
+   What to Expect at Panache Section
+   ================================================ */
+.panache-expect-section {
+    background-color: #0d0d0d;
+    padding: 36px 40px 28px;
+    margin: 0;
+    width: 100%;
+    position: relative;
+}
+
+.panache-expect-inner {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Heading */
+.panache-expect-heading {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.panache-expect-heading h2 {
+    font-family: 'Playfair Display', serif !important;
+    color: #f5e6c8;
+    font-size: 2.4rem;
+    font-weight: 500 !important;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.panache-expect-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.divider-line-thin {
+    display: inline-block;
+    width: 60px;
+    height: 1px;
+    background: #c5a059;
+    opacity: 0.6;
+}
+
+.divider-diamond {
+    color: #c5a059;
+    font-size: 0.75rem;
+    opacity: 0.8;
+}
+
+/* Row: steps + card */
+.panache-expect-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/* Steps area */
+.panache-steps {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 15px;
+    position: relative;
+}
+
+/* The dashed horizontal line through all icon centers */
+.panache-steps-line {
+    position: absolute;
+    top: 50px; /* center of the 100px icon */
+    left: 50px;
+    right: 50px;
+    height: 1px;
+    border-top: 2px dashed rgba(197, 160, 89, 0.5);
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Individual step */
+.panache-step {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    padding: 0 6px;
+}
+
+/* Icon circle */
+.panache-step-icon {
+    width: 100px;
+    height: 100px;
+    background: #0d0d0d;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+    flex-shrink: 0;
+    padding: 4px;
+}
+
+.panache-step-icon svg {
+    width: 88px;
+    height: 88px;
+}
+
+/* Step text */
+.panache-step-content {
+    text-align: center;
+}
+
+.panache-step-content h4 {
+    font-family: 'Playfair Display', serif !important;
+    color: #c5a059;
+    font-size: 1.15rem;
+    font-weight: 600 !important;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+
+.panache-step-content p {
+    color: #e0e0e0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Right card */
+.panache-expect-card {
+    flex-shrink: 0;
+    width: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+}
+
+.panache-card-placeholder {
+    width: 290px;
+    height: 220px;
+    background: linear-gradient(145deg, #1a1a1a, #111);
+    border: 1px solid #c5a059;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(197, 160, 89, 0.2), 0 0 0 3px rgba(197,160,89,0.08);
+    position: relative;
+    overflow: hidden;
+}
+
+.panache-card-placeholder::before {
+    content: '';
+    position: absolute;
+    inset: 4px;
+    border: 1px solid rgba(197,160,89,0.25);
+    border-radius: 3px;
+    pointer-events: none;
+}
+
+.panache-card-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    text-align: center;
+}
+
+.card-logo-ps {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    color: #c5a059;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 2px;
+}
+
+.card-logo-name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.65rem;
+    color: #c5a059;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.card-logo-tagline {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.65rem;
+    color: #a08040;
+    font-style: italic;
+    letter-spacing: 0.5px;
+}
+
+/* ── Tablet (≤ 991px) ── */
+@media (max-width: 991px) {
+    .panache-expect-section {
+        padding: 28px 20px 22px;
+    }
+    .panache-expect-heading h2 {
+        font-size: 2rem;
+    }
+    .panache-expect-row {
+        flex-direction: column;
+        align-items: center;
+    }
+    .panache-steps {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .panache-step-icon {
+        width: 80px;
+        height: 80px;
+    }
+    .panache-step-icon svg {
+        width: 70px;
+        height: 70px;
+    }
+    .panache-steps-line {
+        top: 40px;
+    }
+    .panache-step-content h4 {
+        font-size: 1rem;
+    }
+    .panache-step-content p {
+        font-size: 0.85rem;
+    }
+    .panache-expect-card {
+        width: 100%;
+        margin-left: 0;
+    }
+    .panache-card-placeholder {
+        width: 250px;
+        height: 190px;
+    }
+}
+
+/* ── Mobile (≤ 767px) ── */
+@media (max-width: 767.98px) {
+    .panache-expect-section {
+        padding: 24px 16px 20px;
+    }
+    .panache-expect-heading h2 {
+        font-size: 1.6rem;
+    }
+    .panache-expect-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .panache-steps {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    .panache-steps-line {
+        display: none; /* Hide horizontal line on mobile */
+    }
+    .panache-step-icon {
+        width: 90px;
+        height: 90px;
+        margin-bottom: 10px;
+    }
+    .panache-step-icon svg {
+        width: 78px;
+        height: 78px;
+    }
+    .panache-step-content h4 {
+        font-size: 1.25rem;
+    }
+    .panache-step-content p {
+        font-size: 1rem;
+    }
+    .panache-expect-card {
+        width: 100%;
+        margin-top: 20px;
+        margin-left: 0;
+    }
+    .panache-card-placeholder {
+        width: 260px;
+        height: 200px;
+    }
+    .card-logo-ps {
+        font-size: 2.8rem;
+    }
+}
+
+
 @media (max-width: 767.98px) {
     #hero {
         height: 100vh !important;
@@ -2065,11 +2359,6 @@ h1, h2, h3, h4, h5, h6, .heading-section h2 {
         right: 10px !important;
     }
 
-    /* Fix counter section mobile gap */
-    #section-counter {
-        padding: 4.5em 0 1.5em !important;
-        margin-bottom: 0 !important;
-    }
 
     /* Fix map to copyright gap on mobile */
     .ftco-footer-widget iframe {
