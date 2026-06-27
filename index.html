@@ -67,14 +67,24 @@
 				transition: opacity 0.8s ease;
 			}
 
-			#heroVideo {
+			#heroVideoDesktop,
+			#heroVideoMobile {
 				z-index: 0;
 				opacity: 1;
 				object-position: center center;
 			}
 
+			#heroVideoMobile {
+				display: none;
+			}
+
 			@media (max-width: 767px) {
-				#heroVideo {
+				#heroVideoDesktop {
+					display: none !important;
+				}
+
+				#heroVideoMobile {
+					display: block !important;
 					top: 10%;
 					height: 110%;
 					object-position: center top;
@@ -93,8 +103,11 @@
 				z-index: 2;
 			}
 		</style>
-		<video id="heroVideo" class="hero-media" playsinline muted style="display:block;" preload="auto">
+		<video id="heroVideoDesktop" class="hero-media" playsinline muted style="display:block;" preload="auto">
 			<source src="images/home-hero.mp4" type="video/mp4">
+		</video>
+		<video id="heroVideoMobile" class="hero-media" playsinline muted preload="auto">
+			<source src="images/My Video-1.mp4" type="video/mp4">
 		</video>
 		<div id="heroImage" class="hero-media" style="background-image: url('images/third-hero.png');"></div>
 		<div class="container" style="position:relative; z-index:1;">
@@ -114,23 +127,38 @@
 		<script>
 
 			(function () {
-				var v = document.getElementById('heroVideo');
+				var vDesktop = document.getElementById('heroVideoDesktop');
+				var vMobile = document.getElementById('heroVideoMobile');
 				var img = document.getElementById('heroImage');
 				var showDuration = 10500; // ms each
 				var fadeTime = 8000; // matches CSS transition
 				var showingVideo = true;
+
+				function getActiveVideo() {
+					return window.innerWidth <= 767 ? vMobile : vDesktop;
+				}
+
 				function showVideo() {
 					showingVideo = true;
+					var v = getActiveVideo();
 					img.style.opacity = 0;
-					v.style.opacity = 1;
+					if (window.innerWidth <= 767) {
+						if (vDesktop) vDesktop.style.opacity = 0;
+						if (vMobile) vMobile.style.opacity = 1;
+					} else {
+						if (vMobile) vMobile.style.opacity = 0;
+						if (vDesktop) vDesktop.style.opacity = 1;
+					}
 					v.currentTime = 0;
 					v.play().catch(function () { });
 				}
 				function showImage() {
 					showingVideo = false;
-					v.style.opacity = 0;
+					if (vDesktop) vDesktop.style.opacity = 0;
+					if (vMobile) vMobile.style.opacity = 0;
 					img.style.opacity = 1;
-					try { v.pause(); } catch (e) { }
+					try { vDesktop.pause(); } catch (e) { }
+					try { vMobile.pause(); } catch (e) { }
 				}
 				// start sequence
 				showVideo();
@@ -143,8 +171,41 @@
 					}
 				}, showDuration + fadeTime);
 				// as a safety, also end video to image on ended
-				v.addEventListener('ended', function () {
-					setTimeout(showImage, 0);
+				if (vDesktop) {
+					vDesktop.addEventListener('ended', function () {
+						setTimeout(showImage, 0);
+					});
+				}
+				if (vMobile) {
+					vMobile.addEventListener('ended', function () {
+						setTimeout(showImage, 0);
+					});
+				}
+
+				// Handle resize dynamically
+				window.addEventListener('resize', function () {
+					if (showingVideo) {
+						var v = getActiveVideo();
+						if (window.innerWidth <= 767) {
+							if (vDesktop) {
+								vDesktop.style.opacity = 0;
+								vDesktop.pause();
+							}
+							if (vMobile) {
+								vMobile.style.opacity = 1;
+								vMobile.play().catch(function () { });
+							}
+						} else {
+							if (vMobile) {
+								vMobile.style.opacity = 0;
+								vMobile.pause();
+							}
+							if (vDesktop) {
+								vDesktop.style.opacity = 1;
+								vDesktop.play().catch(function () { });
+							}
+						}
+					}
 				});
 
 			})();
@@ -214,7 +275,8 @@
 					<!-- Step 1 -->
 					<div class="panache-step">
 						<div class="panache-step-icon">
-							<img src="images/Stats Icons and Image/calendar_icon.png" alt="Easy Booking" style="width: 88px; height: 88px; object-fit: contain;">
+							<img src="images/Stats Icons and Image/calendar_icon.png" alt="Easy Booking"
+								style="width: 88px; height: 88px; object-fit: contain;">
 						</div>
 						<div class="panache-step-content">
 							<h4>1. Easy Booking</h4>
@@ -225,7 +287,8 @@
 					<!-- Step 2 -->
 					<div class="panache-step">
 						<div class="panache-step-icon">
-							<img src="images/Stats Icons and Image/cup_icon.png" alt="Warm Welcome" style="width: 88px; height: 88px; object-fit: contain;">
+							<img src="images/Stats Icons and Image/cup_icon.png" alt="Warm Welcome"
+								style="width: 88px; height: 88px; object-fit: contain;">
 						</div>
 						<div class="panache-step-content">
 							<h4>2. Warm Welcome</h4>
@@ -236,7 +299,8 @@
 					<!-- Step 3 -->
 					<div class="panache-step">
 						<div class="panache-step-icon">
-							<img src="images/Stats Icons and Image/services_icon.png" alt="Personalized Service" style="width: 88px; height: 88px; object-fit: contain;">
+							<img src="images/Stats Icons and Image/services_icon.png" alt="Personalized Service"
+								style="width: 88px; height: 88px; object-fit: contain;">
 						</div>
 						<div class="panache-step-content">
 							<h4>3. Personalized Service</h4>
@@ -247,7 +311,8 @@
 					<!-- Step 4 -->
 					<div class="panache-step">
 						<div class="panache-step-icon">
-							<img src="images/Stats Icons and Image/lotus_icon.png" alt="Relax & Enjoy" style="width: 88px; height: 88px; object-fit: contain;">
+							<img src="images/Stats Icons and Image/lotus_icon.png" alt="Relax & Enjoy"
+								style="width: 88px; height: 88px; object-fit: contain;">
 						</div>
 						<div class="panache-step-content">
 							<h4>4. Relax &amp; Enjoy</h4>
@@ -258,7 +323,8 @@
 					<!-- Step 5 -->
 					<div class="panache-step">
 						<div class="panache-step-icon">
-							<img src="images/Stats Icons and Image/stars_icon.png" alt="Walk Out Confident" style="width: 88px; height: 88px; object-fit: contain;">
+							<img src="images/Stats Icons and Image/stars_icon.png" alt="Walk Out Confident"
+								style="width: 88px; height: 88px; object-fit: contain;">
 						</div>
 						<div class="panache-step-content">
 							<h4>5. Walk Out Confident</h4>
@@ -269,7 +335,8 @@
 
 				<!-- Right Side Image / Card -->
 				<div class="panache-expect-card">
-					<img src="images/Stats Icons and Image/Stats Sec Logo Image.png" alt="Stats Section Logo" style="width: 100%; height: auto; border-radius: 6px;">
+					<img src="images/Stats Icons and Image/Stats Sec Logo Image.png" alt="Stats Section Logo"
+						style="width: 100%; height: auto; border-radius: 6px;">
 				</div>
 
 			</div>
@@ -392,47 +459,47 @@
 		<h1>Our Services & Benefits </h1>
 		<div class="carousel">
 			<div class="slide active">
-				<div class="circle" >
-                  <img src="images/icons/skin care_icon.png" alt="Skin Care" >
+				<div class="circle">
+					<img src="images/icons/skin care_icon.png" alt="Skin Care">
 				</div>
 				<div class="service" style="color:#c5a059 ;">Skin Care</div>
 				<p class="quote">"For naturally glowing, healthy skin"</p>
 			</div>
 
 			<div class="slide">
-				<div class="circle" >
-                  <img src="images/icons/hair care_icon.png" alt="Hair Care" >
+				<div class="circle">
+					<img src="images/icons/hair care_icon.png" alt="Hair Care">
 				</div>
 				<div class="service" style="color:#c5a059 ;">Hair Care</div>
 				<p class="quote">"Stronger, shinier hair from root to tip"</p>
 			</div>
 
 			<div class="slide">
-				<div class="circle" >
-                  <img src="images/icons/Massage and Relaxation_icon.png" alt="Massage & Relaxation" >
+				<div class="circle">
+					<img src="images/icons/Massage and Relaxation_icon.png" alt="Massage & Relaxation">
 				</div>
 				<div class="service" style="color:#c5a059 ;">Massage & Relaxation</div>
 				<p class="quote">"Relaxes body and mind, reduces stress."</p>
 			</div>
 			<div class="slide">
-				<div class="circle" >
-                  <img src="images/icons/Men's Grooming_icon.png" alt="Men's Grooming" >
+				<div class="circle">
+					<img src="images/icons/Men's Grooming_icon.png" alt="Men's Grooming">
 				</div>
 				<div class="service" style="color:#c5a059 ;">Men's Grooming</div>
 				<p class="quote">"Enhances your look and boosts confidence."</p>
 			</div>
 
 			<div class="slide">
-				<div class="circle" >
-                  <img src="images/icons/Bridal & Makeup_icon.png" alt="Bridal Makeup" >
+				<div class="circle">
+					<img src="images/icons/Bridal & Makeup_icon.png" alt="Bridal Makeup">
 				</div>
 				<div class="service" style="color:#c5a059 ;">Bridal Makeup</div>
 				<p class="quote">"Brings out your best for every special day."</p>
 			</div>
 
 			<div class="slide">
-				<div class="circle" >
-                  <img src="images/icons/Nail & Footcare_icon.png" alt="Manicure & Pedicure" >
+				<div class="circle">
+					<img src="images/icons/Nail & Footcare_icon.png" alt="Manicure & Pedicure">
 				</div>
 				<div class="service" style="color:#c5a059 ;">Manicure & Pedicure</div>
 				<p class="quote">"Strong healthy nails and soft, smooth feet."</p>
