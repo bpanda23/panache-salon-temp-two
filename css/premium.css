@@ -1741,7 +1741,8 @@ h1, h2, h3, h4, h5, h6, .heading-section h2 {
     width: max-content;
     will-change: transform;
     animation: testimonial-marquee 22s linear infinite;
-    padding-top: 13px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 .slide {
@@ -1752,8 +1753,9 @@ h1, h2, h3, h4, h5, h6, .heading-section h2 {
     border-radius: 18px;
     opacity: 0.82;
     transform: scale(1);
-    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+    box-shadow: 0 18px 40px #67522d, 0 0 2px #967840 ;
     transition: transform 0.75s ease, opacity 0.75s ease, background-color 0.75s ease;
+    border: 1px solid #c5a059;
 }
 
 .slide.prev,
