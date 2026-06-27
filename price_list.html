@@ -1,0 +1,504 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Panache Salon – Hair & Beauty Studio </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+  <link rel="stylesheet" href="css/animate.css">
+
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+
+  <link rel="stylesheet" href="css/aos.css">
+
+  <link rel="stylesheet" href="css/ionicons.min.css">
+
+  <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+
+  <link rel="stylesheet" href="css/flaticon.css">
+  <link rel="stylesheet" href="css/icomoon.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/premium.css">
+  <link rel="stylesheet" href="css/services-new.css">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <div class="container">
+      <div class="collapse navbar-collapse" id="ftco-nav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+          <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+          <li class="nav-item"><a href="bridal_service.html" class="nav-link">Bridal Elite</a></li>
+          <li class="nav-item"><a href="WhyUs.html" class="nav-link">Why Us</a></li>
+          <li class="nav-item"><a href="contact-us.html" class="nav-link">Contact</a></li>
+          <li class="nav-item active"><a href="price_list.html" class="nav-link">Price List</a></li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- END nav -->
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Raleway:wght@300;400;500&display=swap');
+*{box-sizing:border-box;margin:0;padding:0;}
+.wrap{background:#c8b89a;min-height:100vh;font-family:'Raleway',sans-serif;position:relative;overflow:hidden;}
+.marble-top{height:180px;background:#b8a882;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;flex-direction:column;}
+.marble-top::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(125deg,rgba(255,255,255,0.18) 0px,rgba(255,255,255,0.04) 3px,transparent 3px,transparent 35px),repeating-linear-gradient(55deg,rgba(160,130,80,0.2) 0px,rgba(160,130,80,0.05) 2px,transparent 2px,transparent 28px);}
+.marble-top::after{content:'';position:absolute;inset:0;background:repeating-linear-gradient(100deg,transparent 0px,rgba(255,255,255,0.1) 18px,transparent 22px,transparent 60px);}
+.header{position:relative;z-index:1;text-align:center;padding:0 1rem;}
+.header-title{font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:600;color:#fff;letter-spacing:0.08em;text-shadow:0 1px 8px rgba(100,70,20,0.3);}
+.header-sub{font-size:0.78rem;letter-spacing:0.35em;color:rgba(255,255,255,0.85);text-transform:uppercase;margin-top:0.2rem;font-weight:300;}
+.content{background:#e8dcc8;padding:0.5rem 1.75rem 2rem;position:relative;}
+.item-card{overflow:hidden; content-visibility: auto;}
+
+.item-trigger{display:flex;align-items:flex-start;justify-content:space-between;padding:1.35rem 0;cursor:pointer;gap:1rem;border-bottom:1px solid rgba(160,130,80,0.25);}
+.item-card:last-child .item-trigger{border-bottom:none;}
+.item-card.open .item-trigger{border-bottom:none;}
+.item-left{flex:1;}
+.item-name{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:500;color:#2a1f0e;letter-spacing:0.04em;line-height:1.25;text-transform:uppercase;}
+.item-sub{font-size:0.72rem;color:#7a6040;letter-spacing:0.02em;margin-top:0.3rem;font-weight:300;line-height:1.4;}
+.item-right{display:flex;align-items:center;gap:0.5rem;flex-shrink:0;padding-top:2px;}
+.item-price{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:600;color:#2a1f0e;letter-spacing:0.02em;white-space:nowrap;}
+.price-unit{font-size:1.1rem;color:#2a1f0e;font-weight:500;align-self:center;}
+.chevron-icon{width:15px;height:15px;stroke:#9a7d4a;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;transition:transform 0.35s;flex-shrink:0;align-self:center;margin-left:4px;}
+.item-card.open .chevron-icon{transform:rotate(180deg);}
+.item-body{max-height:0;overflow:hidden;transition:max-height 0.4s cubic-bezier(0.4,0,0.2,1);}
+.item-card.open .item-body{max-height:200px;}
+.item-detail{padding:0 0 1.1rem;display:flex;gap:0.5rem;flex-wrap:wrap;border-bottom:1px solid rgba(160,130,80,0.25);}
+.item-card:last-child.open .item-detail{border-bottom:none;}
+.detail-pill{display:inline-flex;align-items:center;gap:0.35rem;background:rgba(160,130,60,0.12);border:1px solid rgba(160,130,60,0.3);border-radius:2px;padding:0.25rem 0.6rem;font-size:0.68rem;color:#5c4020;letter-spacing:0.05em;font-weight:400;}
+.detail-pill i{font-size:12px;color:#9a7040;}
+.footer{padding:1rem 1.75rem;text-align:right;}
+.footer-corner{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border:1px solid #2a1f0e;}
+.footer-corner i{font-size:14px;color:#2a1f0e;}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#000;
+    font-family:'Poppins',sans-serif;
+}
+
+.wrap{
+    width:100%;
+    min-height:100vh;
+    background:#000;
+    color:#fff;
+    overflow:hidden;
+}
+
+/* ---------- HEADER ---------- */
+
+.marble-top{
+    height:220px;
+    background:linear-gradient(160deg,#050505,#111,#1b1b1b);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+    border-bottom:2px solid #c5a059;
+}
+
+.marble-top::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+        radial-gradient(circle at top right,rgba(197,160,89,.18),transparent 45%),
+        radial-gradient(circle at bottom left,rgba(197,160,89,.12),transparent 40%);
+}
+
+.header{
+    position:relative;
+    z-index:2;
+    text-align:center;
+}
+
+.header-title{
+    font-family:'Cinzel',serif;
+    font-size:54px;
+    color:#c5a059;
+    letter-spacing:8px;
+}
+
+.header-sub{
+    margin-top:12px;
+    color:white;
+    letter-spacing:6px;
+    text-transform:uppercase;
+    font-size:13px;
+}
+
+/* ---------- CONTENT ---------- */
+
+.content{
+    padding:40px;
+    background:#0b0b0b;
+}
+
+.item-card{
+    margin-bottom:18px;
+    border:1px solid rgba(197,160,89,.25);
+    border-radius:15px;
+    background:linear-gradient(145deg,#111,#1a1a1a);
+    transition:.35s;
+    overflow:hidden;
+}
+
+.item-card:hover{
+    border-color:#c5a059;
+    box-shadow:0 10px 35px rgba(197,160,89,.25);
+    transform:translateY(-3px);
+}
+
+.item-trigger{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:24px 28px;
+    cursor:pointer;
+}
+
+.item-left{
+    flex:1;
+}
+
+.item-name{
+    font-family:'Cinzel',serif;
+    color:#c5a059;
+    font-size:24px;
+    letter-spacing:2px;
+    line-height:1.4;
+}
+
+.item-sub{
+    margin-top:8px;
+    color:#d6d6d6;
+    font-size:14px;
+    letter-spacing:1px;
+}
+
+.item-right{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.item-price{
+    font-family:'Cinzel',serif;
+    color:#fff;
+    font-size:36px;
+    font-weight:bold;
+}
+
+.price-unit{
+    color:#c5a059;
+    font-size:20px;
+}
+
+.chevron-icon{
+    width:18px;
+    stroke:#c5a059;
+    transition:.35s;
+}
+
+.item-card.open .chevron-icon{
+    transform:rotate(180deg);
+}
+
+/* ---------- DETAILS ---------- */
+
+.item-body{
+    max-height:0;
+    overflow:hidden;
+    transition:max-height .4s ease;
+}
+
+.item-card.open .item-body{
+    max-height:250px;
+}
+
+.item-detail{
+    padding:0 28px 24px;
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+.detail-pill{
+    background:#151515;
+    border:1px solid #c5a059;
+    color:#fff;
+    border-radius:50px;
+    padding:10px 18px;
+    font-size:13px;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    transition:.3s;
+}
+
+.detail-pill:hover{
+    background:#c5a059;
+    color:#000;
+}
+
+.detail-pill i{
+    color:#c5a059;
+}
+
+.detail-pill:hover i{
+    color:#000;
+}
+
+/* ---------- FOOTER ---------- */
+
+.footer{
+    display:flex;
+    justify-content:center;
+    padding:40px;
+    background:#000;
+}
+
+.footer-corner{
+    width:55px;
+    height:55px;
+    border:2px solid #c5a059;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#c5a059;
+    transition:.3s;
+}
+
+.footer-corner:hover{
+    background:#c5a059;
+    color:#000;
+    transform:rotate(45deg);
+}
+/* ==========================
+        MOBILE RESPONSIVE
+========================== */
+
+@media (max-width:768px){
+
+.wrap{
+    width:100%;
+}
+
+.marble-top{
+    height:170px;
+    padding:25px 15px;
+}
+
+.header-title{
+    padding-top: 60px;
+    font-size:30px;
+    letter-spacing:4px;
+}
+
+.header-sub{
+    font-size:11px;
+    letter-spacing:3px;
+}
+
+/* Main Content */
+
+.content{
+    padding:15px;
+}
+
+/* Card */
+
+.item-card{
+    border-radius:12px;
+    margin-bottom:15px;
+}
+
+/* Make card vertical */
+
+.item-trigger{
+    flex-direction:column;
+    align-items:flex-start;
+    padding:18px;
+    gap:12px;
+}
+
+/* Left */
+
+.item-left{
+    width:100%;
+}
+
+.item-name{
+    font-size:22px;
+    line-height:1.3;
+    letter-spacing:1px;
+}
+
+.item-sub{
+    font-size:13px;
+    line-height:1.5;
+}
+
+/* Price */
+
+.item-right{
+    width:100%;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.item-price{
+    font-size:30px;
+}
+
+.price-unit{
+    font-size:18px;
+}
+
+/* Pills */
+
+.item-detail{
+    padding:0 18px 18px;
+    gap:8px;
+}
+
+.detail-pill{
+    font-size:12px;
+    padding:8px 14px;
+}
+
+/* Footer */
+
+.footer{
+    padding:25px;
+}
+
+.footer-corner{
+    width:45px;
+    height:45px;
+}
+
+}
+</style>
+
+<div class="wrap">
+  <div class="marble-top">
+    <div class="header">
+      <div class="header-title">PRICE LIST</div>
+      <div class="header-sub">Manicure</div>
+    </div>
+  </div>
+
+  <div class="content" id="list"></div>
+
+  <div class="footer">
+    <div class="footer-corner"><i class="ti ti-arrows-maximize" aria-hidden="true"></i></div>
+  </div>
+</div>
+
+<script>
+const services = [
+  {
+    name:'Manicure',
+    sub:'manicure without coating',
+    unit:'Rs.',
+    price:'800',
+    details:['No coating','Cuticle care','Nail shaping','~45 min']
+  },
+  {
+    name:'Manicure\nwith Coating',
+    sub:'manicure + gel polish coating',
+    unit:'Rs.',
+    price:'1300',
+    details:['Gel polish','Cuticle care','Nail shaping','~60 min']
+  },
+  {
+    name:'Manicure\nwith Strengthening',
+    sub:'manicure + gel polish coating\n+ strengthening with gel/polygel',
+    price:'1700',
+    unit:'Rs.',
+    details:['Gel polish','Strengthening','Polygel','~75 min']
+  },
+  {
+    name:'Nail\nExtensions',
+    sub:'manicure + length extension\n+ gel polish coating',
+    price:'2500',
+    unit:'Rs.',
+    details:['Extensions','Gel polish','Custom shape','~90 min']
+  },
+  {
+    name:'Extension\nCorrection',
+    sub:'manicure + gel correction\n+ gel polish coating',
+    price:'1700',
+    unit:'Rs.',
+    details:['Gel correction','Gel polish','Reshape','~75 min']
+  }
+];
+
+const icons = ['ti-sparkles','ti-palette','ti-shield-check','ti-stars','ti-refresh'];
+const list = document.getElementById('list');
+
+services.forEach((s,i) => {
+  const nameHtml = s.name.replace('\n','<br>');
+  const subHtml = s.sub.replace('\n','<br>');
+  const card = document.createElement('div');
+  card.className = 'item-card';
+  card.innerHTML = `
+    <div class="item-trigger">
+      <div class="item-left">
+        <div class="item-name">${nameHtml}</div>
+        <div class="item-sub">${subHtml}</div>
+      </div>
+      <div class="item-right">
+        
+        <span class="price-unit">${s.unit}</span>
+        <span class="item-price">${s.price}</span>
+        <svg class="chevron-icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+    </div>
+    <div class="item-body">
+      <div class="item-detail">
+        ${s.details.map((d,j)=>`<span class="detail-pill"><i class="ti ${icons[j]||'ti-check'}" aria-hidden="true"></i>${d}</span>`).join('')}
+      </div>
+    </div>`;
+  card.querySelector('.item-trigger').addEventListener('click',()=>card.classList.toggle('open'));
+  list.appendChild(card);
+});
+</script>
+<script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
+    <script src="js/jquery.timepicker.min.js"></script>
+    <script src="js/scrollax.min.js"></script>
+    <script src="js/mascot.js"></script>
+    <script src="js/main.js"></script>
+
+
+</body>
+</html>
