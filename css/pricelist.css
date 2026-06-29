@@ -1,0 +1,601 @@
+/* ===========================
+      PANACHE LUXURY THEME
+=========================== */
+
+:root{
+
+--gold:#c5a059;
+--gold-light:#e6c87b;
+
+--black:#050505;
+--black2:#0d0d0d;
+--black3:#161616;
+
+--card:#121212;
+
+--white:#ffffff;
+--muted:#bcbcbc;
+
+--border:rgba(197,160,89,.18);
+
+--radius:18px;
+
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+background:
+radial-gradient(circle at top right,
+rgba(197,160,89,.08),
+transparent 35%),
+
+linear-gradient(180deg,
+#050505,
+#0b0b0b,
+#121212);
+
+color:var(--white);
+
+font-family:Poppins,sans-serif;
+
+}
+
+/* ===========================
+      MAIN PANEL
+=========================== */
+
+.sheet-panel{
+
+max-width:450px;
+
+margin:auto;
+
+background:#080808;
+
+min-height:100vh;
+
+box-shadow:
+
+0 0 60px rgba(0,0,0,.65);
+
+}
+
+/* ===========================
+          HERO
+=========================== */
+
+.hero{
+
+padding:55px 25px;
+
+text-align:center;
+
+background:
+
+linear-gradient(rgba(0,0,0,.82),
+rgba(0,0,0,.82)),
+
+linear-gradient(135deg,
+#050505,
+#1b1b1b);
+
+position:relative;
+
+overflow:hidden;
+
+border-bottom:
+
+2px solid var(--gold);
+
+}
+
+.hero::before{
+
+content:"";
+
+position:absolute;
+
+width:280px;
+
+height:280px;
+
+right:-120px;
+
+top:-120px;
+
+background:
+
+rgba(197,160,89,.08);
+
+border-radius:50%;
+
+filter:blur(10px);
+
+}
+
+.hero-title{
+
+font-size:38px;
+
+font-weight:700;
+
+letter-spacing:4px;
+
+color:var(--gold);
+
+}
+
+.hero-sub{
+
+margin-top:8px;
+
+font-size:14px;
+
+color:#ddd;
+
+letter-spacing:3px;
+
+text-transform:uppercase;
+
+}
+
+.hero-tag{
+
+display:inline-block;
+
+margin-top:18px;
+
+padding:10px 20px;
+
+background:#111;
+
+border:1px solid var(--gold);
+
+border-radius:50px;
+
+color:var(--gold);
+
+font-size:13px;
+
+}
+
+.hero-ornament{
+
+margin-top:18px;
+
+color:var(--gold);
+
+}
+
+/* ===========================
+        TOP TABS
+=========================== */
+
+.top-tabs{
+
+display:flex;
+
+background:#0f0f0f;
+
+padding:15px;
+
+gap:12px;
+
+position:sticky;
+
+top:0;
+
+z-index:100;
+
+border-bottom:1px solid var(--border);
+
+}
+
+.top-tab{
+
+flex:1;
+
+padding:14px;
+
+background:#151515;
+
+color:#ddd;
+
+text-align:center;
+
+border-radius:14px;
+
+cursor:pointer;
+
+transition:.3s;
+
+font-weight:600;
+
+}
+
+.top-tab:hover{
+
+background:#202020;
+
+}
+
+.top-tab.active{
+
+background:
+
+linear-gradient(135deg,
+
+var(--gold),
+
+#e7ca82);
+
+color:#111;
+
+}
+
+/* ===========================
+          SECTION
+=========================== */
+
+.section{
+
+margin:25px 18px;
+
+background:var(--card);
+
+border-radius:18px;
+
+overflow:hidden;
+
+border:1px solid var(--border);
+
+box-shadow:
+
+0 12px 30px rgba(0,0,0,.35);
+
+}
+
+.section-header{
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+padding:20px;
+
+cursor:pointer;
+
+background:#171717;
+
+}
+
+.section-name{
+
+font-size:24px;
+
+font-weight:700;
+
+color:var(--gold);
+
+}
+
+.section-label{
+
+font-size:13px;
+
+color:#ddd;
+
+margin-top:5px;
+
+}
+
+.section-count{
+
+background:rgba(197,160,89,.15);
+
+padding:6px 12px;
+
+border-radius:50px;
+
+color:var(--gold);
+
+font-size:12px;
+
+}
+
+.section-icon{
+
+color:var(--gold);
+
+font-size:24px;
+
+}
+
+.chevron{
+
+color:var(--gold);
+
+transition:.35s;
+
+}
+
+.section-body{
+
+padding:15px 20px;
+
+}
+
+/* ===========================
+        SERVICE ROW
+=========================== */
+
+.service-row{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:flex-start;
+
+padding:18px 0;
+
+border-bottom:
+
+1px solid rgba(255,255,255,.06);
+
+transition:.3s;
+
+}
+
+.service-row:hover{
+
+padding-left:10px;
+
+background:#181818;
+
+}
+
+.service-info{
+
+flex:1;
+
+}
+
+.service-name{
+
+font-size:18px;
+
+font-weight:600;
+
+color:#fff;
+
+}
+
+.service-desc{
+
+margin-top:5px;
+
+font-size:13px;
+
+color:#a7a7a7;
+
+line-height:1.5;
+
+}
+
+.service-price{
+
+font-size:22px;
+
+font-weight:700;
+
+color:var(--gold);
+
+white-space:nowrap;
+
+margin-left:15px;
+
+}
+
+/* ===========================
+        SUB CATEGORY
+=========================== */
+
+.sub-cat{
+
+margin:20px 0 10px;
+
+font-size:17px;
+
+font-weight:600;
+
+color:var(--gold);
+
+text-transform:uppercase;
+
+letter-spacing:2px;
+
+}
+
+/* ===========================
+         BADGES
+=========================== */
+
+.badge-he,
+
+.badge-she{
+
+display:inline-flex;
+
+align-items:center;
+
+padding:8px 18px;
+
+border-radius:30px;
+
+font-size:12px;
+
+font-weight:600;
+
+letter-spacing:1px;
+
+}
+
+.badge-he{
+
+background:#1b1b1b;
+
+color:var(--gold);
+
+border:1px solid var(--gold);
+
+}
+
+.badge-she{
+
+background:linear-gradient(135deg,
+
+var(--gold),
+
+#f0d28f);
+
+color:#111;
+
+}
+
+/* ===========================
+       MAKEUP BANNER
+=========================== */
+
+.makeup-banner{
+
+margin:30px 20px;
+
+padding:35px;
+
+border-radius:20px;
+
+background:
+
+linear-gradient(135deg,
+
+#151515,
+
+#202020);
+
+border:1px solid var(--gold);
+
+text-align:center;
+
+}
+
+.makeup-sub{
+
+color:#ddd;
+
+margin-top:10px;
+
+}
+
+/* ===========================
+       PRICE NOTE
+=========================== */
+
+.price-note{
+
+padding:20px;
+
+font-size:13px;
+
+color:#a8a8a8;
+
+text-align:center;
+
+}
+
+/* ===========================
+         FOOTER
+=========================== */
+
+.footer{
+
+padding:35px;
+
+text-align:center;
+
+color:#999;
+
+}
+
+.footer-ornament{
+
+color:var(--gold);
+
+font-size:22px;
+
+margin-bottom:15px;
+
+}
+
+/* ===========================
+         MOBILE
+=========================== */
+
+@media(max-width:768px){
+
+.hero-title{
+
+font-size:30px;
+
+}
+
+.section{
+
+margin:15px;
+
+}
+
+.section-header{
+
+padding:18px;
+
+}
+
+.service-row{
+
+flex-direction:column;
+
+gap:10px;
+
+}
+
+.service-price{
+
+margin-left:0;
+
+font-size:20px;
+
+}
+
+.top-tabs{
+
+   padding:10px;
+
+}
+
+.top-tab{
+
+    padding:12px;
+    font-size:14px;
+
+}
+
+}
