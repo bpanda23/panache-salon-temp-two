@@ -85,13 +85,11 @@
           <div class="ds-left-panel">
             <div class="ds-image-wrapper mb-4">
               <img src="images/Pre-Bridal Countdown Rituals.png" alt="Service" id="dsImage" class="img-fluid ds-image">
-              <div class="ds-desc-overlay">
-                <span class="ds-category mb-2" id="dsCategory">The Bridal & Groom Luxury Care</span>
-                <h3 class="ds-title mb-3" id="dsTitle">Pre-bridal Countdown Rituals</h3>
-                <p class="ds-description" id="dsDesc">We strongly recommend initiating custom tiered packages (Gold, Platinum, or Diamond) 30 to 45 days prior to the
-                wedding event. These tiered programs systematically group multi-session skin brightening detan therapies, deep
-                structural hair repair treatments, and luxury manicures and pedicures into coordinated visits, leading to a radiant, stressfree wedding glow.
-                </p>
+              <div class="ds-desc-overlay" id="dsOverlay">
+                <span class="ds-category mb-2" id="dsCategory" style="display:none;">The Bridal &amp; Groom Luxury Care</span>
+                <h3 class="ds-title mb-3" id="dsTitle">Pre-Bridal Countdown Rituals</h3>
+                <p class="ds-description ds-description-preview" id="dsDesc">We strongly recommend initiating custom tiered packages (Gold, Platinum, or Diamond) 30 to 45 days prior to the wedding event....</p>
+                <a href="#" class="ds-check-more" onclick="event.stopPropagation(); event.preventDefault(); openServicePopup(0); return false;">check for more ›</a>
               </div>
             </div>
           </div>
@@ -103,7 +101,7 @@
             <h3 class="ds-side-heading mb-4">Select a Service</h3>
             <div class="ds-sub-options-vertical" id="dsSubOptionsContainer">
               <button class="ds-sub-option-btn active" data-index="0">
-                <span class="btn-text">Pre-bridal Countdown Rituals</span>
+                <span class="btn-text">Pre-Bridal Countdown Rituals</span>
                 <span class="btn-arrow">→</span>
               </button>
               <button class="ds-sub-option-btn" data-index="0">
@@ -181,7 +179,7 @@
 
           <p><!-- Link back to Sutram Solutions can't be removed.  is licensed under CC BY 3.0. -->
             Copyright &copy;
-            <script>document.write(new Date().getFullYear());</script> All rights reserved | This 
+            <script>document.write(new Date().getFullYear());</script> All rights reserved | This
             is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://sutramsolutions.in"
               target="_blank">Sutram Solutions</a>
             <!-- Link back to Sutram Solutions can't be removed.  is licensed under CC BY 3.0. -->
@@ -210,13 +208,8 @@
     <div class="mascot-menu">
       <h5>How can I help?</h5>
       <ul class="mascot-menu-list">
-        <li><a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSclDF9rdahbYHU4E2IPDVMysiGjUnQSDPDy-Pu1XlWl5yFgeA/viewform?usp=sharing&ouid=105010883578271493527"><i
-              class="fas fa-calendar-check"></i>Quick Booking</a></li>
-        <li><a href="#services"><i class="fas fa-search"></i>Our Services</a></li>
-        <li><a href="team.html"><i class="fas fa-users"></i>Meet Our Team</a></li>
-        <li><a href="testimonial.html"><i class="fas fa-star"></i>Client Reviews</a></li>
-        <li><a href="https://wa.me/6302519834" target="_blank" rel="noreferrer"><i class="fas fa-handshake"></i>Chat
+        <li><a href="#services"><img src="images/search-outline.svg" alt="Search" class="mascot-search-icon">Our Services</a></li>
+        <li><a href="https://wa.me/6302519834" target="_blank" rel="noreferrer"><img src="images/logo-whatsapp.svg" alt="WhatsApp" class="mascot-whatsapp-icon">Chat
             with Us</a></li>
       </ul>
     </div>
@@ -261,16 +254,62 @@
 
   <style>
     @keyframes popupFadeIn {
-      from { opacity: 0; transform: scale(0.93) translateY(24px); }
-      to { opacity: 1; transform: scale(1) translateY(0); }
+      from {
+        opacity: 0;
+        transform: scale(0.93) translateY(24px);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+      }
     }
-    #servicePopupModal.open { display: flex !important; }
+
+    #servicePopupModal.open {
+      display: flex !important;
+    }
+
+    /* Truncated one-liner preview description on the left panel */
+    .ds-description-preview {
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      margin-bottom: 8px;
+    }
+
+    /* "check for more" link - always visible below the clamped text */
+    .ds-check-more {
+      display: inline-block;
+      color: #4ecdc4;
+      font-size: 0.85rem;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-decoration: none;
+      border-bottom: 1.5px solid rgba(78, 205, 196, 0.5);
+      transition: color 0.25s, border-color 0.25s;
+      cursor: pointer;
+    }
+
+    .ds-check-more:hover {
+      color: #81e8e2;
+      border-color: #81e8e2;
+    }
+
+    /* Hint that the title is clickable */
+    #dsOverlay:hover .ds-title {
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
   </style>
 
   <script>
     // Data for the carousel
     const serviceData = [
-    {
+      {
         title: "Pre-bridal Countdown Rituals",
         category: "The Bridal & Groom Luxury Care",
         desc: "We strongly recommend initiating custom tiered packages (Gold, Platinum, or Diamond) 30 to 45 days prior to the wedding event. These tiered programs systematically group multi-session skin brightening detan therapies, deep structural hair repair treatments, and luxury manicures and pedicures into coordinated visits, leading to a radiant, stressfree wedding glow.",
@@ -308,7 +347,7 @@
       document.getElementById('popupCategory').textContent = data.category;
       document.getElementById('popupTitle').textContent = data.title;
       document.getElementById('popupDesc').textContent = data.desc;
-      
+
       const modal = document.getElementById('servicePopupModal');
       modal.classList.add('open');
       document.body.style.overflow = 'hidden';
@@ -334,17 +373,8 @@
         document.querySelectorAll('.ds-sub-option-btn').forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
 
-        if (idx === 0) {
-          // If first option, update the left panel immediately
-          const data = serviceData[0];
-          document.getElementById('dsImage').src = data.img;
-          document.getElementById('dsCategory').textContent = data.category;
-          document.getElementById('dsTitle').textContent = data.title;
-          document.getElementById('dsDesc').textContent = data.desc;
-        } else {
-          // Open popup
-          openServicePopup(idx);
-        }
+        // All options (including first) open the popup
+        openServicePopup(idx);
       });
     });
 
