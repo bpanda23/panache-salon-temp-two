@@ -12712,6 +12712,14 @@ textarea.form-control {
     font-size: 1.1rem;
 }
 
+.mascot-menu-list li a .mascot-whatsapp-icon,
+.mascot-menu-list li a .mascot-search-icon {
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-right: 12px;
+    object-fit: contain;
+}
+
 .mascot-menu-list li a:hover {
     background: #bf9456;
     color: #fff;
