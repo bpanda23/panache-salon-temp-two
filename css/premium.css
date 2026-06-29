@@ -1070,7 +1070,7 @@ h1, h2, h3, h4, h5, h6, .heading-section h2 {
     .drawer-nav-item.active a {
         color: var(--gold-primary) !important;
         padding-left: 8px;
-        display:none;
+       
     }
 
     .drawer-footer {
