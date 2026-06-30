@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,7 +22,6 @@
   <link rel="stylesheet" href="css/bootstrap-datepicker.css">
   <link rel="stylesheet" href="css/jquery.timepicker.css">
 
-
   <link rel="stylesheet" href="css/flaticon.css">
   <link rel="stylesheet" href="css/icomoon.css">
   <link rel="stylesheet" href="css/style.css">
@@ -44,238 +42,51 @@
           <li class="nav-item"><a href="WhyUs.html" class="nav-link">Why Us</a></li>
           <li class="nav-item"><a href="contact-us.html" class="nav-link">Contact</a></li>
           <li class="nav-item active"><a href="price_list.html" class="nav-link">Price List</a></li>
-
         </ul>
       </div>
     </div>
   </nav>
-  <!-- END nav -->
+
 <style>
 
-
-/* =====================================================
-   DESKTOP / LAPTOP VIEW (992px and above)
-   ===================================================== */
-
-@media screen and (min-width: 992px){
-
-body{
-    background:#0a0a0a;
-}
-
-/* Main Container */
-
-.sheet-panel{
-    width:95%;
-    max-width:1400px;
-    margin:40px auto;
-    border-radius:25px;
-    overflow:hidden;
-    background:#111;
-    box-shadow:0 25px 60px rgba(0,0,0,.45);
-}
-
-/* Hero */
-
-.hero{
-    padding:70px 60px;
-}
-
-.hero-title{
-    font-size:52px;
-    letter-spacing:10px;
-}
-
-.hero-sub{
-    font-size:18px;
-    margin-top:12px;
-}
-
-.hero-tag{
-    margin-top:25px;
-}
-
-/* Tabs */
-
-.top-tabs{
-    display:flex;
-    justify-content:center;
-    gap:25px;
-    padding:30px;
-}
-
-.top-tab{
-    max-width:240px;
-    width:100%;
-    padding:18px;
-    font-size:18px;
-    border-radius:50px;
-}
-
-/* Sections */
-
-.section{
-    width:92%;
-    margin:30px auto;
-    border-radius:20px;
-}
-
-.section-header{
-    padding:28px 35px;
-}
-
-.section-name{
-    font-size:30px;
-    letter-spacing:5px;
-}
-
-.section-label{
-    font-size:15px;
-}
-
-.section-count{
-    font-size:13px;
-}
-
-/* Service Area */
-
-.section-body{
-    padding:30px;
-}
-
-/* Two-column service layout */
-
-.service-row{
-    display:grid;
-    grid-template-columns:2.2fr 2fr auto;
-    align-items:center;
-    gap:30px;
-    padding:20px 10px;
-}
-
-.service-info{
-    width:100%;
-}
-
-.service-name{
-    font-size:19px;
-}
-
-.service-desc{
-    font-size:14px;
-    margin-top:6px;
-}
-
-.service-price{
-    font-size:28px;
-    text-align:right;
-    white-space:nowrap;
-}
-
-/* Category Heading */
-
-.sub-cat{
-    margin:40px 0 25px;
-    padding:16px 25px;
-    font-size:20px;
-}
-
-/* Accordion */
-
-.section-body{
-    transition:max-height .45s ease;
-}
-
-/* Footer */
-
-.footer{
-    padding:45px;
-}
-
-.footer-ornament{
-    font-size:30px;
-}
-
-/* Better spacing */
-
-.badge-he,
-.badge-she{
-    margin:30px auto;
-}
-
-.makeup-banner{
-    width:92%;
-    margin:35px auto;
-}
-
-}
-
-    /* ===========================
-      PANACHE LUXURY Mobile  THEME
+/* ===========================
+   PANACHE LUXURY MOBILE THEME
 =========================== */
 
 :root{
-
---gold:#c5a059;
---gold-light:#e6c87b;
-
---black:#050505;
---black2:#0d0d0d;
---black3:#161616;
-
---card:#121212;
-
---white:#ffffff;
---muted:#bcbcbc;
-
---border:rgba(197,160,89,.18);
-
---radius:18px;
-
+  --gold:#c5a059;
+  --gold-light:#e6c87b;
+  --black:#050505;
+  --black2:#0d0d0d;
+  --black3:#161616;
+  --card:#121212;
+  --white:#ffffff;
+  --muted:#bcbcbc;
+  --border:rgba(197,160,89,.18);
+  --radius:18px;
 }
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
 body{
-
-background:
-radial-gradient(circle at top right,
-rgba(197,160,89,.08),
-transparent 35%),
-
-linear-gradient(180deg,
-#050505,
-#0b0b0b,
-#121212);
-
-color:var(--white);
-
-font-family:Poppins,sans-serif;
-
+  background:
+    radial-gradient(circle at top right, rgba(197,160,89,.08), transparent 35%),
+    linear-gradient(180deg, #050505, #0b0b0b, #121212);
+  color:var(--white);
+  font-family:Poppins,sans-serif;
 }
 
-/* ===========================
-      MAIN PANEL
-=========================== */
-
+/* MAIN PANEL */
 .sheet-panel{
-
-max-width:450px;
-
-margin:auto;
-
-background:#080808;
-
-min-height:100vh;
-
-box-shadow:
-
-0 0 60px rgba(0,0,0,.65);
-
+  max-width:450px;
+  margin:auto;
+  background:#080808;
+  min-height:100vh;
+  box-shadow:0 0 60px rgba(0,0,0,.65);
 }
 
 
@@ -363,537 +174,799 @@ letter-spacing:1px;
     object-position:center;
     display:block;
 }
+/* HERO */
+.hero{
+  padding:55px 25px;
+  text-align:center;
+  background:
+    linear-gradient(rgba(0,0,0,.82), rgba(0,0,0,.82)),
+    linear-gradient(135deg, #050505, #1b1b1b);
+  position:relative;
+  overflow:hidden;
+  border-bottom:2px solid var(--gold);
+}
+
+.hero::before{
+  content:"";
+  position:absolute;
+  width:280px;
+  height:280px;
+  right:-120px;
+  top:-120px;
+  background:rgba(197,160,89,.08);
+  border-radius:50%;
+  filter:blur(10px);
+}
+
+.hero::after{
+  content:"";
+  position:absolute;
+  left:20%;
+  right:20%;
+  bottom:20px;
+  height:1px;
+  background:linear-gradient(to right, transparent, #c5a059, transparent);
+}
 
 .hero-title{
-
-font-size:38px;
-
-font-weight:700;
-
-letter-spacing:4px;
-
-color:var(--gold);
-
+  font-size:38px;
+  font-weight:700;
+  letter-spacing:4px;
+  color:var(--gold);
 }
 
 .hero-sub{
-
-margin-top:8px;
-
-font-size:14px;
-
-color:#ddd;
-
-letter-spacing:3px;
-
-text-transform:uppercase;
-
+  margin-top:8px;
+  font-size:14px;
+  color:#ddd;
+  letter-spacing:3px;
+  text-transform:uppercase;
 }
 
 .hero-tag{
-
-display:inline-block;
-
-margin-top:18px;
-
-padding:10px 20px;
-
-background:#111;
-
-border:1px solid var(--gold);
-
-border-radius:50px;
-
-color:var(--gold);
-
-font-size:13px;
-
+  display:inline-block;
+  margin-top:18px;
+  padding:10px 20px;
+  background:#111;
+  border:1px solid var(--gold);
+  border-radius:50px;
+  color:var(--gold);
+  font-size:13px;
 }
 
 .hero-ornament{
-
-margin-top:18px;
-
-color:var(--gold);
-
+  margin-top:18px;
+  color:var(--gold);
 }
 
-/* ===========================
-        TOP TABS
-=========================== */
-
+/* TOP TABS */
 .top-tabs{
-
-display:flex;
-
-background:#0f0f0f;
-
-padding:15px;
-
-gap:12px;
-
-position:sticky;
-
-top:0;
-
-z-index:100;
-
-border-bottom:1px solid var(--border);
-
+  display:flex;
+  gap:15px;
+  padding:20px;
+  background:#111;
+  position:sticky;
+  top:0;
+  z-index:100;
+  border-bottom:1px solid var(--border);
 }
 
 .top-tab{
-
-flex:1;
-
-padding:14px;
-
-background:#151515;
-
-color:#ddd;
-
-text-align:center;
-
-border-radius:14px;
-
-cursor:pointer;
-
-transition:.3s;
-
-font-weight:600;
-
+  flex:1;
+  padding:16px;
+  background:#181818;
+  border:none;
+  border-radius:50px;
+  color:#c5a059;
+  font-weight:600;
+  cursor:pointer;
+  transition:.35s;
+  text-align:center;
 }
 
 .top-tab:hover{
-
-background:#202020;
-
+  background:#222;
 }
 
 .top-tab.active{
-
-background:
-
-linear-gradient(135deg,
-
-var(--gold),
-
-#e7ca82);
-
-color:#111;
-
+  background:linear-gradient(135deg, #c5a059, #e8ca84);
+  color:#000;
 }
 
-/* ===========================
-          SECTION
-=========================== */
-
+/* SECTION */
 .section{
+  margin:20px;
+  background:#111;
+  border:1px solid rgba(197,160,89,.2);
+  border-radius:18px;
+  overflow:hidden;
+  transition:.35s;
+  box-shadow:0 10px 30px rgba(0,0,0,.45);
+  backdrop-filter:blur(12px);
+}
 
-margin:20px;
-
-background:#111;
-
-border:1px solid rgba(197,160,89,.2);
-
-border-radius:18px;
-
-overflow:hidden;
-
-transition:.35s;
-
-box-shadow:
-0 10px 30px rgba(0,0,0,.45);
-
+.section:hover{
+  border-color:#c5a059;
+  box-shadow:0 18px 45px rgba(197,160,89,.18);
 }
 
 .section-header{
-
-display:flex;
-
-justify-content:space-between;
-
-align-items:center;
-
-padding:22px;
-
-cursor:pointer;
-
-user-select:none;
-
-transition:.35s;
-
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:22px;
+  cursor:pointer;
+  user-select:none;
+  transition:.35s;
 }
 
 .section-header:hover{
-
-background:#181818;
-
+  background:#181818;
 }
 
 .section-body{
-
-max-height:0;
-
-overflow:hidden;
-
-transition:max-height .45s ease;
-
-background:#121212;
-
+  max-height:0;
+  overflow:hidden;
+  transition:max-height .45s ease;
+  background:#121212;
 }
 
 .section.active .section-body{
-
-max-height:3000px;
-
+  max-height:3000px;
 }
 
 .chevron{
-
-transition:.35s;
-
-color:#c5a059;
-
+  transition:.35s;
+  color:#c5a059;
 }
 
 .section.active .chevron{
-
-transform:rotate(180deg);
-
+  transform:rotate(180deg);
 }
 
-/* ===========================
-        SERVICE ROW
-=========================== */
-
+/* SERVICE ROW */
 .service-row{
-
-display:flex;
-
-justify-content:space-between;
-
-align-items:flex-start;
-
-padding:18px 22px;
-
-border-bottom:1px solid rgba(255,255,255,.05);
-
-transition:.35s;
-
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  padding:18px 22px;
+  border-bottom:1px solid rgba(255,255,255,.05);
+  transition:.35s;
 }
 
 .service-row:last-child{
-
-border-bottom:none;
-
+  border-bottom:none;
 }
 
 .service-row:hover{
-
-background:#181818;
-
-padding-left:30px;
-
+  background:#181818;
+  padding-left:30px;
 }
 
 .service-name{
-
-font-size:17px;
-
-font-weight:600;
-
-color:#fff;
-
+  font-size:17px;
+  font-weight:600;
+  color:#fff;
 }
 
 .service-desc{
-
-font-size:13px;
-
-color:#999;
-
-margin-top:5px;
-
-line-height:1.6;
-
+  font-size:13px;
+  color:#999;
+  margin-top:5px;
+  line-height:1.6;
 }
 
 .service-price{
-
-font-size:22px;
-
-font-weight:700;
-
-color:#c5a059;
-
-}
-/* Top tabs */
-.top-tabs{
-
-display:flex;
-
-gap:15px;
-
-padding:20px;
-
-background:#111;
-
+  font-family:'Times New Roman', Times, serif;
+  font-size:22px;
+  font-weight:700;
+  color:#c5a059;
+  white-space:nowrap;
 }
 
-.top-tab{
-
-flex:1;
-
-padding:16px;
-
-background:#181818;
-
-border:none;
-
-border-radius:50px;
-
-color:#c5a059;
-
-font-weight:600;
-
-cursor:pointer;
-
-transition:.35s;
-
-}
-
-.top-tab:hover{
-
-background:#222;
-
-}
-
-.top-tab.active{
-
-background:
-
-linear-gradient(135deg,
-
-#c5a059,
-
-#e8ca84);
-
-color:#000;
-
-}
-
-/* ===========================
-        SUB CATEGORY
-=========================== */
-
+/* SUB CATEGORY */
 .sub-cat{
-display:flex;
-align-items:center;
-justify-content:space-between;
-
-margin:30px 0 20px;
-
-padding:14px 18px;
-
-background:linear-gradient(
-135deg,
-rgba(197,160,89,.20),
-rgba(197,160,89,.08)
-);
-
-border-left:5px solid #c5a059;
-border-radius:12px;
-
-font-size:18px;
-font-weight:700;
-
-letter-spacing:2px;
-text-transform:uppercase;
-
-color:#f8e7c0;
-
-box-shadow:
-0 5px 20px rgba(197,160,89,.12);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin:30px 0 20px;
+  padding:14px 18px;
+  background:linear-gradient(135deg, rgba(197,160,89,.20), rgba(197,160,89,.08));
+  border-left:5px solid #c5a059;
+  border-radius:12px;
+  font-size:18px;
+  font-weight:700;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:#f8e7c0;
+  box-shadow:0 5px 20px rgba(197,160,89,.12);
 }
 
-/* ===========================
-         BADGES
-=========================== */
-
+/* BADGES */
 .badge-he,
-
 .badge-she{
-
-display:inline-flex;
-
-align-items:center;
-
-padding:8px 18px;
-
-border-radius:30px;
-
-font-size:12px;
-
-font-weight:600;
-
-letter-spacing:1px;
-
+  display:inline-flex;
+  align-items:center;
+  padding:8px 18px;
+  border-radius:30px;
+  font-size:12px;
+  font-weight:600;
+  letter-spacing:1px;
 }
 
 .badge-he{
-
-background:#1b1b1b;
-
-color:var(--gold);
-
-border:1px solid var(--gold);
-
+  background:#1b1b1b;
+  color:var(--gold);
+  border:1px solid var(--gold);
 }
 
 .badge-she{
-
-background:linear-gradient(135deg,
-
-var(--gold),
-
-#f0d28f);
-
-color:#111;
-
+  background:linear-gradient(135deg, var(--gold), #f0d28f);
+  color:#111;
 }
 
-/* ===========================
-       MAKEUP BANNER
-=========================== */
-
+/* MAKEUP */
 .makeup-banner{
-
-margin:30px 20px;
-
-padding:35px;
-
-border-radius:20px;
-
-background:
-
-linear-gradient(135deg,
-
-#151515,
-
-#202020);
-
-border:1px solid var(--gold);
-
-text-align:center;
-
+  margin:30px 20px;
+  padding:35px;
+  border-radius:20px;
+  background:linear-gradient(135deg, #151515, #202020);
+  border:1px solid var(--gold);
+  text-align:center;
 }
 
 .makeup-sub{
-
-color:#ddd;
-
-margin-top:10px;
-
+  color:#ddd;
+  margin-top:10px;
 }
 
-/* ===========================
-       PRICE NOTE
-=========================== */
-
+/* PRICE NOTE */
 .price-note{
-
-padding:20px;
-
-font-size:13px;
-
-color:#a8a8a8;
-
-text-align:center;
-
+  padding:20px;
+  font-size:13px;
+  color:#a8a8a8;
+  text-align:center;
 }
 
-/* ===========================
-         FOOTER
-=========================== */
-
+/* FOOTER */
 .footer{
-
-padding:35px;
-
-text-align:center;
-
-color:#999;
-
+  padding:35px;
+  text-align:center;
+  color:#999;
 }
 
 .footer-ornament{
-
-color:var(--gold);
-
-font-size:22px;
-
-margin-bottom:15px;
-
+  color:var(--gold);
+  font-size:22px;
+  margin-bottom:15px;
 }
 
-/* ===========================
-         MOBILE
-=========================== */
-
-
-
-@media(max-width:768px){
-
-.section{
-
-margin:15px;
-
-}
-
-.section-header{
-
-padding:18px;
-
-}
-
-.service-row{
-
-flex-direction:row;
-
-
-
-}
-
-.service-price{
-
-font-size:20px;
-
-margin-top:5px;
-font-family: 'Times New Roman', Times, serif;
-
-}
-
-.hero-title{
-
-font-size:32px;
-
-}
-
-}
-
+/* SECTION NAME */
 .section-name{
+  font-size:15px;
+  font-weight:700;
+  font-family:'Times New Roman', Times, serif;
+}
 
-font-size:15px;
+/* MOBILE */
+@media(max-width:768px){
+  .section{ margin:15px; }
+  .section-header{ padding:18px; }
+  .service-row{ flex-direction:row; }
+  .service-price{ font-size:20px; margin-top:5px; font-family:'Times New Roman', Times, serif; }
+  .hero-title{ font-size:32px; }
+}
 
-font-weight:70;
 
-font-family: 'Times New Roman', Times, serif;
+/* =====================================================
+   DESKTOP LAYOUT — min-width: 992px
+   All mobile/tablet styles above are untouched.
+   Only new desktop-specific rules live here.
+===================================================== */
 
+@media screen and (min-width:992px){
+
+  .wrap{ display:none; }
+  .footer{ display:none; }
+
+  body{
+    background:
+      radial-gradient(circle at top left, rgba(197,160,89,.16), transparent 28%),
+      linear-gradient(135deg, #060606 0%, #0c0c0c 45%, #111 100%);
+    min-height:100vh;
+  }
+
+  .section-price{
+    padding:0 0 40px;
+  }
+
+  .hero{
+    padding:92px 64px 78px;
+    min-height:60vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+      /* Desktop: decorative hero image (place file at images/price-desktop.png) */
+      /* Zoom out image and bias toward left so logo area is visible */
+      background:
+        linear-gradient(rgba(4,4,4,0.64), rgba(10,10,10,0.44)),
+        url('images/price-desktop.png') left center/80% no-repeat,
+        radial-gradient(circle at top right, rgba(197,160,89,.18), transparent 35%);
+      background-blend-mode:overlay, normal;
+      background-position: left center;
+      background-size: 100% auto;
+    border-bottom:1px solid rgba(197,160,89,.24);
+    position:relative;
+    overflow:hidden;
+    box-shadow:inset 0 -1px 0 rgba(255,255,255,.03);
+  }
+
+    /* Hide hero text on desktop so the image (with logo) is the focal point */
+    .hero .hero-title,
+    .hero .hero-sub,
+    .hero .hero-tag,
+    .hero .hero-ornament{
+      display:none !important;
+    }
+
+  .hero::before{
+    width:340px;
+    height:340px;
+    right:-140px;
+    top:-140px;
+    background:rgba(197,160,89,.14);
+    filter:blur(16px);
+  }
+
+  .hero::after{
+    /* Mask the unwanted thin line inside the image - cover with a subtle dark band */
+    content:"";
+    position:absolute;
+    left:0;
+    right:0;
+    top:48%;
+    height:14px;
+    background:linear-gradient(180deg, rgba(11,11,11,1), rgba(11,11,11,0.9));
+    z-index:3;
+    pointer-events:none;
+  }
+
+  .hero-title{
+    font-size:62px;
+    letter-spacing:14px;
+    text-transform:uppercase;
+    text-shadow:0 10px 35px rgba(0,0,0,.42);
+  }
+
+  .hero-sub{
+    font-size:19px;
+    margin-top:12px;
+    letter-spacing:3px;
+  }
+
+  .hero-tag{
+    margin-top:24px;
+    padding:12px 24px;
+    border-radius:999px;
+    background:rgba(197,160,89,.11);
+    backdrop-filter:blur(10px);
+    box-shadow:0 0 18px rgba(197,160,89,.16);
+  }
+
+  .top-tabs{
+    justify-content:center;
+    gap:18px;
+    padding:14px 20px;
+    margin:0 auto;
+    width:min(1180px, calc(100% - 40px));
+    position:sticky;
+    top:72px;
+    z-index:250;
+    background:rgba(9,9,9,.92);
+    border:1px solid rgba(197,160,89,.18);
+    border-top:none;
+    border-radius:0 0 24px 24px;
+    backdrop-filter:blur(14px);
+    box-shadow:0 18px 45px rgba(0,0,0,.25);
+  }
+
+  .top-tab{
+    flex:0 1 200px;
+    padding:10px 20px;
+    border-radius:999px;
+    font-size:12px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    font-weight:700;
+    border:1px solid rgba(197,160,89,.34);
+    background:rgba(255,255,255,.03);
+    color:#c5a059;
+    transition:all .3s ease;
+  }
+
+  .top-tab:hover{
+    background:rgba(197,160,89,.08);
+    transform:translateY(-2px);
+  }
+
+  .top-tab.active{
+    background:linear-gradient(135deg, #c5a059, #e8ca84);
+    color:#111;
+    border-color:transparent;
+    box-shadow:0 12px 28px rgba(197,160,89,.25);
+  }
+
+  #panel-salon{
+    display:none !important;
+  }
+
+  #salon,
+  #makeup{
+    display:none;
+  }
+
+  #salon.active-panel,
+  #makeup.active-panel{
+    display:block;
+  }
+
+  .desktop-layout{
+    display:grid;
+    grid-template-columns:300px minmax(0,1fr);
+    width:min(1420px, calc(100% - 40px));
+    margin:24px auto 0;
+    min-height:calc(100vh - 220px);
+    border:1px solid rgba(197,160,89,.18);
+    border-radius:28px;
+    overflow:hidden;
+    box-shadow:0 25px 70px rgba(0,0,0,.36);
+    background:linear-gradient(135deg,#101010 0%,#151515 100%);
+  }
+
+  .dsk-sidebar{
+    background:linear-gradient(180deg,#0d0d0d 0%,#101010 100%);
+    border-right:1px solid rgba(197,160,89,.16);
+    position:sticky;
+    top:148px;
+    height:calc(100vh - 148px);
+    overflow-y:auto;
+    padding:18px 14px;
+    scrollbar-width:thin;
+    scrollbar-color:rgba(197,160,89,.24) transparent;
+  }
+
+  .dsk-sidebar::-webkit-scrollbar{ width:3px; }
+  .dsk-sidebar::-webkit-scrollbar-thumb{ background:rgba(197,160,89,.25); border-radius:3px; }
+
+  .dsk-nav-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:12px 14px;
+    margin:10px 0;
+    cursor:pointer;
+    border:1px solid transparent;
+    border-radius:16px;
+    background:rgba(255,255,255,.025);
+    transition:all .25s ease;
+  }
+
+  .dsk-nav-item:hover{
+    background:rgba(197,160,89,.09);
+    transform:translateX(4px);
+    border-color:rgba(197,160,89,.16);
+  }
+
+  .dsk-nav-item.active{
+    background:linear-gradient(90deg, rgba(197,160,89,.16), rgba(197,160,89,.06));
+    border-color:rgba(197,160,89,.25);
+    box-shadow:0 10px 24px rgba(197,160,89,.12);
+  }
+
+  .dsk-nav-name{
+    font-size:17px;
+    font-weight:600;
+    font-family:'Times New Roman', Times, serif;
+    color:#eee;
+    letter-spacing:1px;
+  }
+
+  .dsk-nav-item.active .dsk-nav-name{ color:#c5a059; }
+
+  .dsk-nav-sub{
+    font-size:13px;
+    color:#666;
+    margin-top:4px;
+    display:flex;
+    align-items:center;
+    gap:6px;
+  }
+
+  .dsk-badge-he{
+    display:inline-block;
+    padding:1px 7px;
+    border-radius:20px;
+    font-size:9px;
+    font-weight:700;
+    background:#1b1b1b;
+    color:#c5a059;
+    border:1px solid #c5a059;
+  }
+
+  .dsk-badge-she{
+    display:inline-block;
+    padding:1px 7px;
+    border-radius:20px;
+    font-size:9px;
+    font-weight:700;
+    background:linear-gradient(135deg, #c5a059, #f0d28f);
+    color:#111;
+  }
+
+  .dsk-nav-arrow{
+    color:#444;
+    font-size:14px;
+    transition:color .25s;
+  }
+
+  .dsk-nav-item.active .dsk-nav-arrow{ color:#c5a059; }
+
+  .dsk-detail{
+    position:relative;
+    background:linear-gradient(160deg,#fffcf7 0%, #f5ebdb 100%);
+    overflow:hidden;
+  }
+
+  .dsk-panel{
+    height:100%;
+    display:block;
+  }
+
+  .dsk-panel-head{
+    position:sticky;
+    top:0;
+    z-index:3;
+    background:linear-gradient(135deg, #ffffff 0%, #f7efe2 100%);
+    text-align:center;
+    padding:20px 28px 16px;
+    border-bottom:1px solid rgba(197,160,89,.12);
+    box-shadow:0 8px 20px rgba(0,0,0,.035);
+  }
+
+  .dsk-panel-icon{
+    font-size:38px;
+    display:block;
+    margin-bottom:10px;
+  }
+
+  .dsk-panel-title{
+    font-size:18px;
+    font-weight:700;
+    letter-spacing:4px;
+    color:#1a1a1a;
+    font-family:'Times New Roman', Times, serif;
+    text-transform:uppercase;
+  }
+
+  .dsk-panel-sub{
+    font-size:13px;
+    color:#8c7a5b;
+    margin-top:5px;
+    letter-spacing:1px;
+  }
+
+  .dsk-panel-ornament{
+    color:#c5a059;
+    margin-top:10px;
+    font-size:13px;
+  }
+
+  .dsk-panel-body{
+    background:transparent;
+    padding:8px 18px 18px;
+    max-height:calc(100vh - 180px);
+    overflow-y:auto;
+    scrollbar-width:thin;
+    scrollbar-color:rgba(197,160,89,.3) transparent;
+  }
+
+  .dsk-panel-body::-webkit-scrollbar{ width:6px; }
+  .dsk-panel-body::-webkit-scrollbar-thumb{ background:rgba(197,160,89,.28); border-radius:999px; }
+
+  .dsk-detail .sub-cat{
+    background:linear-gradient(90deg, rgba(197,160,89,.12), rgba(197,160,89,.05));
+    border-left:none;
+    border-radius:14px;
+    padding:12px 18px;
+    margin:26px 0 12px;
+    font-size:10px;
+    font-weight:700;
+    letter-spacing:3px;
+    color:#c5a059;
+    box-shadow:0 8px 20px rgba(197,160,89,.08);
+  }
+
+  .dsk-detail .service-row{
+    padding:12px 14px;
+    margin:8px 0;
+    border:1px solid rgba(0,0,0,.03);
+    border-radius:12px;
+    background:rgba(255,255,255,.80);
+    box-shadow:0 6px 14px rgba(0,0,0,.03);
+    transition:all .28s cubic-bezier(.2,.9,.2,1);
+  }
+
+  .dsk-detail .service-row:hover{
+    background:#fffaf2;
+    padding-left:22px;
+    transform:translateX(3px);
+  }
+
+  .dsk-detail .service-name{
+    font-size:15px;
+    font-weight:600;
+    color:#1f1f1f;
+  }
+
+  .dsk-detail .service-desc{
+    font-size:12px;
+    color:#b08d5d;
+    margin-top:4px;
+  }
+
+  .dsk-detail .service-price{
+    font-size:15px;
+    font-weight:700;
+    color:#c5a059;
+    white-space:nowrap;
+  }
+
+  .dsk-detail .price-note{
+    color:#9a8a6b;
+    font-size:12px;
+    padding:14px 18px 0;
+  }
+
+  .dsk-detail .makeup-banner{
+    margin:24px 0 12px;
+    padding:18px 22px;
+    border-radius:18px;
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:2px;
+    color:#c5a059;
+    text-align:center;
+    background:linear-gradient(135deg, #111 0%, #231b13 100%);
+    box-shadow:0 12px 24px rgba(0,0,0,.16);
+  }
+
+  .dsk-detail .makeup-sub{
+    color:#1a1a1a;
+    margin-top:0;
+  }
+
+  #makeup .sheet-panel{
+    display:block !important;
+    max-width:none;
+    min-height:auto;
+    margin:24px auto 0;
+    padding:24px;
+    width:min(1180px, calc(100% - 40px));
+    background:linear-gradient(135deg,#0f0f0f 0%,#171717 100%);
+    border:1px solid rgba(197,160,89,.18);
+    border-radius:28px;
+    box-shadow:0 25px 70px rgba(0,0,0,.35);
+  }
+
+  #makeup .makeup-sub{
+    margin:0 0 20px;
+    padding:26px;
+    background:linear-gradient(135deg,#121212 0%,#1b1b1b 100%);
+    border:1px solid rgba(197,160,89,.2);
+    border-radius:22px;
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.04);
+  }
+
+  #makeup .makeup-banner{
+    margin:0 0 16px;
+    padding:16px 20px;
+    border-radius:16px;
+  }
+
+  #makeup .service-row{
+    padding:14px 16px;
+    border-bottom:1px solid rgba(255,255,255,.06);
+  }
+
+  #makeup .service-row:hover{
+    background:rgba(197,160,89,.06);
+    padding-left:20px;
+  }
+
+  .dsk-footer{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    background:#080808;
+    padding:26px 40px;
+    border-top:1px solid rgba(197,160,89,.2);
+    max-width:1420px;
+    margin:0 auto;
+  }
+
+  .dsk-footer-item{ display:flex; align-items:center; gap:14px; }
+  .dsk-footer-icon{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    border:1px solid rgba(197,160,89,.4);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:17px;
+    color:#c5a059;
+    flex-shrink:0;
+  }
+
+  .dsk-footer-label{
+    font-size:9px;
+    letter-spacing:2px;
+    color:#c5a059;
+    font-weight:700;
+    text-transform:uppercase;
+  }
+
+  .dsk-footer-value{
+    font-size:12px;
+    color:#ccc;
+    margin-top:3px;
+  }
+
+  @keyframes panelReveal{
+    from{ opacity:0; transform:translateY(12px); }
+    to{ opacity:1; transform:translateY(0); }
+  }
+
+  @keyframes rowReveal{
+    from{ opacity:0; transform:translateY(10px); }
+    to{ opacity:1; transform:translateY(0); }
+  }
+
+  .dsk-panel.active-panel{
+    animation:panelReveal .6s cubic-bezier(.2,.8,.2,1) both;
+  }
+
+  .dsk-panel.active-panel .service-row,
+  .dsk-panel.active-panel .sub-cat,
+  .dsk-panel.active-panel .makeup-banner{
+    animation:rowReveal .65s cubic-bezier(.2,.8,.2,1) both;
+  }
+
+  /* stronger staggered reveal for rows */
+  .dsk-panel.active-panel .service-row{ opacity:0; transform:translateY(8px); }
+  .dsk-panel.active-panel.revealed .service-row{ opacity:1; transform:none; transition:opacity .5s ease, transform .5s ease; }
+
+  .dsk-panel.active-panel .sub-cat{ animation-delay:.05s; }
+  .dsk-panel.active-panel .makeup-banner{ animation-delay:.08s; }
+  .dsk-panel.active-panel .service-row:nth-child(2){ animation-delay:.1s; }
+  .dsk-panel.active-panel .service-row:nth-child(3){ animation-delay:.14s; }
+  .dsk-panel.active-panel .service-row:nth-child(4){ animation-delay:.18s; }
+  .dsk-panel.active-panel .service-row:nth-child(5){ animation-delay:.22s; }
+
+}
+
+/* Hide desktop-only elements on mobile/tablet */
+@media screen and (max-width:991px){
+  .desktop-layout{ display:none !important; }
+  .dsk-footer{ display:none !important; }
+  #salon{ display:block !important; }
+  #makeup{ display:none !important; }
 }
 
 </style>
 
+<!-- .wrap is mobile only, hidden on desktop via CSS -->
 <div class="wrap">
     
   <div class="marble-top">
@@ -912,481 +985,760 @@ font-family: 'Times New Roman', Times, serif;
 <div class="hero" >
     <img src="images/Pricing Hero Sec 9-16.png" alt="Price List">
   <!-- <div class="hero-tag">Est. Hyderabad</div>
+  <div class="content" id="list"></div>
+  <div class="footer">
+    <div class="footer-corner"><i class="ti ti-arrows-maximize" aria-hidden="true"></i></div>
+  </div>
+</div>
+
+ Hero — shared across all views -->
+<!-- <div class="hero">
+  <div class="hero-tag">Est. Hyderabad</div>
   <div class="hero-title">PANACHE</div>
   <div class="hero-sub">The Dapper Edit · She Slays · Make Up</div>
-  <div class="hero-ornament">— ✦ —</div> -->
-</div>
+  <div class="hero-ornament">— ✦ —</div> 
+</div> -->
 
+<!-- Tabs — shared -->
 <div class="top-tabs">
-  <div class="top-tab active" onclick="switchTab('salon',this)"> The Salon</div>
+  <div class="top-tab active" onclick="switchTab('salon',this)">The Salon</div>
   <div class="top-tab" onclick="switchTab('makeup',this)">Make Up</div>
 </div>
+
 <div class="section-price">
+
 <!-- ========= SALON PANEL ========= -->
 <div id="salon">
- <div class="sheet-panel active" id="panel-salon">
 
-  <!-- HE section -->
-  <div class="section">
-    <div class="section-header" onclick="toggle(this)">
-      <div class="section-label">
-        
+  <!-- ══════════════════════════════════════
+       DESKTOP TWO-COLUMN LAYOUT (992px+)
+  ══════════════════════════════════════ -->
+  <div class="desktop-layout">
+
+    <!-- LEFT SIDEBAR -->
+    <div class="dsk-sidebar">
+
+      <div class="dsk-nav-item active" onclick="dskShow('dsk-dapper', this)">
         <div>
-          <div class="section-name">The Dapper Edit</div>
-          <div class="section-count"><span class="badge-he">HE</span> · Men's Services</div>
+          <div class="dsk-nav-name">The Dapper Edit</div>
+          <div class="dsk-nav-sub"><span class="dsk-badge-he">HE</span> Men's Services</div>
+        </div>
+        <div class="dsk-nav-arrow">›</div>
+      </div>
+
+      <div class="dsk-nav-item" onclick="dskShow('dsk-hair', this)">
+        <div>
+          <div class="dsk-nav-name">She Slays · Hair</div>
+          <div class="dsk-nav-sub"><span class="dsk-badge-she">SHE</span> Cut & Care</div>
+        </div>
+        <div class="dsk-nav-arrow">›</div>
+      </div>
+
+      <div class="dsk-nav-item" onclick="dskShow('dsk-spa', this)">
+        <div>
+          <div class="dsk-nav-name">She Slays · Spa</div>
+          <div class="dsk-nav-sub"><span class="dsk-badge-she">SHE</span> Spa & Scalp Rituals</div>
+        </div>
+        <div class="dsk-nav-arrow">›</div>
+      </div>
+
+      <div class="dsk-nav-item" onclick="dskShow('dsk-styling', this)">
+        <div>
+          <div class="dsk-nav-name">She Slays · Styling</div>
+          <div class="dsk-nav-sub"><span class="dsk-badge-she">SHE</span> Styling & Colour</div>
+        </div>
+        <div class="dsk-nav-arrow">›</div>
+      </div>
+
+      <div class="dsk-nav-item" onclick="dskShow('dsk-skin', this)">
+        <div>
+          <div class="dsk-nav-name">She Slays · Skin</div>
+          <div class="dsk-nav-sub"><span class="dsk-badge-she">SHE</span> Facials, Threading & More</div>
+        </div>
+        <div class="dsk-nav-arrow">›</div>
+      </div>
+
+      <div class="dsk-nav-item" onclick="dskShow('dsk-body', this)">
+        <div>
+          <div class="dsk-nav-name">She Slays · Body</div>
+          <div class="dsk-nav-sub"><span class="dsk-badge-she">SHE</span> Waxing, Peel & Polish</div>
+        </div>
+        <div class="dsk-nav-arrow">›</div>
+      </div>
+
+      <div class="dsk-nav-item" onclick="dskShow('dsk-nails', this)">
+        <div>
+          <div class="dsk-nav-name">She Slays · Nails</div>
+          <div class="dsk-nav-sub"><span class="dsk-badge-she">SHE</span> Mani, Pedi & Nail Art</div>
+        </div>
+        <div class="dsk-nav-arrow">›</div>
+      </div>
+
+    </div><!-- end .dsk-sidebar -->
+
+    <!-- RIGHT DETAIL PANEL -->
+    <div class="dsk-detail">
+
+      <!-- Dapper Edit -->
+      <div id="dsk-dapper" class="dsk-panel">
+        <div class="dsk-panel-head">
+          <span class="dsk-panel-icon">✂️</span>
+          <div class="dsk-panel-title">The Dapper Edit</div>
+          <div class="dsk-panel-sub">Men's Services</div>
+          <div class="dsk-panel-ornament">— ✦ —</div>
+        </div>
+        <div class="dsk-panel-body">
+          <div class="sub-cat">Beard</div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Beard Lining</div></div><div class="service-price">Rs. 249</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Beard Trim</div></div><div class="service-price">Rs. 299</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Signature Beard Styling</div><div class="service-desc">Beard trim + shape + oil</div></div><div class="service-price">Rs. 499</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Beard Spa</div><div class="service-desc">Wash + scrub + mask + oil + steam + head massage</div></div><div class="service-price">Rs. 899</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Beard Colour</div><div class="service-desc">Grey coverage</div></div><div class="service-price">Rs. 499</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Moustache Colour</div></div><div class="service-price">Rs. 249</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Shave</div></div><div class="service-price">Rs. 199</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Classic Shave</div></div><div class="service-price">Rs. 499</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Hot Towel Shave</div><div class="service-desc">Warm steam + rich lather + straight razor + head massage (sensitive skin)</div></div><div class="service-price">Rs. 599</div></div>
+          <div class="sub-cat">Hair Cut</div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Hair Cut Regular</div></div><div class="service-price">Rs. 349</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Hair Cut Advanced</div></div><div class="service-price">Rs. 499</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Kids Haircut</div></div><div class="service-price">Rs. 249</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Kids Haircut Advanced</div></div><div class="service-price">Rs. 399</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Head Shave</div></div><div class="service-price">Rs. 399</div></div>
+          <div class="sub-cat">Hair Care</div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Hair Wash</div></div><div class="service-price">Rs. 249</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Head Massage with Hair Wash</div></div><div class="service-price">Rs. 399 – 499</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Keratin / Colour / Treatment Hair Wash</div></div><div class="service-price">Rs. 399</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Hot Oil Massage</div><div class="service-desc">Coconut / Olive / Navratna</div></div><div class="service-price">Rs. 699</div></div>
+          <div class="sub-cat">Hair Colour</div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Grey Coverage</div><div class="service-desc">Ammonia / Ammonia free</div></div><div class="service-price">Rs. 799 / 1099</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Global Colour</div><div class="service-desc">Ammonia / Ammonia free</div></div><div class="service-price">Rs. 1199 / 1399</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Highlights</div><div class="service-desc">Ammonia / Ammonia free</div></div><div class="service-price">Rs. 1899 / 2099</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Smoothening S | L</div></div><div class="service-price">Rs. 3449 | 4449</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Straightening S | L</div></div><div class="service-price">Rs. 3449 | 4449</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Keratin S | L</div></div><div class="service-price">Rs. 3449 | 4449</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Botox S | L</div></div><div class="service-price">Rs. 3449 | 4449</div></div>
+          <div class="sub-cat">Hair Spa</div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Premium</div></div><div class="service-price">Rs. 899</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Luxury</div></div><div class="service-price">Rs. 1399</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Deep Conditioning</div></div><div class="service-price">Rs. 1999</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Colour / Repair / Rejuvenate / Keratin</div></div><div class="service-price">Rs. 1399</div></div>
+          <div class="sub-cat">Skin Care</div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Cleanup</div></div><div class="service-price">Rs. 399</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Detan — Face / Hand / Leg / Full Body</div></div><div class="service-price">Rs. 399 each</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Facial Regular</div></div><div class="service-price">Rs. 899</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Facial Premium</div></div><div class="service-price">Rs. 1999</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Facial Luxury</div></div><div class="service-price">Rs. 2499 – 3499</div></div>
+          <div class="sub-cat">Hand & Feet</div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Manicure Regular</div></div><div class="service-price">Rs. 499</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Manicure Premium</div></div><div class="service-price">Rs. 699</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Pedicure Regular</div></div><div class="service-price">Rs. 499</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Pedicure Premium</div></div><div class="service-price">Rs. 699</div></div>
+          <div class="price-note">Prices may vary based on hair length (S = short, M = medium, L = long)</div>
         </div>
       </div>
-      <div class="chevron">▾</div>
+
+      <!-- She Hair -->
+      <div id="dsk-hair" class="dsk-panel" style="display:none;">
+        <div class="dsk-panel-head">
+          <span class="dsk-panel-icon">✂️</span>
+          <div class="dsk-panel-title">She Slays · Hair</div>
+          <div class="dsk-panel-sub">Cut & Care</div>
+          <div class="dsk-panel-ornament">— ✦ —</div>
+        </div>
+        <div class="dsk-panel-body">
+          <div class="sub-cat">Hair Cut</div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Hair Cut Basic</div></div><div class="service-price">Rs. 499</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Hair Cut Advanced</div></div><div class="service-price">Rs. 599 – 899</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Kids Hair Cut M / L</div></div><div class="service-price">Rs. 399 – 499</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Kids Haircut Advanced</div></div><div class="service-price">Rs. 499</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Trim / Fringe</div></div><div class="service-price">Rs. 299 – 399</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Change of Style</div></div><div class="service-price">Rs. 799</div></div>
+          <div class="sub-cat">Hair Care</div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Hair Wash + Blast Dry</div><div class="service-desc">Price varies by length · head massage included</div></div><div class="service-price">Rs. 349 – 499</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Hair Wash + Blow Dry M / L</div><div class="service-desc">Price varies by length · head massage included</div></div><div class="service-price">Rs. 449 – 749</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Treatment Based Wash / Styling</div><div class="service-desc">Price varies by length · head massage included</div></div><div class="service-price">Rs. 599 – 899</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Hot Oil Massage</div><div class="service-desc">Coconut / Olive / Navratna</div></div><div class="service-price">Rs. 949</div></div>
+          <div class="price-note">Prices may vary based on hair length (S = short, M = medium, L = long)</div>
+        </div>
+      </div>
+
+      <!-- She Spa -->
+      <div id="dsk-spa" class="dsk-panel" style="display:none;">
+        <div class="dsk-panel-head">
+          <span class="dsk-panel-icon">🌿</span>
+          <div class="dsk-panel-title">She Slays · Spa</div>
+          <div class="dsk-panel-sub">Spa & Scalp Rituals</div>
+          <div class="dsk-panel-ornament">— ✦ —</div>
+        </div>
+        <div class="dsk-panel-body">
+          <div class="service-row"><div class="service-info"><div class="service-name">Hair Spa Regular</div></div><div class="service-price">Rs. 1199 – 1899</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Hair Spa Premium</div></div><div class="service-price">Rs. 1399 – 2499</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Hair Spa Luxury</div></div><div class="service-price">Rs. 2499 – 3499</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Hair Spa Ritual</div><div class="service-desc">Deep conditioning + head massage</div></div><div class="service-price">Rs. 1999 – 2499</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Keratin Spa</div></div><div class="service-price">Rs. 2499 – 2799</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Mentho Burst Spa</div></div><div class="service-price">Rs. 999 – 1199</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Anti Dandruff Treatment</div></div><div class="service-price">Rs. 1099 – 1199</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Deep Conditioning</div></div><div class="service-price">Rs. 1499 – 1799</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Frizz Control Treatment</div></div><div class="service-price">Rs. 1499 – 1799</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Colour Care Treatment</div></div><div class="service-price">Rs. 1599 – 2099</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Repair & Rejuvenate</div><div class="service-desc">Dry / frizzy / chemically treated hair</div></div><div class="service-price">Rs. 1499 – 2099</div></div>
+          <div class="price-note">Prices may vary based on hair length (S = short, M = medium, L = long)</div>
+        </div>
+      </div>
+
+      <!-- She Styling -->
+      <div id="dsk-styling" class="dsk-panel" style="display:none;">
+        <div class="dsk-panel-head">
+          <span class="dsk-panel-icon">🎨</span>
+          <div class="dsk-panel-title">She Slays · Styling</div>
+          <div class="dsk-panel-sub">Styling & Colour</div>
+          <div class="dsk-panel-ornament">— ✦ —</div>
+        </div>
+        <div class="dsk-panel-body">
+          <div class="sub-cat">Hair Styling</div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Ironing / Curls</div></div><div class="service-price">Rs. 699 – 1199</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Blow Dry Setting</div></div><div class="service-price">Rs. 599 – 799</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Hair Do</div></div><div class="service-price">Rs. 1299 – 2799</div></div>
+          <div class="sub-cat">Hair Colour</div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Root Retouch</div><div class="service-desc">Covers grey roots seamlessly</div></div><div class="service-price">Rs. 1499</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Global Colour S | M | L — Ammonia</div></div><div class="service-price">Rs. 3999 / 4999 / 5999</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Global Colour S | M | L — Ammonia Free</div></div><div class="service-price">Rs. 4599 / 5599 / 6599</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Highlights Direct 10–20 Foils — Ammonia</div></div><div class="service-price">Rs. 4049 / 7499</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Highlights Direct 10–20 Foils — Ammonia Free</div></div><div class="service-price">Rs. 5999 / 7999</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Pre-lightened Highlights 10–20 Foils — Ammonia</div></div><div class="service-price">Rs. 4999 / 8999</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Pre-lightened Highlights — Ammonia Free</div></div><div class="service-price">Rs. 5999 / 9999</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Ombré S | M | L</div></div><div class="service-price">Rs. 4499 / 5999</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Balayage</div></div><div class="service-price">Rs. 4499 / 5999</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Global + Highlights 10–20 Foils</div></div><div class="service-price">Rs. 7999 / 10999</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Highlights Per Streak</div><div class="service-desc">Min. 5–6 streaks</div></div><div class="service-price">Rs. 499 / 699</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Bond Strengthener</div><div class="service-desc">With colour / smoothening / straightening</div></div><div class="service-price">Rs. 1199</div></div>
+          <div class="sub-cat">Hair Texture & Treatment</div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Smoothening S | M | L</div></div><div class="service-price">Rs. 4999 / 5999 / 6999</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Straightening S | M | L</div></div><div class="service-price">Rs. 4999 / 5999 / 6999</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Keratin S | M | L</div></div><div class="service-price">Rs. 4999 / 5999 / 6999</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Botox S | M | L</div></div><div class="service-price">Rs. 5999 / 6999 / 7999</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Re-growth / Partial Straightening</div></div><div class="service-price">Rs. 4999</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Rebonding</div></div><div class="service-price">Rs. 5999 / 8999</div></div>
+          <div class="price-note">Prices may vary based on hair length (S = short, M = medium, L = long)</div>
+        </div>
+      </div>
+
+      <!-- She Skin -->
+      <div id="dsk-skin" class="dsk-panel" style="display:none;">
+        <div class="dsk-panel-head">
+          <span class="dsk-panel-icon">🧴</span>
+          <div class="dsk-panel-title">She Slays · Skin</div>
+          <div class="dsk-panel-sub">Facials, Threading & More</div>
+          <div class="dsk-panel-ornament">— ✦ —</div>
+        </div>
+        <div class="dsk-panel-body">
+          <div class="sub-cat">Skin Care</div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Cleanup</div><div class="service-desc">For normal to dry skin</div></div><div class="service-price">Rs. 1199</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Luxury Cleanup</div><div class="service-desc">For normal to sensitive skin</div></div><div class="service-price">Rs. 1999</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Facial Regular</div></div><div class="service-price">Rs. 1199 – 1499</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Facial Premium</div></div><div class="service-price">Rs. 1599 – 2599</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Facial Luxury</div></div><div class="service-price">Rs. 2999 – 5999</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Bright Care Add-on</div><div class="service-desc">Neck / underarms / elbow</div></div><div class="service-price">Rs. 899</div></div>
+          <div class="sub-cat">Threading</div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Eyebrow / Upper Lip / Lower Lip</div></div><div class="service-price">Rs. 69</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Chin / Forehead</div></div><div class="service-price">Rs. 69</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Face Sides</div></div><div class="service-price">Rs. 99</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Full Face</div></div><div class="service-price">Rs. 399</div></div>
+          <div class="sub-cat">Detan</div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Face & Neck</div></div><div class="service-price">Rs. 499 – 599</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Upper Lip</div></div><div class="service-price">Rs. 149</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Under Arms</div></div><div class="service-price">Rs. 249</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Feet</div></div><div class="service-price">Rs. 399</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Face, Neck & Blouseline</div></div><div class="service-price">Rs. 799</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Midriff / Back</div></div><div class="service-price">Rs. 699 / 799</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Half / Full Arms</div></div><div class="service-price">Rs. 599 / 799</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Half / Full Legs</div></div><div class="service-price">Rs. 599 / 799</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Full Body Detan</div></div><div class="service-price">Rs. 3299</div></div>
+        </div>
+      </div>
+
+      <!-- She Body -->
+      <div id="dsk-body" class="dsk-panel" style="display:none;">
+        <div class="dsk-panel-head">
+          <span class="dsk-panel-icon">🌸</span>
+          <div class="dsk-panel-title">She Slays · Body</div>
+          <div class="dsk-panel-sub">Waxing, Peel & Polish</div>
+          <div class="dsk-panel-ornament">— ✦ —</div>
+        </div>
+        <div class="dsk-panel-body">
+          <div class="sub-cat">Waxing</div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Under Arms</div></div><div class="service-price">Rs. 249 – 349</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Half / Full Arms</div></div><div class="service-price">Rs. 499 / 699</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Half / Full Legs</div></div><div class="service-price">Rs. 799 / 899</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Full Back / Midriff</div></div><div class="service-price">Rs. 1499</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Full Body Wax</div></div><div class="service-price">Rs. 4499</div></div>
+          <div class="sub-cat">Peel Off</div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Upper Lip / Chin</div></div><div class="service-price">Rs. 149</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Under Arms</div></div><div class="service-price">Rs. 199</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Neck</div></div><div class="service-price">Rs. 349</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Face</div></div><div class="service-price">Rs. 549</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Bikini Line</div></div><div class="service-price">Rs. 1199</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Full Bikini</div></div><div class="service-price">Rs. 2999</div></div>
+          <div class="sub-cat">Body Polish</div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Whole Back / Full Arms / Full Legs</div></div><div class="service-price">Rs. 1999</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Full Body Polish</div></div><div class="service-price">Rs. 3999</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Full Body Polish with Massage</div></div><div class="service-price">Rs. 4999</div></div>
+        </div>
+      </div>
+
+      <!-- She Nails -->
+      <div id="dsk-nails" class="dsk-panel" style="display:none;">
+        <div class="dsk-panel-head">
+          <span class="dsk-panel-icon">💅</span>
+          <div class="dsk-panel-title">She Slays · Nails</div>
+          <div class="dsk-panel-sub">Mani, Pedi & Nail Art</div>
+          <div class="dsk-panel-ornament">— ✦ —</div>
+        </div>
+        <div class="dsk-panel-body">
+          <div class="sub-cat">Hand & Feet Care</div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Regular Manicure</div></div><div class="service-price">Rs. 799 – 1299</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Premium Manicure</div></div><div class="service-price">Rs. 1299 – 1699</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Luxury Manicure</div></div><div class="service-price">Rs. 1699 – 2499</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Regular Pedicure</div></div><div class="service-price">Rs. 799 – 1299</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Premium Pedicure</div></div><div class="service-price">Rs. 1299 – 1699</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Luxury Pedicure</div></div><div class="service-price">Rs. 1699 – 2499</div></div>
+          <div class="sub-cat">Nail Colour & Polish</div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Nail Colour Normal</div></div><div class="service-price">Rs. 199</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Change of Nail Colour</div></div><div class="service-price">Rs. 99 – 199</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Gel Polish</div></div><div class="service-price">Rs. 799</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Gel Polish — Hands & Toes</div></div><div class="service-price">Rs. 699</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Cut, File & Polish</div></div><div class="service-price">Rs. 249</div></div>
+          <div class="sub-cat">Nail Extensions & Art</div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Gel Nail Extension</div></div><div class="service-price">Rs. 1799</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Acrylic Nail Extension</div></div><div class="service-price">Rs. 1799</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Design Gel Polish</div><div class="service-desc">Per nail</div></div><div class="service-price">Rs. 99</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Nail Extension Refill</div></div><div class="service-price">Rs. 1449</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Nail Repair</div><div class="service-desc">Per nail</div></div><div class="service-price">Rs. 199</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Nail Art Add-on</div><div class="service-desc">French tips / ombré / glitter / stone</div></div><div class="service-price">Rs. 59 / 99</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Gel / Acrylic Extension Removal</div></div><div class="service-price">Rs. 499</div></div>
+          <div class="service-row"><div class="service-info"><div class="service-name">Gel Remover</div></div><div class="service-price">Rs. 299</div></div>
+        </div>
+      </div>
+
+    </div><!-- end .dsk-detail -->
+  </div><!-- end .desktop-layout -->
+
+  <!-- ══════════════════════════════════════
+       MOBILE / TABLET ACCORDION (below 992px)
+  ══════════════════════════════════════ -->
+  <div class="sheet-panel active" id="panel-salon">
+
+    <!-- HE section -->
+    <div class="section">
+      <div class="section-header" onclick="toggle(this)">
+        <div class="section-label">
+          <div>
+            <div class="section-name">The Dapper Edit</div>
+            <div class="section-count"><span class="badge-he">HE</span> · Men's Services</div>
+          </div>
+        </div>
+        <div class="chevron">▾</div>
+      </div>
+      <div class="section-body">
+        <div class="sub-cat">Beard</div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Beard Lining</div></div><div class="service-price">Rs. 249</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Beard Trim</div></div><div class="service-price">Rs. 299</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Signature Beard Styling</div><div class="service-desc">Beard trim + shape + oil</div></div><div class="service-price">Rs. 499</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Beard Spa</div><div class="service-desc">Wash + scrub + mask + oil + steam + head massage</div></div><div class="service-price">Rs. 899</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Beard Colour</div><div class="service-desc">Grey coverage</div></div><div class="service-price">Rs. 499</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Moustache Colour</div></div><div class="service-price">Rs. 249</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Shave</div></div><div class="service-price">Rs. 199</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Classic Shave</div></div><div class="service-price">Rs. 499</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Hot Towel Shave</div><div class="service-desc">Warm steam + rich lather + straight razor + head massage (sensitive skin)</div></div><div class="service-price">Rs. 599</div></div>
+        <div class="sub-cat">Hair Cut</div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Hair Cut Regular</div></div><div class="service-price">Rs. 349</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Hair Cut Advanced</div></div><div class="service-price">Rs. 499</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Kids Haircut</div></div><div class="service-price">Rs. 249</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Kids Haircut Advanced</div></div><div class="service-price">Rs. 399</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Head Shave</div></div><div class="service-price">Rs. 399</div></div>
+        <div class="sub-cat">Hair Care</div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Hair Wash</div></div><div class="service-price">Rs. 249</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Head Massage with Hair Wash</div></div><div class="service-price">Rs. 399 – 499</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Keratin / Colour / Treatment Hair Wash</div></div><div class="service-price">Rs. 399</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Hot Oil Massage</div><div class="service-desc">Coconut / Olive / Navratna</div></div><div class="service-price">Rs. 699</div></div>
+        <div class="sub-cat">Hair Colour</div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Grey Coverage</div><div class="service-desc">Ammonia / Ammonia free</div></div><div class="service-price">Rs. 799 / 1099</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Global Colour</div><div class="service-desc">Ammonia / Ammonia free</div></div><div class="service-price">Rs. 1199 / 1399</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Highlights</div><div class="service-desc">Ammonia / Ammonia free</div></div><div class="service-price">Rs. 1899 / 2099</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Smoothening S | L</div></div><div class="service-price">Rs. 3449 | 4449</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Straightening S | L</div></div><div class="service-price">Rs. 3449 | 4449</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Keratin S | L</div></div><div class="service-price">Rs. 3449 | 4449</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Botox S | L</div></div><div class="service-price">Rs. 3449 | 4449</div></div>
+        <div class="sub-cat">Hair Spa</div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Premium</div></div><div class="service-price">Rs. 899</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Luxury</div></div><div class="service-price">Rs. 1399</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Deep Conditioning</div></div><div class="service-price">Rs. 1999</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Colour / Repair / Rejuvenate / Keratin</div></div><div class="service-price">Rs. 1399</div></div>
+        <div class="sub-cat">Skin Care</div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Cleanup</div></div><div class="service-price">Rs. 399</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Detan — Face / Hand / Leg / Full Body</div></div><div class="service-price">Rs. 399 each</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Facial Regular</div></div><div class="service-price">Rs. 899</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Facial Premium</div></div><div class="service-price">Rs. 1999</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Facial Luxury</div></div><div class="service-price">Rs. 2499 – 3499</div></div>
+        <div class="sub-cat">Hand & Feet</div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Manicure Regular</div></div><div class="service-price">Rs. 499</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Manicure Premium</div></div><div class="service-price">Rs. 699</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Pedicure Regular</div></div><div class="service-price">Rs. 499</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Pedicure Premium</div></div><div class="service-price">Rs. 699</div></div>
+      </div>
     </div>
-    <div class="section-body">
 
-      <div class="sub-cat">Beard</div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Beard Lining</div></div><div class="service-price">Rs.  249</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Beard Trim</div></div><div class="service-price">Rs. 299</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Signature Beard Styling</div><div class="service-desc">Beard trim + shape + oil</div></div><div class="service-price">Rs. 499</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Beard Spa</div><div class="service-desc">Wash + scrub + mask + oil + steam + head massage</div></div><div class="service-price">Rs. 899</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Beard Colour</div><div class="service-desc">Grey coverage</div></div><div class="service-price">Rs. 499</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Moustache Colour</div></div><div class="service-price">Rs. 249</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Shave</div></div><div class="service-price">Rs. 199</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Classic Shave</div></div><div class="service-price">Rs. 499</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Hot Towel Shave</div><div class="service-desc">Warm steam + rich lather + straight razor + head massage (sensitive skin)</div></div><div class="service-price">Rs. 599</div></div>
-
-      <div class="sub-cat">Hair Cut</div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Hair Cut Regular</div></div><div class="service-price">Rs. 349</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Hair Cut Advanced</div></div><div class="service-price">Rs. 499</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Kids Haircut</div></div><div class="service-price">Rs. 249</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Kids Haircut Advanced</div></div><div class="service-price">Rs. 399</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Head Shave</div></div><div class="service-price">Rs. 399</div></div>
-
-      <div class="sub-cat">Hair Care</div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Hair Wash</div></div><div class="service-price">Rs. 249</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Head Massage with Hair Wash</div></div><div class="service-price">Rs. 399 – 499</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Keratin / Colour / Treatment Hair Wash</div></div><div class="service-price">Rs. 399</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Hot Oil Massage</div><div class="service-desc">Coconut / Olive / Navratna</div></div><div class="service-price">Rs. 699</div></div>
-
-      <div class="sub-cat">Hair Colour</div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Grey Coverage</div><div class="service-desc">Ammonia / Ammonia free</div></div><div class="service-price">Rs. 799 / 1099</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Global Colour</div><div class="service-desc">Ammonia / Ammonia free</div></div><div class="service-price">Rs. 1199 / 1399</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Highlights</div><div class="service-desc">Ammonia / Ammonia free</div></div><div class="service-price">Rs. 1899 / 2099</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Smoothening S | L</div></div><div class="service-price">Rs. 3449 | 4449</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Straightening S | L</div></div><div class="service-price">Rs. 3449 | 4449</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Keratin S | L</div></div><div class="service-price">Rs. 3449 | 4449</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Botox S | L</div></div><div class="service-price">Rs. 3449 | 4449</div></div>
-
-      <div class="sub-cat">Hair Spa</div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Premium</div></div><div class="service-price">Rs. 899</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Luxury</div></div><div class="service-price">Rs. 1399</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Deep Conditioning</div></div><div class="service-price">Rs. 1999</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Colour / Repair / Rejuvenate / Keratin</div></div><div class="service-price">Rs. 1399</div></div>
-
-      <div class="sub-cat">Skin Care</div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Cleanup</div></div><div class="service-price">Rs. 399</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Detan — Face / Hand / Leg / Full Body</div></div><div class="service-price">Rs. 399 each</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Facial Regular</div></div><div class="service-price">Rs. 899</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Facial Premium</div></div><div class="service-price">Rs. 1999</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Facial Luxury</div></div><div class="service-price">Rs. 2499 – 3499</div></div>
-
-      <div class="sub-cat">Hand & Feet</div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Manicure Regular</div></div><div class="service-price">Rs. 499</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Manicure Premium</div></div><div class="service-price">Rs. 699</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Pedicure Regular</div></div><div class="service-price">Rs. 499</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Pedicure Premium</div></div><div class="service-price">Rs. 699</div></div>
-    </div>
-  </div>
-
-  <!-- SHE section — Hair Cut -->
-  <div class="section">
-    <div class="section-header" onclick="toggle(this)">
-      <div class="section-label">
-        <div>
+    <!-- SHE — Hair -->
+    <div class="section">
+      <div class="section-header" onclick="toggle(this)">
+        <div class="section-label"><div>
           <div class="section-name">She Slays · Hair</div>
           <div class="section-count"><span class="badge-she">SHE</span> · Cut & Care</div>
-        </div>
+        </div></div>
+        <div class="chevron">▾</div>
       </div>
-      <div class="chevron">▾</div>
+      <div class="section-body">
+        <div class="sub-cat">Hair Cut</div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Hair Cut Basic</div></div><div class="service-price">Rs. 499</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Hair Cut Advanced</div></div><div class="service-price">Rs. 599 – 899</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Kids Hair Cut M / L</div></div><div class="service-price">Rs. 399 – 499</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Kids Haircut Advanced</div></div><div class="service-price">Rs. 499</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Trim / Fringe</div></div><div class="service-price">Rs. 299 – 399</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Change of Style</div></div><div class="service-price">Rs. 799</div></div>
+        <div class="sub-cat">Hair Care</div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Hair Wash + Blast Dry</div><div class="service-desc">Price varies by length · head massage included</div></div><div class="service-price">Rs. 349 – 499</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Hair Wash + Blow Dry M / L</div><div class="service-desc">Price varies by length · head massage included</div></div><div class="service-price">Rs. 449 – 749</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Treatment Based Wash / Styling</div><div class="service-desc">Price varies by length · head massage included</div></div><div class="service-price">Rs. 599 – 899</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Hot Oil Massage</div><div class="service-desc">Coconut / Olive / Navratna</div></div><div class="service-price">Rs. 949</div></div>
+      </div>
     </div>
-    <div class="section-body">
 
-      <div class="sub-cat">Hair Cut</div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Hair Cut Basic</div></div><div class="service-price">Rs. 499</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Hair Cut Advanced</div></div><div class="service-price">Rs. 599 – 899</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Kids Hair Cut M / L</div></div><div class="service-price">Rs. 399 – 499</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Kids Haircut Advanced</div></div><div class="service-price">Rs. 499</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Trim / Fringe</div></div><div class="service-price">Rs. 299 – 399</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Change of Style</div></div><div class="service-price">Rs. 799</div></div>
-
-      <div class="sub-cat">Hair Care</div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Hair Wash + Blast Dry</div><div class="service-desc">Price varies by length · head massage included</div></div><div class="service-price">Rs. 349 – 499</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Hair Wash + Blow Dry M / L</div><div class="service-desc">Price varies by length · head massage included</div></div><div class="service-price">Rs. 449 – 749</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Treatment Based Wash / Styling</div><div class="service-desc">Price varies by length · head massage included</div></div><div class="service-price">Rs. 599 – 899</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Hot Oil Massage</div><div class="service-desc">Coconut / Olive / Navratna</div></div><div class="service-price">Rs. 949</div></div>
-    </div>
-  </div>
-
-  <!-- SHE — Spa & Scalp -->
-  <div class="section">
-    <div class="section-header" onclick="toggle(this)">
-      <div class="section-label">
-        <div>
+    <!-- SHE — Spa -->
+    <div class="section">
+      <div class="section-header" onclick="toggle(this)">
+        <div class="section-label"><div>
           <div class="section-name">She Slays · Spa</div>
           <div class="section-count"><span class="badge-she">SHE</span> · Spa & Scalp Rituals</div>
-        </div>
+        </div></div>
+        <div class="chevron">▾</div>
       </div>
-      <div class="chevron">▾</div>
+      <div class="section-body">
+        <div class="service-row"><div class="service-info"><div class="service-name">Hair Spa Regular</div></div><div class="service-price">Rs. 1199 – 1899</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Hair Spa Premium</div></div><div class="service-price">Rs. 1399 – 2499</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Hair Spa Luxury</div></div><div class="service-price">Rs. 2499 – 3499</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Hair Spa Ritual</div><div class="service-desc">Deep conditioning + head massage</div></div><div class="service-price">Rs. 1999 – 2499</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Keratin Spa</div></div><div class="service-price">Rs. 2499 – 2799</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Mentho Burst Spa</div></div><div class="service-price">Rs. 999 – 1199</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Anti Dandruff Treatment</div></div><div class="service-price">Rs. 1099 – 1199</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Deep Conditioning</div></div><div class="service-price">Rs. 1499 – 1799</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Frizz Control Treatment</div></div><div class="service-price">Rs. 1499 – 1799</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Colour Care Treatment</div></div><div class="service-price">Rs. 1599 – 2099</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Repair & Rejuvenate</div><div class="service-desc">Dry / frizzy / chemically treated hair</div></div><div class="service-price">Rs. 1499 – 2099</div></div>
+      </div>
     </div>
-    <div class="section-body">
-      <div class="service-row"><div class="service-info"><div class="service-name">Hair Spa Regular</div></div><div class="service-price">Rs. 1199 – 1899</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Hair Spa Premium</div></div><div class="service-price">Rs. 1399 – 2499</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Hair Spa Luxury</div></div><div class="service-price">Rs. 2499 – 3499</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Hair Spa Ritual</div><div class="service-desc">Deep conditioning + head massage</div></div><div class="service-price">Rs. 1999 – 2499</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Keratin Spa</div></div><div class="service-price">Rs. 2499 – 2799</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Mentho Burst Spa</div></div><div class="service-price">Rs. 999 – 1199</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Anti Dandruff Treatment</div></div><div class="service-price">Rs. 1099 – 1199</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Deep Conditioning</div></div><div class="service-price">Rs. 1499 – 1799</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Frizz Control Treatment</div></div><div class="service-price">Rs. 1499 – 1799</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Colour Care Treatment</div></div><div class="service-price">Rs. 1599 – 2099</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Repair & Rejuvenate</div><div class="service-desc">Dry / frizzy / chemically treated hair</div></div><div class="service-price">Rs. 1499 – 2099</div></div>
-    </div>
-  </div>
 
-  <!-- SHE — Hair Styling -->
-  <div class="section">
-    <div class="section-header" onclick="toggle(this)">
-      <div class="section-label">
-        <div>
+    <!-- SHE — Styling -->
+    <div class="section">
+      <div class="section-header" onclick="toggle(this)">
+        <div class="section-label"><div>
           <div class="section-name">She Slays · Styling</div>
           <div class="section-count"><span class="badge-she">SHE</span> · Styling & Colour</div>
-        </div>
+        </div></div>
+        <div class="chevron">▾</div>
       </div>
-      <div class="chevron">▾</div>
+      <div class="section-body">
+        <div class="sub-cat">Hair Styling</div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Ironing / Curls</div></div><div class="service-price">Rs. 699 – 1199</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Blow Dry Setting</div></div><div class="service-price">Rs. 599 – 799</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Hair Do</div></div><div class="service-price">Rs. 1299 – 2799</div></div>
+        <div class="sub-cat">Hair Colour</div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Root Retouch</div><div class="service-desc">Covers grey roots seamlessly</div></div><div class="service-price">Rs. 1499</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Global Colour S | M | L — Ammonia</div></div><div class="service-price">Rs. 3999 / 4999 / 5999</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Global Colour S | M | L — Ammonia Free</div></div><div class="service-price">Rs. 4599 / 5599 / 6599</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Highlights Direct 10–20 Foils — Ammonia</div></div><div class="service-price">Rs. 4049 / 7499</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Highlights Direct 10–20 Foils — Ammonia Free</div></div><div class="service-price">Rs. 5999 / 7999</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Pre-lightened Highlights 10–20 Foils — Ammonia</div></div><div class="service-price">Rs. 4999 / 8999</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Pre-lightened Highlights — Ammonia Free</div></div><div class="service-price">Rs. 5999 / 9999</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Ombré S | M | L</div></div><div class="service-price">Rs. 4499 / 5999</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Balayage</div></div><div class="service-price">Rs. 4499 / 5999</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Global + Highlights 10–20 Foils</div></div><div class="service-price">Rs. 7999 / 10999</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Highlights Per Streak</div><div class="service-desc">Min. 5–6 streaks</div></div><div class="service-price">Rs. 499 / 699</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Bond Strengthener</div><div class="service-desc">With colour / smoothening / straightening</div></div><div class="service-price">Rs. 1199</div></div>
+        <div class="sub-cat">Hair Texture & Treatment</div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Smoothening S | M | L</div></div><div class="service-price">Rs. 4999 / 5999 / 6999</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Straightening S | M | L</div></div><div class="service-price">Rs. 4999 / 5999 / 6999</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Keratin S | M | L</div></div><div class="service-price">Rs. 4999 / 5999 / 6999</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Botox S | M | L</div></div><div class="service-price">Rs. 5999 / 6999 / 7999</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Re-growth / Partial Straightening</div></div><div class="service-price">Rs. 4999</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Rebonding</div></div><div class="service-price">Rs. 5999 / 8999</div></div>
+      </div>
     </div>
-    <div class="section-body">
-      <div class="sub-cat">Hair Styling</div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Ironing / Curls</div></div><div class="service-price">Rs. 699 – 1199</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Blow Dry Setting</div></div><div class="service-price">Rs. 599 – 799</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Hair Do</div></div><div class="service-price">Rs. 1299 – 2799</div></div>
 
-      <div class="sub-cat">Hair Colour</div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Root Retouch</div><div class="service-desc">Covers grey roots seamlessly</div></div><div class="service-price">Rs. 1499</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Global Colour S | M | L — Ammonia</div></div><div class="service-price">Rs. 3999 / 4999 / 5999</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Global Colour S | M | L — Ammonia Free</div></div><div class="service-price">Rs. 4599 / 5599 / 6599</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Highlights Direct 10–20 Foils — Ammonia</div></div><div class="service-price">Rs. 4049 / 7499</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Highlights Direct 10–20 Foils — Ammonia Free</div></div><div class="service-price">Rs. 5999 / 7999</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Pre-lightened Highlights 10–20 Foils — Ammonia</div></div><div class="service-price">Rs. 4999 / 8999</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Pre-lightened Highlights — Ammonia Free</div></div><div class="service-price">Rs. 5999 / 9999</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Ombré S | M | L</div></div><div class="service-price">Rs. 4499 / 5999</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Balayage</div></div><div class="service-price">Rs. 4499 / 5999</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Global + Highlights 10–20 Foils</div></div><div class="service-price">Rs. 7999 / 10999</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Highlights Per Streak</div><div class="service-desc">Min. 5–6 streaks</div></div><div class="service-price">Rs. 499 / 699</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Bond Strengthener</div><div class="service-desc">With colour / smoothening / straightening</div></div><div class="service-price">Rs. 1199</div></div>
-
-      <div class="sub-cat">Hair Texture & Treatment</div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Smoothening S | M | L</div></div><div class="service-price">Rs. 4999 / 5999 / 6999</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Straightening S | M | L</div></div><div class="service-price">Rs. 4999 / 5999 / 6999</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Keratin S | M | L</div></div><div class="service-price">Rs. 4999 / 5999 / 6999</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Botox S | M | L</div></div><div class="service-price">Rs. 5999 / 6999 / 7999</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Re-growth / Partial Straightening</div></div><div class="service-price">Rs. 4999</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Rebonding</div></div><div class="service-price">Rs. 5999 / 8999</div></div>
-    </div>
-  </div>
-
-  <!-- SHE — Skin Care -->
-  <div class="section">
-    <div class="section-header" onclick="toggle(this)">
-      <div class="section-label">
-        <div>
+    <!-- SHE — Skin -->
+    <div class="section">
+      <div class="section-header" onclick="toggle(this)">
+        <div class="section-label"><div>
           <div class="section-name">She Slays · Skin</div>
           <div class="section-count"><span class="badge-she">SHE</span> · Facials, Threading & More</div>
-        </div>
+        </div></div>
+        <div class="chevron">▾</div>
       </div>
-      <div class="chevron">▾</div>
+      <div class="section-body">
+        <div class="sub-cat">Skin Care</div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Cleanup</div><div class="service-desc">For normal to dry skin</div></div><div class="service-price">Rs. 1199</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Luxury Cleanup</div><div class="service-desc">For normal to sensitive skin</div></div><div class="service-price">Rs. 1999</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Facial Regular</div></div><div class="service-price">Rs. 1199 – 1499</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Facial Premium</div></div><div class="service-price">Rs. 1599 – 2599</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Facial Luxury</div></div><div class="service-price">Rs. 2999 – 5999</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Bright Care Add-on</div><div class="service-desc">Neck / underarms / elbow</div></div><div class="service-price">Rs. 899</div></div>
+        <div class="sub-cat">Threading</div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Eyebrow / Upper Lip / Lower Lip</div></div><div class="service-price">Rs. 69</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Chin / Forehead</div></div><div class="service-price">Rs. 69</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Face Sides</div></div><div class="service-price">Rs. 99</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Full Face</div></div><div class="service-price">Rs. 399</div></div>
+        <div class="sub-cat">Detan</div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Face & Neck</div></div><div class="service-price">Rs. 499 – 599</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Upper Lip</div></div><div class="service-price">Rs. 149</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Under Arms</div></div><div class="service-price">Rs. 249</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Feet</div></div><div class="service-price">Rs. 399</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Face, Neck & Blouseline</div></div><div class="service-price">Rs. 799</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Midriff / Back</div></div><div class="service-price">Rs. 699 / 799</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Half / Full Arms</div></div><div class="service-price">Rs. 599 / 799</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Half / Full Legs</div></div><div class="service-price">Rs. 599 / 799</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Full Body Detan</div></div><div class="service-price">Rs. 3299</div></div>
+      </div>
     </div>
-    <div class="section-body">
-      <div class="sub-cat">Skin Care</div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Cleanup</div><div class="service-desc">For normal to dry skin</div></div><div class="service-price">Rs. 1199</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Luxury Cleanup</div><div class="service-desc">For normal to sensitive skin</div></div><div class="service-price">Rs. 1999</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Facial Regular</div></div><div class="service-price">Rs. 1199 – 1499</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Facial Premium</div></div><div class="service-price">Rs. 1599 – 2599</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Facial Luxury</div></div><div class="service-price">Rs. 2999 – 5999</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Bright Care Add-on</div><div class="service-desc">Neck / underarms / elbow</div></div><div class="service-price">Rs. 899</div></div>
 
-      <div class="sub-cat">Threading</div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Eyebrow / Upper Lip / Lower Lip</div></div><div class="service-price">Rs. 69</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Chin / Forehead</div></div><div class="service-price">Rs. 69</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Face Sides</div></div><div class="service-price">Rs. 99</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Full Face</div></div><div class="service-price">Rs. 399</div></div>
-
-      <div class="sub-cat">Detan</div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Face & Neck</div></div><div class="service-price">Rs. 499 – 599</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Upper Lip</div></div><div class="service-price">Rs. 149</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Under Arms</div></div><div class="service-price">Rs. 249</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Feet</div></div><div class="service-price">Rs. 399</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Face, Neck & Blouseline</div></div><div class="service-price">Rs. 799</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Midriff / Back</div></div><div class="service-price">Rs. 699 / 799</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Half / Full Arms</div></div><div class="service-price">Rs. 599 / 799</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Half / Full Legs</div></div><div class="service-price">Rs. 599 / 799</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Full Body Detan</div></div><div class="service-price">Rs. 3299</div></div>
-    </div>
-  </div>
-
-  <!-- SHE — Waxing & Body -->
-  <div class="section">
-    <div class="section-header" onclick="toggle(this)">
-      <div class="section-label">
-        <div>
+    <!-- SHE — Body -->
+    <div class="section">
+      <div class="section-header" onclick="toggle(this)">
+        <div class="section-label"><div>
           <div class="section-name">She Slays · Body</div>
           <div class="section-count"><span class="badge-she">SHE</span> · Waxing, Peel & Polish</div>
-        </div>
+        </div></div>
+        <div class="chevron">▾</div>
       </div>
-      <div class="chevron">▾</div>
+      <div class="section-body">
+        <div class="sub-cat">Waxing</div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Under Arms</div></div><div class="service-price">Rs. 249 – 349</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Half / Full Arms</div></div><div class="service-price">Rs. 499 / 699</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Half / Full Legs</div></div><div class="service-price">Rs. 799 / 899</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Full Back / Midriff</div></div><div class="service-price">Rs. 1499</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Full Body Wax</div></div><div class="service-price">Rs. 4499</div></div>
+        <div class="sub-cat">Peel Off</div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Upper Lip / Chin</div></div><div class="service-price">Rs. 149</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Under Arms</div></div><div class="service-price">Rs. 199</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Neck</div></div><div class="service-price">Rs. 349</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Face</div></div><div class="service-price">Rs. 549</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Bikini Line</div></div><div class="service-price">Rs. 1199</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Full Bikini</div></div><div class="service-price">Rs. 2999</div></div>
+        <div class="sub-cat">Body Polish</div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Whole Back / Full Arms / Full Legs</div></div><div class="service-price">Rs. 1999</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Full Body Polish</div></div><div class="service-price">Rs. 3999</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Full Body Polish with Massage</div></div><div class="service-price">Rs. 4999</div></div>
+      </div>
     </div>
-    <div class="section-body">
-      <div class="sub-cat">Waxing</div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Under Arms</div></div><div class="service-price">Rs. 249 – 349</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Half / Full Arms</div></div><div class="service-price">Rs. 499 / 699</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Half / Full Legs</div></div><div class="service-price">Rs. 799 / 899</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Full Back / Midriff</div></div><div class="service-price">Rs. 1499</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Full Body Wax</div></div><div class="service-price">Rs. 4499</div></div>
 
-      <div class="sub-cat">Peel Off</div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Upper Lip / Chin</div></div><div class="service-price">Rs. 149</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Under Arms</div></div><div class="service-price">Rs. 199</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Neck</div></div><div class="service-price">Rs. 349</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Face</div></div><div class="service-price">Rs. 549</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Bikini Line</div></div><div class="service-price">Rs. 1199</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Full Bikini</div></div><div class="service-price">Rs. 2999</div></div>
-
-      <div class="sub-cat">Body Polish</div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Whole Back / Full Arms / Full Legs</div></div><div class="service-price">Rs. 1999</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Full Body Polish</div></div><div class="service-price">Rs. 3999</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Full Body Polish with Massage</div></div><div class="service-price">Rs. 4999</div></div>
-    </div>
-  </div>
-
-  <!-- SHE — Nails -->
-  <div class="section">
-    <div class="section-header" onclick="toggle(this)">
-      <div class="section-label">
-        <div>
+    <!-- SHE — Nails -->
+    <div class="section">
+      <div class="section-header" onclick="toggle(this)">
+        <div class="section-label"><div>
           <div class="section-name">She Slays · Nails</div>
           <div class="section-count"><span class="badge-she">SHE</span> · Mani, Pedi & Nail Art</div>
-        </div>
+        </div></div>
+        <div class="chevron">▾</div>
       </div>
-      <div class="chevron">▾</div>
+      <div class="section-body">
+        <div class="sub-cat">Hand & Feet Care</div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Regular Manicure</div></div><div class="service-price">Rs. 799 – 1299</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Premium Manicure</div></div><div class="service-price">Rs. 1299 – 1699</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Luxury Manicure</div></div><div class="service-price">Rs. 1699 – 2499</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Regular Pedicure</div></div><div class="service-price">Rs. 799 – 1299</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Premium Pedicure</div></div><div class="service-price">Rs. 1299 – 1699</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Luxury Pedicure</div></div><div class="service-price">Rs. 1699 – 2499</div></div>
+        <div class="sub-cat">Nail Colour & Polish</div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Nail Colour Normal</div></div><div class="service-price">Rs. 199</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Change of Nail Colour</div></div><div class="service-price">Rs. 99 – 199</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Gel Polish</div></div><div class="service-price">Rs. 799</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Gel Polish — Hands & Toes</div></div><div class="service-price">Rs. 699</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Cut, File & Polish</div></div><div class="service-price">Rs. 249</div></div>
+        <div class="sub-cat">Nail Extensions & Art</div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Gel Nail Extension</div></div><div class="service-price">Rs. 1799</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Acrylic Nail Extension</div></div><div class="service-price">Rs. 1799</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Design Gel Polish</div><div class="service-desc">Per nail</div></div><div class="service-price">Rs. 99</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Nail Extension Refill</div></div><div class="service-price">Rs. 1449</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Nail Repair</div><div class="service-desc">Per nail</div></div><div class="service-price">Rs. 199</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Nail Art Add-on</div><div class="service-desc">French tips / ombré / glitter / stone</div></div><div class="service-price">Rs. 59 / 99</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Gel / Acrylic Extension Removal</div></div><div class="service-price">Rs. 499</div></div>
+        <div class="service-row"><div class="service-info"><div class="service-name">Gel Remover</div></div><div class="service-price">Rs. 299</div></div>
+      </div>
     </div>
-    <div class="section-body">
-      <div class="sub-cat">Hand & Feet Care</div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Regular Manicure</div></div><div class="service-price">Rs. 799 – 1299</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Premium Manicure</div></div><div class="service-price">Rs. 1299 – 1699</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Luxury Manicure</div></div><div class="service-price">Rs. 1699 – 2499</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Regular Pedicure</div></div><div class="service-price">Rs. 799 – 1299</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Premium Pedicure</div></div><div class="service-price">Rs. 1299 – 1699</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Luxury Pedicure</div></div><div class="service-price">Rs. 1699 – 2499</div></div>
 
-      <div class="sub-cat">Nail Colour & Polish</div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Nail Colour Normal</div></div><div class="service-price">Rs. 199</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Change of Nail Colour</div></div><div class="service-price">Rs. 99 – 199</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Gel Polish</div></div><div class="service-price">Rs. 799</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Gel Polish — Hands & Toes</div></div><div class="service-price">Rs. 699</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Cut, File & Polish</div></div><div class="service-price">Rs. 249</div></div>
+    <div class="price-note">Prices may vary based on hair length (S = short, M = medium, L = long)</div>
 
-      <div class="sub-cat">Nail Extensions & Art</div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Gel Nail Extension</div></div><div class="service-price">Rs. 1799</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Acrylic Nail Extension</div></div><div class="service-price">Rs. 1799</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Design Gel Polish</div><div class="service-desc">Per nail</div></div><div class="service-price">Rs. 99</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Nail Extension Refill</div></div><div class="service-price">1449</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Nail Repair</div><div class="service-desc">Per nail</div></div><div class="service-price">Rs. 199</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Nail Art Add-on</div><div class="service-desc">French tips / ombré / glitter / stone</div></div><div class="service-price">Rs. 59 / 99</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Gel / Acrylic Extension Removal</div></div><div class="service-price">Rs. 499</div></div>
-      <div class="service-row"><div class="service-info"><div class="service-name">Gel Remover</div></div><div class="service-price">Rs. 299</div></div>
-    </div>
-  </div>
+  </div><!-- end #panel-salon -->
+</div><!-- end #salon -->
 
-  <div class="price-note">Prices may vary based on hair length (S = short, M = medium, L = long)</div>
-
-</div>
-</div>
 <!-- ========= MAKEUP PANEL ========= -->
-<div id="makeup" style="display:none;"">
-<div class="sheet-panel" id="panel-makeup">
-
-  <div class="makeup-sub">
-    <div class="makeup-banner">✦ &nbsp; Bridal & Party Makeup</div>
-    <div class="service-row"><div class="service-info"><div class="service-name">Eye Makeup</div></div><div class="service-price">Rs. 1999</div></div>
-    <div class="service-row"><div class="service-info"><div class="service-name">Light Makeup</div></div><div class="service-price">Rs. 2999</div></div>
-    <div class="service-row"><div class="service-info"><div class="service-name">Party Makeup</div></div><div class="service-price">Rs. 5999</div></div>
-    <div class="service-row"><div class="service-info"><div class="service-name">Premium Makeup</div></div><div class="service-price">Rs. 10999</div></div>
-    <div class="service-row"><div class="service-info"><div class="service-name">Bride Makeover</div></div><div class="service-price">Rs. 15999</div></div>
-    <div class="service-row"><div class="service-info"><div class="service-name">Airbrush Makeup</div></div><div class="service-price">Rs. 19999</div></div>
-    <div class="service-row"><div class="service-info"><div class="service-name">Guest / Family Makeup</div></div><div class="service-price">Rs. 2499</div></div>
-    <div class="service-row"><div class="service-info"><div class="service-name">Guest / Family Saree Drape & Styling</div></div><div class="service-price">Rs. 3499</div></div>
-    <div class="service-row"><div class="service-info"><div class="service-name">Kids Party Makeup & Styling</div></div><div class="service-price">Rs. 2499</div></div>
+<div id="makeup" style="display:none;">
+  <div class="sheet-panel" id="panel-makeup">
+    <div class="makeup-sub">
+      <div class="makeup-banner">✦ &nbsp; Bridal & Party Makeup</div>
+      <div class="service-row"><div class="service-info"><div class="service-name">Eye Makeup</div></div><div class="service-price">Rs. 1999</div></div>
+      <div class="service-row"><div class="service-info"><div class="service-name">Light Makeup</div></div><div class="service-price">Rs. 2999</div></div>
+      <div class="service-row"><div class="service-info"><div class="service-name">Party Makeup</div></div><div class="service-price">Rs. 5999</div></div>
+      <div class="service-row"><div class="service-info"><div class="service-name">Premium Makeup</div></div><div class="service-price">Rs. 10999</div></div>
+      <div class="service-row"><div class="service-info"><div class="service-name">Bride Makeover</div></div><div class="service-price">Rs. 15999</div></div>
+      <div class="service-row"><div class="service-info"><div class="service-name">Airbrush Makeup</div></div><div class="service-price">Rs. 19999</div></div>
+      <div class="service-row"><div class="service-info"><div class="service-name">Guest / Family Makeup</div></div><div class="service-price">Rs. 2499</div></div>
+      <div class="service-row"><div class="service-info"><div class="service-name">Guest / Family Saree Drape & Styling</div></div><div class="service-price">Rs. 3499</div></div>
+      <div class="service-row"><div class="service-info"><div class="service-name">Kids Party Makeup & Styling</div></div><div class="service-price">Rs. 2499</div></div>
+    </div>
+    <div class="makeup-sub" style="margin-top:0.75rem;">
+      <div class="makeup-banner">✦ &nbsp; Groom & Party Makeup</div>
+      <div class="service-row"><div class="service-info"><div class="service-name">Party Makeup</div></div><div class="service-price">Rs. 3499</div></div>
+      <div class="service-row"><div class="service-info"><div class="service-name">Pre-Wedding Glow & Hair Set</div></div><div class="service-price">Rs. 4999</div></div>
+      <div class="service-row"><div class="service-info"><div class="service-name">Light Makeup</div></div><div class="service-price">Rs. 2599</div></div>
+      <div class="service-row"><div class="service-info"><div class="service-name">Premium Makeup</div></div><div class="service-price">Rs. 3999</div></div>
+      <div class="service-row"><div class="service-info"><div class="service-name">Luxury Makeup</div></div><div class="service-price">Rs. 5999</div></div>
+    </div>
   </div>
-
-  <div class="makeup-sub" style="margin-top: 0.75rem;">
-    <div class="makeup-banner">✦ &nbsp; Groom & Party Makeup</div>
-    <div class="service-row"><div class="service-info"><div class="service-name">Party Makeup</div></div><div class="service-price">Rs. 3499</div></div>
-    <div class="service-row"><div class="service-info"><div class="service-name">Pre-Wedding Glow & Hair Set</div></div><div class="service-price">Rs. 4999</div></div>
-    <div class="service-row"><div class="service-info"><div class="service-name">Light Makeup</div></div><div class="service-price">Rs. 2599</div></div>
-    <div class="service-row"><div class="service-info"><div class="service-name">Premium Makeup</div></div><div class="service-price">Rs. 3999</div></div>
-    <div class="service-row"><div class="service-info"><div class="service-name">Luxury Makeup</div></div><div class="service-price">Rs. 5999</div></div>
-  </div>
-</div>
   <div class="price-note">All prices are inclusive of professional products. Advance booking recommended.</div>
 
 </div>
 </div>
+<div class="footer">
+  <span class="footer-ornament">— ✦ —</span>
+  Panache Salon · Hyderabad
+</div>
+
+
+<footer class="ftco-footer ftco-section img">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row mb-5">
+				<div class="col-md-6">
+					<div class="ftco-footer-widget mb-8">
+						<h2 class="ftco-heading-2">Have a Questions?</h2>
+						<div class="block-23 mb-3">
+							<ul>
+								<li><span class="icon icon-map-marker"></span><span class="text">
+										Assotech World - Avenue 01
+										Plot No. 274, adjacent to NH-16,
+										Rudrapur, Bhubaneswar, Odisha
+
+									</span></li>
+								<li><span class="icon icon-clock-o"></span><span class="text">
+										Opening Hours Monday - Sunday <br>
+										09:00AM - 09:00PM <br>
+										Including Public Holidays
+									</span></li>
+
+								<li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929
+											210</span></a></li>
+								<li><a href="#"><span class="icon icon-envelope"></span><span
+											class="text">info@panache.co.in</span></a></li>
+							</ul>
+						</div>
+						<ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+							<li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+							<li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+							<li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="col-md-6">
+					<div class="col-md-16">
+						<div class="ftco-footer-widget mb-12">
+							<iframe width="95%" height="390" style="border:0; border-radius:28px;" loading="lazy"
+								allowfullscreen
+								src="https://www.google.com/maps?q=Assotech%20World%20-%20Avenue%2001%2C%20Plot%20No.%20274%2C%20adjacent%20to%20NH-16%2C%20Rudrapur%2C%20Bhubaneswar%2C%20Odisha%20751032&output=embed">
+							</iframe>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 text-center">
+
+					<p><!-- Link back to Sutram Solutions can't be removed.  is licensed under CC BY 3.0. -->
+						Copyright &copy;
+						<script>document.write(new Date().getFullYear());</script> All rights reserved | This
+						is made with <i class="icon-heart" aria-hidden="true"></i> by <a
+							href="https://sutramsolutions.in" target="_blank">Sutram Solutions</a>
+						<!-- Link back to Sutram Solutions can't be removed.  is licensed under CC BY 3.0. -->
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
 
 
 <script>
+// Mobile accordion toggle
 const sections = document.querySelectorAll(".section");
-
 sections.forEach(section => {
+  const header = section.querySelector(".section-header");
+  header.addEventListener("click", () => {
+    section.classList.toggle("active");
+  });
+});
 
-    const header = section.querySelector(".section-header");
+// Tab switcher (works for both mobile and desktop)
+function switchTab(tab, element) {
+  const salon = document.getElementById("salon");
+  const makeup = document.getElementById("makeup");
+  salon.style.display = "none";
+  makeup.style.display = "none";
+  salon.classList.remove("active-panel");
+  makeup.classList.remove("active-panel");
+  const activePanel = document.getElementById(tab);
+  activePanel.style.display = "block";
+  activePanel.classList.add("active-panel");
+  document.querySelectorAll(".top-tab").forEach(t => t.classList.remove("active"));
+  element.classList.add("active");
+}
 
-    header.addEventListener("click", () => {
+// Desktop sidebar navigation
+function dskShow(id, clickedItem) {
+  document.querySelectorAll('.dsk-panel').forEach(p => p.classList.remove('active-panel'));
+  document.querySelectorAll('.dsk-panel').forEach(p => p.style.display = 'none');
+  const panel = document.getElementById(id);
+  panel.style.display = 'block';
+  panel.classList.add('active-panel');
+  document.querySelectorAll('.dsk-nav-item').forEach(i => i.classList.remove('active'));
+  clickedItem.classList.add('active');
+}
 
-        section.classList.toggle("active");
-
-    });
-
+window.addEventListener('load', () => {
+  const initialSalon = document.getElementById('salon');
+  const initialTab = document.querySelector('.top-tab.active');
+  if (initialSalon) {
+    initialSalon.classList.add('active-panel');
+  }
+  if (initialTab) {
+    initialTab.classList.add('active');
+  }
 });
 </script>
-<script>
-    function switchTab(tab, element) {
-
-    // Hide all sections
-    document.getElementById("salon").style.display = "none";
-    document.getElementById("makeup").style.display = "none";
-
-    // Show selected section
-    document.getElementById(tab).style.display = "block";
-
-    // Remove active class from all tabs
-    document.querySelectorAll(".top-tab").forEach(tabItem => {
-        tabItem.classList.remove("active");
-    });
-
-    // Activate clicked tab
-    element.classList.add("active");
-}
-</script>
-<footer class="ftco-footer ftco-section img">
-    <div class="overlay"></div>
-    <div class="container">
-      <div class="row mb-5">
-        <div class="col-md-6">
-          <div class="ftco-footer-widget mb-8">
-            <h2 class="ftco-heading-2">Have a Questions?</h2>
-            <div class="block-23 mb-3">
-              <ul>
-                <li><span class="icon icon-map-marker"></span><span class="text">
-                    Assotech World - Avenue 01
-                    Plot No. 274, adjacent to NH-16,
-                    Rudrapur, Bhubaneswar, Odisha
-
-                  </span></li>
-                <li><span class="icon icon-clock-o"></span><span class="text">
-                    Opening Hours Monday - Sunday <br>
-                    09:00AM - 09:00PM <br>
-                    Including Public Holidays
-                  </span></li>
-
-                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929
-                      210</span></a></li>
-                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@panache.co.in</span></a>
-                </li>
-              </ul>
-            </div>
-            <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
-              <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-              <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-              <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="col-md-6">
-          <div class="col-md-16">
-            <div class="ftco-footer-widget mb-12">
-              <iframe width="95%" height="390" style="border:0; border-radius:28px;" loading="lazy" allowfullscreen
-                src="https://www.google.com/maps?q=Assotech%20World%20-%20Avenue%2001%2C%20Plot%20No.%20274%2C%20adjacent%20to%20NH-16%2C%20Rudrapur%2C%20Bhubaneswar%2C%20Odisha%20751032&output=embed">
-              </iframe>
-
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12 text-center">
-
-          <p><!-- Link back to Sutram Solutions can't be removed.  is licensed under CC BY 3.0. -->
-            Copyright &copy;
-            <script>document.write(new Date().getFullYear());</script> All rights reserved | This
-            is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://sutramsolutions.in"
-              target="_blank">Sutram Solutions</a>
-            <!-- Link back to Sutram Solutions can't be removed.  is licensed under CC BY 3.0. -->
-          </p>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <script src="js/mascot.js"></script>
-  <script src="js/main.js"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Playfair+Display:wght@500&family=Work+Sans&display=swap"
-    rel="stylesheet">
-
-  <!-- Icon Font Stylesheet -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-  <div class="mascot-container">
-    <div class="speech-bubble">Welcome!</div>
-    <div class="mascot-img-wrapper">
-      <img src="images/mascot.png" alt="Mascot">
-    </div>
-    <div class="mascot-menu">
-      <h5>How can I help?</h5>
-      <ul class="mascot-menu-list">
-        <li><a href="#services"><img src="images/search-outline.svg" alt="Search" class="mascot-search-icon">Our Services</a></li>
-        <li><a href="https://wa.me/6302519834" target="_blank" rel="noreferrer"><img src="images/logo-whatsapp.svg" alt="WhatsApp" class="mascot-whatsapp-icon">Chat
-            with Us</a></li>
-      </ul>
-    </div>
-  </div>
-
-
-
-
-
-  <!-- loader -->
-  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
-      <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
-      <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
-        stroke="#F96D00" />
-    </svg></div>
-
 <script src="js/jquery.min.js"></script>
-    <script src="js/jquery-migrate-3.0.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.easing.1.3.js"></script>
-    <script src="js/jquery.waypoints.min.js"></script>
-    <script src="js/jquery.stellar.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/aos.js"></script>
-    <script src="js/jquery.animateNumber.min.js"></script>
-    <script src="js/bootstrap-datepicker.js"></script>
-    <script src="js/jquery.timepicker.min.js"></script>
-    <script src="js/scrollax.min.js"></script>
-    <script src="js/mascot.js"></script>
-    <script src="js/main.js"></script>
-
+<script src="js/jquery-migrate-3.0.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/jquery.stellar.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/aos.js"></script>
+<script src="js/jquery.animateNumber.min.js"></script>
+<script src="js/bootstrap-datepicker.js"></script>
+<script src="js/jquery.timepicker.min.js"></script>
+<script src="js/scrollax.min.js"></script>
+<script src="js/mascot.js"></script>
+<script src="js/main.js"></script>
 
 </body>
 </html>
