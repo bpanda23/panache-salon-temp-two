@@ -167,24 +167,9 @@ letter-spacing:1px;
     background:#000;
 }
 
-.hero img{
-    width:100%;
-    height:100%;
-    object-fit:cover;   /* Crops image while filling container */
-    object-position:center;
-    display:block;
-}
+
 /* HERO */
-.hero{
-  padding:55px 25px;
-  text-align:center;
-  background:
-    linear-gradient(rgba(0,0,0,.82), rgba(0,0,0,.82)),
-    linear-gradient(135deg, #050505, #1b1b1b);
-  position:relative;
-  overflow:hidden;
-  border-bottom:2px solid var(--gold);
-}
+
 
 .hero::before{
   content:"";
@@ -249,6 +234,21 @@ letter-spacing:1px;
   top:0;
   z-index:100;
   border-bottom:1px solid var(--border);
+   justify-content:center;
+    gap:18px;
+    padding:14px 20px;
+    margin:0 auto;
+    width:min(1180px, calc(100% - 40px));
+    position:sticky;
+    top:72px;
+    z-index:250;
+    background:rgba(9,9,9,.92);
+    border:1px solid rgba(197,160,89,.18);
+    border-top:none;
+    border-radius:0 0 24px 24px;
+    backdrop-filter:blur(14px);
+    box-shadow:0 18px 45px rgba(0,0,0,.25);
+  
 }
 
 .top-tab{
@@ -458,6 +458,7 @@ letter-spacing:1px;
 }
 
 
+
 /* =====================================================
    DESKTOP LAYOUT — min-width: 992px
    All mobile/tablet styles above are untouched.
@@ -465,9 +466,8 @@ letter-spacing:1px;
 ===================================================== */
 
 @media screen and (min-width:992px){
-
-  .wrap{ display:none; }
-  .footer{ display:none; }
+ .wrap{display: none;}
+ .footer{display: none;}
 
   body{
     background:
@@ -506,6 +506,7 @@ letter-spacing:1px;
     .hero .hero-title,
     .hero .hero-sub,
     .hero .hero-tag,
+    
     .hero .hero-ornament{
       display:none !important;
     }
@@ -960,8 +961,56 @@ letter-spacing:1px;
 @media screen and (max-width:991px){
   .desktop-layout{ display:none !important; }
   .dsk-footer{ display:none !important; }
-  #salon{ display:block !important; }
-  #makeup{ display:none !important; }
+  /* #salon{ display:block !important; } */
+  /* #makeup{ display:none !important; } */
+}
+
+
+/* Hero image desktop and mobile  */
+/* =========================
+   HERO CONTAINER
+========================= */
+
+.hero-img{
+    width:100%;
+    overflow:hidden;
+    position:relative;
+}
+
+/* Common image styles */
+
+.hero-img img{
+    width:100%;
+   
+}
+
+/* =========================
+   MOBILE (Default)
+========================= */
+
+.hero-mobile{
+    display:block;
+}
+
+.hero-desktop{
+    display:none;
+
+}
+
+/* =========================
+   TABLET & DESKTOP
+========================= */
+
+@media screen and (min-width:768px){
+
+.hero-mobile{
+    display:none;
+}
+
+.hero-desktop{
+    display:block;
+}
+
 }
 
 </style>
@@ -969,11 +1018,12 @@ letter-spacing:1px;
 <!-- .wrap is mobile only, hidden on desktop via CSS -->
 <div class="wrap">
     
-  <div class="marble-top">
+  <!-- <div class="marble-top">
     <div class="header">
       <div class="header-title">PRICE LIST</div>
       <div class="header-sub">Manicure</div>
-    </div>
+      
+  </div> -->
   </div>
 
   <!-- <div class="content" id="list"></div>
@@ -982,8 +1032,11 @@ letter-spacing:1px;
     <div class="footer-corner"><i class="ti ti-arrows-maximize" aria-hidden="true"></i></div>
   </div>
 </div> -->
-<div class="hero" >
-    <img src="images/Pricing Hero Sec 9-16.png" alt="Price List">
+<div class="hero-img" >
+    <img class="hero-mobile" src="images/Pricing Hero Sec 9-16.png" alt="Price List">
+    <img  class="hero-desktop" src="images/price-desktop.png" alt="Price List">
+    </div>
+
   <!-- <div class="hero-tag">Est. Hyderabad</div>
   <div class="content" id="list"></div>
   <div class="footer">
@@ -996,8 +1049,8 @@ letter-spacing:1px;
   <div class="hero-tag">Est. Hyderabad</div>
   <div class="hero-title">PANACHE</div>
   <div class="hero-sub">The Dapper Edit · She Slays · Make Up</div>
-  <div class="hero-ornament">— ✦ —</div> 
-</div> -->
+  <div class="hero-ornament">— ✦ —</div> -->
+
 
 <!-- Tabs — shared -->
 <div class="top-tabs">
@@ -1606,11 +1659,11 @@ letter-spacing:1px;
   <div class="price-note">All prices are inclusive of professional products. Advance booking recommended.</div>
 
 </div>
-</div>
-<div class="footer">
+
+<!-- <div class="footer">
   <span class="footer-ornament">— ✦ —</span>
   Panache Salon · Hyderabad
-</div>
+</div> -->
 
 
 <footer class="ftco-footer ftco-section img">
@@ -1686,19 +1739,38 @@ sections.forEach(section => {
   });
 });
 
-// Tab switcher (works for both mobile and desktop)
-function switchTab(tab, element) {
-  const salon = document.getElementById("salon");
-  const makeup = document.getElementById("makeup");
-  salon.style.display = "none";
-  makeup.style.display = "none";
-  salon.classList.remove("active-panel");
-  makeup.classList.remove("active-panel");
-  const activePanel = document.getElementById(tab);
-  activePanel.style.display = "block";
-  activePanel.classList.add("active-panel");
-  document.querySelectorAll(".top-tab").forEach(t => t.classList.remove("active"));
-  element.classList.add("active");
+// // Tab switcher (works for both mobile and desktop)
+// function switchTab(tab, element) {
+//   const salon = document.getElementById("salon");
+//   const makeup = document.getElementById("makeup");
+//   salon.style.display = "none";
+//   makeup.style.display = "none";
+//   salon.classList.remove("active-panel");
+//   makeup.classList.remove("active-panel");
+//   const activePanel = document.getElementById(tab);
+//   activePanel.style.display = "block";
+//   activePanel.classList.add("active-panel");
+//   document.querySelectorAll(".top-tab").forEach(t => t.classList.remove("active"));
+//   element.classList.add("active");
+// }
+function switchTab(tab, element){
+
+    console.log("Clicked:", tab);
+
+    const salon=document.getElementById("salon");
+    const makeup=document.getElementById("makeup");
+
+    salon.style.display="none";
+    makeup.style.display="none";
+
+    document.getElementById(tab).style.display="block";
+
+    document.querySelectorAll(".top-tab").forEach(t=>{
+        t.classList.remove("active");
+    });
+
+    element.classList.add("active");
+
 }
 
 // Desktop sidebar navigation
@@ -1721,7 +1793,10 @@ window.addEventListener('load', () => {
   if (initialTab) {
     initialTab.classList.add('active');
   }
+ 
+  
 });
+
 </script>
 <script src="js/jquery.min.js"></script>
 <script src="js/jquery-migrate-3.0.1.min.js"></script>
