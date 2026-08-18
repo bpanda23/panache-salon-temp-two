@@ -451,11 +451,15 @@ letter-spacing:1px;
 
 .badge-he{
 
-background:#1b1b1b;
+background:linear-gradient(135deg,
 
-color:var(--gold);
+var(--gold),
 
-border:1px solid var(--gold);
+#f0d28f);
+
+color:#111;
+
+border:none;
 
 }
 
@@ -582,6 +586,8 @@ gap:10px;
 margin-left:0;
 
 font-size:20px;
+
+color:#1a1a1a !important;
 
 }
 

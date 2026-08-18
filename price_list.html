@@ -395,9 +395,9 @@ letter-spacing:1px;
 }
 
 .badge-he{
-  background:#1b1b1b;
-  color:var(--gold);
-  border:1px solid var(--gold);
+  background:linear-gradient(135deg, var(--gold), #f0d28f);
+  color:#111;
+  border:none;
 }
 
 .badge-she{
@@ -413,6 +413,10 @@ letter-spacing:1px;
   background:linear-gradient(135deg, #151515, #202020);
   border:1px solid var(--gold);
   text-align:center;
+  color:#1a1a1a;
+  font-size:20px;
+  font-weight:700;
+  letter-spacing:1px;
 }
 
 .makeup-sub{
@@ -448,12 +452,116 @@ letter-spacing:1px;
   font-family:'Times New Roman', Times, serif;
 }
 
-/* MOBILE */
-@media(max-width:768px){
+/* MOBILE & TABLET — warm cream background (matches reference price list image) */
+@media(max-width:991px){
+
+  body{
+    background: #ede3d5 !important;
+    color: #1a1a1a;
+  }
+
+  .sheet-panel{
+    background: #ede3d5 !important;
+    box-shadow: 0 0 40px rgba(0,0,0,.12);
+  }
+
+  /* Keep section cards warm instead of black */
+  .section{
+    background: #f5ede0 !important;
+    border: 1px solid rgba(197,160,89,.35) !important;
+    box-shadow: 0 8px 24px rgba(0,0,0,.10) !important;
+  }
+
+  .section-header{
+    background: #f0e6d3 !important;
+  }
+
+  .section-header:hover{
+    background: #e8dcc8 !important;
+  }
+
+  .section-body{
+    background: #f5ede0 !important;
+  }
+
+  /* Service rows on cream background */
+  .service-row{
+    border-bottom: 1px solid rgba(197,160,89,.22) !important;
+  }
+
+  .service-row:hover{
+    background: #ecdfd0 !important;
+  }
+
+  .service-name{
+    color: #1a1a1a !important;
+  }
+
+  .service-desc{
+    color: #6b5c47 !important;
+  }
+
+  /* Hero on cream */
+  .hero{
+    background: #e2d5c3 !important;
+    border-bottom: 2px solid rgba(197,160,89,.55) !important;
+  }
+
+  /* Top tabs on cream */
+  .top-tabs{
+    background: rgba(237,227,213,.95) !important;
+    border-bottom: 1px solid rgba(197,160,89,.3) !important;
+    backdrop-filter: blur(8px);
+  }
+
+  .top-tab{
+    background: #e2d5c3 !important;
+    color: #7a5c2e !important;
+  }
+
+  .top-tab:hover{
+    background: #d9c9b2 !important;
+  }
+
+  .top-tab.active{
+    background: linear-gradient(135deg, #c5a059, #e8ca84) !important;
+    color: #1a1a1a !important;
+  }
+
+  /* Sub-category headings */
+  .sub-cat{
+    background: linear-gradient(135deg, rgba(197,160,89,.20), rgba(197,160,89,.08)) !important;
+    color: #7a5c2e !important;
+  }
+
+  /* Makeup banner */
+  .makeup-banner{
+    background: linear-gradient(135deg, #e8d9c5, #ddd0bc) !important;
+    color: #1a1a1a !important;
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    letter-spacing: 1px !important;
+  }
+
+  .makeup-sub{
+    color: #6b5c47 !important;
+  }
+
+  /* Price note */
+  .price-note{
+    color: #7a6650 !important;
+  }
+
+  /* Footer */
+  .footer{
+    color: #7a6650 !important;
+  }
+
+  /* Standard mobile sizing */
   .section{ margin:15px; }
   .section-header{ padding:18px; }
   .service-row{ flex-direction:row; }
-  .service-price{ font-size:20px; margin-top:5px; font-family:'Times New Roman', Times, serif; }
+  .service-price{ font-size:20px; margin-top:5px; font-family:'Times New Roman', Times, serif; color:#1a1a1a !important; }
   .hero-title{ font-size:32px; }
 }
 
